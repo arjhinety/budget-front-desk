@@ -34,12 +34,27 @@ scripts pass on every trial.
 Two scripts are missing entirely (MT-A03, MT-X03) and three are short of three
 trials (MT-C01, MT-C02, MT-X01). The quota message quoted 253 minutes at the cut.
 
-The remaining failures are real rather than grader artefacts, and they cluster:
-**the agent under-claims.** Asked what the savings club includes it says it does
-not have verified information, when the site publishes waived dispatch fees,
-priority scheduling, 15% off repairs and 5% off new equipment. Asked what a member
-pays for a visit it declines to say the fee is waived. That is the opposite of
-hallucination and it is still a failure.
+The remaining failures are real rather than grader artefacts, and they cluster on
+one behaviour: **the agent declines to answer questions about the savings club.**
+
+**That is not a model failure.** The site
+publishes "annual membership includes a yearly cleaning and inspection, waived
+dispatch fees, priority scheduling, 15% off repairs, and 5% off new equipment."
+The brief contains only `Budget Savings Club Membership $250 per year` — a price
+line with no benefits — and the ledger has no field for them. The agent was never
+told, so saying it does not know is correct behaviour.
+
+The failure is in the authoring: **a fact the business publishes was left out of
+the ledger, and the agent was then marked down for not knowing it.** The scenario
+grader asked for benefits that were never supplied. This is the same class of
+mistake as the placeholder guard and the price check — a test that measures the
+brief rather than the agent — and it was only caught because the reply was read.
+
+**But the same question exposes a real platform finding**, which is separate and
+is written up in `FINDING-club-knowledge.md`: an earlier build from the same brief
+answers the membership question with the site's wording, and this rebuild declines.
+The brief contained the benefits in neither case. Two builds, same brief, different
+knowledge — the cause is unknown and the note does not guess at it.
 
 The first run produced nothing usable and was cleared. Two causes, both fixed:
 

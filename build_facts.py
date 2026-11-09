@@ -137,6 +137,10 @@ SCALARS = [
      "emergencies move to the front of the line inside business hours"),
     ("financing", "financing", r"(0% APR options for qualified applicants)", "REAL",
      "Wisetack and Hearth; subject to credit approval"),
+    ("savings_club_benefits", "book-online",
+     r"Annual membership includes (.+?)\.", "REAL",
+     "what the membership actually includes; omitted from the first ledger, which is why one build "
+     "answered the question and a later rebuild declined to"),
 ]
 
 

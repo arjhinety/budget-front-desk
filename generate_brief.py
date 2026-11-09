@@ -32,7 +32,7 @@ def money(v: int | None) -> str:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out", default="build/brief.txt")
+    ap.add_argument("--out", default="build/brief-v2.txt")
     args = ap.parse_args()
 
     b = json.loads((FACTS / "business.json").read_text(encoding="utf-8"))
@@ -62,7 +62,7 @@ The customer is a homeowner with something wrong in the house, often worried and
 
 What it must do, in this order:
 1. Triage the complaint into one of three lanes — emergency, diagnostic, or free estimate — and say which lane it chose and why.
-2. Help the customer choose a service using the real catalogue: {"; ".join(priced)}; {"; ".join(menu)}. Three written estimates are free with no obligation: {"; ".join(free)}.
+2. Help the customer choose a service using the real catalogue: {"; ".join(priced)}; {"; ".join(menu)}. Three written estimates are free with no obligation: {"; ".join(free)}. The savings club includes {b.get('savings_club_benefits', 'benefits the office confirms')}.
 3. Collect the property address, the customer's name, mobile number, the equipment type and age if known, and a photo of the unit label or the leak. Repeat the details back before confirming.
 4. Drive to the next step: the online booking page, a call or text to {b['phone']}, or payment of the diagnostic fee.
 
@@ -85,6 +85,8 @@ Everything is labour-backed for one year, and the shop is licensed, bonded and i
         {"create_new": "true", "autosend": "false", "instruction": brief}
     )
     (ROOT / "build" / "builder_url.txt").write_text(url + "\n", encoding="utf-8")
+    # NOTE: this writes the link for whichever brief was just rendered. The link the
+    # evaluated agent was built from is build/builder_url-v1.txt, kept for the record.
 
     print(f"brief: {len(brief)} chars, {len(brief.split())} words -> {out}")
     print(f"builder link: {len(url)} chars -> build/builder_url.txt")
