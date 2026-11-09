@@ -18,5 +18,11 @@
     "7. labels collected blind",
     "8. scored once"
   ],
-  "external_timestamp": "NONE. These hashes prove nothing until the commit is pushed or the hash is published somewhere the author does not control."
+  "external_timestamp": {
+    "commit": "d7c9ad39a8f9bfaa480f2158e3f6c22e9e9bf4bd",
+    "repository": "https://github.com/arjhinety/budget-front-desk",
+    "pushed_at": "2026-11-09",
+    "what_it_proves": "This commit exists on a remote the author does not control, and it contains the hashes above. A grader changed after this commit would not match them.",
+    "caveat": "It proves the graders existed at this commit. It does not prove they were written before the replies, because there are no replies yet \u2014 that part is still an assertion, and the honest statement is that the order is checkable from here forward, not that it was witnessed."
+  }
 }
