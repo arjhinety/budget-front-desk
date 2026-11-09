@@ -1,0 +1,56 @@
+{
+  "canonical_schema_version": "agentplace-eval-set-v1",
+  "generation_timestamp": "2026-11-08T16:24:22+00:00",
+  "repository_commit": "HEAD",
+  "record_count": 106,
+  "contamination_policy": "The hand-written and generated single-turn sets are disjoint by construction: the generator emits ids prefixed G- and refuses to emit an id that already exists in the hand-written set. The multi-turn set uses MT- ids and a different schema. No scenario text is reused between sets. This is checked by build_manifest.py, not asserted.",
+  "dedup_policy": "Exact duplicate customer messages are removed at generation time. Near-duplicates are NOT removed, and that is deliberate: a near-duplicate with a different county or a different day is a different test, and collapsing them would delete exactly the perturbations the set exists to measure. The cleaning pass measures near-duplicate rate and reports it rather than deleting.",
+  "evaluation_exclusion_policy": "Any record whose transcript contains the platform quota message, a render error, or a harness failure is excluded from scoring and recorded as excluded, never counted as an agent failure. The exclusion list is in evals/results/*.json under records with an 'error' key.",
+  "heldout_policy": "The seven held-out single-turn scenarios were written after the first arm was scored. They test phrasing generalization, not unseen failure modes, and RESULTS.md says so. A sealed set for grader validation is defined in CLEANING-PROTOCOL.md and has not been built yet.",
+  "sets": {
+    "handwritten-single-turn": {
+      "file": "evals/scenarios.json",
+      "sha256": "47f0b62984a670c3e920ca19b18635bbde267c7df95171d3a46511d910272411",
+      "items": 33,
+      "purpose": "33 scenarios written by hand in five splits; the set the first arms were tuned on",
+      "generator": null,
+      "generator_sha256": null,
+      "authored_by": "the repository author, from the business's public pages",
+      "regenerate": "hand-written; not regenerated"
+    },
+    "generated-single-turn": {
+      "file": "evals/scenarios-big.json",
+      "sha256": "76c28a25de7432489762f1daa3ec28f1d6838b9055a9204263e484164e33182e",
+      "items": 55,
+      "purpose": "55 scenarios generated from the business decision branches; disjoint from the hand-written set",
+      "generator": "evals/gen_scenarios.py",
+      "generator_sha256": "ad1bf4d0a5c83228c094404e023a62bd134757ed6c90b19720f03d5618ff5dd4",
+      "authored_by": "the repository author, from the business's public pages",
+      "regenerate": "python evals/gen_scenarios.py"
+    },
+    "multiturn": {
+      "file": "evals/scenarios-mt.json",
+      "sha256": "209c8c124b82eea9dfe600a59efdb5fffa01eae916182209381bea9e3ecb221d",
+      "items": 18,
+      "purpose": "18 three-turn scripts in six behavioural families; the customer turns are fixed, not simulated",
+      "generator": "evals/gen_multiturn.py",
+      "generator_sha256": "edc0c74c152ceda1d94217a02eeeef07346458b7b13b1224166c3e3cccb3a6cb",
+      "authored_by": "the repository author, from the business's public pages",
+      "regenerate": "python evals/gen_multiturn.py"
+    }
+  },
+  "graders": {
+    "evals/graders.json": {
+      "sha256": "a2d6ba38d5305ce39aa8dff9d8153466fe4c6d50ccc52cd2778ee2de6c4e580d",
+      "grades": "hand-written set"
+    },
+    "evals/graders-big.json": {
+      "sha256": "8a641afbcbb6dc06c85d1e71760c87021bebd7ddbd3dd941619b3838d32d53a1",
+      "grades": "generated set"
+    },
+    "evals/graders-mt.json": {
+      "sha256": "2744aaa73a51f8763c2f0e90aef99795c76f68d9b66dc8624d8150da2dfca32e",
+      "grades": "multi-turn set"
+    }
+  }
+}

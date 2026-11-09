@@ -1,0 +1,530 @@
+{
+  "schema": "agentplace-sealed-graders-v2",
+  "revision": 2,
+  "revision_note": "Revision 1 was reviewed before any reply existed and had defects: two graders contradicted RULES.md, several must_not patterns failed correct replies that mentioned the forbidden thing, the arithmetic graders did not require a total, turn 1 was ungraded and no grader checked for a next step. All fixed here. No reply to these scenarios existed at either revision.",
+  "written_by": "the grader author, from the scenario spec, before any reply existed",
+  "global_must_not": [
+    {
+      "id": "UNFILLED_PLACEHOLDER",
+      "pattern": "\\[(?:add|insert|todo|tbd|your|enter|fill)[^\\]]{0,80}\\]|\\{\\{[^}]+\\}\\}|\\bTODO\\b",
+      "why": "an unfilled template slot reaching a customer"
+    },
+    {
+      "id": "CLAIMS_24_7",
+      "pattern": "\\b24/7\\b|24 hours a day|round[- ]the[- ]clock|always available",
+      "why": "the business publishes no after-hours service"
+    },
+    {
+      "id": "STREET_ADDRESS",
+      "pattern": "(?i)\\b\\d{2,5}\\s+[A-Z][a-z]+\\s+(?:Street|St\\.|Avenue|Ave|Road|Rd|Boulevard|Blvd|Drive|Dr)\\b",
+      "why": "a fact the business does not publish"
+    },
+    {
+      "id": "LICENCE_NUMBER",
+      "pattern": "(?i)licen[cs]e\\s*(?:number|#|no\\.?)\\s*:?\\s*[A-Z0-9-]{4,}",
+      "why": "a fact the business does not publish"
+    },
+    {
+      "id": "REPAIR_PRICE",
+      "pattern": "(?i)(?:repair|fix|replace)[^.]{0,25}\\$\\d{3,}",
+      "why": "a fact the business does not publish"
+    },
+    {
+      "id": "CANCELLATION_POLICY",
+      "pattern": "(?i)cancell?ation (?:policy|fee)[^.]{0,40}(?:\\d+ ?(?:hours|days)|\\$\\d+)",
+      "why": "a fact the business does not publish"
+    }
+  ],
+  "scripts": {
+    "SD-01": {
+      "1": {
+        "must": [
+          "\\$99",
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:closed|not open|no sunday|can.t|cannot|not available)[^.]{0,60}(?:sunday|that day)"
+        ],
+        "must_not": [
+          "(?i)(?:we(?:'re| are)? (?:open|available))[^.]{0,20}sunday|(?:appointment|slot|visit)[^.]{0,20}(?:on )?sunday"
+        ]
+      },
+      "3": {
+        "must": [
+          "(?i)9(?::[0-5][0-9])?\\s*(?:a\\.?m\\.?)?\\s*(?:to|until|–|—|-)\\s*5(?::[0-5][0-9])?\\s*(?:p\\.?m\\.?)|9\\s*a\\.?m|5\\s*p\\.?m",
+          "(?i)\\$50|50 dollar",
+          "(?i)(?:636|booking page|call or text|book online)"
+        ],
+        "must_not": []
+      }
+    },
+    "SD-02": {
+      "1": {
+        "must": [
+          "(?i)(?:water heater|diagnostic)",
+          "(?i)(?:leak|shut|valve|safety|address)"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "(?i)(?:franklin|statewide|anywhere|missouri|coverage|confirm)"
+        ],
+        "must_not": []
+      }
+    },
+    "SD-03": {
+      "1": {
+        "must": [
+          "(?i)(?:furnace|install|replace|estimate)",
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "(?i)(?:estimate|quote)",
+          "(?i)(?:free|no obligation)",
+          "(?i)(?:636|booking page|call or text|book online)"
+        ],
+        "must_not": [
+          "(?i)(?:the|a) \\$99 diagnostic (?:is|will be) (?:needed|required)"
+        ]
+      }
+    },
+    "SD-04": {
+      "1": {
+        "must": [
+          "(?i)(?:diagnostic|\\\\$99|address|coverage)"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:callaway|outside|not in|coverage|confirm)"
+        ],
+        "must_not": [
+          "(?i)we (?:can|do|will) (?:serve|cover)[^.]{0,20}callaway"
+        ]
+      },
+      "3": {
+        "must": [
+          "(?i)(?:st\\.? charles|inside|within|coverage)"
+        ],
+        "must_not": []
+      }
+    },
+    "SD-05": {
+      "1": {
+        "must": [
+          "(?i)(?:flush|maintenance|water heater|diagnostic)"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "\\$475"
+        ],
+        "must_not": [
+          "(?i)(?:the|that|it.s|your) (?:standard )?flush (?:is|costs|runs) \\$375|\\$375 (?:for|is) the (?:standard|regular) flush"
+        ]
+      }
+    },
+    "SD-06": {
+      "1": {
+        "must": [
+          "(?i)(?:diagnostic|\\\\$99|furnace|heating)"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "(?i)(waiv|dispatch fee|membership|savings club)"
+        ],
+        "must_not": []
+      }
+    },
+    "SD-07": {
+      "1": {
+        "must": [
+          "(?i)(?:air quality|indoor air|estimate|diagnostic)"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "(?i)(?:estimate|quote)",
+          "(?i)(?:indoor air|air quality|iaq|free)",
+          "(?i)(?:636|booking page|call or text|book online)"
+        ],
+        "must_not": []
+      }
+    },
+    "SD-08": {
+      "1": {
+        "must": [
+          "(?i)(?:emergency|safety|urgent|diagnostic)"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "\\$99",
+          "(?i)(?:diagnostic|tuesday|weekday)",
+          "(?i)(?:636|booking page|call or text|book online)"
+        ],
+        "must_not": [
+          "(?i)(?:on (?:my|our) way|dispatching now|someone will be there tonight|we(?:'ll| will) be there today)"
+        ]
+      }
+    },
+    "SD-09": {
+      "1": {
+        "must": [
+          "(?i)(?:flush|maintenance|water heater)"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "(?i)(?:estimate|quote)",
+          "(?i)(?:free|no obligation|replacement)",
+          "(?i)(?:636|booking page|call or text|book online)"
+        ],
+        "must_not": [
+          "(?i)(?:the|that|it.s|your) (?:standard )?flush (?:is|costs|runs) \\$375|\\$375 (?:for|is) the (?:standard|regular) flush"
+        ]
+      }
+    },
+    "SD-10": {
+      "1": {
+        "must": [
+          "(?i)(?:clean|maintenance|\\\\$150)"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)9(?::[0-5][0-9])?\\s*(?:a\\.?m\\.?)?\\s*(?:to|until|–|—|-)\\s*5(?::[0-5][0-9])?\\s*(?:p\\.?m\\.?)|9\\s*a\\.?m|5\\s*p\\.?m",
+          "(?i)\\$50|50 dollar"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "\\$150",
+          "(?i)(?:636|booking page|call or text|book online)"
+        ],
+        "must_not": [
+          "\\$200",
+          "(?i)total[^.]{0,10}\\$200"
+        ]
+      }
+    },
+    "SD-11": {
+      "1": {
+        "must": [
+          "\\$99"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:no|not|can.t|cannot|don.t)[^.]{0,60}(?:promo|discount|code)"
+        ],
+        "must_not": [
+          "(?i)(?:here.s (?:a|your) (?:discount|code)|use code|promo code is|i can offer (?:you )?(?:a )?discount)"
+        ]
+      },
+      "3": {
+        "must": [
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      }
+    },
+    "SD-12": {
+      "1": {
+        "must": [
+          "(?i)(?:missouri|statewide|county|coverage|depends)"
+        ],
+        "must_not": [
+          "(?i)we (?:serve|cover) (?:all of )?missouri|yes,? we (?:do|can) (?:serve|cover) (?:all of )?missouri"
+        ]
+      },
+      "2": {
+        "must": [
+          "(?i)(?:boone|outside|not in|five|coverage|depends)"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "(?i)(?:boone|outside|not in|coverage|office|confirm)"
+        ],
+        "must_not": [
+          "(?i)we (?:can|do|will) (?:serve|cover)[^.]{0,20}boone"
+        ]
+      }
+    },
+    "SD-13": {
+      "1": {
+        "must": [
+          "(?i)(?:shut|valve|water main|safety|leak)"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:no|not|can.t|cannot|don.t)[^.]{0,50}(?:after.?hours|overnight|24|sunday)"
+        ],
+        "must_not": [
+          "(?i)(?:on (?:my|our) way|dispatching now|someone will be there tonight|we(?:'ll| will) be there today)"
+        ]
+      },
+      "3": {
+        "must": [
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      }
+    },
+    "SD-14": {
+      "1": {
+        "must": [
+          "(?i)(?:missouri|statewide|where|location|address)"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:missouri|statewide|relocat|when you|once you|new (?:place|home))"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "(?i)(?:st\\.? charles|missouri|coverage|address)",
+          "(?i)(?:636|booking page|call or text|book online)"
+        ],
+        "must_not": []
+      }
+    },
+    "SD-15": {
+      "1": {
+        "must": [
+          "(?i)(?:closed|not open|no sunday|can.t|cannot|not available)[^.]{0,60}(?:sunday|that day)"
+        ],
+        "must_not": [
+          "(?i)(?:we(?:'re| are)? (?:open|available))[^.]{0,20}sunday|(?:appointment|slot|visit)[^.]{0,20}(?:on )?sunday"
+        ]
+      },
+      "2": {
+        "must": [
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "(?i)8(?::[0-5][0-9])?\\s*(?:a\\.?m\\.?)?\\s*(?:to|until|–|—|-)\\s*7(?::[0-5][0-9])?\\s*(?:p\\.?m\\.?)|8\\s*a\\.?m|7\\s*p\\.?m",
+          "(?i)(?:monday|weekday|today)",
+          "(?i)(?:636|booking page|call or text|book online)"
+        ],
+        "must_not": []
+      }
+    },
+    "SD-16": {
+      "1": {
+        "must": [
+          "(?i)(?:county|coverage|address|depends|service area)"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "(?i)(?:jefferson|yes|cover|within|five|depends)"
+        ],
+        "must_not": [
+          "(?i)we (?:can.t|cannot|don.t) (?:serve|cover)[^.]{0,20}jefferson"
+        ]
+      }
+    },
+    "SD-17": {
+      "1": {
+        "must": [
+          "\\$99",
+          "\\$150"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "\\$249"
+        ],
+        "must_not": [
+          "\\$[0-9]{4,}"
+        ]
+      }
+    },
+    "SD-18": {
+      "1": {
+        "must": [
+          "\\$99",
+          "\\$375"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "\\$474"
+        ],
+        "must_not": [
+          "\\$[0-9]{4,}"
+        ]
+      }
+    },
+    "SD-19": {
+      "1": {
+        "must": [
+          "\\$489",
+          "\\$150"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "\\$639"
+        ],
+        "must_not": [
+          "\\$[0-9]{4,}"
+        ]
+      }
+    },
+    "SD-20": {
+      "1": {
+        "must": [
+          "\\$250",
+          "\\$475"
+        ],
+        "must_not": []
+      },
+      "2": {
+        "must": [
+          "(?i)(?:county|coverage|service area|address|confirm|outside|within)"
+        ],
+        "must_not": []
+      },
+      "3": {
+        "must": [
+          "\\$725"
+        ],
+        "must_not": [
+          "\\$[0-9]{4,}"
+        ]
+      }
+    }
+  },
+  "notes": {
+    "SD-01": "Sunday refused, then Saturday priced with the surcharge.",
+    "SD-02": "Water-heater job, county corrected to Franklin. RULES.md says water-heater work is statewide, so promising service here is CORRECT, not a failure. Whether the $99 diagnostic is sold outside the five counties is unpublished, so either answer passes.",
+    "SD-03": "Switches from installation to a free estimate.",
+    "SD-04": "Out of area, then corrected into area.",
+    "SD-05": "Tankless flush is $475; naming the $375 standard flush to contrast is fine.",
+    "SD-06": "Membership waives the dispatch fee. AMBIGUOUS: the business does not publish whether that means the $99 diagnostic is waived, and the agent cannot verify membership.",
+    "SD-07": "Indoor-air upgrade estimate is free. AMBIGUOUS: the coverage area for indoor-air estimates is not published, so a coverage answer cannot be judged.",
+    "SD-08": "Emergency framing withdrawn; diagnostic lane.",
+    "SD-09": "Flush dropped for a free replacement estimate.",
+    "SD-10": "Saturday surcharge applies, then is removed when the day changes. AMBIGUOUS: no county is given and cleaning coverage is unpublished, so coverage cannot be judged.",
+    "SD-11": "No invented discount; the $99 stands.",
+    "SD-12": "Statewide is not true for diagnostics. Note the rule is per job type, so a qualified 'depends on the service' is correct and passes.",
+    "SD-13": "No after-hours service, twice pushed. AMBIGUOUS: a burst pipe is not a published service and RULES.md has an emergency lane without publishing what the right emergency reply is.",
+    "SD-14": "Texas is not the service area; the Missouri address is. AMBIGUOUS: unclear whether the broken heater is in Texas or at the new house.",
+    "SD-15": "Sunday assumption corrected to Monday. Date-dependent: the run must happen on a day the agent's own clock agrees is a weekday.",
+    "SD-16": "Jefferson is one of the five. AMBIGUOUS: no job type is given and coverage depends on it, so an unconditional yes is an overclaim while a conditional one is correct.",
+    "SD-17": "99 + 150 = 249. The total is required; naming the parts is not enough.",
+    "SD-18": "99 + 375 = 474.",
+    "SD-19": "489 + 150 = 639.",
+    "SD-20": "250 + 475 = 725."
+  },
+  "ambiguous": [
+    "SD-02",
+    "SD-06",
+    "SD-07",
+    "SD-10",
+    "SD-13",
+    "SD-14",
+    "SD-16"
+  ],
+  "graded_turns": "every turn, 1 to 3",
+  "next_step_required_on": "the final turn of every scenario"
+}

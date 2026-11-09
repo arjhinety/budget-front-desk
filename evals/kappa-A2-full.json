@@ -1,0 +1,908 @@
+{
+ "n": 99,
+ "agreement": 0.8282828282828283,
+ "kappa": 0.31390134529148006,
+ "detail": [
+  {
+   "arm": "A2",
+   "id": "M01",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M01",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M02",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M02",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M02",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M03",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M03",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M03",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M04",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M05",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M05",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M05",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M06",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M06",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M06",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H01",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H01",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H01",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H02",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H03",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H03",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H04",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H05",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H05",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H05",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H06",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H06",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H06",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H07",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H07",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H07",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M01",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M04",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M04",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H02",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H02",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H03",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H04",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "H04",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T01",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T01",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T01",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T02",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T02",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T02",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T03",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T03",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T03",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T04",
+   "trial": 1,
+   "mine": "FAIL",
+   "judge": "FAIL",
+   "why": [
+    "MUST missing /(?i)9[^0-9]{0,3}(a\\.?m\\.?)?[^0-9]{0,3}5/"
+   ],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T04",
+   "trial": 2,
+   "mine": "FAIL",
+   "judge": "FAIL",
+   "why": [
+    "MUST missing /(?i)9[^0-9]{0,3}(a\\.?m\\.?)?[^0-9]{0,3}5/"
+   ],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T04",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T05",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T05",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T06",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T06",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T06",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T07",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T07",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T07",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T08",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T08",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T08",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P01",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P01",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P01",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P02",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P02",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P02",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P03",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P03",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P03",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P04",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P04",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P04",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P05",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P05",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P05",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P06",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P06",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P06",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T05",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S01",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S01",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S01",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S02",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S02",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S02",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S04",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S04",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S04",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S05",
+   "trial": 1,
+   "mine": "FAIL",
+   "judge": "FAIL",
+   "why": [
+    "MUST missing /(?i)(closed|no 24|not 24|can.t|don.t)[^.]{0,60}(sunday|tonight|after.?hours)/"
+   ],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S05",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S05",
+   "trial": 3,
+   "mine": "FAIL",
+   "judge": "FAIL",
+   "why": [
+    "MUST missing /(?i)(closed|no 24|not 24|can.t|don.t)[^.]{0,60}(sunday|tonight|after.?hours)/"
+   ],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S03",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S03",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S03",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S06",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S06",
+   "trial": 3,
+   "mine": "FAIL",
+   "judge": "FAIL",
+   "why": [
+    "HARNESS:handle.fill() timed out after 8000ms; typing stopped after 200 of 213 characters (the field keeps what was typed)"
+   ],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S06",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  }
+ ]
+}

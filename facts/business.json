@@ -1,0 +1,157 @@
+{
+  "business_name": "Budget Heating, Cooling & Plumbing",
+  "established": 2009,
+  "phone": "(636) 887-2800",
+  "hours_weekday": "Mon–Fri 8–7",
+  "hours_saturday": "Sat 9–5",
+  "closed_day": "Closed Sundays",
+  "saturday_surcharge_usd": 50,
+  "service_area": "St. Charles, St. Louis, Lincoln, Warren & Jefferson Counties",
+  "hometown": "St. Peters, Missouri",
+  "labour_warranty": "backed for a full year",
+  "emergency_scope": "same-day response",
+  "financing": "0% APR options for qualified applicants",
+  "services": [
+    {
+      "id": "hvac_estimate",
+      "name": "Free HVAC Equipment Estimate",
+      "kind": "free",
+      "price_usd": null,
+      "price_unit": null,
+      "requires_office_review": false,
+      "evidence": "Get a written quote for a new or replacement HVAC system — no cost, no obligation. Free What's included Free Water Heater & Plumbing Equipment Estimate Get a written quote for a ne",
+      "status": "REAL"
+    },
+    {
+      "id": "water_heater_estimate",
+      "name": "Free Water Heater & Plumbing Equipment Estimate",
+      "kind": "free",
+      "price_usd": null,
+      "price_unit": null,
+      "requires_office_review": false,
+      "evidence": "Get a written quote for a new water heater or other plumbing equipment replacement — no cost. Free What's included Indoor Air / HVAC Upgrade Estimate Get a written quote for a humi",
+      "status": "REAL"
+    },
+    {
+      "id": "iaq_upgrade_estimate",
+      "name": "Indoor Air / HVAC Upgrade Estimate",
+      "kind": "free",
+      "price_usd": null,
+      "price_unit": null,
+      "requires_office_review": false,
+      "evidence": "Get a written quote for a humidifier, air cleaner, smart thermostat, zoning, or other HVAC upgrade. Free What's included\n\nSomething's broken (diagnostics)\nHVAC Diagnostic Service C",
+      "status": "REAL"
+    },
+    {
+      "id": "hvac_diagnostic",
+      "name": "HVAC Diagnostic Service Call",
+      "kind": "paid",
+      "price_usd": 99,
+      "price_unit": "visit",
+      "requires_office_review": false,
+      "evidence": "A technician diagnoses your heating or cooling problem and gives you a repair quote on site. $99 What's included Water Heater Diagnostic Service Call A plumber inspects your water ",
+      "status": "REAL"
+    },
+    {
+      "id": "water_heater_diagnostic",
+      "name": "Water Heater Diagnostic Service Call",
+      "kind": "paid",
+      "price_usd": 99,
+      "price_unit": "visit",
+      "requires_office_review": false,
+      "evidence": "A plumber inspects your water heater problem and quotes the fix on site. $99 What's included\n\nTune-ups & maintenance\nBudget Savings Club Maintenance Visit Seasonal tune-up for Savi",
+      "status": "REAL"
+    },
+    {
+      "id": "savings_club_visit",
+      "name": "Budget Savings Club Maintenance Visit",
+      "kind": "member",
+      "price_usd": null,
+      "price_unit": null,
+      "requires_office_review": false,
+      "evidence": "Seasonal tune-up for Savings Club members. Included for active members What's included Budget Savings Club Membership Join the Savings Club for annual HVAC maintenance, waived disp",
+      "status": "REAL"
+    },
+    {
+      "id": "savings_club",
+      "name": "Budget Savings Club Membership",
+      "kind": "paid",
+      "price_usd": 250,
+      "price_unit": "year",
+      "requires_office_review": false,
+      "evidence": "Join the Savings Club for annual HVAC maintenance, waived dispatch fees, and discounts on repairs. $250/yr What's included One-Time HVAC Cleaning and Maintenance A one-time HVAC cl",
+      "status": "REAL"
+    },
+    {
+      "id": "hvac_clean_one_time",
+      "name": "One-Time HVAC Cleaning and Maintenance",
+      "kind": "paid",
+      "price_usd": 150,
+      "price_unit": "system",
+      "requires_office_review": false,
+      "evidence": "A one-time HVAC cleaning and inspection — no membership required. $150 per system What's included Complete HVAC System Refresh and Performance Report A deep two-hour HVAC cleaning ",
+      "status": "REAL"
+    },
+    {
+      "id": "hvac_refresh_report",
+      "name": "Complete HVAC System Refresh and Performance Report",
+      "kind": "paid",
+      "price_usd": 489,
+      "price_unit": "system",
+      "requires_office_review": false,
+      "evidence": "A deep two-hour HVAC cleaning with a written system-condition report. $489 per system What's included\n\nWater heaters & more\nWater Heater Maintenance and Flush Maintenance and flush",
+      "status": "REAL"
+    },
+    {
+      "id": "water_heater_flush",
+      "name": "Water Heater Maintenance and Flush",
+      "kind": "paid",
+      "price_usd": 375,
+      "price_unit": "flush",
+      "requires_office_review": false,
+      "evidence": "Maintenance and flush for a standard tank-style water heater — available anywhere in Missouri. $375 What's included Tankless Water Heater Maintenance and Flush Flushing and descali",
+      "status": "REAL"
+    },
+    {
+      "id": "tankless_flush",
+      "name": "Tankless Water Heater Maintenance and Flush",
+      "kind": "paid",
+      "price_usd": 475,
+      "price_unit": "flush",
+      "requires_office_review": false,
+      "evidence": "Flushing and descaling for an accessible residential tankless water heater — available statewide. $475 What's included Special Access / Light Commercial Service Request For commerc",
+      "status": "REAL"
+    },
+    {
+      "id": "special_access",
+      "name": "Special Access / Light Commercial Service Request",
+      "kind": "review",
+      "price_usd": null,
+      "price_unit": null,
+      "requires_office_review": true,
+      "evidence": "For commercial rooftop units, restricted roof access, lifts, or buildings above two stories — office review required. Requires office review What's included\n\nPlease select the serv",
+      "status": "REAL"
+    }
+  ],
+  "not_stated": [
+    "no after-hours or 24/7 service is claimed anywhere; emergencies are handled Monday–Saturday inside business hours",
+    "no street address for walk-in visits is published (service-area business)",
+    "no per-repair prices are published; the site quotes the $99 diagnostic and a maintenance menu only",
+    "no license number is printed on the captured pages, only 'licensed, bonded and insured'",
+    "no cancellation or late-arrival policy is published",
+    "no explicit travel or trip charge beyond the $99 diagnostic is published"
+  ],
+  "contradictions": [
+    {
+      "topic": "the $99",
+      "detail": "the catalogue calls it a 'Diagnostic Service Call'; the FAQ calls the same $99 a 'dispatch fee'. Both describe one charge for the visit that includes the diagnosis.",
+      "resolution": "quote $99 once per visit as a diagnostic that includes the trip; never add a second dispatch charge on top"
+    },
+    {
+      "topic": "coverage differs by job type",
+      "detail": "water-heater estimates are offered 'anywhere in Missouri' and tankless flushing 'statewide', while other plumbing-equipment estimates stop at the St. Charles County line. Diagnostic visits are sold inside the five-county area.",
+      "resolution": "test the address against the job type, not against one blanket map: water-heater work statewide, everything else inside the five counties"
+    }
+  ],
+  "captured_at": "2026-11-07T13:54:32+00:00"
+}

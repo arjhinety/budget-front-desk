@@ -1,0 +1,21 @@
+# --- the browser profile holding a live, logged-in Agentplace session ---
+# A live signed-in session. Never distribute this directory.
+.profile/
+*.cookies.json
+
+# --- captured third-party pages ---
+# Kept locally as evidence. Not redistributed: the text belongs to the business.
+raw/
+
+# --- python / os noise ---
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+Thumbs.db
+
+# --- working notes, review prompts, and the application itself ---
+# Working notes and correspondence, kept outside the repository.
+notes/
+*.err
+*_tmp.json

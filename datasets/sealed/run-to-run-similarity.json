@@ -1,0 +1,12 @@
+{
+ "what": "run-to-run reply similarity, same scenario, same agent",
+ "model": "BAAI/bge-small-en-v1.5",
+ "pooling": "CLS, L2-normalised",
+ "corpus": "evals/results/A5.json, trial 1 vs trial 2, 55 scenarios",
+ "median_cosine": 0.94,
+ "min": 0.73,
+ "max": 0.989,
+ "above_0.95": "23/55",
+ "why_it_matters": "The agent is templated. A sealed set built from fresh replies on the same scenarios would be roughly half near-duplicates of the corpus the graders were fitted to, before any label was collected. The sealed set must use new customer messages instead.",
+ "reproduce": "python datasets/measure_similarity.py"
+}

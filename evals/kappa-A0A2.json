@@ -1,0 +1,240 @@
+{
+ "n": 23,
+ "agreement": 0.8695652173913043,
+ "kappa": 0.7376425855513308,
+ "detail": [
+  {
+   "arm": "A0",
+   "id": "H05",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A0",
+   "id": "H01",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": [
+    "\\$99"
+   ]
+  },
+  {
+   "arm": "A0",
+   "id": "T06",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M03",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A0",
+   "id": "H01",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": [
+    "\\$99"
+   ]
+  },
+  {
+   "arm": "A0",
+   "id": "H06",
+   "trial": 1,
+   "mine": "FAIL",
+   "judge": "PASS",
+   "why": [
+    "MUST missing /(?i)636/"
+   ],
+   "soft": []
+  },
+  {
+   "arm": "A0",
+   "id": "T03",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "P01",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T04",
+   "trial": 2,
+   "mine": "FAIL",
+   "judge": "FAIL",
+   "why": [
+    "MUST missing /(?i)9[^0-9]{0,3}(a\\.?m\\.?)?[^0-9]{0,3}5/"
+   ],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S05",
+   "trial": 1,
+   "mine": "FAIL",
+   "judge": "FAIL",
+   "why": [
+    "MUST missing /(?i)(closed|no 24|not 24|can.t|don.t)[^.]{0,60}(sunday|tonight|after.?hours)/"
+   ],
+   "soft": []
+  },
+  {
+   "arm": "A0",
+   "id": "M03",
+   "trial": 3,
+   "mine": "FAIL",
+   "judge": "FAIL",
+   "why": [
+    "MUST missing /\\$99/"
+   ],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "M03",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A0",
+   "id": "H06",
+   "trial": 2,
+   "mine": "FAIL",
+   "judge": "FAIL",
+   "why": [
+    "MUST missing /(?i)636/"
+   ],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S05",
+   "trial": 3,
+   "mine": "FAIL",
+   "judge": "FAIL",
+   "why": [
+    "MUST missing /(?i)(closed|no 24|not 24|can.t|don.t)[^.]{0,60}(sunday|tonight|after.?hours)/"
+   ],
+   "soft": []
+  },
+  {
+   "arm": "A0",
+   "id": "H01",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": [
+    "\\$99"
+   ]
+  },
+  {
+   "arm": "A0",
+   "id": "M04",
+   "trial": 2,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "T04",
+   "trial": 1,
+   "mine": "FAIL",
+   "judge": "FAIL",
+   "why": [
+    "MUST missing /(?i)9[^0-9]{0,3}(a\\.?m\\.?)?[^0-9]{0,3}5/"
+   ],
+   "soft": []
+  },
+  {
+   "arm": "A0",
+   "id": "T02",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "FAIL",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A0",
+   "id": "T04",
+   "trial": 3,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A0",
+   "id": "H02",
+   "trial": 1,
+   "mine": "FAIL",
+   "judge": "FAIL",
+   "why": [
+    "MUST missing /\\$99/"
+   ],
+   "soft": []
+  },
+  {
+   "arm": "A0",
+   "id": "P04",
+   "trial": 1,
+   "mine": "PASS",
+   "judge": "PASS",
+   "why": [],
+   "soft": []
+  },
+  {
+   "arm": "A2",
+   "id": "S06",
+   "trial": 3,
+   "mine": "FAIL",
+   "judge": "FAIL",
+   "why": [
+    "HARNESS:handle.fill() timed out after 8000ms; typing stopped after 200 of 213 characters (the field keeps what was typed)"
+   ],
+   "soft": []
+  },
+  {
+   "arm": "A0",
+   "id": "M05",
+   "trial": 1,
+   "mine": "FAIL",
+   "judge": "FAIL",
+   "why": [
+    "MUST missing /(?i)(phone|text|confirm)/"
+   ],
+   "soft": []
+  }
+ ]
+}

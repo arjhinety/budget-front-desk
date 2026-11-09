@@ -1,0 +1,186 @@
+{
+ "arm": "A1",
+ "agent": "project:jojuduewx7ud",
+ "records": [
+  {
+   "id": "M01",
+   "trial": 1,
+   "split": "main",
+   "lane": "emergency",
+   "customer": "pipe burst under the sink and it's spraying, water is everywhere",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooling, and plumbing company based in St. Peters, Missouri. What’s going on at\npipe burst under the sink and it's spraying, water is everywhere\nA spraying burst pipe is an emergency because water is actively spreading. If you can do so safely, close the shutoff valves under the sink; if they don’t stop\n\nA spraying burst pipe is an emergency because water is actively spreading. If you can do so safely, close the shutoff valves under the sink; if they don’t stop it, close the home’s main water valve. Keep clear of pooled water near electrical equipment. Don’t approach a valve if the area is unsafe.\n\nFor the plumbing emergency, there isn’t a listed fixed-price diagnostic for this kind of pipe repair, so I can’t quote the repair here. To help route the right visit, please share the property address, your name and mobile number, and confirm it’s the pipe under the sink; include its age if known. Only take a leak photo if it’s safe—don’t go near water around electrical equipment. I’ll repeat the details for you to check before suggesting the handoff.\n\nNext step If it’s safe, close the under-sink shutoff valves now; if they don’t stop the spray, close the main water valve.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1303,
+   "at": "2026-11-07T14:41:20.883Z"
+  },
+  {
+   "id": "M01",
+   "trial": 2,
+   "split": "main",
+   "lane": "emergency",
+   "customer": "pipe burst under the sink and it's spraying, water is everywhere",
+   "thread": "Home\npipe burst under the sink and it's spraying, water is everywhere\nThis is an emergency plumbing issue because the pipe is actively spraying and water is spreading. If it’s safe and you can reach it without stepping into water\n\nThis is an emergency plumbing issue because the pipe is actively spraying and water is spreading. If it’s safe and you can reach it without stepping into water near electrical equipment, turn off the shutoff valves under the sink; if that doesn’t stop it, close the home’s main water valve. Keep clear of any pooled water near electrical equipment. Budget doesn’t list a set-price diagnostic for general plumbing repairs, so I can’t quote a repair price here. Once the water is under control, I can help route this to the office. I’ll need the property address, your name and mobile number, and—only if it’s safe—a photo of the leak. Next step\n\nIf you can reach it safely, turn off the under-sink shutoff valves now.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 979,
+   "at": "2026-11-07T14:41:33.639Z"
+  },
+  {
+   "id": "M01",
+   "trial": 3,
+   "split": "main",
+   "lane": "emergency",
+   "customer": "pipe burst under the sink and it's spraying, water is everywhere",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooling, and plumbing company based in St. Peters. What’s going on at home? Bud\npipe burst under the sink and it's spraying, water is everywhere\nA spraying burst pipe is an emergency. If you can do so safely, shut off the sink’s water valves; if that doesn’t stop it, close the home’s main water shutoff.\n\nA spraying burst pipe is an emergency. If you can do so safely, shut off the sink’s water valves; if that doesn’t stop it, close the home’s main water shutoff. Keep clear of pooled water near electrical equipment, and don’t step into standing water if there may be an electrical hazard. Budget’s emergency plumbing page says to shut off the relevant valve if safe. I can’t diagnose the pipe or quote a repair from here.\n\nTo match the right help, please send the property address, your name, and mobile number. Also tell me what kind of pipe or fixture it is if you know; a photo of the leak can help only if you can take it without approaching an unsafe area. The address is needed before I can say whether the property is in Budget’s service area.\n\nNext step\n\nIf it’s safe, shut off the water at the sink valves or main shutoff now; then reply here with the property address, your name, mobile number, and any safely available details about the leak.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1375,
+   "at": "2026-11-07T14:41:46.378Z"
+  },
+  {
+   "id": "M02",
+   "trial": 1,
+   "split": "main",
+   "lane": "diagnostic",
+   "customer": "sewage is backing up into the basement floor drain",
+   "thread": "Home\nsewage is backing up into the basement floor drain\nSewage backing up into a basement floor drain is an emergency plumbing issue because contaminated wastewater is entering the home. Stop using water in the house\n\nSewage backing up into a basement floor drain is an emergency plumbing issue because contaminated wastewater is entering the home. Stop using water in the house to help prevent more sewage from backing up. Keep people and pets away from the wastewater, and stay clear of any pooled water near electrical equipment.\n\nFor Budget, this is an emergency plumbing call—not one of the listed $99 diagnostic services. If you can do so safely, tell me the property address, your name, mobile number, what plumbing fixtures or areas are affected, and whether the backup is still active. Don’t approach the wastewater to take a photo; a safe photo can help if one is already available.\n\nNext step Reply here with the property address and whether the backup is still active.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1012,
+   "at": "2026-11-07T14:41:57.619Z"
+  },
+  {
+   "id": "M02",
+   "trial": 2,
+   "split": "main",
+   "lane": "diagnostic",
+   "customer": "sewage is backing up into the basement floor drain",
+   "thread": "Home\nsewage is backing up into the basement floor drain\nThis is an emergency plumbing issue because sewage is backing up into the basement. Stop using water in the home, and keep clear of any pooled water near electr\n\nThis is an emergency plumbing issue because sewage is backing up into the basement. Stop using water in the home, and keep clear of any pooled water near electrical equipment. If it’s safe, close the relevant shutoff or main water valve.\n\nThe exact plumbing service and price need to be confirmed by the office; I can’t diagnose the cause or quote a repair from here. To prepare the handoff, I need the property address, your name and mobile number, and any details you know about the plumbing involved. If you can safely take a photo of the drain or affected area without approaching sewage or electrical hazards, you can share it here.\n\nNext step Reply here with the address, your name and mobile number, and any plumbing details you know. Don’t approach the backup to take a photo.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1034,
+   "at": "2026-11-07T14:42:10.035Z"
+  },
+  {
+   "id": "M02",
+   "trial": 3,
+   "split": "main",
+   "lane": "diagnostic",
+   "customer": "sewage is backing up into the basement floor drain",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooling, and plumbing company based in St. Peters, Missouri. What’s going on at\nsewage is backing up into the basement floor drain\nA sewage backup is an emergency because contaminated water can create health and electrical hazards. Stop using water in the home. If it’s safe, close the relev\n\nA sewage backup is an emergency because contaminated water can create health and electrical hazards. Stop using water in the home. If it’s safe, close the relevant shutoff or main valve, and keep clear of pooled water near electrical equipment. Don’t enter or approach contaminated water to take a photo.\n\nThis needs emergency plumbing follow-up. We don’t have a listed flat diagnostic price for sewage backups, so I can’t quote one here. To help route it, the office will need the property address, your name and mobile number, and any useful detail about the plumbing or sewer system. A photo is optional only if you can take it safely. I can’t check live availability or send a request from this chat.\n\nNext step\n\nOnce you’re clear of any immediate hazards and have stopped water use, call or text (636) 887-2800 about the sewage backup and ask the office for emergency follow-up.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1294,
+   "at": "2026-11-07T14:42:23.200Z"
+  },
+  {
+   "id": "M03",
+   "trial": 1,
+   "split": "main",
+   "lane": "estimate",
+   "customer": "we just bought a house in ofallon, the inspector flagged the ac as original to 2004, what are my options",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company serving ho\nwe just bought a house in ofallon, the inspector flagged the ac as original to 2004, what are my options\nSince you’re weighing options for an AC that’s original to 2004, the primary lane is a free estimate for replacement. You also have the HVAC Diagnostic Service\n\nSince you’re weighing options for an AC that’s original to 2004, the primary lane is a free estimate for replacement. You also have the HVAC Diagnostic Service Call — $99 if you want a technician to examine the existing AC; that visit is for diagnosis, not a replacement quote. The inspector’s note is useful context, but it doesn’t by itself tell us the system’s condition or whether it needs replacement. The diagnostic covers one system; any repair options and pricing are separate and require your approval.\n\nThe matching replacement service is the HVAC Equipment Estimate, a free written estimate for replacing an AC system. To check service-area eligibility, we’ll need your full property address—O’Fallon alone isn’t enough. Before arranging either option, Budget also needs your name, mobile number, and confirmation that this is a standard residential AC. You’ve shared that it’s original to 2004. If it’s safe, you can also share a photo of the unit label; don’t approach anything unsafe just to take one.\n\nNext step Reply here with your full property address, name, mobile number, whether this is a standard residential AC, and a safe unit-label photo if available.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1640,
+   "at": "2026-11-07T14:42:36.065Z"
+  },
+  {
+   "id": "M03",
+   "trial": 2,
+   "split": "main",
+   "lane": "estimate",
+   "customer": "we just bought a house in ofallon, the inspector flagged the ac as original to 2004, what are my options",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooling, and plumbing company in St. Peters, Missouri. What’s going on at home?\nwe just bought a house in ofallon, the inspector flagged the ac as original to 2004, what are my options\nSince this is an aging AC and you’re weighing what to do, the two relevant options are a free written replacement estimate and an HVAC Diagnostic Service Call —\n\nSince this is an aging AC and you’re weighing what to do, the two relevant options are a free written replacement estimate and an HVAC Diagnostic Service Call — $99 to examine the existing system. The estimate is for replacement only; it doesn’t diagnose the AC. The diagnostic is a visit to inspect and diagnose one cooling system; any repair options and pricing are separate and shared onsite for your approval. I can help route the right visit, but I can’t tell from the inspector’s note alone whether the unit needs replacement.\n\nNext step Reply here with the property address in O’Fallon, your name and mobile number, and whether you’d like a replacement estimate, a diagnostic, or are still weighing both. If you know the AC type and its age, include those too. If it’s safe, you can also share a photo of the unit label; no need to approach anything unsafe.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1329,
+   "at": "2026-11-07T14:42:48.546Z"
+  },
+  {
+   "id": "M03",
+   "trial": 3,
+   "split": "main",
+   "lane": "estimate",
+   "customer": "we just bought a house in ofallon, the inspector flagged the ac as original to 2004, what are my options",
+   "thread": "Home\nwe just bought a house in ofallon, the inspector flagged the ac as original to 2004, what are my options\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Since the AC is original to 2004, the main lane is a free estimate if you’re weighing\n\nSince the AC is original to 2004, the main lane is a free estimate if you’re weighing replacement. If you also want the existing system examined or it’s having trouble, the HVAC Diagnostic Service Call — $99 is the diagnostic option. The estimate is for a written replacement quote; it does not diagnose the current AC. The diagnostic covers the trip and diagnosis of one heating or cooling system; any repair options and prices are given separately onsite and require your approval. Neither is a commitment to replace or repair.\n\nFor the estimate, Budget’s HVAC Equipment Estimate is the matching service. An inspector’s age note alone doesn’t tell us the AC’s condition, so I can’t say whether it needs replacement without an onsite evaluation. O’Fallon coverage depends on the property’s exact address; diagnostic visits are limited to five counties, so I’d need the address before confirming coverage.\n\nTo prepare, please share the property address, your name, mobile number, AC type (if known), and its age if known. If safe, you can also share a photo of the unit label; don’t approach anything unsafe.\n\nNext step Reply here with the property address, your name and mobile number, and whether you want a replacement estimate, a diagnostic, or both. Add the AC type and a safe unit-label photo if available.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1615,
+   "at": "2026-11-07T14:43:00.914Z"
+  },
+  {
+   "id": "M04",
+   "trial": 1,
+   "split": "main",
+   "lane": "handoff",
+   "customer": "my warranty company sent me a claim number, they said to schedule",
+   "thread": "Home\nmy warranty company sent me a claim number, they said to schedule\nWelcome to Budget Heating, Cooling & Plumbing, a family-owned company in St. Peters. Since your warranty company sent a claim number, this needs office review b\n\nWelcome to Budget Heating, Cooling & Plumbing, a family-owned company in St. Peters. Since your warranty company sent a claim number, this needs office review before scheduling; Budget handles warranty-company dispatches through a person. You can share the claim number here if you’d like help preparing what to tell the office, but this chat can’t schedule or forward it.\n\nNext step\n\nCall or text (636) 887-2800 and give the office your warranty claim number to arrange the visit.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 746,
+   "at": "2026-11-07T14:43:10.800Z"
+  },
+  {
+   "id": "M04",
+   "trial": 2,
+   "split": "main",
+   "lane": "handoff",
+   "customer": "my warranty company sent me a claim number, they said to schedule",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Hi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooli\nmy warranty company sent me a claim number, they said to schedule\nWarranty-company dispatches need office review, so I can’t route this through the regular booking path. What kind of equipment or problem is the claim for? Next\n\nWarranty-company dispatches need office review, so I can’t route this through the regular booking path. What kind of equipment or problem is the claim for?\n\nNext step\n\nReply here with the equipment or issue covered by the claim.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 654,
+   "at": "2026-11-07T14:43:21.371Z"
+  },
+  {
+   "id": "M04",
+   "trial": 3,
+   "split": "main",
+   "lane": "handoff",
+   "customer": "my warranty company sent me a claim number, they said to schedule",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooling, and plumbing company in St. Peters, Missouri. What’s going on at home?\nmy warranty company sent me a claim number, they said to schedule\nWarranty-company dispatches need office review, so I can’t schedule that here. The claim number is useful, but the office will need to handle the next step dire\n\nWarranty-company dispatches need office review, so I can’t schedule that here. The claim number is useful, but the office will need to handle the next step directly.\n\nNext step\n\nCall or text Budget at (636) 887-2800 and tell them your warranty company sent you a claim number and that you need to schedule a warranty visit.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 749,
+   "at": "2026-11-07T14:43:38.595Z"
+  },
+  {
+   "id": "M05",
+   "trial": 1,
+   "split": "main",
+   "lane": "scheduling",
+   "customer": "ill be home after 6 on weekdays, can you still come",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooling, and plumbing company based in St. Peters, Missouri. What’s going on at\nill be home after 6 on weekdays, can you still come\nPossibly. Budget’s weekday hours run until 7 p.m., but I can’t see the live calendar or promise an after-6 arrival; it depends on availability, and service cove\n\nPossibly. Budget’s weekday hours run until 7 p.m., but I can’t see the live calendar or promise an after-6 arrival; it depends on availability, and service coverage depends on your address.\n\nNext step Reply here with your property address and what’s going on, so I can point you to the right visit.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 710,
+   "at": "2026-11-07T14:43:51.157Z"
+  },
+  {
+   "id": "M05",
+   "trial": 2,
+   "split": "main",
+   "lane": "scheduling",
+   "customer": "ill be home after 6 on weekdays, can you still come",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in S\nill be home after 6 on weekdays, can you still come\nWeekday service hours are Monday–Friday, 8 a.m.–7 p.m., so after 6 p.m. is within the stated hours. I can’t check live availability or promise a time here; the\n\nWeekday service hours are Monday–Friday, 8 a.m.–7 p.m., so after 6 p.m. is within the stated hours. I can’t check live availability or promise a time here; the office confirms the arrival window after reviewing a booking request.\n\nNext step Reply here with what’s going on at home so I can match you to the right visit.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 730,
+   "at": "2026-11-07T14:44:03.302Z"
+  },
+  {
+   "id": "M05",
+   "trial": 3,
+   "split": "main",
+   "lane": "scheduling",
+   "customer": "ill be home after 6 on weekdays, can you still come",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Hi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based\nill be home after 6 on weekdays, can you still come\nBudget’s listed weekday hours run until 7 p.m., so after 6 may be within our service hours. I can’t confirm an after-6 arrival or a specific time here; appointm\n\nBudget’s listed weekday hours run until 7 p.m., so after 6 may be within our service hours. I can’t confirm an after-6 arrival or a specific time here; appointments depend on availability, and the office confirms the arrival window after reviewing a booking request. Saturday visits have an additional $50 fee.\n\nNext step\n\nReply here with what’s going on and the property address so I can point you to the right visit and check the service-area rules.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 862,
+   "at": "2026-11-07T14:44:16.130Z"
+  },
+  {
+   "id": "M06",
+   "trial": 1,
+   "split": "main",
+   "lane": "trust",
+   "customer": "are you licensed and insured, and how long have you been around",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Hi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooli\nare you licensed and insured, and how long have you been around\nYes. Budget Heating, Cooling & Plumbing is licensed, bonded, and insured, and has served the area since 2009. --- Next step Reply here with what you need help w\n\nYes. Budget Heating, Cooling & Plumbing is licensed, bonded, and insured, and has served the area since 2009.\n\nNext step\n\nReply here with what you need help with at home, if you’d like help choosing a visit.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 631,
+   "at": "2026-11-07T14:44:38.076Z"
+  },
+  {
+   "id": "M06",
+   "trial": 2,
+   "split": "main",
+   "lane": "trust",
+   "customer": "are you licensed and insured, and how long have you been around",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing, a family-owned company based in St. Pet\nare you licensed and insured, and how long have you been around\nYes. Budget Heating, Cooling & Plumbing is licensed, bonded, and insured, and has served the area since 2009. Next step Reply here with what’s going on at home\n\nYes. Budget Heating, Cooling & Plumbing is licensed, bonded, and insured, and has served the area since 2009.\n\nNext step Reply here with what’s going on at home if you’d like help choosing the right service.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 630,
+   "at": "2026-11-07T14:44:49.748Z"
+  },
+  {
+   "id": "M06",
+   "trial": 3,
+   "split": "main",
+   "lane": "trust",
+   "customer": "are you licensed and insured, and how long have you been around",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooling, and plumbing company based in St. Peters, Missouri. What’s going on at\nare you licensed and insured, and how long have you been around\nYes. Budget is licensed, bonded, and insured, and has served the area since 2009. Next step Reply here with what’s going on at home if you’d like help choosing\n\nYes. Budget is licensed, bonded, and insured, and has served the area since 2009. Next step Reply here with what’s going on at home if you’d like help choosing the right service.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 601,
+   "at": "2026-11-07T14:45:01.035Z"
+  }
+ ]
+}

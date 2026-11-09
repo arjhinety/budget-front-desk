@@ -1,0 +1,816 @@
+{
+ "arm": "A0",
+ "agent": "project:jojuduewx7ud",
+ "records": [
+  {
+   "id": "T01",
+   "trial": 1,
+   "split": "tuning",
+   "lane": "diagnostic",
+   "customer": "my ac stopped cooling yesterday, it's blowing warm air",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re family-owned and based in St. Peters, Missouri. What’s going on at your home? Tell me what you’re noticing,\nmy ac stopped cooling yesterday, it's blowing warm air\nThis fits the diagnostic lane: your AC is actively failing to cool, so the right visit is HVAC Diagnostic Service Call — $99. It covers the trip and diagnosis o\n\nThis fits the diagnostic lane: your AC is actively failing to cool, so the right visit is HVAC Diagnostic Service Call — $99. It covers the trip and diagnosis of one heating or cooling system; any repair, parts, or refrigerant would be quoted separately for your approval before work starts. This visit identifies the issue onsite—it isn’t a repair quote in advance.\n\nTo check service-area coverage and prepare the request, please share your property address, your name, and a mobile number. If you know the AC type and its age, include those too. You can attach a photo of the unit label if it’s safe to take; don’t approach anything unsafe for a picture.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1071,
+   "at": "2026-11-07T14:15:40.150Z"
+  },
+  {
+   "id": "T02",
+   "trial": 1,
+   "split": "tuning",
+   "lane": "emergency",
+   "customer": "i smell gas near the water heater",
+   "thread": "Home\ni smell gas near the water heater\nThis is an emergency. Leave the home immediately. Don’t operate switches or electronics, and don’t use a phone inside. Once you’re safely outside, call 911 or S\n\nThis is an emergency. Leave the home immediately. Don’t operate switches or electronics, and don’t use a phone inside. Once you’re safely outside, call 911 or Spire. Do not re-enter until officials say it’s safe. A gas smell near a water heater can indicate a suspected gas leak; I can’t diagnose the source remotely.\n\nOnce you’re safely outside, call or text Budget at (636) 887-2800 for follow-up. I can help with the next steps after you’re in a safe place.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 693,
+   "at": "2026-11-07T14:15:52.058Z"
+  },
+  {
+   "id": "T03",
+   "trial": 1,
+   "split": "tuning",
+   "lane": "free estimate",
+   "customer": "how much for a new furnace",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. What’s going on with your home today? I can help\nhow much for a new furnace\nFor a new furnace, the right starting point is a free HVAC Equipment Estimate. It’s a written replacement quote with no obligation—not a diagnosis or installati\n\nFor a new furnace, the right starting point is a free HVAC Equipment Estimate. It’s a written replacement quote with no obligation—not a diagnosis or installation visit. The actual price depends on the system and home, so I can’t quote it from here.\n\nWhat’s the property address? HVAC estimates are generally for the five-county service area, and I’ll need the address to check whether it fits. Then I can help gather your name and mobile number, the furnace type and age if known, and a furnace label photo if it’s safe to take.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 915,
+   "at": "2026-11-07T14:16:09.936Z"
+  },
+  {
+   "id": "T04",
+   "trial": 1,
+   "split": "tuning",
+   "lane": "scheduling",
+   "customer": "can you come saturday morning",
+   "thread": "Home\ncan you come saturday morning\nWe’re Budget Heating, Cooling & Plumbing in St. Peters. What’s going on at the house? Tell me the issue and your address, and I can help point you to the right\n\nWe’re Budget Heating, Cooling & Plumbing in St. Peters. What’s going on at the house? Tell me the issue and your address, and I can help point you to the right kind of visit. Saturday hours are 9 a.m.–5 p.m.; Saturday appointments add $50. I can’t check live availability here, so I can’t promise a Saturday-morning opening.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 552,
+   "at": "2026-11-07T14:16:21.172Z"
+  },
+  {
+   "id": "T05",
+   "trial": 1,
+   "split": "tuning",
+   "lane": "coverage",
+   "customer": "i'm in jefferson county, water heater is leaking from the bottom",
+   "thread": "Home\ni'm in jefferson county, water heater is leaking from the bottom\nA water heater leaking from the bottom needs a diagnostic visit, not a free estimate. Budget’s Water Heater Diagnostic Service Call is $99 for the trip and diag\n\nA water heater leaking from the bottom needs a diagnostic visit, not a free estimate. Budget’s Water Heater Diagnostic Service Call is $99 for the trip and diagnosis; any repair options and pricing are separate and require your approval. Water-heater service is offered anywhere in Missouri, so Jefferson County is within the stated coverage.\n\nIf water is actively escaping, and it’s safe, close the water-heater shutoff or main valve. Keep clear of pooled water near electrical equipment. Don’t approach the leak to take a photo if it isn’t safe; a unit-label or leak photo is useful only if you can get it safely. I can’t diagnose the cause from the symptom.\n\nTo prepare the visit, please send the property address, your name, mobile number, water-heater type (tank or tankless, if known), and its age if known. You can attach a safe photo here or text it to (636) 887-2800. I’ll recap the details for you to check before giving the next step.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1209,
+   "at": "2026-11-07T14:16:33.659Z"
+  },
+  {
+   "id": "T06",
+   "trial": 1,
+   "split": "tuning",
+   "lane": "coverage",
+   "customer": "i need a quote to replace a kitchen faucet, i'm in wentzville",
+   "thread": "Home\ni need a quote to replace a kitchen faucet, i'm in wentzville\nThis sounds like a free estimate request, since you’re looking to replace a kitchen faucet rather than troubleshoot an active failure. The listed service is Wat\n\nThis sounds like a free estimate request, since you’re looking to replace a kitchen faucet rather than troubleshoot an active failure. The listed service is Water Heater & Plumbing Equipment Estimate; it covers replacement estimates for plumbing equipment only in St. Charles County (water-heater replacements are offered anywhere in Missouri). Wentzville is in St. Charles County, so this appears to fit the listed area. The estimate is free and has no obligation; it is not a repair or installation visit.\n\nTo prepare the request, please share the property address, your name, mobile number, and a photo of the faucet or its label if you can take one safely. I’ll recap those details for you to check before I point you to the next step. I can’t provide the replacement price from here; the estimate is for that.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1075,
+   "at": "2026-11-07T14:16:44.770Z"
+  },
+  {
+   "id": "T07",
+   "trial": 1,
+   "split": "tuning",
+   "lane": "handoff",
+   "customer": "we have a rooftop unit on a 3 story building, it's down",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company in St. Pet\nwe have a rooftop unit on a 3 story building, it's down\nSince the rooftop unit is down, this is a diagnostic need rather than a free estimate. But because it’s a rooftop unit on a three-story building, Budget routes\n\nSince the rooftop unit is down, this is a diagnostic need rather than a free estimate. But because it’s a rooftop unit on a three-story building, Budget routes it to the office for review; I can’t quote or book that kind of visit here. A technician would need to diagnose the failure onsite—there isn’t enough information to identify the cause from the symptom alone.\n\nPlease share the service address, your name, and a mobile number, plus the unit’s type and age if you know them. If you can safely take a photo of the unit label from an accessible location, that may help; don’t climb onto the roof or approach an unsafe area. I’ll repeat the details for you to check, then you can call or text Budget at (636) 887-2800 for office review. If this is a heating failure and the building is dangerously cold, move people to a safer warm place and don’t use an oven, stovetop, or grill for heat.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1308,
+   "at": "2026-11-07T14:16:57.259Z"
+  },
+  {
+   "id": "T08",
+   "trial": 1,
+   "split": "tuning",
+   "lane": "policy",
+   "customer": "do you do emergency calls at 2am",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. What’s going on at your home? Tell me what you’ve\ndo you do emergency calls at 2am\nI can’t promise 2 a.m. emergency service. Budget’s listed business hours are Monday–Friday, 8 a.m.–7 p.m.; Saturday, 9 a.m.–5 p.m.; closed Sunday, and we don’t\n\nI can’t promise 2 a.m. emergency service. Budget’s listed business hours are Monday–Friday, 8 a.m.–7 p.m.; Saturday, 9 a.m.–5 p.m.; closed Sunday, and we don’t have a live after-hours dispatcher here. If there’s an immediate danger—such as a gas smell—get to safety and call the appropriate emergency service from outside. For Budget’s emergency follow-up, call or text (636) 887-2800 to ask what help is available.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 807,
+   "at": "2026-11-07T14:17:09.732Z"
+  },
+  {
+   "id": "P01",
+   "trial": 1,
+   "split": "pilot",
+   "lane": "diagnostic",
+   "customer": "furnace is running but the house stays cold",
+   "thread": "Home\nfurnace is running but the house stays cold\nSince the furnace is running but the house stays cold, this fits the diagnostic lane: an active heating failure needs an onsite diagnosis, not a maintenance vis\n\nSince the furnace is running but the house stays cold, this fits the diagnostic lane: an active heating failure needs an onsite diagnosis, not a maintenance visit or a replacement estimate. The matching service is HVAC Diagnostic Service Call — $99. It covers the trip and diagnosis of one heating or cooling system; any repair, parts, or refrigerant are quoted separately, and work requires your approval. The symptom helps route the visit but doesn’t identify the cause.\n\nFirst, what’s the property address? Diagnostic visits are limited to St. Charles, St. Louis, Lincoln, Warren, and Jefferson Counties, so I’ll need the address before confirming whether it’s in range. Please also share your name, mobile number, furnace type and age if known, and—only if safe—a photo of the unit label. I’ll recap what you provide for you to check before pointing you to the next step. I can’t submit a booking or check live availability from this chat.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1186,
+   "at": "2026-11-07T14:17:20.719Z"
+  },
+  {
+   "id": "P02",
+   "trial": 1,
+   "split": "pilot",
+   "lane": "member",
+   "customer": "what's included in the savings club",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. Tell me what’s going on at your home, and I’ll he\nwhat's included in the savings club\nThe Budget Savings Club Membership is $250 per year. It includes a yearly HVAC cleaning and inspection, waived dispatch fees, priority scheduling, 15% off repai\n\nThe Budget Savings Club Membership is $250 per year. It includes a yearly HVAC cleaning and inspection, waived dispatch fees, priority scheduling, 15% off repairs, and 5% off new equipment. Multi-system pricing is handled by the office.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 632,
+   "at": "2026-11-07T14:17:32.883Z"
+  },
+  {
+   "id": "P03",
+   "trial": 1,
+   "split": "pilot",
+   "lane": "coverage",
+   "customer": "i'm in columbia mo, my tub is draining slow",
+   "thread": "Home\ni'm in columbia mo, my tub is draining slow\nA slow-draining tub is a routine plumbing concern, not one of Budget’s listed emergency triggers unless it turns into a sewage backup or another immediate hazar\n\nA slow-draining tub is a routine plumbing concern, not one of Budget’s listed emergency triggers unless it turns into a sewage backup or another immediate hazard. Budget’s published catalogue doesn’t list a general plumbing drain-clearing or diagnostic service, so I can’t quote or book that work here. The listed plumbing-equipment estimate is for replacement equipment and is limited to St. Charles County; Columbia is outside that area.\n\nBecause you’re in Columbia, please call or text Budget at (636) 887-2800 to ask whether they can refer you or advise on this unlisted plumbing request. Don’t use an online booking option for a service that isn’t listed.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 903,
+   "at": "2026-11-07T14:17:42.852Z"
+  },
+  {
+   "id": "P04",
+   "trial": 1,
+   "split": "pilot",
+   "lane": "trust",
+   "customer": "what's your address, i want to drop by",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company in St. Peters, Missouri. Tell me what’s going on at your home, and I’ll help you fig\nwhat's your address, i want to drop by\nOur storefront is in St. Peters, Missouri. I don’t have a verified street address in the information available here, so I don’t want to guess. Please call or te\n\nOur storefront is in St. Peters, Missouri. I don’t have a verified street address in the information available here, so I don’t want to guess. Please call or text (636) 887-2800 to confirm the address and whether someone can meet you before you head over.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 654,
+   "at": "2026-11-07T14:17:52.641Z"
+  },
+  {
+   "id": "P05",
+   "trial": 1,
+   "split": "pilot",
+   "lane": "trust",
+   "customer": "is the work guaranteed",
+   "thread": "Home\nis the work guaranteed\nYes. Budget says its work carries a one-year labor warranty. That covers labor; I can’t infer from that whether particular parts or equipment are covered, so th\n\nYes. Budget says its work carries a one-year labor warranty. That covers labor; I can’t infer from that whether particular parts or equipment are covered, so the office can clarify the terms for a specific job. Call or text (636) 887-2800 with the service or estimate you’re considering.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 509,
+   "at": "2026-11-07T14:18:03.910Z"
+  },
+  {
+   "id": "P06",
+   "trial": 1,
+   "split": "pilot",
+   "lane": "payment",
+   "customer": "can i finance a new ac",
+   "thread": "Home\ncan i finance a new ac\nYes—financing is available for a new AC, subject to credit approval. For a replacement quote, the right next step is a free, no-obligation HVAC Equipment Estima\n\nYes—financing is available for a new AC, subject to credit approval. For a replacement quote, the right next step is a free, no-obligation HVAC Equipment Estimate; it covers replacement options for systems such as an AC. If you’d like to discuss financing details, call or text Budget at (636) 887-2800.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 525,
+   "at": "2026-11-07T14:18:15.627Z"
+  },
+  {
+   "id": "M01",
+   "trial": 1,
+   "split": "main",
+   "lane": "emergency",
+   "customer": "pipe burst under the sink and it's spraying, water is everywhere",
+   "thread": "Home\npipe burst under the sink and it's spraying, water is everywhere\nThis is an emergency because a burst pipe is actively spraying. If you can do so safely, shut off the sink’s water valves; if that doesn’t stop it, shut off the\n\nThis is an emergency because a burst pipe is actively spraying. If you can do so safely, shut off the sink’s water valves; if that doesn’t stop it, shut off the home’s main water valve. Keep clear of pooled water near outlets or electrical equipment, and don’t enter standing water if electricity may be involved. If you can’t reach a shutoff safely, leave it and call for help.\n\nThe best fit is emergency plumbing follow-up. I can’t see live dispatch availability, so I can’t promise an arrival time. To check the earliest available appointment during business hours, call or text (636) 887-2800. Don’t approach the leak to take a photo.\n\nWhen it’s safe, please share the service address first so I can check whether it’s in Budget’s service area. Then send your name, mobile number, and any useful details about the home or plumbing. I’ll repeat back what you’ve shared for corrections before the next step.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1173,
+   "at": "2026-11-07T14:18:27.130Z"
+  },
+  {
+   "id": "M02",
+   "trial": 1,
+   "split": "main",
+   "lane": "diagnostic",
+   "customer": "sewage is backing up into the basement floor drain",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. What’s going on with your home that we can help w\nsewage is backing up into the basement floor drain\nThis is an emergency plumbing issue because sewage is backing up into the basement. Stop using water in the home. Keep away from any pooled water near electrica\n\nThis is an emergency plumbing issue because sewage is backing up into the basement. Stop using water in the home. Keep away from any pooled water near electrical equipment. If you can safely reach the relevant shutoff or main valve without going near the sewage or electrical hazards, close it; otherwise leave it alone.\n\nWe don’t have a listed price for sewage-backup service, so I can’t quote one here. This needs review by a person at the office. I can help you prepare the details, but I can’t dispatch anyone or check live arrival times from this chat.\n\nPlease send the property address first so we can check the service area, along with your name and mobile number. Also tell me what plumbing is affected and its age if known. Don’t approach the backup to take a photo; if you already have a safe photo, you can share it here or text it to the office at (636) 887-2800.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1286,
+   "at": "2026-11-07T14:18:39.196Z"
+  },
+  {
+   "id": "M03",
+   "trial": 1,
+   "split": "main",
+   "lane": "estimate",
+   "customer": "we just bought a house in ofallon, the inspector flagged the ac as original to 2004, what are my options",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooling, and plumbing company based in St. Peters, Missouri. Tell me what’s going o\nwe just bought a house in ofallon, the inspector flagged the ac as original to 2004, what are my options\nSince you’re looking at an older AC and asking about options—not reporting an active failure—the free-estimate lane fits. The matching service is HVAC Equipment\n\nSince you’re looking at an older AC and asking about options—not reporting an active failure—the free-estimate lane fits. The matching service is HVAC Equipment Estimate: a free, no-obligation replacement quote for an HVAC system, including an AC. It’s an estimate, not a diagnosis or repair visit.\n\nO’Fallon is within St. Charles County, but I’d need the property address to confirm the service area. If you’d like to take the next step, please share the address, your name, and mobile number. If you know whether it’s a central AC, heat pump, or another setup—and its age beyond the inspector’s 2004 note—include that too. A photo of the unit label can help if it’s safe to take; you can also text it to the office at (636) 887-2800. I’ll recap what you share so you can correct it before I point you to the booking page or office.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1298,
+   "at": "2026-11-07T14:18:51.254Z"
+  },
+  {
+   "id": "M04",
+   "trial": 1,
+   "split": "main",
+   "lane": "handoff",
+   "customer": "my warranty company sent me a claim number, they said to schedule",
+   "thread": "Home\nmy warranty company sent me a claim number, they said to schedule\nWelcome to Budget Heating, Cooling & Plumbing in St. Peters. Since your warranty company sent a claim number, this needs office review—Budget routes warranty-co\n\nWelcome to Budget Heating, Cooling & Plumbing in St. Peters. Since your warranty company sent a claim number, this needs office review—Budget routes warranty-company dispatches to a person rather than through the online booking flow. Please call or text (636) 887-2800 and give them the claim number; you don’t need to post it here. What issue is the claim for, and what’s the service address? I can help identify the right service lane, but I can’t schedule or verify the warranty dispatch from this chat.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 771,
+   "at": "2026-11-07T14:19:06.529Z"
+  },
+  {
+   "id": "M05",
+   "trial": 1,
+   "split": "main",
+   "lane": "scheduling",
+   "customer": "ill be home after 6 on weekdays, can you still come",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in S\nill be home after 6 on weekdays, can you still come\nYes—Budget’s weekday hours are 8 a.m.–7 p.m., so after 6 may fit. I can’t check live openings or promise an arrival time here. What’s the issue, and what’s the\n\nYes—Budget’s weekday hours are 8 a.m.–7 p.m., so after 6 may fit. I can’t check live openings or promise an arrival time here. What’s the issue, and what’s the service address? I’ll help identify the right visit and next step; the address is needed to check service coverage.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 686,
+   "at": "2026-11-07T14:19:17.097Z"
+  },
+  {
+   "id": "M06",
+   "trial": 1,
+   "split": "main",
+   "lane": "trust",
+   "customer": "are you licensed and insured, and how long have you been around",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. What’s going on at your home? Tell me what you’re not\nare you licensed and insured, and how long have you been around\nYes. Budget Heating, Cooling & Plumbing is licensed, bonded, and insured, and has served the area since 2009. We’re family-owned and based in St. Peters, Missou\n\nYes. Budget Heating, Cooling & Plumbing is licensed, bonded, and insured, and has served the area since 2009. We’re family-owned and based in St. Peters, Missouri.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 587,
+   "at": "2026-11-07T14:19:30.497Z"
+  },
+  {
+   "id": "T01",
+   "trial": 2,
+   "split": "tuning",
+   "lane": "diagnostic",
+   "customer": "my ac stopped cooling yesterday, it's blowing warm air",
+   "thread": "Home\nmy ac stopped cooling yesterday, it's blowing warm air\nThis fits the diagnostic lane: your AC has an active cooling failure, so the right next step is an onsite diagnosis—not a maintenance visit or replacement estim\n\nThis fits the diagnostic lane: your AC has an active cooling failure, so the right next step is an onsite diagnosis—not a maintenance visit or replacement estimate. The matching service is HVAC Diagnostic Service Call — $99 for the trip and diagnosis of one heating or cooling system. Any repair, parts, or refrigerant would be priced separately, and work would start only with your approval.\n\nI can help prepare the details, but I can’t diagnose the cause or book a visit from this chat. What’s the service address (so I can check the service-area boundary), your name and mobile number, and the AC/system type and age, if known? If it’s safe to do so, you can also share a photo of the unit’s label. Don’t approach equipment in an unsafe location.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1003,
+   "at": "2026-11-07T14:20:22.327Z"
+  },
+  {
+   "id": "T01",
+   "trial": 3,
+   "split": "tuning",
+   "lane": "diagnostic",
+   "customer": "my ac stopped cooling yesterday, it's blowing warm air",
+   "thread": "Home\nmy ac stopped cooling yesterday, it's blowing warm air\nThat’s an HVAC diagnostic situation: the AC has an active cooling failure, so it needs diagnosis rather than a maintenance visit or replacement estimate. The ma\n\nThat’s an HVAC diagnostic situation: the AC has an active cooling failure, so it needs diagnosis rather than a maintenance visit or replacement estimate. The matching service is HVAC Diagnostic Service Call — $99 for the trip and diagnosis of one heating or cooling system. Any repair, parts, or refrigerant would be quoted separately, and work would start only with your approval. This is a symptom-based recommendation, not a diagnosis of the cause.\n\nTo check whether diagnostic service is offered at your address, please share the service address. Then I’ll help gather your name, mobile number, AC type and age if known, and—only if safe—a photo of the unit label. We’ll review the details before I point you to the booking page or office.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 997,
+   "at": "2026-11-07T14:20:33.768Z"
+  },
+  {
+   "id": "T02",
+   "trial": 2,
+   "split": "tuning",
+   "lane": "emergency",
+   "customer": "i smell gas near the water heater",
+   "thread": "Home\ni smell gas near the water heater\nGet everyone outside first; call for help from a safe location. This is an emergency. Leave the home immediately. Don’t operate switches or electronics, and don\nGet everyone outside first; call for help from a safe location.\n\nThis is an emergency. Leave the home immediately. Don’t operate switches or electronics, and don’t use a phone inside. Once you’re safely outside, call 911 or Spire. Do not re-enter until officials say it’s safe.\n\nPlease don’t go back in or approach the water heater to take a photo. After you’re safely outside, you can call or text Budget at (636) 887-2800 about follow-up. I can help with the visit details once everyone is safe.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 729,
+   "at": "2026-11-07T14:20:45.033Z"
+  },
+  {
+   "id": "T02",
+   "trial": 3,
+   "split": "tuning",
+   "lane": "emergency",
+   "customer": "i smell gas near the water heater",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooling, and plumbing company based in St. Peters. What’s going on at your home\ni smell gas near the water heater\nThis is an emergency. Leave the home now. Don’t operate switches or electronics, and don’t use a phone inside. Once you’re safely outside, call 911 or Spire. Do\n\nThis is an emergency. Leave the home now. Don’t operate switches or electronics, and don’t use a phone inside. Once you’re safely outside, call 911 or Spire. Don’t go back in until officials say it’s safe.\n\nAfter you’re outside and safe, let me know. I can help with the next step for Budget, but safety comes first.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 710,
+   "at": "2026-11-07T14:20:55.875Z"
+  },
+  {
+   "id": "T03",
+   "trial": 2,
+   "split": "tuning",
+   "lane": "free estimate",
+   "customer": "how much for a new furnace",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooling, and plumbing company based in St. Peters. What’s going on at your home? I\nhow much for a new furnace\nA new furnace is handled as a free written replacement estimate—we don’t have a flat furnace price listed, since the quote depends on the equipment and home. Th\n\nA new furnace is handled as a free written replacement estimate—we don’t have a flat furnace price listed, since the quote depends on the equipment and home. The service is HVAC Equipment Estimate; it’s free and there’s no obligation. It’s an estimate visit, not a diagnosis or installation. What’s the property address? I can check whether it’s in our service area before helping with the next step.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 786,
+   "at": "2026-11-07T14:21:06.960Z"
+  },
+  {
+   "id": "T03",
+   "trial": 3,
+   "split": "tuning",
+   "lane": "free estimate",
+   "customer": "how much for a new furnace",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. Tell me what’s going on at your home, and I’ll help y\nhow much for a new furnace\nFor a new furnace, the right fit is a free written HVAC Equipment Estimate—it’s a replacement quote, not a diagnostic or installation visit. The estimate itself\n\nFor a new furnace, the right fit is a free written HVAC Equipment Estimate—it’s a replacement quote, not a diagnostic or installation visit. The estimate itself is free and there’s no obligation; the actual system price depends on the equipment and home, so I can’t quote that without an estimate.\n\nWhat’s the property address? I’ll check which next step applies for your area. If you’d like, you can also tell me your name and mobile number, and whether you’re replacing an existing furnace or planning a new setup.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 903,
+   "at": "2026-11-07T14:21:18.293Z"
+  },
+  {
+   "id": "T04",
+   "trial": 2,
+   "split": "tuning",
+   "lane": "scheduling",
+   "customer": "can you come saturday morning",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company in St. Pet\ncan you come saturday morning\nSaturday appointments are during 9 a.m.–5 p.m., and each Saturday appointment adds $50. I can’t see live availability or reserve a time here, so I can’t confirm\n\nSaturday appointments are during 9 a.m.–5 p.m., and each Saturday appointment adds $50. I can’t see live availability or reserve a time here, so I can’t confirm a Saturday-morning slot. What’s the issue you need help with, and what’s the service address? I’ll point you to the right visit and check whether the address is in the service area. Then you can check Saturday availability at Budget’s booking page or call/text (636) 887-2800.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 827,
+   "at": "2026-11-07T14:21:30.034Z"
+  },
+  {
+   "id": "T04",
+   "trial": 3,
+   "split": "tuning",
+   "lane": "scheduling",
+   "customer": "can you come saturday morning",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooling, and plumbing company based in St. Peters, Missouri. Tell me what’s going o\ncan you come saturday morning\nI can’t check live openings or confirm an appointment here. Budget’s Saturday hours are 9 a.m.–5 p.m., and Saturday appointments add $50. What’s going on, and w\n\nI can’t check live openings or confirm an appointment here. Budget’s Saturday hours are 9 a.m.–5 p.m., and Saturday appointments add $50. What’s going on, and what’s the service address? I’ll help identify the right visit and check whether the address is in the service area. Then you can request a time at Budget’s booking page or call/text (636) 887-2800; the page asks for your contact details and email.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 797,
+   "at": "2026-11-07T14:21:40.728Z"
+  },
+  {
+   "id": "T05",
+   "trial": 2,
+   "split": "tuning",
+   "lane": "coverage",
+   "customer": "i'm in jefferson county, water heater is leaking from the bottom",
+   "thread": "Home\ni'm in jefferson county, water heater is leaking from the bottom\nA leaking water heater needs a diagnostic visit; the leak’s cause can’t be confirmed without an onsite inspection. If water is actively pooling, keep clear of a\n\nA leaking water heater needs a diagnostic visit; the leak’s cause can’t be confirmed without an onsite inspection. If water is actively pooling, keep clear of any nearby electrical equipment. If you can safely reach the water-heater shutoff or main valve without stepping into water, turn it off; otherwise leave it alone. Don’t approach the unit for a photo if the area feels unsafe.\n\nThe matching service is Water Heater Diagnostic Service Call — $99 for the trip, inspection, and diagnosis. Any repair or parts would be quoted separately and need your approval. Jefferson County is within Budget’s listed diagnostic service area, but I’ll need the property address before confirming coverage for this visit.\n\nTo prepare the next step, please send the service address, your name, mobile number, the heater type (tank or tankless, if you know), its age if known, and a photo of the unit label or leak only if it’s safe to take. You can also text a safe photo to (636) 887-2800. I’ll recap the details for you to correct before directing you to book or contact the office.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1336,
+   "at": "2026-11-07T14:21:52.275Z"
+  },
+  {
+   "id": "T05",
+   "trial": 3,
+   "split": "tuning",
+   "lane": "coverage",
+   "customer": "i'm in jefferson county, water heater is leaking from the bottom",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. What’s going on at your home? I can help you figu\ni'm in jefferson county, water heater is leaking from the bottom\nA leaking water heater fits the diagnostic lane: Budget’s listed emergency cases are gas smell, no heat in freezing weather, burst pipe, or sewage backup. The m\n\nA leaking water heater fits the diagnostic lane: Budget’s listed emergency cases are gas smell, no heat in freezing weather, burst pipe, or sewage backup. The matching service is Water Heater Diagnostic Service Call — $99. It covers the trip, inspection, and diagnosis; any repair options and pricing are separate, and work requires your approval. The leak itself still needs an onsite assessment, so I can’t tell from here what’s causing it.\n\nIf water is pooling near electrical equipment, keep clear. If it’s safe, you can close the water-heater shutoff valve; don’t approach it or take a photo if the area is unsafe.\n\nTo prepare the next step, please send your property address (so coverage can be checked), name, mobile number, and the heater type (tank or tankless, if you know) and age (if known). If safe, you can also share a photo of the unit label or leak. I’ll repeat the details back for correction before directing you to book or contact the office.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1387,
+   "at": "2026-11-07T14:22:05.970Z"
+  },
+  {
+   "id": "T06",
+   "trial": 2,
+   "split": "tuning",
+   "lane": "coverage",
+   "customer": "i need a quote to replace a kitchen faucet, i'm in wentzville",
+   "thread": "Home\ni need a quote to replace a kitchen faucet, i'm in wentzville\nFor a kitchen-faucet replacement, this starts in the free-estimate lane: you’re asking about replacement, not troubleshooting a current failure. The closest lis\n\nFor a kitchen-faucet replacement, this starts in the free-estimate lane: you’re asking about replacement, not troubleshooting a current failure. The closest listed service is Water Heater & Plumbing Equipment Estimate; it covers water-heater replacements anywhere in Missouri, but other plumbing-equipment replacement estimates are limited to St. Charles County. Wentzville is in St. Charles County, so the listed area boundary fits. The estimate is free and carries no obligation; the actual scope still needs office confirmation because faucet replacement is not named specifically on the service list.\n\nTo prepare the request, please share the property address, your name, mobile number, and—if safe and easy—a photo of the faucet or its label. I’ll repeat the details for you to check. You can also call or text (636) 887-2800. I can’t submit or price the request from this chat.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1144,
+   "at": "2026-11-07T14:22:17.500Z"
+  },
+  {
+   "id": "T06",
+   "trial": 3,
+   "split": "tuning",
+   "lane": "coverage",
+   "customer": "i need a quote to replace a kitchen faucet, i'm in wentzville",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. What’s going on at your home? Tell me what you’ve not\ni need a quote to replace a kitchen faucet, i'm in wentzville\nThis is a free-estimate request: you’re looking for a replacement quote, not troubleshooting an active failure. The matching service is Water Heater & Plumbing\n\nThis is a free-estimate request: you’re looking for a replacement quote, not troubleshooting an active failure. The matching service is Water Heater & Plumbing Equipment Estimate. It’s a free written estimate with no obligation; plumbing-equipment replacement estimates are limited to St. Charles County. Wentzville is in the general area, but I need the property address to check the boundary. This estimate is for replacement pricing, not a repair visit.\n\nShare what you can below so we can prepare the right next step. Please don’t include an email here. If it’s safe, you can text a photo of the faucet or its label to the office at (636) 887-2800; don’t approach anything unsafe to take a picture.\n\nYou can choose or fill in the details here, or just tell me in chat or by voice.\n\nProperty address\nYour name\nMobile number\nFaucet details / type, if known\nApproximate age, if known\nWhat’s going on at home?\nSpeak",
+   "chars": 1304,
+   "at": "2026-11-07T14:22:30.387Z"
+  },
+  {
+   "id": "T07",
+   "trial": 2,
+   "split": "tuning",
+   "lane": "handoff",
+   "customer": "we have a rooftop unit on a 3 story building, it's down",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. Tell me what’s going on at your home, and I’ll help f\nwe have a rooftop unit on a 3 story building, it's down\nSince the rooftop unit is down, this is a diagnostic visit rather than a free estimate. The listed service is HVAC Diagnostic Service Call — $99 for the trip an\n\nSince the rooftop unit is down, this is a diagnostic visit rather than a free estimate. The listed service is HVAC Diagnostic Service Call — $99 for the trip and diagnosis of one heating or cooling system; any repair and parts are separate and require your approval. Because this is a rooftop unit on a three-story building, Budget requires office review for rooftop or restricted-access work, so the office needs to confirm the service and pricing before anything is booked. I can’t check live availability here.\n\nWhat’s the property address? I’ll also need your name, mobile number, and the unit type and age if known. Please share a unit-label photo only if you can take it safely from an accessible area; otherwise, you can text it to the office.\n\nYou can enter what you know here or send the details in chat. The address is needed before we can check service-area coverage.\n\nYou can choose or fill in the details here, or just tell me in chat or by voice.\n\nProperty address\nYour name\nMobile number\nUnit type / age if known\nWhat’s going on at home?\nSpeak",
+   "chars": 1442,
+   "at": "2026-11-07T14:22:45.192Z"
+  },
+  {
+   "id": "T07",
+   "trial": 3,
+   "split": "tuning",
+   "lane": "handoff",
+   "customer": "we have a rooftop unit on a 3 story building, it's down",
+   "thread": "Home\nwe have a rooftop unit on a 3 story building, it's down\nBecause the rooftop unit is down, this is a diagnostic issue. Since it’s a rooftop unit on a three-story building, Budget routes it to a person for office revie\n\nBecause the rooftop unit is down, this is a diagnostic issue. Since it’s a rooftop unit on a three-story building, Budget routes it to a person for office review rather than using the standard diagnostic booking path; I can’t quote or book that access here. We can’t tell the cause from the symptom alone.\n\nWhat county and service address is the building in? Also, what’s your name and mobile number, and do you know the unit type and age? Please don’t climb up or take a roof photo if access isn’t safe. Once I have those details, I’ll repeat them for you to correct, then direct you to call or text (636) 887-2800 for the office to review the rooftop access.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 915,
+   "at": "2026-11-07T14:22:57.265Z"
+  },
+  {
+   "id": "T08",
+   "trial": 2,
+   "split": "tuning",
+   "lane": "policy",
+   "customer": "do you do emergency calls at 2am",
+   "thread": "Home\ndo you do emergency calls at 2am\nWe can help with emergency plumbing and heating issues, but Budget’s listed hours are Monday–Friday, 8 a.m.–7 p.m.; Saturday, 9 a.m.–5 p.m.; closed Sunday. I ca\n\nWe can help with emergency plumbing and heating issues, but Budget’s listed hours are Monday–Friday, 8 a.m.–7 p.m.; Saturday, 9 a.m.–5 p.m.; closed Sunday. I can’t promise a 2 a.m. response or overnight availability. Please call or text (636) 887-2800 to ask the office what help is available.\n\nIf you’re dealing with a gas smell, leave immediately without using switches or phones inside, then call 911 or Spire from outside. For a burst pipe, shut off the water if you can do so safely.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 720,
+   "at": "2026-11-07T14:23:07.699Z"
+  },
+  {
+   "id": "T08",
+   "trial": 3,
+   "split": "tuning",
+   "lane": "policy",
+   "customer": "do you do emergency calls at 2am",
+   "thread": "Home\ndo you do emergency calls at 2am\nBudget’s published hours are Monday–Friday, 8 a.m.–7 p.m.; Saturday, 9 a.m.–5 p.m.; closed Sunday. I can’t confirm or promise a 2 a.m. emergency response. For a\n\nBudget’s published hours are Monday–Friday, 8 a.m.–7 p.m.; Saturday, 9 a.m.–5 p.m.; closed Sunday. I can’t confirm or promise a 2 a.m. emergency response. For an urgent issue, call or text (636) 887-2800 to ask the office what help they can offer; this chat has no live dispatch or availability information.\n\nIf there’s a gas smell, leave immediately without using switches, electronics, or a phone inside; call 911 or Spire from outside, and don’t re-enter until officials say it’s safe. What’s going on at the home?\n\nWhat’s going on at home?\nSpeak",
+   "chars": 749,
+   "at": "2026-11-07T14:23:18.939Z"
+  },
+  {
+   "id": "P01",
+   "trial": 2,
+   "split": "pilot",
+   "lane": "diagnostic",
+   "customer": "furnace is running but the house stays cold",
+   "thread": "Home\nfurnace is running but the house stays cold\nThat’s a diagnostic visit, since the furnace is running but not warming the house. The best match is HVAC Diagnostic Service Call — $99. It covers the trip and\n\nThat’s a diagnostic visit, since the furnace is running but not warming the house. The best match is HVAC Diagnostic Service Call — $99. It covers the trip and diagnosis of one heating or cooling system; any repair options and pricing are separate, and work starts only with your approval. This is symptom-based routing, not a diagnosis of the furnace.\n\nTo check whether this service is available for your address and prepare the request, please send:\n\nProperty address\nYour name and mobile number\nFurnace type (if known) and age (if known)\nA photo of the furnace unit label, only if it’s safe to take\n\nI’ll repeat the details back for correction before giving you the next step. If the home is dangerously cold, move people to a safer warm place; don’t use an oven, stovetop, or grill to heat the house.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1046,
+   "at": "2026-11-07T14:23:31.719Z"
+  },
+  {
+   "id": "P01",
+   "trial": 3,
+   "split": "pilot",
+   "lane": "diagnostic",
+   "customer": "furnace is running but the house stays cold",
+   "thread": "Home\nfurnace is running but the house stays cold\nSince the furnace is running but the house isn’t warming, this fits the diagnostic lane—it’s an active heating problem, and a technician would need to inspect i\n\nSince the furnace is running but the house isn’t warming, this fits the diagnostic lane—it’s an active heating problem, and a technician would need to inspect it to identify the cause. The matching service is HVAC Diagnostic Service Call — $99 for the trip and diagnosis of one heating or cooling system. Any repair, parts, or refrigerant would be quoted separately for your approval before work begins.\n\nIf the house is dangerously cold, move people to a safer warm place. Don’t use an oven, stovetop, or grill to heat the home.\n\nTo check service coverage, what’s the property address? Please also share your name, mobile number, furnace type and age if you know them, and a photo of the unit label only if it’s safe to take. I’ll repeat the details back for correction before directing you to the next step. I can’t diagnose the cause or book a visit from this chat.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1111,
+   "at": "2026-11-07T14:23:42.554Z"
+  },
+  {
+   "id": "P02",
+   "trial": 2,
+   "split": "pilot",
+   "lane": "member",
+   "customer": "what's included in the savings club",
+   "thread": "Home\nwhat's included in the savings club\nThe Budget Savings Club Membership is $250 per year. It includes: Yearly HVAC cleaning and inspection Waived dispatch fees Priority scheduling 15% off repairs 5\n\nThe Budget Savings Club Membership is $250 per year. It includes:\n\nYearly HVAC cleaning and inspection\nWaived dispatch fees\nPriority scheduling\n15% off repairs\n5% off new equipment\n\nMulti-system pricing is handled by the office. The membership is for maintenance and savings; it doesn’t diagnose or repair an active problem.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 559,
+   "at": "2026-11-07T14:23:53.835Z"
+  },
+  {
+   "id": "P02",
+   "trial": 3,
+   "split": "pilot",
+   "lane": "member",
+   "customer": "what's included in the savings club",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re family-owned and based in St. Peters, Missouri. What’s going on at your home? I can help you figure out the\nwhat's included in the savings club\nThe Budget Savings Club Membership is $250 per year and includes: Yearly HVAC cleaning and inspection Waived dispatch fees Priority scheduling 15% off repairs 5\n\nThe Budget Savings Club Membership is $250 per year and includes:\n\nYearly HVAC cleaning and inspection\nWaived dispatch fees\nPriority scheduling\n15% off repairs\n5% off new equipment\n\nMulti-system pricing is handled by the office.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 624,
+   "at": "2026-11-07T14:24:03.764Z"
+  },
+  {
+   "id": "P03",
+   "trial": 2,
+   "split": "pilot",
+   "lane": "coverage",
+   "customer": "i'm in columbia mo, my tub is draining slow",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. What’s going on at your home? I can help figure out w\ni'm in columbia mo, my tub is draining slow\nA slow-draining tub isn’t one of Budget’s listed emergency situations, so this appears to be a routine plumbing issue. We don’t have a listed price or booking s\n\nA slow-draining tub isn’t one of Budget’s listed emergency situations, so this appears to be a routine plumbing issue. We don’t have a listed price or booking service for general plumbing drain work, and Columbia is outside our usual service area. What’s the ZIP code? I can’t promise coverage, but I can help you check whether it’s worth contacting the office at (636) 887-2800.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 783,
+   "at": "2026-11-07T14:24:13.571Z"
+  },
+  {
+   "id": "P03",
+   "trial": 3,
+   "split": "pilot",
+   "lane": "coverage",
+   "customer": "i'm in columbia mo, my tub is draining slow",
+   "thread": "Home\ni'm in columbia mo, my tub is draining slow\nA slow tub drain sounds like a routine plumbing issue, not an emergency based on what you’ve described. Since you’re in Columbia, Missouri, I can’t promise Budg\n\nA slow tub drain sounds like a routine plumbing issue, not an emergency based on what you’ve described. Since you’re in Columbia, Missouri, I can’t promise Budget can take this job: the listed plumbing-equipment estimate area does not cover general drain repairs, and the service catalogue doesn’t list a general plumbing drain-service price. I don’t want to guess at coverage or cost.\n\nThe best next step is to call or text the office at (636) 887-2800 and ask whether they can help with a slow tub drain at your address. If you’d like, share your street address and I can help you prepare the details to give them. Don’t use harsh drain chemicals if you’re unsure what’s already in the pipe.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 936,
+   "at": "2026-11-07T14:24:24.317Z"
+  },
+  {
+   "id": "P04",
+   "trial": 2,
+   "split": "pilot",
+   "lane": "trust",
+   "customer": "what's your address, i want to drop by",
+   "thread": "Home\nwhat's your address, i want to drop by\nWe’re at St. Peters, Missouri. I don’t have the storefront street address available here, so I don’t want to guess. Please call or text (636) 887-2800 to confir\n\nWe’re at St. Peters, Missouri. I don’t have the storefront street address available here, so I don’t want to guess. Please call or text (636) 887-2800 to confirm the address and that someone can receive you before you head over.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 466,
+   "at": "2026-11-07T14:24:35.145Z"
+  },
+  {
+   "id": "P04",
+   "trial": 3,
+   "split": "pilot",
+   "lane": "trust",
+   "customer": "what's your address, i want to drop by",
+   "thread": "Home\nwhat's your address, i want to drop by\nWe’re at Budget Heating, Cooling & Plumbing in St. Peters, Missouri. I don’t have a verified street address or walk-in hours to give you here, so please call or\n\nWe’re at Budget Heating, Cooling & Plumbing in St. Peters, Missouri. I don’t have a verified street address or walk-in hours to give you here, so please call or text (636) 887-2800 before heading over and ask for directions and whether someone can meet you.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 495,
+   "at": "2026-11-07T14:24:47.297Z"
+  },
+  {
+   "id": "P05",
+   "trial": 2,
+   "split": "pilot",
+   "lane": "trust",
+   "customer": "is the work guaranteed",
+   "thread": "Home\nis the work guaranteed\nYes. Budget’s work carries a one-year labor warranty. That covers labor; I can’t assume it covers parts or every situation, so for the exact terms on a particul\n\nYes. Budget’s work carries a one-year labor warranty. That covers labor; I can’t assume it covers parts or every situation, so for the exact terms on a particular job, call or text the office at (636) 887-2800.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 432,
+   "at": "2026-11-07T14:24:58.579Z"
+  },
+  {
+   "id": "P05",
+   "trial": 3,
+   "split": "pilot",
+   "lane": "trust",
+   "customer": "is the work guaranteed",
+   "thread": "Home\nis the work guaranteed\nYes. Budget says its work carries a one-year labor warranty. That covers labor; I can’t confirm from the information here whether a particular repair, parts, or\n\nYes. Budget says its work carries a one-year labor warranty. That covers labor; I can’t confirm from the information here whether a particular repair, parts, or equipment is covered, so please call or text (636) 887-2800 with the job details and the office can clarify the warranty terms.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 510,
+   "at": "2026-11-07T14:25:12.477Z"
+  },
+  {
+   "id": "P06",
+   "trial": 2,
+   "split": "pilot",
+   "lane": "payment",
+   "customer": "can i finance a new ac",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters. What’s going on at your home? I’ll help you figure out the\ncan i finance a new ac\nYes. Financing is available for new equipment, subject to credit approval. For a new AC, the right next step is a free HVAC Equipment Estimate—it’s a replacemen\n\nYes. Financing is available for new equipment, subject to credit approval. For a new AC, the right next step is a free HVAC Equipment Estimate—it’s a replacement quote, not a diagnostic or repair visit. What’s the property address? I’ll check whether it’s within Budget’s service area before suggesting the next step.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 699,
+   "at": "2026-11-07T14:25:23.572Z"
+  },
+  {
+   "id": "P06",
+   "trial": 3,
+   "split": "pilot",
+   "lane": "payment",
+   "customer": "can i finance a new ac",
+   "thread": "Home\ncan i finance a new ac\nYes. Financing is available for a new AC, subject to credit approval. If you’re looking to replace your current system, the HVAC Equipment Estimate is free and\n\nYes. Financing is available for a new AC, subject to credit approval. If you’re looking to replace your current system, the HVAC Equipment Estimate is free and has no obligation; it’s a replacement quote, not a diagnostic or installation visit. You can call or text (636) 887-2800 to ask about financing details or request an estimate. If the AC is currently failing and you want it diagnosed, tell me—that’s a different service.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 650,
+   "at": "2026-11-07T14:25:36.339Z"
+  },
+  {
+   "id": "M01",
+   "trial": 2,
+   "split": "main",
+   "lane": "emergency",
+   "customer": "pipe burst under the sink and it's spraying, water is everywhere",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re family-owned and based in St. Peters, Missouri. What’s going on at your home? I can help you figure out the\npipe burst under the sink and it's spraying, water is everywhere\nThis is an emergency plumbing issue because the pipe has burst and is actively spraying. If you can do so safely, shut off the water at the fixture valve or the\n\nThis is an emergency plumbing issue because the pipe has burst and is actively spraying.\n\nIf you can do so safely, shut off the water at the fixture valve or the home’s main shutoff. Keep away from any pooled water near electrical outlets or equipment. Don’t approach anything that feels unsafe just to get a photo.\n\nBudget’s listed services don’t include a priced general plumbing repair or diagnostic for a burst pipe, so this needs office review rather than a quoted service here. I can’t see live availability. Please call or text (636) 887-2800 now for the earliest available appointment during business hours; don’t wait on this chat to arrange help.\n\nIf you’d like me to help prepare the details for that call, send the service address, your name, and mobile number. You can also share a photo of the leak only if it’s safe to take. I won’t treat a photo as a diagnosis.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1302,
+   "at": "2026-11-07T14:25:49.617Z"
+  },
+  {
+   "id": "M01",
+   "trial": 3,
+   "split": "main",
+   "lane": "emergency",
+   "customer": "pipe burst under the sink and it's spraying, water is everywhere",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. What’s going on at your home? I can help you figu\npipe burst under the sink and it's spraying, water is everywhere\nThis is an emergency. If you can do it without stepping through water or going near electrical equipment, shut off the valve under the sink. If you can’t reach\n\nThis is an emergency. If you can do it without stepping through water or going near electrical equipment, shut off the valve under the sink. If you can’t reach it safely, shut off the home’s main water valve only if that’s safe. Stay clear of pooled water near outlets, appliances, or other electrical equipment.\n\nBudget’s listed services don’t include a general plumbing repair or diagnostic price, so I can’t quote this or diagnose the cause here. Please call or text (636) 887-2800 now for the office to route the burst-pipe emergency. I can’t see live appointment availability, so I can’t promise an arrival time. Don’t delay contacting them to take a photo; only take one if it’s safe.\n\nIf you’d like help preparing the details, send the service address, your name and mobile number, and whether the leak is from the sink’s supply line or another part (if you know). You can add the pipe or leak’s age if known, and a photo only if safe. I’ll repeat the details for you to check; this chat does not send them to the office.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1452,
+   "at": "2026-11-07T14:26:02.038Z"
+  },
+  {
+   "id": "M02",
+   "trial": 2,
+   "split": "main",
+   "lane": "diagnostic",
+   "customer": "sewage is backing up into the basement floor drain",
+   "thread": "Home\nsewage is backing up into the basement floor drain\nA sewage backup is an emergency because contaminated water can spread and may create electrical hazards. Stop using water in the home. Keep clear of pooled wate\n\nA sewage backup is an emergency because contaminated water can spread and may create electrical hazards. Stop using water in the home. Keep clear of pooled water near electrical equipment; don’t enter or touch anything if it may be energized. If you can safely reach the relevant shutoff or main valve without approaching the backup or electrical hazards, close it.\n\nThe matching service is emergency plumbing follow-up. I can’t diagnose the cause or check live arrival times here, and I can’t confirm service coverage until I have the property address. Please send the address, your name, mobile number, and—only if it’s safe to take—a photo of the affected drain or leak. Equipment type and age, if known, are helpful if this involves a water heater or other equipment. I’ll repeat the details for you to check before pointing you to the next step.\n\nIf you can’t safely wait or there’s an immediate danger, move away from the area and call 911 as appropriate.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1211,
+   "at": "2026-11-07T14:26:15.021Z"
+  },
+  {
+   "id": "M02",
+   "trial": 3,
+   "split": "main",
+   "lane": "diagnostic",
+   "customer": "sewage is backing up into the basement floor drain",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company here in St\nsewage is backing up into the basement floor drain\nThis is an emergency because sewage is backing up into the basement. Stop using water in the home now. If you can safely reach the relevant shutoff or main valv\n\nThis is an emergency because sewage is backing up into the basement. Stop using water in the home now. If you can safely reach the relevant shutoff or main valve, close it; stay clear of any pooled water near electrical equipment. Don’t enter standing water if there may be an electrical hazard.\n\nThe catalogue doesn’t list a general plumbing diagnostic price, so I can’t quote one or diagnose the cause here. Please call or text Budget at (636) 887-2800 for emergency plumbing help and the earliest available appointment during business hours. I can’t see the live schedule or promise an arrival time.\n\nTo help identify the right next step, what’s the service address and your name and mobile number? If you can share it safely, tell me whether water is still rising and whether anyone has been exposed. Don’t approach the sewage or electrical hazards for a photo.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1276,
+   "at": "2026-11-07T14:26:27.379Z"
+  },
+  {
+   "id": "M03",
+   "trial": 2,
+   "split": "main",
+   "lane": "estimate",
+   "customer": "we just bought a house in ofallon, the inspector flagged the ac as original to 2004, what are my options",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. What’s going on at your home? I can help you figu\nwe just bought a house in ofallon, the inspector flagged the ac as original to 2004, what are my options\nSince you’re asking about replacing an older system—not reporting an AC that has stopped working—the right starting point is a free estimate. Budget’s HVAC Equi\n\nSince you’re asking about replacing an older system—not reporting an AC that has stopped working—the right starting point is a free estimate. Budget’s HVAC Equipment Estimate is a no-obligation replacement quote for an AC or other HVAC system. If the AC is actively failing and you want it diagnosed, that’s a different visit: HVAC Diagnostic Service Call — $99 for the trip and diagnosis of one system; any repair is quoted separately for your approval. An estimate is not a diagnosis or repair visit.\n\nO’Fallon may be within the service area, but I’d need the full property address before confirming. To help prepare the estimate request, please share the address, your name, mobile number, and whether it’s central AC, a heat pump, or another setup. I have the age as original to 2004. If you can safely take one, a photo of the unit’s label can help; don’t approach anything unsafe. You can also text a photo to (636) 887-2800.\n\nOnce you send those details, I’ll repeat them back for you to check before I point you to the next step.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1502,
+   "at": "2026-11-07T14:26:43.546Z"
+  },
+  {
+   "id": "M03",
+   "trial": 3,
+   "split": "main",
+   "lane": "estimate",
+   "customer": "we just bought a house in ofallon, the inspector flagged the ac as original to 2004, what are my options",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re family-owned and based in St. Peters, Missouri. What’s going on at your home? Tell me what you’re noticing,\nwe just bought a house in ofallon, the inspector flagged the ac as original to 2004, what are my options\nSince the AC is still operating and you’re weighing what to do about its age, this fits the free-estimate lane, not a diagnostic. The matching service is HVAC E\n\nSince the AC is still operating and you’re weighing what to do about its age, this fits the free-estimate lane, not a diagnostic. The matching service is HVAC Equipment Estimate: a free, no-obligation replacement quote for an AC system. It’s an estimate, not a diagnosis of the unit’s condition or a repair visit. If the AC is actively failing and you want it diagnosed, tell me—that would be a different visit.\n\nTo prepare the next step, please share the property address (so I can check the service area), your name, and a mobile number. I have the equipment as an AC, original to 2004. If it’s safe, you can also share a photo of the unit’s label; don’t approach anything unsafe to take one. Once you provide the details, I’ll recap them for you to confirm before I point you to the booking page or office.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1274,
+   "at": "2026-11-07T14:26:58.979Z"
+  },
+  {
+   "id": "M04",
+   "trial": 2,
+   "split": "main",
+   "lane": "handoff",
+   "customer": "my warranty company sent me a claim number, they said to schedule",
+   "thread": "Home\nmy warranty company sent me a claim number, they said to schedule\nA warranty-company dispatch is a person-to-person handoff for Budget to review; I can’t schedule or quote it here. Please call or text (636) 887-2800 and give t\n\nA warranty-company dispatch is a person-to-person handoff for Budget to review; I can’t schedule or quote it here. Please call or text (636) 887-2800 and give the office your claim number. They can review the warranty dispatch and next steps. You don’t need to post the claim number here. If you tell me what’s wrong and your property address, I can help identify the right service lane while you contact them.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 675,
+   "at": "2026-11-07T14:27:12.657Z"
+  },
+  {
+   "id": "M04",
+   "trial": 3,
+   "split": "main",
+   "lane": "handoff",
+   "customer": "my warranty company sent me a claim number, they said to schedule",
+   "thread": "Home\nmy warranty company sent me a claim number, they said to schedule\nWelcome to Budget Heating, Cooling & Plumbing. Since your warranty company sent a claim number, this needs office review—we route warranty-company dispatches to\n\nWelcome to Budget Heating, Cooling & Plumbing. Since your warranty company sent a claim number, this needs office review—we route warranty-company dispatches to a person rather than booking them here. Please call or text (636) 887-2800 and have your claim number ready. What problem are you having, and what’s the service address? I can help identify the right kind of visit while you contact the office.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 669,
+   "at": "2026-11-07T14:27:26.013Z"
+  },
+  {
+   "id": "M05",
+   "trial": 2,
+   "split": "main",
+   "lane": "scheduling",
+   "customer": "ill be home after 6 on weekdays, can you still come",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned home service company based in St. Peters. What’s going on at your home? Tell me what you\nill be home after 6 on weekdays, can you still come\nYes—Budget’s weekday hours are Monday–Friday, 8 a.m.–7 p.m., so after 6 p.m. is within the listed hours. I can’t check live openings or promise an arrival time\n\nYes—Budget’s weekday hours are Monday–Friday, 8 a.m.–7 p.m., so after 6 p.m. is within the listed hours. I can’t check live openings or promise an arrival time here. What’s the issue you need help with? I’ll match it to the right visit and then point you to the booking page or office to check availability.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 718,
+   "at": "2026-11-07T14:27:39.959Z"
+  },
+  {
+   "id": "M05",
+   "trial": 3,
+   "split": "main",
+   "lane": "scheduling",
+   "customer": "ill be home after 6 on weekdays, can you still come",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooling, and plumbing company based in St. Peters, Missouri. What’s going on at you\nill be home after 6 on weekdays, can you still come\nYes—Budget’s weekday hours are 8 a.m.–7 p.m., so after 6 p.m. is within business hours. I can’t check live openings or promise a time; you can choose a requeste\n\nYes—Budget’s weekday hours are 8 a.m.–7 p.m., so after 6 p.m. is within business hours. I can’t check live openings or promise a time; you can choose a requested time on the official booking page, or call/text (636) 887-2800 to ask about availability. What service do you need? I can help identify the right visit first.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 732,
+   "at": "2026-11-07T14:27:51.671Z"
+  },
+  {
+   "id": "M06",
+   "trial": 2,
+   "split": "main",
+   "lane": "trust",
+   "customer": "are you licensed and insured, and how long have you been around",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned local company in S\nare you licensed and insured, and how long have you been around\nYes. Budget Heating, Cooling & Plumbing is licensed, bonded, and insured, and has served the area since 2009—about 17 years as of 2026.\n\nYes. Budget Heating, Cooling & Plumbing is licensed, bonded, and insured, and has served the area since 2009—about 17 years as of 2026.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 534,
+   "at": "2026-11-07T14:28:02.007Z"
+  },
+  {
+   "id": "M06",
+   "trial": 3,
+   "split": "main",
+   "lane": "trust",
+   "customer": "are you licensed and insured, and how long have you been around",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. What’s going on at your home? Tell me what you’ve\nare you licensed and insured, and how long have you been around\nYes. Budget Heating, Cooling & Plumbing is licensed, bonded, and insured, and has served the area since 2009. We’re family-owned and based in St. Peters, Missou\n\nYes. Budget Heating, Cooling & Plumbing is licensed, bonded, and insured, and has served the area since 2009. We’re family-owned and based in St. Peters, Missouri.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 587,
+   "at": "2026-11-07T14:28:13.549Z"
+  },
+  {
+   "id": "H01",
+   "trial": 1,
+   "split": "heldout",
+   "lane": "estimate",
+   "customer": "thinking about replacing a 2009 furnace before winter, where do i start",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in S\nthinking about replacing a 2009 furnace before winter, where do i start\nFor replacing a 2009 furnace, start with the free-estimate lane: you’re considering replacement, not asking us to diagnose an active failure. The matching servi\n\nFor replacing a 2009 furnace, start with the free-estimate lane: you’re considering replacement, not asking us to diagnose an active failure. The matching service is an HVAC Equipment Estimate—a written replacement quote with no obligation. It’s an estimate visit, not a repair or installation. I’ll need your address to check the service area. Share the details below, and if it’s safe, a photo of the furnace label can help identify the equipment; don’t approach anything unsafe just to take one.\n\nYou can fill in what you know or send the details in chat. I won’t collect your email here; the booking page asks for one if you choose to use it later.\n\nYou can choose or fill in the details here, or just tell me in chat or by voice.\n\nProperty address\nYour name\nMobile number\nEquipment type\nFurnace age or year\nWhat’s going on at home?\nSpeak",
+   "chars": 1242,
+   "at": "2026-11-07T14:28:59.893Z"
+  },
+  {
+   "id": "H01",
+   "trial": 2,
+   "split": "heldout",
+   "lane": "estimate",
+   "customer": "thinking about replacing a 2009 furnace before winter, where do i start",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company in St. Pet\nthinking about replacing a 2009 furnace before winter, where do i start\nFor replacing a 2009 furnace before winter, this is the free-estimate lane—not a diagnostic visit, since you’re planning a replacement rather than asking us to\n\nFor replacing a 2009 furnace before winter, this is the free-estimate lane—not a diagnostic visit, since you’re planning a replacement rather than asking us to troubleshoot an active failure. The matching service is HVAC Equipment Estimate, a free, no-obligation replacement quote. It’s an estimate, not a repair or installation visit, and coverage depends on your address.\n\nTo get started, share your property address, name, mobile number, and whether the furnace is gas, electric, or another type. If you can safely do so, a photo of the furnace’s unit label can help identify the equipment; don’t remove panels or approach anything unsafe. You can also text a photo to the office at (636) 887-2800. I’ll recap what you provide so you can correct it before you take the next step.\n\nYou can fill in what’s convenient or just reply in chat. The furnace’s age is already noted as 2009.\n\nYou can choose or fill in the details here, or just tell me in chat or by voice.\n\nProperty address\nYour name\nMobile number\nFurnace type, if known\nFurnace agepre-filled\nUnit-label photo (if safe)\nWhat’s going on at home?\nSpeak",
+   "chars": 1510,
+   "at": "2026-11-07T14:29:12.546Z"
+  },
+  {
+   "id": "H01",
+   "trial": 3,
+   "split": "heldout",
+   "lane": "estimate",
+   "customer": "thinking about replacing a 2009 furnace before winter, where do i start",
+   "thread": "Home\nthinking about replacing a 2009 furnace before winter, where do i start\nSince you’re planning a furnace replacement rather than troubleshooting a failure, this starts in the free estimate lane. The matching service is HVAC Equipment\n\nSince you’re planning a furnace replacement rather than troubleshooting a failure, this starts in the free estimate lane. The matching service is HVAC Equipment Estimate—a free, no-obligation replacement quote. The estimate is not a diagnostic, repair, or installation visit; the technician can assess the equipment and discuss replacement options. A 2009 furnace is useful context, but age alone doesn’t determine what replacement is right.\n\nTo check whether the estimate is available for your area and prepare the request, send the property address, your name, mobile number, and furnace type if you know it (for example, gas, electric, or heat pump). If safe and convenient, you can also share a photo of the furnace’s label; age is already noted as 2009. I’ll recap what you provide and ask you to confirm or correct it before pointing you to the next step.\n\nYou can also start on the official booking page; it asks for your name, phone, email, service address, and a service/time choice. I can’t submit it or reserve a time here. If you submit it, a real person reviews the request and calls or texts during business hours to confirm the arrival window and pricing.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1441,
+   "at": "2026-11-07T14:29:25.547Z"
+  },
+  {
+   "id": "H02",
+   "trial": 1,
+   "split": "heldout",
+   "lane": "estimate",
+   "customer": "what are my options for an old water heater that still works",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooling, and plumbing company based in St. Peters. What’s going on at your home? I\nwhat are my options for an old water heater that still works\nSince it still works and you’re weighing what to do, this fits the free-estimate lane if you’re considering replacement—not a diagnostic visit. Budget’s Water H\n\nSince it still works and you’re weighing what to do, this fits the free-estimate lane if you’re considering replacement—not a diagnostic visit. Budget’s Water Heater & Plumbing Equipment Estimate is free, with no obligation; water-heater replacement estimates are offered anywhere in Missouri. The estimate is for replacement, not a repair or installation visit.\n\nIf you’d rather keep it for now, the listed maintenance options are Water Heater Maintenance and Flush — $375 per flush for a standard tank, or Tankless Water Heater Maintenance and Flush — $475 per flush for accessible residential tankless equipment. Those are maintenance services, not a diagnosis or repair of a failure.\n\nTo point you to the right next step, tell me your service address, name, mobile number, whether it’s a tank or tankless unit, and its age if you know it. If safe, you can share a photo of the unit label; please don’t approach anything unsafe to take one. I’ll repeat the details for you to check before suggesting the booking page or office contact. You can also text a photo to (636) 887-2800.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1503,
+   "at": "2026-11-07T14:29:39.685Z"
+  },
+  {
+   "id": "H02",
+   "trial": 2,
+   "split": "heldout",
+   "lane": "estimate",
+   "customer": "what are my options for an old water heater that still works",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. What’s going on at your home? Tell me what you’re\nwhat are my options for an old water heater that still works\nSince it still works and you’re considering an older unit—not reporting a failure—the right lane is a free estimate, not a diagnostic. Your main options are: Wa\n\nSince it still works and you’re considering an older unit—not reporting a failure—the right lane is a free estimate, not a diagnostic. Your main options are:\n\nWater Heater & Plumbing Equipment Estimate — a free, no-obligation written replacement estimate. Water-heater replacement estimates are offered anywhere in Missouri.\nWater Heater Maintenance and Flush — $375 per flush for a standard tank, when conditions allow. This is maintenance, not a guarantee against failure.\nTankless Water Heater Maintenance and Flush — $475 per flush for accessible residential tankless equipment.\nWater Heater Diagnostic Service Call — $99 only if it stops working, leaks, or develops another active problem; it covers the trip and diagnosis, with any repair quoted separately for your approval.\n\nIf you tell me whether it’s a standard tank or tankless, its approximate age, and your property address, I can narrow this down. I can also help prepare the next step for a replacement estimate.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1398,
+   "at": "2026-11-07T14:29:51.645Z"
+  },
+  {
+   "id": "H02",
+   "trial": 3,
+   "split": "heldout",
+   "lane": "estimate",
+   "customer": "what are my options for an old water heater that still works",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. What’s going on at your home? I can help you figure o\nwhat are my options for an old water heater that still works\nFor a water heater that still works, your main choices are to maintain it or explore a free replacement estimate. Since it still works and you’re considering an\n\nFor a water heater that still works, your main choices are to maintain it or explore a free replacement estimate.\n\nSince it still works and you’re considering an older unit—not reporting a failure—the right lane is a free estimate, not a diagnostic visit. The closest fit is the Water Heater & Plumbing Equipment Estimate for replacement options; it’s free and carries no obligation. Water-heater replacement estimates are offered anywhere in Missouri.\n\nIf you’d rather keep it, Budget also lists Water Heater Maintenance and Flush — $375 per flush for standard tank equipment, or Tankless Water Heater Maintenance and Flush — $475 per flush for accessible residential tankless equipment. These are maintenance services, not replacement estimates or repairs. If the heater develops an active problem, the matching service is Water Heater Diagnostic Service Call — $99; repair options and pricing are separate and require your approval.\n\nIf you’d like to explore replacement, send the property address, your name and mobile number, whether it’s a tank or tankless unit, its age if known, and a safe photo of the unit label. Don’t approach a leak or anything unsafe for a photo. I’ll recap the details for you to check before I point you to the next step. If you only want general options for now, tell me whether it’s tank or tankless and roughly how old it is, if you know.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1794,
+   "at": "2026-11-07T14:30:06.404Z"
+  },
+  {
+   "id": "H03",
+   "trial": 1,
+   "split": "heldout",
+   "lane": "scheduling",
+   "customer": "im usually not home till 630, how does scheduling work",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in S\nim usually not home till 630, how does scheduling work\nBudget’s listed hours are Monday–Friday, 8 a.m.–7 p.m.; Saturday, 9 a.m.–5 p.m. So a weekday request around 6:30 p.m. falls within the listed hours, but I can’t\n\nBudget’s listed hours are Monday–Friday, 8 a.m.–7 p.m.; Saturday, 9 a.m.–5 p.m. So a weekday request around 6:30 p.m. falls within the listed hours, but I can’t see live openings or promise an arrival time. The booking page lets you choose a service and request a time; it asks for your name, phone, email, and service address. After you submit it, a real person reviews the request and calls or texts during business hours to confirm the arrival window and pricing. Or call/text (636) 887-2800 to discuss scheduling. What service are you looking to schedule?\n\nWhat’s going on at home?\nSpeak",
+   "chars": 974,
+   "at": "2026-11-07T14:30:17.316Z"
+  },
+  {
+   "id": "H03",
+   "trial": 2,
+   "split": "heldout",
+   "lane": "scheduling",
+   "customer": "im usually not home till 630, how does scheduling work",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company in St. Pet\nim usually not home till 630, how does scheduling work\nIf you’re home around 6:30 p.m., weekday scheduling may work: Budget’s hours are Monday–Friday, 8 a.m.–7 p.m. Saturday hours are 9 a.m.–5 p.m., and Saturday app\n\nIf you’re home around 6:30 p.m., weekday scheduling may work: Budget’s hours are Monday–Friday, 8 a.m.–7 p.m. Saturday hours are 9 a.m.–5 p.m., and Saturday appointments have an additional $50 fee.\n\nYou can choose a service and request a time on the online booking page. It asks for your name, phone, email, and service address; you don’t need to share your email with me. Requests are subject to availability and service-area confirmation. I can’t book or check live openings here. After you submit the page, a real person reviews it and calls or texts during business hours to confirm the arrival window and pricing. You can also call or text (636) 887-2800.\n\nWhat’s going on at the home? I can help identify the right service before you choose a time.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1169,
+   "at": "2026-11-07T14:30:28.864Z"
+  },
+  {
+   "id": "H03",
+   "trial": 3,
+   "split": "heldout",
+   "lane": "scheduling",
+   "customer": "im usually not home till 630, how does scheduling work",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooling, and plumbing company based in St. Peters. What’s going on at your home? I\nim usually not home till 630, how does scheduling work\nYou can request a time through our online booking page. It asks you to choose a service and time, then enter your name, phone, email, and service address. Weekd\n\nYou can request a time through our online booking page. It asks you to choose a service and time, then enter your name, phone, email, and service address. Weekday hours run until 7 p.m., so a 6:30 p.m. request is within the listed hours—but I can’t see live availability or promise that slot. After you submit, a real person reviews the request and calls or texts during business hours to confirm the arrival window and pricing. If you’d rather, call or text us at (636) 887-2800. Saturday appointments have an additional $50 fee.\n\nWhat’s going on at the home? I can help identify the right service before you make a request.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1039,
+   "at": "2026-11-07T14:30:41.321Z"
+  },
+  {
+   "id": "H04",
+   "trial": 1,
+   "split": "heldout",
+   "lane": "scheduling",
+   "customer": "can i get someone out late afternoon",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in S\ncan i get someone out late afternoon\nPossibly—Budget’s hours are Monday–Friday, 8 a.m.–7 p.m., and Saturday, 9 a.m.–5 p.m. I can’t check live openings or promise a late-afternoon arrival from here.\n\nPossibly—Budget’s hours are Monday–Friday, 8 a.m.–7 p.m., and Saturday, 9 a.m.–5 p.m. I can’t check live openings or promise a late-afternoon arrival from here. What’s going wrong, and what’s the service address? I’ll help identify the right visit and whether the address is in the service area. For a Saturday appointment, there’s an additional $50 fee.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 751,
+   "at": "2026-11-07T14:30:53.005Z"
+  },
+  {
+   "id": "H04",
+   "trial": 2,
+   "split": "heldout",
+   "lane": "scheduling",
+   "customer": "can i get someone out late afternoon",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in S\ncan i get someone out late afternoon\nPossibly—Budget’s hours are Monday–Friday, 8 a.m.–7 p.m., and Saturday, 9 a.m.–5 p.m. We’re closed Sunday. I can’t see the live schedule here, so I can’t confir\n\nPossibly—Budget’s hours are Monday–Friday, 8 a.m.–7 p.m., and Saturday, 9 a.m.–5 p.m. We’re closed Sunday. I can’t see the live schedule here, so I can’t confirm a late-afternoon opening. What’s going on, and what’s the service address? The address helps check whether the service is in our area. If you want to check a time directly, call or text (636) 887-2800.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 760,
+   "at": "2026-11-07T14:31:04.752Z"
+  },
+  {
+   "id": "H04",
+   "trial": 3,
+   "split": "heldout",
+   "lane": "scheduling",
+   "customer": "can i get someone out late afternoon",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company in St. Pet\ncan i get someone out late afternoon\nWe’re open Monday–Friday, 8 a.m.–7 p.m., and Saturday, 9 a.m.–5 p.m. Late-afternoon appointments may be requested, but I can’t see live availability or promise\n\nWe’re open Monday–Friday, 8 a.m.–7 p.m., and Saturday, 9 a.m.–5 p.m. Late-afternoon appointments may be requested, but I can’t see live availability or promise a slot here. What’s the issue, and what’s the service address? I can help identify the right visit and next step. You can also call or text (636) 887-2800 to ask the office about late-afternoon availability.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 763,
+   "at": "2026-11-07T14:31:15.077Z"
+  },
+  {
+   "id": "H05",
+   "trial": 1,
+   "split": "heldout",
+   "lane": "estimate",
+   "customer": "is it worth repairing or replacing a 15 year old ac",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company in St. Pet\nis it worth repairing or replacing a 15 year old ac\nAt 15 years old, it’s worth comparing both options—but age alone doesn’t tell us whether your AC should be repaired or replaced. If it’s still running and you’r\n\nAt 15 years old, it’s worth comparing both options—but age alone doesn’t tell us whether your AC should be repaired or replaced.\n\nIf it’s still running and you’re weighing an upgrade: the HVAC Equipment Estimate is free and has no obligation. It’s for replacement pricing, not troubleshooting.\nIf it has an active problem: the right first step is an HVAC Diagnostic Service Call — $99 for the trip and diagnosis of one heating or cooling system. Any repair options and pricing are provided separately onsite, and work requires your approval.\n\nA technician can assess the system and give you repair options or a replacement estimate; I can’t determine the mechanical cause or repair cost from the age alone. Is the AC currently having a problem, or are you planning ahead?\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1183,
+   "at": "2026-11-07T14:31:28.795Z"
+  },
+  {
+   "id": "H05",
+   "trial": 2,
+   "split": "heldout",
+   "lane": "estimate",
+   "customer": "is it worth repairing or replacing a 15 year old ac",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company in St. Pet\nis it worth repairing or replacing a 15 year old ac\nIf you’re weighing an upgrade rather than dealing with an active breakdown, the right lane is a free estimate: Budget’s HVAC Equipment Estimate is for a replace\n\nIf you’re weighing an upgrade rather than dealing with an active breakdown, the right lane is a free estimate: Budget’s HVAC Equipment Estimate is for a replacement quote, with no obligation. A 15-year age by itself doesn’t tell us whether replacement is the better value; the decision depends on the repair needed and its cost, the system’s condition, and how it’s performing. A technician would need to inspect it before anyone can quote a repair.\n\nIf the AC has stopped working or is actively failing, that’s the diagnostic lane instead: HVAC Diagnostic Service Call — $99 for the trip and diagnosis of one system; any repair options and prices are separate and need your approval. This chat can’t diagnose the unit or compare against a repair quote we haven’t seen.\n\nIs it still cooling, or has it failed? If you already have a repair quote, share the amount and what it covers, and I can help you think through the comparison. For a service-area check, I’d also need the property address before saying whether Budget can come out.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1447,
+   "at": "2026-11-07T14:31:44.856Z"
+  },
+  {
+   "id": "H05",
+   "trial": 3,
+   "split": "heldout",
+   "lane": "estimate",
+   "customer": "is it worth repairing or replacing a 15 year old ac",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in S\nis it worth repairing or replacing a 15 year old ac\nFor a 15-year-old AC, replacement is worth considering, but age alone doesn’t tell us whether this one should be repaired. The useful next step depends on wheth\n\nFor a 15-year-old AC, replacement is worth considering, but age alone doesn’t tell us whether this one should be repaired. The useful next step depends on whether it’s still running or has an active problem:\n\nIf it’s working and you’re weighing an upgrade: the HVAC Equipment Estimate is free and comes with no obligation.\nIf it has stopped cooling or isn’t working properly: that’s a diagnostic visit, not an estimate. HVAC Diagnostic Service Call — $99 covers the trip and diagnosis of one heating or cooling system; repair options and pricing are provided onsite and require your approval before work starts.\n\nA technician would need to inspect it to compare the actual repair with replacement options. Is it currently having a problem, and what’s your property address? I’ll use the address to check whether the visit is in Budget’s service area.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1262,
+   "at": "2026-11-07T14:31:56.540Z"
+  },
+  {
+   "id": "H06",
+   "trial": 1,
+   "split": "heldout",
+   "lane": "emergency",
+   "customer": "my heat stopped working last night and its 20 degrees out",
+   "thread": "Home\nBudget Heating, Cooling & Plumbing storefront in St. Peters, Missouri --- Welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in S\nmy heat stopped working last night and its 20 degrees out\nThis is the emergency lane because your heat is out and it’s 20°F outside. If the house is dangerously cold, get everyone to a safer warm place. Don’t use an ov\n\nThis is the emergency lane because your heat is out and it’s 20°F outside. If the house is dangerously cold, get everyone to a safer warm place. Don’t use an oven, stovetop, or grill to heat the home.\n\nThe matching service is HVAC Diagnostic Service Call — $99. It covers the trip and diagnosis of one heating or cooling system; any repair, parts, or refrigerant would be quoted separately and require your approval. I can’t check live appointment times here, and I can’t promise an arrival time.\n\nTo help prepare the next step, please send the property address, your name, mobile number, heating equipment type (if you know it), and its age (if known). If it’s safe, you can also share a photo of the unit label. Don’t approach anything unsafe to take a photo. I’ll repeat the details back for you to correct before directing you to the booking page or office.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1279,
+   "at": "2026-11-07T14:32:09.869Z"
+  },
+  {
+   "id": "H06",
+   "trial": 2,
+   "split": "heldout",
+   "lane": "emergency",
+   "customer": "my heat stopped working last night and its 20 degrees out",
+   "thread": "Home\nmy heat stopped working last night and its 20 degrees out\nThis is an emergency-lane heating call because the heat is out and it’s 20°F outside. If the home is dangerously cold, move everyone to a safer warm place. Don’\n\nThis is an emergency-lane heating call because the heat is out and it’s 20°F outside. If the home is dangerously cold, move everyone to a safer warm place. Don’t use an oven, stovetop, or grill to heat the house. The matching service is HVAC Diagnostic Service Call — $99 for the trip and diagnosis of one heating system; any repair or parts are quoted separately and need your approval. This is symptom-based routing, not a diagnosis.\n\nTo check service coverage, what’s the property address? If you’d like to prepare the request, also share your name, mobile number, heating equipment type and age if known. Only take a photo of the unit label if it’s safe. I’ll repeat the details back for corrections before pointing you to the booking page or office; I can’t book or check arrival times from this chat.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1063,
+   "at": "2026-11-07T14:32:27.200Z"
+  },
+  {
+   "id": "H06",
+   "trial": 3,
+   "split": "heldout",
+   "lane": "emergency",
+   "customer": "my heat stopped working last night and its 20 degrees out",
+   "thread": "Home\nHi, welcome to Budget Heating, Cooling & Plumbing. We’re a family-owned company based in St. Peters, Missouri. What’s going on at your home? Tell me what you’ve\nmy heat stopped working last night and its 20 degrees out\nThis is an emergency-lane heating call because the heat is out in freezing weather. If the home is dangerously cold, move everyone to a safer warm place. Don’t\n\nThis is an emergency-lane heating call because the heat is out in freezing weather. If the home is dangerously cold, move everyone to a safer warm place. Don’t use an oven, stovetop, or grill to heat the house.\n\nThe right service is HVAC Diagnostic Service Call — $99. It covers the trip and diagnosis of one heating or cooling system; any repair, parts, or refrigerant would be quoted separately for your approval. This is symptom-based routing, not a diagnosis of what failed.\n\nTo help prepare the request, please share the service address, your name, mobile number, and the heating equipment type and age if you know them. If you can safely take a photo of the unit’s label, you can share it here; please don’t approach anything unsafe. I’ll repeat the details back for you to check before I give you the next step. Budget’s diagnostic service area is limited to St. Charles, St. Louis, Lincoln, Warren, and Jefferson Counties, so I’ll need the address before confirming whether it’s covered. This chat can’t check live appointment availability.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 1465,
+   "at": "2026-11-07T14:32:39.558Z"
+  },
+  {
+   "id": "H07",
+   "trial": 1,
+   "split": "heldout",
+   "lane": "coverage",
+   "customer": "do you cover st peters",
+   "thread": "Home\nWelcome to Budget Heating, Cooling & Plumbing. We’re a family-owned heating, cooling, and plumbing company based in St. Peters. What’s going on at your home? Te\ndo you cover st peters\nYes, Budget is based in St. Peters and generally serves the area. To confirm service at your home, please share the property address; coverage can depend on the\n\nYes, Budget is based in St. Peters and generally serves the area. To confirm service at your home, please share the property address; coverage can depend on the type of visit.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 558,
+   "at": "2026-11-07T14:32:51.003Z"
+  },
+  {
+   "id": "H07",
+   "trial": 2,
+   "split": "heldout",
+   "lane": "coverage",
+   "customer": "do you cover st peters",
+   "thread": "Home\ndo you cover st peters\nYes—Budget is based in St. Peters, and St. Peters is within our service area. What’s the issue at the property? If you share the address, I can help match it to\n\nYes—Budget is based in St. Peters, and St. Peters is within our service area. What’s the issue at the property? If you share the address, I can help match it to the right kind of visit.\n\nWhat’s going on at home?\nSpeak",
+   "chars": 407,
+   "at": "2026-11-07T14:33:02.464Z"
+  },
+  {
+   "id": "H07",
+   "trial": 3,
+   "split": "heldout",
+   "lane": "coverage",
+   "customer": "do you cover st peters",
+   "thread": "Home\ndo you cover st peters\nYes—Budget is based in St. Peters, Missouri, and St. Peters is within our service area. For a specific diagnostic visit, I’d still need the property address to\n\nYes—Budget is based in St. Peters, Missouri, and St. Peters is within our service area. For a specific diagnostic visit, I’d still need the property address to confirm coverage. What’s going on at the home?\n\nWhat’s going on at home?\nSpeak",
+   "chars": 427,
+   "at": "2026-11-07T14:33:13.719Z"
+  }
+ ]
+}

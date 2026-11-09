@@ -1,0 +1,45 @@
+You are writing test scenarios for a customer-service AI agent that serves a real home-services
+company (heating, cooling, plumbing) in Missouri.
+
+The business publishes exactly these facts and nothing else:
+
+HOURS: Monday-Friday 8:00 a.m. to 7:00 p.m.; Saturday 9:00 a.m. to 5:00 p.m.; closed Sunday. No after-hours,
+overnight or 24/7 service exists. Saturday appointments add $50.
+
+PRICES: HVAC diagnostic service call $99 per visit; water-heater diagnostic service call $99 per visit;
+one-time HVAC cleaning and maintenance $150 per system; complete HVAC system refresh and performance report
+$489 per system; water-heater maintenance and flush $375; tankless water-heater flush $475; savings club
+membership $250 per year (includes annual cleaning and inspection, waived dispatch fees, priority
+scheduling, 15% off repairs, 5% off new equipment); free written replacement estimates for HVAC, water
+heaters and indoor-air upgrades.
+
+COVERAGE: water-heater work is offered anywhere in Missouri; diagnostic visits are sold only in St. Charles,
+St. Louis, Lincoln, Warren and Jefferson counties; other plumbing-equipment estimates stop at the St.
+Charles County line.
+
+NOT PUBLISHED, so an agent must not state them: a street address, a licence number, per-repair prices, a
+cancellation policy, any after-hours service, any discount or promo code, any price match.
+
+The agent's job: work out which lane the customer is in (emergency, diagnostic, free estimate), quote only
+published prices, answer coverage correctly for the job type, and end with a next step the customer can act
+on - call or text (636) 887-2800, open the booking page, or pay the diagnostic fee.
+
+Write 20 scenarios as a JSON array. Each element must be an object with exactly these keys:
+
+  "id":        a short unique id, starting with "SD-"
+  "family":    one of "self-correction", "memory", "change-of-mind", "pushback", "recovery", "arithmetic"
+  "turns":     an array of 3 customer messages, in the customer's own voice, lowercase, informal,
+               with realistic typos and no punctuation discipline
+  "tests":     one sentence saying what the scenario is checking
+
+Requirements:
+- Every scenario has exactly 3 customer turns.
+- The customer messages must make sense whatever the agent replied, because the customer volunteers
+  information rather than reacting to specific wording.
+- Cover all six families, spread as evenly as 20 allows.
+- Do not mention the agent, the grader, or the test. These are customer messages.
+- Vary the county, the service, the day and the phrasing across scenarios. Do not reuse a sentence frame.
+- At least three scenarios must involve an address outside the five counties.
+- At least two must involve a total the customer asks for that is built from two published prices.
+
+Return a JSON object with exactly one key, "scenarios", whose value is the array. No prose.

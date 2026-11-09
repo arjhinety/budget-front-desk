@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.12.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="dcterms.date" content="2026-11-08" />
+  <title>Budget Front Desk</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      color: light-dark(#1a1a1a, #fdfdfd);
+      background-color: #fdfdfd;
+      background-color: light-dark(#fdfdfd, #1a1a1a);
+      color-scheme: light dark;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        color-scheme: light only;
+      }
+      html, body, pre, code {
+        background-color: transparent;
+      }
+      body, a, a:visited, blockquote {
+        color: black;
+      }
+      pre, code {
+        padding: 0;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a, a:visited {
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid;
+      border-color: #e6e6e6;
+      border-color: light-dark(#e6e6e6, #4c4c4c);
+      color: #606060;
+      color: light-dark(#606060, #b6b6b6);
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid currentColor;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+    }
+    th {
+      border-top: 1px solid currentColor;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Budget Front Desk</h1>
+<p class="subtitle">An agent built from a business’s public pages, and
+the measurements of where it fails</p>
+<p class="date">2026-11-08</p>
+</header>
+<h2 id="what-was-built">1. What was built</h2>
+<p>An AI agent for a real home-services company, built from a brief
+generated out of a ledger of 24 facts, each carrying the page and line
+it came from. The agent triages a complaint into emergency, diagnostic
+or free estimate, works the company’s published price catalogue,
+collects what a dispatcher collects, and routes to a booking, a phone
+call or a payment.</p>
+<p>The ledger bounds what goes into the brief: it fails the build if a
+price moves or if the evidence turns out to be template placeholder
+text. It does not bound what the model then says, which is why the
+output is checked separately against the same seven prices.</p>
+<h2 id="how-it-was-measured">2. How it was measured</h2>
+<p>33 hand-written scenarios and 55 generated from the business’s
+decision branches (service × county × timing × complication), three
+trials each. Every scenario carries required behaviours and forbidden
+ones; a forbidden behaviour fails it even when every required one is
+present. A deterministic grader checks the transcript, and a separate
+check fails any dollar figure that is not one of the seven published
+prices.</p>
+<p>Two tiers are reported rather than one score: an <strong>integrity
+gate</strong> (any invented price, policy or placeholder fails the
+scenario outright) and <strong>completeness</strong> (how often the
+required behaviour appears), with a Wilson interval because the counts
+are small.</p>
+<h2 id="what-the-measurements-found">3. What the measurements found</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>A0 as built</th>
+<th>A2 two rules</th>
+<th>A5 three rules</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scenarios</td>
+<td>53</td>
+<td>53</td>
+<td>55</td>
+</tr>
+<tr>
+<td>trials</td>
+<td>159</td>
+<td>159</td>
+<td>165</td>
+</tr>
+<tr>
+<td>passed</td>
+<td>113</td>
+<td>135</td>
+<td>145</td>
+</tr>
+<tr>
+<td>strict pass³</td>
+<td>26</td>
+<td>40</td>
+<td>45</td>
+</tr>
+<tr>
+<td>integrity gate failures</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Four instruction changes were tried. A1 regressed the emergency lane:
+told every reply must name a route, the agent chose “reply in chat” and
+dropped the phone number. A2 fixed that. A3 tried to make the agent
+state when the office reopens and it started querying a clock and
+contradicting a customer mid-gas-leak, so it was reverted. A5 reaches
+the same goal as A3 without a tool, and is the arm that ships.</p>
+<p>By lane, on the scenarios both arms ran. The A2 column is included
+because it shows what A5 fixed and what it did not:</p>
+<table>
+<thead>
+<tr>
+<th>lane</th>
+<th>A0</th>
+<th>A2</th>
+<th>A5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>coverage</td>
+<td>1/8</td>
+<td>6/8</td>
+<td>7/8</td>
+</tr>
+<tr>
+<td>diagnostic</td>
+<td>6/10</td>
+<td>10/10</td>
+<td>10/10</td>
+</tr>
+<tr>
+<td>free estimate</td>
+<td>6/8</td>
+<td>8/8</td>
+<td>8/8</td>
+</tr>
+<tr>
+<td>emergency</td>
+<td>4/8</td>
+<td>6/8</td>
+<td>6/8</td>
+</tr>
+<tr>
+<td>trust</td>
+<td>3/5</td>
+<td>5/5</td>
+<td>5/5</td>
+</tr>
+<tr>
+<td>scheduling</td>
+<td>3/9</td>
+<td>2/9</td>
+<td>4/9</td>
+</tr>
+<tr>
+<td>off-task</td>
+<td>2/3</td>
+<td>1/3</td>
+<td>2/3</td>
+</tr>
+<tr>
+<td>handoff</td>
+<td>1/2</td>
+<td>2/2</td>
+<td>1/2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="what-is-wrong-with-it">4. What is wrong with it</h2>
+<ul>
+<li><p><strong>One lane did not recover.</strong> Handoff sits at 1/2:
+the multi-system and warranty-claim probes are where a person has to
+take over, and the agent handles one of the two.</p></li>
+<li><p><strong>Nineteen grader corrections</strong> were needed, all
+found by reading transcripts rather than by the suite. Every one was a
+pattern failing a correct answer.</p></li>
+<li><p><strong>The comparison is significant only after those
+corrections.</strong> The 27-scenario version of it was p = 0.289; it
+reached p = 0.004 after nineteen grader fixes, most of which were
+failing correct answers. That sequence is a reason to read the number
+with care rather than to celebrate it.</p></li>
+<li><p><strong>The held-out set was written after the first arm’s
+failures were on screen.</strong> It tests phrasing generalization, not
+failure modes nobody imagined.</p></li>
+<li><p><strong>One human calibration, 30 transcripts, and not
+double-blind.</strong> Agreement was 70% with the requirement unstated
+and 97% with it stated; on the full 99-transcript set kappa fell to
+0.314 because the sample is almost all passes. All three numbers say
+more about the rubric than about the agent.</p></li>
+</ul>
+<h2 id="what-i-would-do-next">5. What I would do next</h2>
+<ol type="1">
+<li>Fix the handoff lane, then re-run the same set.</li>
+<li>Move the three failure classes into the platform rather than the
+prompt: a typed next-step field, one clock resolved per turn with the
+customer’s premise winning, and rule precedence as data. All three are
+implemented in <code>platform/</code> and replayed against the recorded
+conversations.</li>
+<li>Get a second reader who never sees the first pass, on rows whose
+requirement is stated from the start.</li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,186 @@
+{
+  "schema": 1,
+  "note": "multi-turn, 3 turns per script",
+  "scripts": [
+    {
+      "id": "MT-C01",
+      "family": "self-correction",
+      "turns": [
+        "my furnace wont light and im in franklin county, can you send someone",
+        "sorry, typo - im in st charles county, ofallon",
+        "ok so what does that cost"
+      ],
+      "note": "The corrected county must replace the first one, not sit alongside it."
+    },
+    {
+      "id": "MT-C02",
+      "family": "self-correction",
+      "turns": [
+        "my ac is dead, im in jefferson county",
+        "actually it's the furnace, not the ac",
+        "and how much for someone to look at it"
+      ],
+      "note": "The service must switch from cooling to heating without re-asking."
+    },
+    {
+      "id": "MT-C03",
+      "family": "self-correction",
+      "turns": [
+        "i want a quote to replace my water heater in franklin county",
+        "wait, it's a plumbing fixture replacement not a water heater",
+        "so what do i do next"
+      ],
+      "note": "Different job type, different coverage rule. This is the S06 trap in multi-turn form."
+    },
+    {
+      "id": "MT-M01",
+      "family": "memory",
+      "turns": [
+        "my water heater is leaking, im at 412 s main st in st charles",
+        "how much is the visit",
+        "and can you get someone out this week"
+      ],
+      "note": "The address was given in turn 1. Asking for it again in turn 3 is the failure."
+    },
+    {
+      "id": "MT-M02",
+      "family": "memory",
+      "turns": [
+        "its a 2016 tankless water heater in warren county, no hot water",
+        "what are my options",
+        "and what would the flush cost"
+      ],
+      "note": "Tankless was stated in turn 1; the flush price is the tankless one."
+    },
+    {
+      "id": "MT-M03",
+      "family": "memory",
+      "turns": [
+        "im in lincoln county and my heat is out",
+        "its 15 degrees tonight",
+        "whats the next step"
+      ],
+      "note": "County was given in turn 1 and the cold in turn 2; neither may be re-asked."
+    },
+    {
+      "id": "MT-S01",
+      "family": "change-of-mind",
+      "turns": [
+        "my ac stopped cooling, what does a diagnostic cost",
+        "actually forget the diagnostic, i want a price to replace the whole system",
+        "ok whats the difference"
+      ],
+      "note": "Turn 2 must not keep selling the diagnostic."
+    },
+    {
+      "id": "MT-S02",
+      "family": "change-of-mind",
+      "turns": [
+        "i need a saturday tune up",
+        "actually make it a weekday, im off tuesday",
+        "and what does that run"
+      ],
+      "note": "The Saturday surcharge must disappear when Saturday does."
+    },
+    {
+      "id": "MT-S03",
+      "family": "change-of-mind",
+      "turns": [
+        "my water heater is leaking, im in jefferson county",
+        "on second thought just tell me about the savings club",
+        "what does that include"
+      ],
+      "note": "The topic moved; the answer must move with it."
+    },
+    {
+      "id": "MT-P01",
+      "family": "pushback",
+      "turns": [
+        "can someone come out sunday",
+        "im only free sunday, i really need it",
+        "so you cant help me at all"
+      ],
+      "note": "Three chances to give in. The closed-Sunday rule has to survive all three."
+    },
+    {
+      "id": "MT-P02",
+      "family": "pushback",
+      "turns": [
+        "do you do emergency calls at 2am",
+        "but its an emergency, someone has to come",
+        "fine, whats the number"
+      ],
+      "note": "A 2am emergency is the strongest possible push. The answer may not change."
+    },
+    {
+      "id": "MT-P03",
+      "family": "pushback",
+      "turns": [
+        "im in franklin county, my furnace is out",
+        "your truck was on my street last week, just come out",
+        "so youre refusing to help"
+      ],
+      "note": "The neighbour argument is a real one. The coverage rule still has to hold."
+    },
+    {
+      "id": "MT-X01",
+      "family": "recovery",
+      "turns": [
+        "my heater is acting up",
+        "its the water heater, not the furnace",
+        "how much to look at it"
+      ],
+      "note": "Turn 1 should ask; turn 3 should quote the water-heater diagnostic, not the HVAC one."
+    },
+    {
+      "id": "MT-X02",
+      "family": "recovery",
+      "turns": [
+        "i need someone out",
+        "the ac, its not cooling",
+        "im in warren county"
+      ],
+      "note": "A bare request is not a diagnosis; the agent has to ask before pricing."
+    },
+    {
+      "id": "MT-X03",
+      "family": "recovery",
+      "turns": [
+        "hi",
+        "hello?",
+        "is anyone there"
+      ],
+      "note": "Three near-empty messages. No invented booking, and no identical reply three times."
+    },
+    {
+      "id": "MT-A01",
+      "family": "arithmetic",
+      "turns": [
+        "i want the one-time hvac cleaning",
+        "can you do saturday",
+        "so whats the total"
+      ],
+      "note": "150 + 50 = 200. A total built from two published prices is correct, not invented."
+    },
+    {
+      "id": "MT-A02",
+      "family": "arithmetic",
+      "turns": [
+        "whats the diagnostic cost",
+        "and if i join the savings club",
+        "so what do i pay for the visit if im a member"
+      ],
+      "note": "Members have the dispatch fee waived. The answer must reflect that, not repeat $99."
+    },
+    {
+      "id": "MT-A03",
+      "family": "arithmetic",
+      "turns": [
+        "i need the tankless flush",
+        "and the regular water heater flush too",
+        "whats that together"
+      ],
+      "note": "475 + 375 = 850. Two published prices, one correct total."
+    }
+  ]
+}

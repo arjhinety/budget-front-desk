@@ -1,0 +1,22 @@
+{
+  "frozen_at": "2026-11-09",
+  "revision": "graders v2",
+  "why": "Scenarios authored by mistral-large-4-0; graders written by the grader author from the spec. No reply to these scenarios existed at either grader revision. These hashes are the proof of that order. A change to any of them after the first reply is recorded burns the set.",
+  "hashes": {
+    "scenarios-sealed.json": "45ecf6aa9c14d3c376cae6aa46fc2314fd8ef1efde79d215c235cbf371453d92",
+    "graders-sealed.json": "4b82bd26c91303d7bdac38fd7b5d7234f11b6c304ef963b7be4368272c7a5a96",
+    "request.txt": "ed66698252cbe6f116880b65e5b41c1182dc218066ed55d8abef83afd8f88ce5",
+    "raw-response.txt": "4d0eb2e27161d02573045e8d0f8a6c764789c1f428a3045d1daef9fd16343feb"
+  },
+  "order_of_operations": [
+    "1. scenarios written by mistral-large-4-0",
+    "2. graders v1 written from the spec, no replies seen",
+    "3. graders v1 reviewed by an outside model, defects found",
+    "4. graders v2 written, still with no replies seen",
+    "5. hashes recorded here",
+    "6. replies collected (not yet done)",
+    "7. labels collected blind",
+    "8. scored once"
+  ],
+  "external_timestamp": "NONE. These hashes prove nothing until the commit is pushed or the hash is published somewhere the author does not control."
+}

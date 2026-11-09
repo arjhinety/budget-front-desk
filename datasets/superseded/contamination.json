@@ -1,0 +1,17 @@
+{
+ "model": "BAAI/bge-small-en-v1.5",
+ "threshold": 0.95,
+ "contamination_ceiling": 0.2,
+ "sealed_replies": 165,
+ "tuned_on_replies": 159,
+ "near_duplicates": 78,
+ "rate": 0.4727,
+ "similarity": {
+  "min": 0.7963920831680298,
+  "p50": 0.9459218978881836,
+  "p95": 0.9876664876937866,
+  "max": 0.9955558776855469
+ },
+ "verdict": "SEALED SET IS NOT TESTING NEW WORDING",
+ "note": "Flagged pairs are reported, not deleted. Deleting them would remove the cases most likely to expose a fitted rule."
+}

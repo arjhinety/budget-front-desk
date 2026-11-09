@@ -1,0 +1,139 @@
+{
+  "target_root": "https://justcallbudget.com",
+  "host": "justcallbudget.com",
+  "captured_at": "2026-11-07T13:54:32+00:00",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) reference-use capture for a business agent brief",
+  "robots": {
+    "url": "https://justcallbudget.com/robots.txt",
+    "status": 200,
+    "can_fetch_this_agent": true,
+    "content_signals": [
+      "search=yes,ai-train=no,use=reference"
+    ],
+    "reading": "Content-Signal 'use=reference' permits reading these pages to build a reference agent; 'ai-train=no' is honoured in that no page text is used to train a model. No named-bot prohibition applies to this UA."
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "url": "https://justcallbudget.com/",
+      "final_url": "https://justcallbudget.com/",
+      "status": 200,
+      "fetched_at": "2026-11-07T13:54:19+00:00",
+      "bytes": 142409,
+      "sha256": "73a4d9b71c87c8b998375d0d55549fa3841418d7fcb0aaf0e7b430358349e714",
+      "text_file": "raw/home.txt",
+      "text_chars": 10608
+    },
+    {
+      "slug": "book-online",
+      "url": "https://justcallbudget.com/book-online/",
+      "final_url": "https://justcallbudget.com/book-online/",
+      "status": 200,
+      "fetched_at": "2026-11-07T13:54:22+00:00",
+      "bytes": 205314,
+      "sha256": "d2d3e7150a376ab3b93a782a7e6dbdb9b1341cf763e30784e05c27a4b1ccd882",
+      "text_file": "raw/book-online.txt",
+      "text_chars": 13896
+    },
+    {
+      "slug": "plumbing",
+      "url": "https://justcallbudget.com/plumbing/",
+      "final_url": "https://justcallbudget.com/plumbing/",
+      "status": 200,
+      "fetched_at": "2026-11-07T13:54:22+00:00",
+      "bytes": 107705,
+      "sha256": "a2c03e6e2441637a58697dd73a43cd46887debbd2a6b163c430e103d4c2b93b4",
+      "text_file": "raw/plumbing.txt",
+      "text_chars": 6110
+    },
+    {
+      "slug": "heating",
+      "url": "https://justcallbudget.com/heating/",
+      "final_url": "https://justcallbudget.com/heating/",
+      "status": 200,
+      "fetched_at": "2026-11-07T13:54:23+00:00",
+      "bytes": 103403,
+      "sha256": "d882699352c3d6e91dfb25ae0a2b4c28beb051ad4d2a7f1ee4dc82abc23efccb",
+      "text_file": "raw/heating.txt",
+      "text_chars": 5838
+    },
+    {
+      "slug": "air-conditioning",
+      "url": "https://justcallbudget.com/air-conditioning/",
+      "final_url": "https://justcallbudget.com/air-conditioning/",
+      "status": 200,
+      "fetched_at": "2026-11-07T13:54:29+00:00",
+      "bytes": 104989,
+      "sha256": "229bb64efb697950ca3b51b3a24d50cf2d7aa234c8e9b36b14063cda17ccc845",
+      "text_file": "raw/air-conditioning.txt",
+      "text_chars": 5894
+    },
+    {
+      "slug": "emergency-plumbing",
+      "url": "https://justcallbudget.com/emergency-plumbing/",
+      "final_url": "https://justcallbudget.com/emergency-plumbing/",
+      "status": 200,
+      "fetched_at": "2026-11-07T13:54:30+00:00",
+      "bytes": 91866,
+      "sha256": "13050a760967daf51d682f646315bb1f84c0b90a493ab4eb3e2ee7ca419f99b1",
+      "text_file": "raw/emergency-plumbing.txt",
+      "text_chars": 9087
+    },
+    {
+      "slug": "areas-we-service",
+      "url": "https://justcallbudget.com/areas-we-service/",
+      "final_url": "https://justcallbudget.com/areas-we-service/",
+      "status": 200,
+      "fetched_at": "2026-11-07T13:54:30+00:00",
+      "bytes": 81066,
+      "sha256": "ab83901786e72def85f6e99fc6b985c670a7082b34a5a846f7c913bfdb4c6083",
+      "text_file": "raw/areas-we-service.txt",
+      "text_chars": 3760
+    },
+    {
+      "slug": "contact-us",
+      "url": "https://justcallbudget.com/contact-us/",
+      "final_url": "https://justcallbudget.com/contact-us/",
+      "status": 200,
+      "fetched_at": "2026-11-07T13:54:31+00:00",
+      "bytes": 82510,
+      "sha256": "9944237088eee3a9942bb4bfe9d9eb32eaaaba07c61c916edbd85b0f06b8376e",
+      "text_file": "raw/contact-us.txt",
+      "text_chars": 3978
+    },
+    {
+      "slug": "maintenance",
+      "url": "https://justcallbudget.com/maintenance/",
+      "final_url": "https://justcallbudget.com/maintenance/",
+      "status": 200,
+      "fetched_at": "2026-11-07T13:54:31+00:00",
+      "bytes": 79368,
+      "sha256": "0c169a1f31920043fcc50d1aee1671d14433e4df090cb0f70b7fb947bdf249bd",
+      "text_file": "raw/maintenance.txt",
+      "text_chars": 4144
+    },
+    {
+      "slug": "financing",
+      "url": "https://justcallbudget.com/financing/",
+      "final_url": "https://justcallbudget.com/financing/",
+      "status": 200,
+      "fetched_at": "2026-11-07T13:54:31+00:00",
+      "bytes": 95605,
+      "sha256": "97e08f133d84b94a61dfa0791a094f4204e29da9105f90407e44c7418b450afd",
+      "text_file": "raw/financing.txt",
+      "text_chars": 7211
+    },
+    {
+      "slug": "about-us",
+      "url": "https://justcallbudget.com/about-us/",
+      "final_url": "https://justcallbudget.com/about-us/",
+      "status": 200,
+      "fetched_at": "2026-11-07T13:54:32+00:00",
+      "bytes": 75162,
+      "sha256": "8540e6fc2664ec1c43f621fc8bb554183f5e82dab2cb990524800d740c469bb8",
+      "text_file": "raw/about-us.txt",
+      "text_chars": 4621
+    }
+  ],
+  "not_served": []
+}

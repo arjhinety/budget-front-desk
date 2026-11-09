@@ -1,0 +1,222 @@
+{
+  "schema": "agentplace-sealed-scenarios-v1",
+  "authored_by": "mistral-large-4-0 via the Mistral API",
+  "authored_at": "2026-11-09T09:33:54+00:00",
+  "not_authored_by": "the grader author, deliberately",
+  "request_sha256": "379623ef1be76a9543672a1f828e0c975940f558d7f79c71565d5bd7e02e92f0",
+  "response_sha256": "4d0eb2e27161d02573045e8d0f8a6c764789c1f428a3045d1daef9fd16343feb",
+  "usage": {
+    "prompt_tokens": 701,
+    "total_tokens": 19503,
+    "completion_tokens": 18802,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 17160
+    },
+    "service_tier": "standard"
+  },
+  "scenarios": [
+    {
+      "id": "SD-01",
+      "family": "self-correction",
+      "turns": [
+        "my ac is blowin warm air and i need a tech to look at it",
+        "can someone come sunday morning i work mon thru fri",
+        "oops i mean saturday the 14th not sunday"
+      ],
+      "tests": "Checks that the agent applies saturday hours and the $50 surcharge after the customer corrects the day from sunday to saturday."
+    },
+    {
+      "id": "SD-02",
+      "family": "self-correction",
+      "turns": [
+        "hot water heater is leaking everywhere in my basement",
+        "im over by the galleria in st louis county",
+        "scratch that im actually in union franklin county"
+      ],
+      "tests": "Verifies the agent still offers statewide water-heater diagnostics after the customer corrects to franklin county outside the five-county list."
+    },
+    {
+      "id": "SD-03",
+      "family": "self-correction",
+      "turns": [
+        "i wanna whole new furnace put in my house",
+        "home is in troy lincoln county",
+        "on second thought just do a free written estimate for replacement first"
+      ],
+      "tests": "Ensures the agent routes to the free written estimate lane when the customer self-corrects from installation to estimate."
+    },
+    {
+      "id": "SD-04",
+      "family": "self-correction",
+      "turns": [
+        "my heat pump is making a grinding noise",
+        "im based in fulton callaway county",
+        "wait no my new place is in ofallon st charles county"
+      ],
+      "tests": "Confirms the agent switches coverage from out-of-area to in-area for diagnostics after the customer corrects the county to st charles."
+    },
+    {
+      "id": "SD-05",
+      "family": "memory",
+      "turns": [
+        "time to get my water heater serviced",
+        "im located in kirkwood st louis county",
+        "oh its a tankless unit so its the higher flush price"
+      ],
+      "tests": "Checks that the agent recalls the tankless flush price of $475 rather than the standard $375 after the customer remembers the unit type."
+    },
+    {
+      "id": "SD-06",
+      "family": "memory",
+      "turns": [
+        "furnace isnt keeping up and needs a check",
+        "out in warrenton warren county",
+        "i have the savings club membership so dispatch is waived"
+      ],
+      "tests": "Verifies the agent acknowledges the savings club membership benefits when the customer remembers holding one."
+    },
+    {
+      "id": "SD-07",
+      "family": "memory",
+      "turns": [
+        "the air in my house feels stale and dusty",
+        "address is in arnold jefferson county",
+        "you guys do free written estimates for indoor air upgrades right"
+      ],
+      "tests": "Ensures the agent offers the free written estimate for indoor-air upgrades when the customer recalls that service exists."
+    },
+    {
+      "id": "SD-08",
+      "family": "change-of-mind",
+      "turns": [
+        "no heat in da house its an emergency send someone now",
+        "off highway 94 in st charles county",
+        "never mind its not urgent just book a diagnostic for tuesday"
+      ],
+      "tests": "Checks that the agent moves from emergency framing to the $99 diagnostic lane when the customer changes their mind about urgency."
+    },
+    {
+      "id": "SD-09",
+      "family": "change-of-mind",
+      "turns": [
+        "my water heater needs flushing and maintenance",
+        "wright city warren county",
+        "forget the flush just give me a free estimate for a new one"
+      ],
+      "tests": "Verifies the agent switches to the free written replacement estimate lane after the customer changes from maintenance to replacement."
+    },
+    {
+      "id": "SD-10",
+      "family": "change-of-mind",
+      "turns": [
+        "i want a one time hvac cleaning for my system",
+        "can you do it saturday morning",
+        "switch it to wednesday to skip the extra fee"
+      ],
+      "tests": "Confirms the agent removes the $50 saturday fee when the customer changes to a weekday appointment."
+    },
+    {
+      "id": "SD-11",
+      "family": "pushback",
+      "turns": [
+        "how much is the diagnostic visit",
+        "do you have any promo codes or discounts for first time customers",
+        "im on highway n in st charles county"
+      ],
+      "tests": "Ensures the agent quotes only the published $99 and does not invent discounts or promo codes."
+    },
+    {
+      "id": "SD-12",
+      "family": "pushback",
+      "turns": [
+        "you guys service all of missouri right",
+        "columbia boone county",
+        "get me an ac diagnostic visit"
+      ],
+      "tests": "Checks that the agent correctly limits diagnostic visits to the five listed counties when the customer pushes back on statewide coverage."
+    },
+    {
+      "id": "SD-13",
+      "family": "pushback",
+      "turns": [
+        "my pipe busted at 10pm on sunday",
+        "surely you have emergency after hours service",
+        "chesterfield st louis county"
+      ],
+      "tests": "Verifies the agent states that no after-hours or sunday service exists when the customer pushes for emergency coverage."
+    },
+    {
+      "id": "SD-14",
+      "family": "recovery",
+      "turns": [
+        "currently in texas but i need my water heater fixed",
+        "im relocating to missouri next week",
+        "my new place is in st charles county missouri"
+      ],
+      "tests": "Confirms the agent recovers to missouri coverage for water-heater work after the customer corrects from texas to st charles county."
+    },
+    {
+      "id": "SD-15",
+      "family": "recovery",
+      "turns": [
+        "can you come sunday for my ac problem",
+        "troy lincoln county",
+        "oh wait today is monday not sunday"
+      ],
+      "tests": "Checks that the agent books a weekday diagnostic after the customer recovers from thinking it was sunday."
+    },
+    {
+      "id": "SD-16",
+      "family": "recovery",
+      "turns": [
+        "i dont think you come to my area",
+        "arnold jefferson county",
+        "oh jefferson is one of your five counties so you do"
+      ],
+      "tests": "Verifies the agent confirms jefferson county coverage for diagnostics after the customer recovers from doubting coverage."
+    },
+    {
+      "id": "SD-17",
+      "family": "arithmetic",
+      "turns": [
+        "book a diagnostic and a one time cleaning for my ac",
+        "st charles county",
+        "so what would the total be for both services"
+      ],
+      "tests": "Checks that the agent correctly sums the $99 diagnostic and $150 cleaning to $249."
+    },
+    {
+      "id": "SD-18",
+      "family": "arithmetic",
+      "turns": [
+        "my water heater need a diagnostic and a maintenance flush",
+        "ballwin st louis county",
+        "how much would both of those cost together"
+      ],
+      "tests": "Verifies the agent totals the $99 diagnostic and $375 flush to $474."
+    },
+    {
+      "id": "SD-19",
+      "family": "arithmetic",
+      "turns": [
+        "i want the complete hvac refresh and also a cleaning",
+        "imperial jefferson county",
+        "whats the combined price for the 489 and the 150"
+      ],
+      "tests": "Ensures the agent adds the $489 refresh and $150 cleaning to $639."
+    },
+    {
+      "id": "SD-20",
+      "family": "arithmetic",
+      "turns": [
+        "i want to join the savings club and get my tankless flushed",
+        "warrenton warren county",
+        "so thats 250 plus 475 for a total of what"
+      ],
+      "tests": "Checks that the agent sums the $250 membership and $475 tankless flush to $725."
+    }
+  ]
+}

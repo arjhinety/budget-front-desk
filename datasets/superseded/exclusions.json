@@ -1,0 +1,13 @@
+{
+ "policy": {
+  "artefacts": [
+   "cannot continue right now",
+   "Something went wrong loading this page",
+   "The answer could not be displayed"
+  ],
+  "min_reply_chars": 200
+ },
+ "excluded": [],
+ "kept": 165,
+ "total": 165
+}

@@ -1,0 +1,182 @@
+{
+ "1": {
+  "arm": "BIG-A0",
+  "id": "G-X-NOHEAT-SUNDAY",
+  "trial": 3,
+  "my_verdict": "PASS"
+ },
+ "2": {
+  "arm": "BIG-A2",
+  "id": "G-E-HVAC-STCHAR",
+  "trial": 1,
+  "my_verdict": "PASS"
+ },
+ "3": {
+  "arm": "BIG-A2",
+  "id": "G-D-WATERH-BOONE",
+  "trial": 3,
+  "my_verdict": "PASS"
+ },
+ "4": {
+  "arm": "BIG-A0",
+  "id": "G-X-GAS-SUNDAY",
+  "trial": 2,
+  "my_verdict": "FAIL"
+ },
+ "5": {
+  "arm": "BIG-A0",
+  "id": "G-S-WEEKDA-EVENIN",
+  "trial": 3,
+  "my_verdict": "PASS"
+ },
+ "6": {
+  "arm": "BIG-A2",
+  "id": "G-D-HVAC-FRANKL",
+  "trial": 3,
+  "my_verdict": "PASS"
+ },
+ "7": {
+  "arm": "BIG-A0",
+  "id": "G-D-WATERH-STLOUI",
+  "trial": 2,
+  "my_verdict": "PASS"
+ },
+ "8": {
+  "arm": "BIG-A0",
+  "id": "G-X-GAS-SUNDAY",
+  "trial": 3,
+  "my_verdict": "PASS"
+ },
+ "9": {
+  "arm": "BIG-A0",
+  "id": "G-A-WARRAN",
+  "trial": 3,
+  "my_verdict": "PASS"
+ },
+ "10": {
+  "arm": "BIG-A0",
+  "id": "G-X-BURST-SATURD",
+  "trial": 2,
+  "my_verdict": "PASS"
+ },
+ "11": {
+  "arm": "BIG-A0",
+  "id": "G-S-WEEKDA-NOON",
+  "trial": 3,
+  "my_verdict": "PASS"
+ },
+ "12": {
+  "arm": "BIG-A2",
+  "id": "G-D-WATERH-LINCOL",
+  "trial": 1,
+  "my_verdict": "PASS"
+ },
+ "13": {
+  "arm": "BIG-A0",
+  "id": "G-P-LICENC",
+  "trial": 1,
+  "my_verdict": "PASS"
+ },
+ "14": {
+  "arm": "BIG-A2",
+  "id": "G-D-WATERH-STCHAR",
+  "trial": 1,
+  "my_verdict": "PASS"
+ },
+ "15": {
+  "arm": "BIG-A0",
+  "id": "G-E-HVAC-JEFFER",
+  "trial": 2,
+  "my_verdict": "PASS"
+ },
+ "16": {
+  "arm": "BIG-A0",
+  "id": "G-E-HVAC-JEFFER",
+  "trial": 3,
+  "my_verdict": "PASS"
+ },
+ "17": {
+  "arm": "BIG-A2",
+  "id": "G-A-DISCOU",
+  "trial": 3,
+  "my_verdict": "FAIL"
+ },
+ "18": {
+  "arm": "BIG-A2",
+  "id": "G-S-SATURD-AFTERN",
+  "trial": 1,
+  "my_verdict": "FAIL"
+ },
+ "19": {
+  "arm": "BIG-A2",
+  "id": "G-D-HVAC-JEFFER",
+  "trial": 3,
+  "my_verdict": "PASS"
+ },
+ "20": {
+  "arm": "BIG-A2",
+  "id": "G-P-LICENC",
+  "trial": 1,
+  "my_verdict": "FAIL"
+ },
+ "21": {
+  "arm": "BIG-A2",
+  "id": "G-D-HVAC-JEFFER",
+  "trial": 2,
+  "my_verdict": "PASS"
+ },
+ "22": {
+  "arm": "BIG-A2",
+  "id": "G-S-WEEKDA-NOON",
+  "trial": 3,
+  "my_verdict": "FAIL"
+ },
+ "23": {
+  "arm": "BIG-A0",
+  "id": "G-D-HVAC-WARREN",
+  "trial": 1,
+  "my_verdict": "FAIL"
+ },
+ "24": {
+  "arm": "BIG-A2",
+  "id": "G-S-SUNDAY-EVENIN",
+  "trial": 1,
+  "my_verdict": "FAIL"
+ },
+ "25": {
+  "arm": "BIG-A0",
+  "id": "G-D-WATERH-FRANKL",
+  "trial": 3,
+  "my_verdict": "FAIL"
+ },
+ "26": {
+  "arm": "BIG-A0",
+  "id": "G-S-SATURD-EARLY",
+  "trial": 2,
+  "my_verdict": "FAIL"
+ },
+ "27": {
+  "arm": "BIG-A0",
+  "id": "G-D-WATERH-STFRAN",
+  "trial": 1,
+  "my_verdict": "PASS"
+ },
+ "28": {
+  "arm": "BIG-A2",
+  "id": "G-X-SEWAGE-FRIDAY",
+  "trial": 3,
+  "my_verdict": "FAIL"
+ },
+ "29": {
+  "arm": "BIG-A2",
+  "id": "G-D-WATERH-JEFFER",
+  "trial": 1,
+  "my_verdict": "PASS"
+ },
+ "30": {
+  "arm": "BIG-A2",
+  "id": "G-E-WATERH-FRANKL",
+  "trial": 3,
+  "my_verdict": "PASS"
+ }
+}
