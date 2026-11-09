@@ -9,6 +9,23 @@ that person had already read. Nobody can currently say whether they generalize.
 before finishing step 4.** If you do, the set is no longer sealed and the result
 should be reported as unsealed.
 
+## Every finding gets two outside reviews before it is written up
+
+A rule this project arrived at the hard way. Each of the following was caught by an
+outside model reading the work, not by the author:
+
+- a grader that failed every correct reply because `ac` matches inside `HVAC`
+- a rule that banned the word "Franklin" and so failed the correction that named it
+- a protocol that still pointed at the old scenario set
+- a claim that the agent under-claims, when the brief never contained the fact
+- a request hash that did not match the file it claimed to hash
+
+The procedure: state the finding, its evidence and what it does not establish; ask
+two models from different families for an opinion; reconcile the two answers and
+record where they disagreed. The reconciliation is the part that matters — the two
+have never fully agreed, and the disagreement is usually where the framing was
+wrong.
+
 ## Who does what, and why it is written down
 
 | role | who | sees | does not see |
