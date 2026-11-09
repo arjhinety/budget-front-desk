@@ -705,6 +705,166 @@
     "The diagnostic visit is $99, even if you’re a Savings Club member, based on the pricing I have. The membership is $250 per year; I don’t have information showin\n\nThe diagnostic visit is $99, even if you’re a Savings Club member, based on the pricing I have. The membership is $250 per year; I don’t have information showing that it changes the diagnostic fee. So the known charges would be $99 for the diagnostic visit, plus the membership’s annual fee if you choose to join. Any repairs, parts, or refrigerant would be quoted separately and need your approval.\n\nNext step: Call or text (636) 887-2800 to confirm the charges for your specific visit.\n\nAsk me anything\nSpeak"
    ],
    "at": "2026-11-09T10:03:31.379Z"
+  },
+  {
+   "id": "MT-C01",
+   "family": "self-correction",
+   "trial": 2,
+   "turns": [
+    "my furnace wont light and im in franklin county, can you send someone",
+    "sorry, typo - im in st charles county, ofallon",
+    "ok so what does that cost"
+   ],
+   "replies": [
+    "A furnace that won’t light needs troubleshooting, so this is a diagnostic request. The HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis;\n\nA furnace that won’t light needs troubleshooting, so this is a diagnostic request. The HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis; repairs or parts are quoted separately and require your approval. Franklin County is outside the five counties listed for diagnostic visits, so I can’t confirm service coverage here. A dispatcher will need to check whether they can help. I can’t dispatch or book someone from this chat, and the earliest appointment is unknown until a dispatcher confirms it.\n\nPlease share the property address (city and ZIP), your name and mobile number, and the furnace’s age if you know it. You can attach a photo of the furnace label if available. I’ll recap the details, but that won’t place a booking.\n\nCall or text (636) 887-2800 now to ask the dispatcher to confirm Franklin County coverage and the earliest available visit. I can’t send someone directly from this chat.\n\nAsk me anything\nSpeak",
+    "Thanks for correcting that. St. Charles County is within the listed diagnostic service area, but I still need the full property address, including ZIP, before c\n\nThanks for correcting that. St. Charles County is within the listed diagnostic service area, but I still need the full property address, including ZIP, before confirming coverage. This remains a diagnostic request: the HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis; repairs or parts are separate and need your approval before work begins. I can’t dispatch or book someone from chat, and the earliest appointment must be confirmed by a dispatcher.\n\nTo prepare the request, please provide your full address, your name and mobile number, and the furnace’s age if known. A photo of the furnace label is welcome if you have one; it isn’t required.\n\nCall or text (636) 887-2800 to request service and confirm the address, fee, and earliest available visit with the dispatcher.\n\nAsk me anything\nSpeak",
+    "The HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis only; any repair, parts, or refrigerant are quoted separately, and you app\n\nThe HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis only; any repair, parts, or refrigerant are quoted separately, and you approve the quote before work begins. A dispatcher must confirm service at your exact address and the earliest appointment.\n\nCall or text (636) 887-2800 to confirm coverage at your O’Fallon address and arrange the diagnostic visit.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:19:54.021Z"
+  },
+  {
+   "id": "MT-C01",
+   "family": "self-correction",
+   "trial": 3,
+   "turns": [
+    "my furnace wont light and im in franklin county, can you send someone",
+    "sorry, typo - im in st charles county, ofallon",
+    "ok so what does that cost"
+   ],
+   "replies": [
+    "A furnace that won’t light needs a diagnostic visit. The HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis; any repairs or parts would be\n\nHi, I’m the front-desk assistant for Budget Heating, Cooling & Plumbing. I can help sort out an HVAC or plumbing problem, explain the right service or estimate, and prepare a request for the dispatcher.\n\nWhat’s going on? If you’d like service, include the property address so we can check the service area. You can call or text (636) 887-2800 for a person.\n\nThe answer could not be displayed. Please try again.\n×\nAsk me anything\nSpeak",
+    "Thanks for correcting that. St. Charles County is within the listed diagnostic service area, and O’Fallon helps identify the location; I still need the full pro\n\nHi, I’m the front-desk assistant for Budget Heating, Cooling & Plumbing. I can help sort out an HVAC or plumbing problem, explain the right service or estimate, and prepare a request for the dispatcher.\n\nWhat’s going on? If you’d like service, include the property address so we can check the service area. You can call or text (636) 887-2800 for a person.\n\nThe answer could not be displayed. Please try again.\n×\nAsk me anything\nSpeak",
+    "The HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis only; repairs, parts, or refrigerant are quoted separately, and you approv\n\nHi, I’m the front-desk assistant for Budget Heating, Cooling & Plumbing. I can help sort out an HVAC or plumbing problem, explain the right service or estimate, and prepare a request for the dispatcher.\n\nWhat’s going on? If you’d like service, include the property address so we can check the service area. You can call or text (636) 887-2800 for a person.\n\nThe answer could not be displayed. Please try again.\n×\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:20:26.629Z"
+  },
+  {
+   "id": "MT-C02",
+   "family": "self-correction",
+   "trial": 3,
+   "turns": [
+    "my ac is dead, im in jefferson county",
+    "actually it's the furnace, not the ac",
+    "and how much for someone to look at it"
+   ],
+   "replies": [
+    "Sorry your AC is out. Since you’re in Jefferson County, that’s within Budget’s diagnostic-service counties, though I’ll need the property address to confirm the\n\nSorry your AC is out. Since you’re in Jefferson County, that’s within Budget’s diagnostic-service counties, though I’ll need the property address to confirm the specific service area. I’d put this in the diagnostic lane because a nonworking AC needs troubleshooting. The HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis; any repairs, parts, or refrigerant would be quoted separately, and you’d approve any work before it starts.\n\nIf anyone is in immediate danger from the heat, move them somewhere cool and contact emergency services as needed. What’s the property address, and what’s your name and mobile number? If you know the AC’s age, include that too; you can attach a photo of its unit label if handy.\n\nNext step: Call or text (636) 887-2800 to reach the dispatcher and confirm service and the earliest available appointment. I can help you prepare the details here, but I can’t book or confirm a time in chat.\n\nAsk me anything\nSpeak",
+    "Thanks for correcting me. I’ll treat this as a furnace problem, not an AC problem. A furnace that isn’t working needs troubleshooting, so the right lane is a di\n\nThanks for correcting me. I’ll treat this as a furnace problem, not an AC problem. A furnace that isn’t working needs troubleshooting, so the right lane is a diagnostic: the HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis. Repairs, parts, and refrigerant are separate; you’d approve any repair before work begins.\n\nIs the furnace completely out, and is it cold enough that anyone at home may be at risk from the lack of heat? If it’s freezing indoors or someone is vulnerable, move them to a safe, warm place; don’t use an oven or an outdoor fuel-burning heater for heat. What’s the property address, and what’s your name and mobile number? Share the furnace’s age if known and attach a photo of its unit label if handy.\n\nNext step: Call or text (636) 887-2800 so the dispatcher can confirm the service area and earliest available appointment. I can’t confirm a booking or time in chat.\n\nAsk me anything\nSpeak",
+    "The HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis of the furnace; repairs and parts are quoted separately, and you approve a\n\nThe HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis of the furnace; repairs and parts are quoted separately, and you approve any work before it begins. A Saturday appointment adds $50.\n\nNext step: Call or text (636) 887-2800 to confirm service and the earliest available appointment with the dispatcher.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:20:54.635Z"
+  },
+  {
+   "id": "MT-X01",
+   "family": "recovery",
+   "trial": 3,
+   "turns": [
+    "my heater is acting up",
+    "its the water heater, not the furnace",
+    "how much to look at it"
+   ],
+   "replies": [
+    "I can help narrow down the right next step. What is the heater doing—no heat, blowing cool air, making an unusual noise, or something else? If you smell gas, le\n\nI can help narrow down the right next step. What is the heater doing—no heat, blowing cool air, making an unusual noise, or something else? If you smell gas, leave the area without operating switches or using your phone inside, then call emergency services or the gas utility from outside. Please include the property address so service coverage can be checked. You can also attach a photo of the unit label if it’s handy.\n\nFor a heating problem that needs troubleshooting, the usual next lane is an HVAC Diagnostic Service Call ($99 per visit). If you’re considering replacing an older system, tell me that too; a free written HVAC Equipment Estimate may fit better.\n\nAsk me anything\nSpeak",
+    "Thanks for clarifying. For a water-heater problem that needs troubleshooting, the right lane is a Water Heater Diagnostic Service Call ($99 per visit); that cov\n\nThanks for clarifying. For a water-heater problem that needs troubleshooting, the right lane is a Water Heater Diagnostic Service Call ($99 per visit); that covers the trip and diagnosis, not repairs. What is it doing—no hot water, leaking, unusual noise, or something else? Please share the property address so coverage can be checked. If you smell gas, leave without using switches or your phone inside, then call the gas utility or emergency services from outside. You can attach a photo of the unit label or leak if available. Call or text (636) 887-2800 to reach the dispatcher about service.\n\nAsk me anything\nSpeak",
+    "The Water Heater Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis; any repair, parts, or other work would be quoted separately for y\n\nThe Water Heater Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis; any repair, parts, or other work would be quoted separately for your approval before work begins. Please share the property address so the dispatcher can confirm coverage. Call or text (636) 887-2800 to arrange a dispatcher-confirmed visit.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:21:20.905Z"
+  },
+  {
+   "id": "MT-X03",
+   "family": "recovery",
+   "trial": 1,
+   "turns": [
+    "hi",
+    "hello?",
+    "is anyone there"
+   ],
+   "replies": [
+    "Hi! We can help with heating, cooling, and plumbing problems, maintenance, or free written equipment estimates. What’s going on? If you’re asking about service\n\nHi! We can help with heating, cooling, and plumbing problems, maintenance, or free written equipment estimates. What’s going on? If you’re asking about service at a property, include its address so we can check the right next step.\n\nCall or text (636) 887-2800 to reach the team.\n\nAsk me anything\nSpeak",
+    "Hello! I’m here. What can I help you with—heating, cooling, or plumbing? If you need service, you can call or text (636) 887-2800.\n\nHello! I’m here. What can I help you with—heating, cooling, or plumbing? If you need service, you can call or text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "Yes, I’m here and ready to help. What’s going on with your heating, cooling, or plumbing? You can also call or text (636) 887-2800 to reach the team.\n\nYes, I’m here and ready to help. What’s going on with your heating, cooling, or plumbing? You can also call or text (636) 887-2800 to reach the team.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:21:46.661Z"
+  },
+  {
+   "id": "MT-X03",
+   "family": "recovery",
+   "trial": 2,
+   "turns": [
+    "hi",
+    "hello?",
+    "is anyone there"
+   ],
+   "replies": [
+    "Hi, Casey. We can help with heating, cooling, and plumbing service, maintenance, or a free written equipment estimate. What’s going on? If you’re asking about s\n\nHi, Casey. We can help with heating, cooling, and plumbing service, maintenance, or a free written equipment estimate. What’s going on? If you’re asking about service at your home, include the property address so we can check coverage.\n\nCall or text (636) 887-2800 for the next step.\n\nAsk me anything\nSpeak",
+    "Hello, Casey—I’m here. What’s going on with your heating, cooling, or plumbing? If you need service, include the property address so we can check coverage. For\n\nHello, Casey—I’m here. What’s going on with your heating, cooling, or plumbing? If you need service, include the property address so we can check coverage.\n\nFor a real next step, call or text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "Yes, Casey—I’m here and can help with a heating, cooling, or plumbing question. Tell me what’s going on, or call/text (636) 887-2800 to reach the office directl\n\nYes, Casey—I’m here and can help with a heating, cooling, or plumbing question. Tell me what’s going on, or call/text (636) 887-2800 to reach the office directly.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:22:12.458Z"
+  },
+  {
+   "id": "MT-X03",
+   "family": "recovery",
+   "trial": 3,
+   "turns": [
+    "hi",
+    "hello?",
+    "is anyone there"
+   ],
+   "replies": [
+    "Hi! I can help with heating, cooling, or plumbing issues, and figure out whether a diagnostic visit or a free written estimate fits. What’s going on? If you’d l\n\nHi! I can help with heating, cooling, or plumbing issues, and figure out whether a diagnostic visit or a free written estimate fits. What’s going on? If you’d like service, include the property address so we can check the service area.\n\nCall or text (636) 887-2800 for the next step.\n\nAsk me anything\nSpeak",
+    "Hi, I’m here. Tell me what’s happening with your heating, cooling, or plumbing, and I’ll help you find the right next step. If you need service, include the pro\n\nHi, I’m here. Tell me what’s happening with your heating, cooling, or plumbing, and I’ll help you find the right next step. If you need service, include the property address so coverage can be checked.\n\nFor a real service request, call or text (636) 887-2800. I can help prepare the details here, but can’t book or notify a dispatcher through chat.\n\nAsk me anything\nSpeak",
+    "Yes, I’m here. What’s going on with your heating, cooling, or plumbing? For a real service request, call or text (636) 887-2800; I can’t contact the dispatcher\n\nYes, I’m here. What’s going on with your heating, cooling, or plumbing? For a real service request, call or text (636) 887-2800; I can’t contact the dispatcher from this chat.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:27:39.762Z"
+  },
+  {
+   "id": "MT-A03",
+   "family": "arithmetic",
+   "trial": 1,
+   "turns": [
+    "i need the tankless flush",
+    "and the regular water heater flush too",
+    "whats that together"
+   ],
+   "replies": [
+    "The Tankless Water Heater Maintenance and Flush is $475 per flush. Since you’re asking for maintenance, this is the free-estimate lane rather than a diagnostic.\n\nThe Tankless Water Heater Maintenance and Flush is $475 per flush. Since you’re asking for maintenance, this is the free-estimate lane rather than a diagnostic. Please share the property address so we can check the service area; tankless water-heater work is offered anywhere in Missouri. If you’d like to prepare the request, send your name, mobile number, address, and the heater’s age if known. You can attach a photo of its label if handy.\n\nNext step: Call or text (636) 887-2800 to ask about arranging the flush; a person will confirm timing.\n\nAsk me anything\nSpeak",
+    "The regular Water Heater Maintenance and Flush is $375 per flush; the Tankless Water Heater Maintenance and Flush is $475 per flush. Since you’re considering bo\n\nThe regular Water Heater Maintenance and Flush is $375 per flush; the Tankless Water Heater Maintenance and Flush is $475 per flush. Since you’re considering both maintenance services, this is the free-estimate lane, not a diagnostic. Water-heater work is offered anywhere in Missouri, but please share the property address so we can prepare the request and confirm the right service details. You can also send your name, mobile number, and each heater’s age if known; attach photos of the unit labels if handy.\n\nNext step: Call or text (636) 887-2800 to ask about arranging both flushes. A person must confirm timing.\n\nAsk me anything\nSpeak",
+    "Together, the two flushes total $850: $375 for the Water Heater Maintenance and Flush plus $475 for the Tankless Water Heater Maintenance and Flush. Next step:\n\nTogether, the two flushes total $850: $375 for the Water Heater Maintenance and Flush plus $475 for the Tankless Water Heater Maintenance and Flush.\n\nNext step: Call or text (636) 887-2800 to ask about arranging both; a person must confirm timing.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:28:07.238Z"
+  },
+  {
+   "id": "MT-A03",
+   "family": "arithmetic",
+   "trial": 2,
+   "turns": [
+    "i need the tankless flush",
+    "and the regular water heater flush too",
+    "whats that together"
+   ],
+   "replies": [
+    "The right service is the Tankless Water Heater Maintenance and Flush at $475 per flush. That’s a maintenance service, not a diagnostic or a repair quote. I need\n\nThe right service is the Tankless Water Heater Maintenance and Flush at $475 per flush. That’s a maintenance service, not a diagnostic or a repair quote. I need the property address to check the service area, since water-heater work is offered anywhere in Missouri. If you’d like to prepare the request, send your name, mobile number, full property address, and the heater’s age if known; you can also attach a photo of its label if available. I’ll recap the details, but a dispatcher must confirm timing. Call or text (636) 887-2800 to request the flush and confirm the appointment.\n\nAsk me anything\nSpeak",
+    "The regular tank-style service is Water Heater Maintenance and Flush — $375 per flush. That’s separate from the Tankless Water Heater Maintenance and Flush — $4\n\nThe regular tank-style service is Water Heater Maintenance and Flush — $375 per flush. That’s separate from the Tankless Water Heater Maintenance and Flush — $475 per flush. Both are maintenance services, not diagnostics or repair quotes. To check coverage and prepare the request, send your name, mobile number, full property address (city and ZIP), and each heater’s age if known; attach photos of the unit labels if available. Before routing, I’ll recap what you’ve provided and note anything still missing. A dispatcher needs to confirm timing. Call or text (636) 887-2800 to request the flush service(s) and confirm the appointment.\n\nAsk me anything\nSpeak",
+    "Together, the two flushes are $850: $475 for the tankless flush plus $375 for the regular water-heater flush. That’s the total of the listed flush prices. Call\n\nTogether, the two flushes are $850: $475 for the tankless flush plus $375 for the regular water-heater flush. That’s the total of the listed flush prices. Call or text (636) 887-2800 to request both and confirm appointment timing.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:28:35.297Z"
+  },
+  {
+   "id": "MT-A03",
+   "family": "arithmetic",
+   "trial": 3,
+   "turns": [
+    "i need the tankless flush",
+    "and the regular water heater flush too",
+    "whats that together"
+   ],
+   "replies": [
+    "The Tankless Water Heater Maintenance and Flush is $475 per flush. Because you’re requesting maintenance rather than troubleshooting a problem, this is the main\n\nThe Tankless Water Heater Maintenance and Flush is $475 per flush. Because you’re requesting maintenance rather than troubleshooting a problem, this is the maintenance lane. I can’t check live availability or book it here; a dispatcher can confirm the appointment and any applicable details.\n\nTo prepare the request, please share the property address (city and ZIP), your name, and mobile number. If you know the unit’s age, include it; you can also attach a photo of its label if available. Call or text (636) 887-2800 to request the flush and confirm service for your address.\n\nAsk me anything\nSpeak",
+    "The regular Water Heater Maintenance and Flush is $375 per flush; the Tankless Water Heater Maintenance and Flush is $475 per flush. Both are maintenance servic\n\nThe regular Water Heater Maintenance and Flush is $375 per flush; the Tankless Water Heater Maintenance and Flush is $475 per flush. Both are maintenance services, not diagnostic visits.\n\nTo request both, call or text (636) 887-2800 with the property address (city and ZIP), your name, and mobile number so the dispatcher can confirm service and appointment details. You can include each unit’s age if known and attach photos of the labels if available. I can’t check availability or book them here.\n\nAsk me anything\nSpeak",
+    "Together, the two flushes total $850: $475 for the Tankless Water Heater Maintenance and Flush plus $375 for the Water Heater Maintenance and Flush. Call or tex\n\nTogether, the two flushes total $850: $475 for the Tankless Water Heater Maintenance and Flush plus $375 for the Water Heater Maintenance and Flush. Call or text (636) 887-2800 to request both and confirm appointment details with the dispatcher.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:28:59.454Z"
   }
  ],
  "note": "Cleared 2026-11-09. The first multi-turn run was invalid twice over: the reply extraction used a character offset that returned empty when the page re-rendered, and the account quota was hit partway through, so most replies are the quota message. Both are fixed; the run is to be redone."
