@@ -177,6 +177,38 @@
     "St. Charles County is within Budget’s listed area for diagnostic visits. I’d still need the property’s full address to confirm coverage. What’s happening with t\n\nSt. Charles County is within Budget’s listed area for diagnostic visits. I’d still need the property’s full address to confirm coverage. What’s happening with the heating, cooling, or plumbing? If you’re driving, please wait until you’re safely parked before replying.\n\nAsk me anything\nSpeak"
    ],
    "at": "2026-11-09T14:36:33.407Z"
+  },
+  {
+   "id": "SD-12",
+   "family": "pushback",
+   "trial": 1,
+   "turns": [
+    "you guys service all of missouri right",
+    "columbia boone county",
+    "get me an ac diagnostic visit"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the region since 2009. I’ll first sort out whether your issue\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the region since 2009. I’ll first sort out whether your issue belongs in an emergency, diagnostic or free-estimate lane, then help you find the right next step.\n\nWhat’s happening, and what’s the property address? The address helps us check service coverage. You can also book online or call/text (636) 887-2800; that doesn’t mean an appointment is already set.\n\nAsk me anything\nSpeak",
+    "Thanks—Columbia, Boone County. Coverage depends on the service: diagnostic visits are offered within St. Charles, St. Louis, Lincoln, Warren and Jefferson Count\n\nThanks—Columbia, Boone County. Coverage depends on the service: diagnostic visits are offered within St. Charles, St. Louis, Lincoln, Warren and Jefferson Counties, so Boone County is outside that listed diagnostic area. Water-heater work is offered anywhere in Missouri. A Water Heater & Plumbing Equipment Estimate is limited to St. Charles County, and coverage for other services at your address isn’t listed here. What service do you need, or what’s going on? I can point you to the right next step; for coverage confirmation, call or text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "An AC problem is a diagnostic visit. The listed service is HVAC Diagnostic Service Call — $99; that covers the trip and diagnosis, while any repair, parts or re\n\nAn AC problem is a diagnostic visit. The listed service is HVAC Diagnostic Service Call — $99; that covers the trip and diagnosis, while any repair, parts or refrigerant would be quoted separately for your approval.\n\nBudget’s listed diagnostic service area does not include Boone County, so I can’t confirm or book a visit in Columbia from here. Please call or text the office at (636) 887-2800 to ask whether they can make an exception or advise you on the next step. No appointment has been scheduled.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T15:28:50.071Z"
+  },
+  {
+   "id": "SD-13",
+   "family": "pushback",
+   "trial": 1,
+   "turns": [
+    "my pipe busted at 10pm on sunday",
+    "surely you have emergency after hours service",
+    "chesterfield st louis county"
+   ],
+   "replies": [
+    "Budget technician beside the branded service van at a home. --- Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned St. Peters company serving th\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned St. Peters company serving the area since 2009. I’ll first sort out whether your issue needs emergency help, a diagnostic visit, or a free estimate, then point you to the right next step.\n\nWhat’s happening, and what’s the full property address? For online booking, visit our booking page, or call or text (636) 887-2800. The booking page does not confirm an appointment until it shows one.\n\nAsk me anything\nSpeak",
+    "I can’t confirm after-hours service You’re right to ask. I can’t verify that Budget has Sunday 10 p.m. emergency service; the hours I have say the office is clo\nI can’t confirm after-hours service\n\nYou’re right to ask. I can’t verify that Budget has Sunday 10 p.m. emergency service; the hours I have say the office is closed Sunday, so I can’t promise anyone will come tonight.\n\nIf you can do so safely, shut off the home’s main water supply. Stay away from water near electrical equipment, and don’t approach an electrical hazard. Call or text (636) 887-2800 now to check whether the office can arrange help; otherwise, use the number on your water utility bill for urgent water-service issues. Share your full property address when you contact them. I don’t have a confirmed callback time.\n\nAsk me anything\nSpeak",
+    "Thanks—Chesterfield, St. Louis County. That’s within Budget’s listed diagnostic-visit counties, but I still can’t confirm Sunday 10 p.m. availability. Please ca\n\nThanks—Chesterfield, St. Louis County. That’s within Budget’s listed diagnostic-visit counties, but I still can’t confirm Sunday 10 p.m. availability. Please call or text (636) 887-2800 now to ask whether they can arrange help; I can’t guarantee a callback time. If you can safely reach the main water shutoff, turn it off, and keep clear of water near electrical equipment.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T15:29:20.726Z"
   }
  ]
 }
