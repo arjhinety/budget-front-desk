@@ -88,8 +88,14 @@ for (const s of picks) {
         // The page re-renders between turns and its total length can shrink, so a
         // character-offset delta returns empty. Take everything after the last
         // occurrence of what the customer just said instead.
-        const idx = after.lastIndexOf(turn);
-        replies.push(idx >= 0 ? after.slice(idx + turn.length).trim() : "");
+        // lastIndexOf finds the message inside other words ("hi" inside "this"), so
+        // anchor to a line start. Short customer messages are the case that breaks.
+        const marker = "\n" + turn;
+        let idx = after.lastIndexOf(marker);
+        if (idx < 0) idx = after.lastIndexOf(turn);
+        const reply = idx >= 0 ? after.slice(idx + (idx === after.lastIndexOf(marker) ? marker.length : turn.length)).trim() : "";
+        if (/cannot continue right now/i.test(reply)) throw new Error("quota");
+        replies.push(reply);
       }
       store.records.push({ id: s.id, family: s.family, trial, turns: s.turns, replies,
                            at: new Date().toISOString() });

@@ -196,7 +196,7 @@ def build() -> list[dict]:
          "so whats the total"],
         {1: {"must": ["\\$150"], "must_not": []},
          2: {"must": [SAT, "(?i)\\$50|50 dollar"], "must_not": []},
-         3: {"must": ["\\$200|\\$150.{0,40}\\$50|\\$50.{0,40}\\$150"], "must_not": ["(?i)\\$[0-9]{3,}"]}},
+         3: {"must": ["\\$200|\\$150.{0,40}\\$50|\\$50.{0,40}\\$150"], "must_not": []}},
         "150 + 50 = 200. A total built from two published prices is correct, not invented."))
 
     out.append(script("MT-A02", "arithmetic",
@@ -205,7 +205,7 @@ def build() -> list[dict]:
          "so what do i pay for the visit if im a member"],
         {1: {"must": [FEE], "must_not": []},
          2: {"must": ["(?i)\\$250|savings club|membership"], "must_not": []},
-         3: {"must": ["(?i)(waiv|included|no dispatch|\\$0)"], "must_not": ["(?i)\\$[0-9]{3,}"]}},
+         3: {"must": ["(?i)(waiv|included|no dispatch|\\$0)"], "must_not": []}},
         "Members have the dispatch fee waived. The answer must reflect that, not repeat $99."))
 
     out.append(script("MT-A03", "arithmetic",
