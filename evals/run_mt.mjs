@@ -22,8 +22,9 @@ const ONLY = opt("ids", "");
 
 if (!AGENT_URL) { console.error("--url is required"); process.exit(2); }
 
-const CFG = JSON.parse(await Bun.file("evals/scenarios-mt.json").text());
-let picks = CFG.scripts;
+const SET = opt("set", "evals/scenarios-mt.json");
+const CFG = JSON.parse(await Bun.file(SET).text());
+let picks = CFG.scripts || CFG.scenarios;
 if (ONLY) picks = picks.filter((s) => ONLY.split(",").includes(s.id));
 
 const tab = browser.tab(TAB);
@@ -68,7 +69,7 @@ async function settle(budgetMs = 90000) {
   return await tab.text();
 }
 
-const outPath = `evals/results/${ARM}.json`;
+const outPath = opt("out", `evals/results/${ARM}.json`);
 let store = { arm: ARM, agent: AGENT_URL, records: [] };
 try { store = JSON.parse(await Bun.file(outPath).text()); } catch {}
 const done = new Set(store.records.map((r) => `${r.id}#${r.trial}`));

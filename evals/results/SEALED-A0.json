@@ -1,0 +1,182 @@
+{
+ "arm": "SEALED-A0",
+ "agent": "https://guikfrraxzk5.run.agentplace.io/",
+ "records": [
+  {
+   "id": "SD-01",
+   "family": "self-correction",
+   "trial": 1,
+   "turns": [
+    "my ac is blowin warm air and i need a tech to look at it",
+    "can someone come sunday morning i work mon thru fri",
+    "oops i mean saturday the 14th not sunday"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort this into an emergency, d\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort this into an emergency, diagnostic, or free-estimate next step based on what’s happening. Warm air from an AC usually needs a diagnostic visit; I’ll confirm the right lane and service with you.\n\nWhat’s happening with the system, and what’s the property address? The address is needed to check service coverage.\n\nYou can also use our online booking page or call/text (636) 887-2800. This doesn’t mean an appointment has been made.\n\nAsk me anything\nSpeak",
+    "Sunday visits aren’t available We’re closed Sundays, so I can’t offer a Sunday-morning appointment. Warm air from the AC fits the diagnostic lane: HVAC Diagnost\nSunday visits aren’t available\n\nWe’re closed Sundays, so I can’t offer a Sunday-morning appointment. Warm air from the AC fits the diagnostic lane: HVAC Diagnostic Service Call — $99 for the trip and diagnosis; any repair, parts, or refrigerant would be quoted separately for your approval before work begins.\n\nSaturday hours are 9:00 a.m.–5:00 p.m., with a $50 Saturday appointment fee. I can’t see live appointment availability here. Please share the property address so coverage can be checked, then use online booking or call/text (636) 887-2800 to ask about the earliest available time. No appointment has been made yet.\n\nAsk me anything\nSpeak",
+    "Saturday, November 14 Yes—Saturday, November 14, 2026 is within our Saturday hours of 9:00 a.m.–5:00 p.m. A Saturday appointment adds $50. I can’t see live avai\nSaturday, November 14\n\nYes—Saturday, November 14, 2026 is within our Saturday hours of 9:00 a.m.–5:00 p.m. A Saturday appointment adds $50. I can’t see live availability here, so I can’t confirm that a technician can come that day.\n\nFor the warm-air issue, the service is HVAC Diagnostic Service Call — $99 for the trip and diagnosis; any repair, parts, or refrigerant would be quoted separately for your approval. What’s the property address? Then you can check times on our online booking page or call/text (636) 887-2800. No appointment has been booked.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:31:46.126Z"
+  },
+  {
+   "id": "SD-02",
+   "family": "self-correction",
+   "trial": 1,
+   "turns": [
+    "hot water heater is leaking everywhere in my basement",
+    "im over by the galleria in st louis county",
+    "scratch that im actually in union franklin county"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether this is an em\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether this is an emergency, a diagnostic visit, or a free estimate based on what’s happening and where the property is.\n\nA water heater leaking heavily can be an emergency. If water is near outlets, wiring, or the electrical panel, stay out of the water and don’t touch electrical equipment. If you can safely reach the water-heater shutoff without stepping into water or approaching electrical hazards, turn off the water supply to the heater; otherwise leave it alone and call/text us at (636) 887-2800 for the next step.\n\nWhat’s the property address? If you can do so safely, tell me whether water is near any electrical equipment. I can then help with the right service route. You can also use our online booking page or call/text (636) 887-2800; that does not mean an appointment is already booked.\n\nAsk me anything\nSpeak",
+    "This is an emergency A water heater leaking heavily needs urgent attention. If water is near outlets, wiring, or the electrical panel, stay out of the water and\nThis is an emergency\n\nA water heater leaking heavily needs urgent attention. If water is near outlets, wiring, or the electrical panel, stay out of the water and don’t touch electrical equipment. If you can safely reach the heater’s water shutoff without stepping into water or approaching electrical hazards, turn it off; otherwise leave it alone.\n\nYour area near the Galleria is in St. Louis County, which is within our listed service area for water-heater work. Please send the full property address so the office can confirm the location and help with the earliest available appointment. Call or text (636) 887-2800 now for the urgent next step; you can also check the online booking page. I can’t see live appointment availability or promise a response time here.\n\nAsk me anything\nSpeak",
+    "Still treat this as an emergency Thanks for correcting the location. Union is in Franklin County, but I need the full property address to confirm whether we ser\nStill treat this as an emergency\n\nThanks for correcting the location. Union is in Franklin County, but I need the full property address to confirm whether we serve it. Please keep clear of any water near outlets, wiring, or the electrical panel. Only shut off the heater’s water supply if you can reach it without stepping into water or approaching an electrical hazard.\n\nPlease call or text (636) 887-2800 now for help with this urgent leak; you can also use our online booking page. I can’t confirm live availability or a response time here. What’s the full service address?\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:32:16.889Z"
+  },
+  {
+   "id": "SD-03",
+   "family": "self-correction",
+   "trial": 1,
+   "turns": [
+    "i wanna whole new furnace put in my house",
+    "home is in troy lincoln county",
+    "on second thought just do a free written estimate for replacement first"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether your request\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether your request is an emergency, a diagnostic visit, or a free estimate—and why. A new furnace installation sounds like a free-estimate request.\n\nWhat’s the full property address, and is the furnace currently working, or is there an urgent problem such as no heat in freezing weather? That helps confirm service coverage and whether this needs emergency attention first.\n\nFor a new furnace, the relevant service is an HVAC Equipment Estimate—a free written estimate with no obligation. You can also start through online booking or call/text (636) 887-2800. No appointment is made here.\n\nAsk me anything\nSpeak",
+    "Thanks—that’s a new-furnace request, so the right lane is a free written HVAC Equipment Estimate, with no obligation. Lincoln County is within Budget’s diagnost\n\nThanks—that’s a new-furnace request, so the right lane is a free written HVAC Equipment Estimate, with no obligation. Lincoln County is within Budget’s diagnostic-service counties, but I can’t confirm coverage for an HVAC equipment estimate from the information I have. Please call or text (636) 887-2800 to check whether they serve your address in Troy and arrange the estimate. You can also use Budget’s online booking page, but I can’t verify its current availability or callback process. Is the furnace working, or is there an urgent no-heat problem in freezing weather? If it is, tell me so I can address safety first.\n\nAsk me anything\nSpeak",
+    "Yes—the right service is the HVAC Equipment Estimate, a free written estimate with no obligation. Since your home is in Troy, Lincoln County, I can’t confirm es\n\nYes—the right service is the HVAC Equipment Estimate, a free written estimate with no obligation. Since your home is in Troy, Lincoln County, I can’t confirm estimate coverage from the details I have. Please call or text (636) 887-2800 to verify service at your full address and arrange the estimate, or use Budget’s online booking page. No appointment has been booked here.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:32:42.909Z"
+  },
+  {
+   "id": "SD-04",
+   "family": "self-correction",
+   "trial": 1,
+   "turns": [
+    "my heat pump is making a grinding noise",
+    "im based in fulton callaway county",
+    "wait no my new place is in ofallon st charles county"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned St. Peters company serving the area since 2009. I’ll first sort this into an emergency, a dia\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned St. Peters company serving the area since 2009. I’ll first sort this into an emergency, a diagnostic visit, or a free estimate based on what’s happening and why.\n\nA grinding noise from a heat pump is a diagnostic issue if there’s no immediate danger; it needs troubleshooting, and I can’t identify the cause from the sound alone. If you smell gas or have no heat in freezing weather, tell me—that changes the next step.\n\nWhat’s the property address? Also, what’s your name and mobile number, and is the unit still heating? If the noise is severe or the unit is shaking, switch it off if you can do so safely; don’t open it or reach inside.\n\nYou can also use our online booking page or call/text (636) 887-2800. This isn’t an appointment confirmation.\n\nAsk me anything\nSpeak",
+    "Thanks—that puts the address in Callaway County. Budget’s listed HVAC diagnostic coverage is limited to St. Charles, St. Louis, Lincoln, Warren, and Jefferson C\n\nThanks—that puts the address in Callaway County. Budget’s listed HVAC diagnostic coverage is limited to St. Charles, St. Louis, Lincoln, Warren, and Jefferson Counties, so Fulton/Callaway is outside the listed diagnostic area. I can’t confirm service there. For the grinding heat pump, the right lane remains a diagnostic, but I don’t want to promise a visit we can’t verify.\n\nPlease call or text the office at (636) 887-2800 to ask whether they can help at your exact address. You can also check the online booking page, but availability and coverage aren’t confirmed here. The listed HVAC Diagnostic Service Call is $99 only where that service is offered; repairs, parts, and refrigerant are quoted separately and need your approval before work starts.\n\nIf the unit is shaking or the grinding is severe, switch it off if you can do so safely; don’t open it or reach inside. If you have no heat in freezing weather, say so when you contact the office because that changes the urgency.\n\nAsk me anything\nSpeak",
+    "Got it—your new place is in O’Fallon, St. Charles County, which is within Budget’s listed HVAC diagnostic service area. For the heat pump’s grinding noise, the\n\nGot it—your new place is in O’Fallon, St. Charles County, which is within Budget’s listed HVAC diagnostic service area. For the heat pump’s grinding noise, the appropriate service is HVAC Diagnostic Service Call — $99. That covers the trip and diagnosis; any repair, parts, or refrigerant would be quoted separately and need your approval before work begins.\n\nI still need the full property address, your name, and a mobile number before I can recap the details for you. If the unit is shaking or the grinding is severe, switch it off if you can do so safely; don’t open it or reach inside. To pursue service, use the online booking page or call/text (636) 887-2800. I can’t see live appointment availability here, so this isn’t a confirmed booking.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:33:10.347Z"
+  },
+  {
+   "id": "SD-05",
+   "family": "memory",
+   "trial": 1,
+   "turns": [
+    "time to get my water heater serviced",
+    "im located in kirkwood st louis county",
+    "oh its a tankless unit so its the higher flush price"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the region since 2009. I’ll first sort out whether your water-\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the region since 2009. I’ll first sort out whether your water-heater issue calls for emergency help, a diagnostic visit, or maintenance, then point you to the right next step. What’s happening with the water heater, and what’s the property address?\n\nYou can also book online or call/text (636) 887-2800. This chat hasn’t made an appointment.\n\nAsk me anything\nSpeak",
+    "Thanks—that puts you in St. Louis County. If this is a water-heater fault that needs troubleshooting, Budget lists a Water Heater Diagnostic Service Call — $99\n\nThanks—that puts you in St. Louis County. If this is a water-heater fault that needs troubleshooting, Budget lists a Water Heater Diagnostic Service Call — $99 in its diagnostic service area. If you mean routine upkeep, the listed service is Water Heater Maintenance and Flush — $375 per flush. What’s happening with the heater, and what’s the service address? The address is needed before I can confirm coverage. You can also call or text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "Yes—the listed routine service for a tankless unit is Tankless Water Heater Maintenance and Flush — $475 per flush. To confirm coverage and help with the right\n\nYes—the listed routine service for a tankless unit is Tankless Water Heater Maintenance and Flush — $475 per flush. To confirm coverage and help with the right next step, what’s the full service address and your name and mobile number? If there’s a fault rather than routine maintenance, tell me what’s happening so I can route it correctly.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:33:36.302Z"
+  },
+  {
+   "id": "SD-06",
+   "family": "memory",
+   "trial": 1,
+   "turns": [
+    "furnace isnt keeping up and needs a check",
+    "out in warrenton warren county",
+    "i have the savings club membership so dispatch is waived"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort this into an emergency, d\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort this into an emergency, diagnostic, or free-estimate next step based on what’s happening and where the home is.\n\nA furnace that isn’t keeping up sounds like a heating diagnostic if there’s no immediate danger. Is the home dangerously cold, or is there any gas smell? What’s the property address so I can check whether the service area applies?\n\nYou can also call or text (636) 887-2800, or visit the online booking page. No appointment is confirmed here.\n\nBudget’s local service team\nAsk me anything\nSpeak",
+    "A furnace that isn’t keeping up fits the HVAC Diagnostic Service Call — $99 if there’s no immediate danger. The fee is one charge per visit for the trip and dia\n\nA furnace that isn’t keeping up fits the HVAC Diagnostic Service Call — $99 if there’s no immediate danger. The fee is one charge per visit for the trip and diagnosis; any repair, parts, or refrigerant would be quoted separately for your approval before work begins.\n\nWarren County is among the counties where diagnostic visits are offered, but I’ll need the full street address to confirm service coverage. Please also share your name and mobile number; the furnace’s age is helpful if you know it.\n\nIf you smell gas, leave the building, avoid switches and flames, and call 911 or the gas utility from a safe location. If the home has no heat in freezing weather, tell me that too, since it changes the next step.\n\nOnce we have the details, you can use the online booking page or call/text (636) 887-2800. I can’t confirm an appointment from chat.\n\nAsk me anything\nSpeak",
+    "Thanks for letting me know. I can’t verify from the information I have whether Budget Savings Club Membership waives the $99 HVAC Diagnostic Service Call charge\n\nThanks for letting me know. I can’t verify from the information I have whether Budget Savings Club Membership waives the $99 HVAC Diagnostic Service Call charge, so I don’t want to promise the fee is waived. Please call or text (636) 887-2800 and ask the office to confirm your membership benefit before booking. The diagnostic fee covers the trip and diagnosis; any repair or parts would be quoted separately for your approval.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:34:05.289Z"
+  },
+  {
+   "id": "SD-07",
+   "family": "memory",
+   "trial": 1,
+   "turns": [
+    "the air in my house feels stale and dusty",
+    "address is in arnold jefferson county",
+    "you guys do free written estimates for indoor air upgrades right"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company based in St. Peters, serving the area since 2009. I’ll first sort out whether this is\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company based in St. Peters, serving the area since 2009. I’ll first sort out whether this is an emergency, a diagnostic visit, or a free estimate, based on what’s happening and your address.\n\nStale, dusty air may fit an Indoor Air / HVAC Upgrade Estimate if you’re considering an indoor-air improvement; that written estimate is free and carries no obligation. If you’re describing a problem with existing HVAC equipment, tell me what you’ve noticed and I’ll help choose the right next step.\n\nWhat’s the property address, and are you looking to improve indoor air quality or troubleshoot an existing system? The address helps us check service coverage. You can also use our online booking page or call/text (636) 887-2800; no appointment has been made here.\n\nAsk me anything\nSpeak",
+    "Thanks—that helps narrow it down Arnold is in Jefferson County, which is within Budget’s listed diagnostic-service counties. I still need the street address to\nThanks—that helps narrow it down\n\nArnold is in Jefferson County, which is within Budget’s listed diagnostic-service counties. I still need the street address to confirm coverage for your property.\n\nFor stale, dusty air, if you want an indoor-air improvement, the Indoor Air / HVAC Upgrade Estimate is free and carries no obligation. If you want troubleshooting for an existing HVAC problem, the HVAC Diagnostic Service Call — $99 is the diagnostic option; repairs, parts, and refrigerant would be quoted separately for your approval before work begins.\n\nAre you looking to improve indoor air quality or troubleshoot an existing HVAC system? Please share the street address too. You can call or text (636) 887-2800 if you’d rather speak with the office.\n\nAsk me anything\nSpeak",
+    "Yes The Indoor Air / HVAC Upgrade Estimate is a free written estimate with no obligation. It’s the right lane if you’re considering an indoor-air improvement. I\nYes\n\nThe Indoor Air / HVAC Upgrade Estimate is a free written estimate with no obligation. It’s the right lane if you’re considering an indoor-air improvement. If you’d like to pursue one, share the street address in Arnold so the office can confirm coverage, or call/text (636) 887-2800. No appointment is booked yet.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:34:32.740Z"
+  },
+  {
+   "id": "SD-08",
+   "family": "change-of-mind",
+   "trial": 1,
+   "turns": [
+    "no heat in da house its an emergency send someone now",
+    "off highway 94 in st charles county",
+    "never mind its not urgent just book a diagnostic for tuesday"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned St. Peters company serving the area since 2009. I’ll first sort out whether this is an emerge\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned St. Peters company serving the area since 2009. I’ll first sort out whether this is an emergency, diagnostic visit, or free estimate based on what’s happening and the property address.\n\nYou’ve mentioned no heat, which can be an emergency in freezing weather. Is it freezing inside or outside, and what’s the full service address? If anyone is in immediate danger, call 911. I can’t confirm a dispatch or send someone from this chat; for the earliest confirmed appointment, call or text (636) 887-2800 or use our online booking page.\n\nAsk me anything\nSpeak",
+    "Highway 94 in St. Charles County narrows the location, but I still need the full street address to check service coverage. No heat is an emergency when the home\n\nHighway 94 in St. Charles County narrows the location, but I still need the full street address to check service coverage. No heat is an emergency when the home is in freezing conditions. Is it freezing in the house now?\n\nI can’t dispatch someone or confirm an arrival time from this chat. If the home is freezing, call or text (636) 887-2800 now to ask for the earliest confirmed appointment; you can also use the online booking page. Please send the full service address here too.\n\nAsk me anything\nSpeak",
+    "For a no-heat problem that isn’t urgent, the right service is HVAC Diagnostic Service Call — $99. That covers one visit’s trip and diagnosis; any repair, parts,\n\nFor a no-heat problem that isn’t urgent, the right service is HVAC Diagnostic Service Call — $99. That covers one visit’s trip and diagnosis; any repair, parts, or refrigerant would be quoted separately and need your approval before work starts.\n\nYou’re asking for Tuesday, November 10, 2026. I can’t reserve or confirm a time from this chat. To request an available Tuesday appointment, call or text (636) 887-2800 or use the online booking page. St. Charles County is within the diagnostic service area, but I’ll need your full address to confirm coverage. Share the details below if you’d like help getting the request ready.\n\nSend the details you know; you can also provide them directly to the office when requesting the appointment.\n\nYou can choose or fill in the details here, or just tell me in chat or by voice.\n\nFull service address\nYour name\nMobile number\nHeating equipment type\nEquipment age, if known\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:35:04.742Z"
+  },
+  {
+   "id": "SD-09",
+   "family": "change-of-mind",
+   "trial": 1,
+   "turns": [
+    "my water heater needs flushing and maintenance",
+    "wright city warren county",
+    "forget the flush just give me a free estimate for a new one"
+   ],
+   "replies": [
+    "Water heater maintenance If this is routine upkeep and the heater is working normally, this sounds like a maintenance visit, not a diagnostic call. The right se\nWater heater maintenance\n\nIf this is routine upkeep and the heater is working normally, this sounds like a maintenance visit, not a diagnostic call. The right service depends on the type of heater:\n\nWater Heater Maintenance and Flush — $375 per flush\nTankless Water Heater Maintenance and Flush — $475 per flush\n\nWater-heater work is offered anywhere in Missouri. To help you take the next step, tell me whether it’s tank or tankless, the property address, your name, and a mobile number. The equipment age is helpful if you know it; a label photo can help identify the unit, but it isn’t required for a diagnosis. If it’s leaking, not heating, or there’s another problem beyond routine maintenance, let me know so I can guide you to the right service instead.\n\nAsk me anything\nSpeak",
+    "Thanks—Wright City, Warren County is within Missouri, and water-heater work is offered anywhere in Missouri. I still need the street address to complete the ser\n\nThanks—Wright City, Warren County is within Missouri, and water-heater work is offered anywhere in Missouri. I still need the street address to complete the service details. Is your unit a standard tank or tankless heater? Please also share your name and mobile number; its age is helpful if you know it.\n\nThe maintenance options are Water Heater Maintenance and Flush — $375 per flush or Tankless Water Heater Maintenance and Flush — $475 per flush. Once we identify the unit and have the details, you can take the next step through online booking or by calling/texting (636) 887-2800. Availability isn’t confirmed here.\n\nAsk me anything\nSpeak",
+    "Understood—we’ll drop the flush request. For a new water heater, the service is a Water Heater & Plumbing Equipment Estimate, a free written estimate with no ob\n\nUnderstood—we’ll drop the flush request. For a new water heater, the service is a Water Heater & Plumbing Equipment Estimate, a free written estimate with no obligation. That estimate service stops at the St. Charles County line, so I can’t confirm coverage for Wright City in Warren County from the information available here.\n\nPlease call or text the office at (636) 887-2800 to check whether they can provide the estimate at your address. You can also use the online booking page, but I can’t confirm coverage or availability through chat.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:35:36.736Z"
+  },
+  {
+   "id": "SD-10",
+   "family": "change-of-mind",
+   "trial": 1,
+   "turns": [
+    "i want a one time hvac cleaning for my system",
+    "can you do it saturday morning",
+    "switch it to wednesday to skip the extra fee"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether your concern\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether your concern calls for emergency help, a diagnostic visit, or a free estimate, based on what’s happening. What’s going on, and what’s the property address?\n\nIf you already know the service you need, you can also start through our online booking page or call/text (636) 887-2800. That doesn’t mean an appointment is confirmed.\n\nAsk me anything\nSpeak",
+    "A one-time cleaning is One-Time HVAC Cleaning and Maintenance — $150 per system. Saturday appointments add $50, so the listed total for one system would be $200\n\nA one-time cleaning is One-Time HVAC Cleaning and Maintenance — $150 per system. Saturday appointments add $50, so the listed total for one system would be $200. Saturday hours are 9:00 a.m.–5:00 p.m.; I can’t see live availability here, so I can’t confirm a Saturday-morning slot.\n\nTo check and request a time, use the online booking page or call/text (636) 887-2800. Before we can confirm service coverage, we’ll need the full property address. What’s the address, and what name and mobile number should be used for the request?\n\nAsk me anything\nSpeak",
+    "Wednesday avoids the Saturday surcharge. The listed service is One-Time HVAC Cleaning and Maintenance — $150 per system; weekday hours are Monday–Friday, 8:00 a\n\nWednesday avoids the Saturday surcharge. The listed service is One-Time HVAC Cleaning and Maintenance — $150 per system; weekday hours are Monday–Friday, 8:00 a.m.–7:00 p.m. I can’t see live availability here, so I can’t confirm a Wednesday time.\n\nTo check coverage and request a Wednesday appointment, please send the full property address, your name, and a mobile number. Or contact the office directly by booking online or calling/texting (636) 887-2800. No appointment is confirmed yet.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:36:04.442Z"
+  },
+  {
+   "id": "SD-11",
+   "family": "pushback",
+   "trial": 1,
+   "turns": [
+    "how much is the diagnostic visit",
+    "do you have any promo codes or discounts for first time customers",
+    "im on highway n in st charles county"
+   ],
+   "replies": [
+    "The diagnostic visit is $99 for an HVAC Diagnostic Service Call or a Water Heater Diagnostic Service Call. That’s one charge per visit and covers the trip and d\n\nThe diagnostic visit is $99 for an HVAC Diagnostic Service Call or a Water Heater Diagnostic Service Call. That’s one charge per visit and covers the trip and diagnosis; any repair, parts, or refrigerant would be quoted separately and need your approval before work begins.\n\nFor another plumbing issue, we don’t have a separate plumbing diagnostic price listed. Call or text (636) 887-2800 and the office can clarify. If you tell me what’s going on and the property address, I can help point you to the right next step.\n\nAsk me anything\nSpeak",
+    "I don’t have a confirmed first-time-customer promo or discount to share. Please call or text the office at (636) 887-2800 to ask what offers, if any, are curren\n\nI don’t have a confirmed first-time-customer promo or discount to share. Please call or text the office at (636) 887-2800 to ask what offers, if any, are currently available. I don’t want to promise a discount that hasn’t been confirmed.\n\nAsk me anything\nSpeak",
+    "St. Charles County is within Budget’s listed area for diagnostic visits. I’d still need the property’s full address to confirm coverage. What’s happening with t\n\nSt. Charles County is within Budget’s listed area for diagnostic visits. I’d still need the property’s full address to confirm coverage. What’s happening with the heating, cooling, or plumbing? If you’re driving, please wait until you’re safely parked before replying.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-09T14:36:33.407Z"
+  }
+ ]
+}

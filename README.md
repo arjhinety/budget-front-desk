@@ -39,6 +39,7 @@ honoured immediately. See `NOTICE.md`.
 | `STATUS.md` | open work and the commands to finish it |
 | `NOTICE.md` | the business relationship, the scripted conversations, and takedown |
 | `REFERENCES.md` | every paper cited, with what was taken from it |
+| `FINDINGS-FOR-AGENTPLACE.md` | the two findings worth sending, and the one thing I got wrong |
 | `FINDING-club-knowledge.md` | two builds from one brief know different amounts, with the evidence |
 | `datasets/manifest.json` | every set, its hash, its generator, and the contamination policy |
 | `datasets/CLEANING-PROTOCOL.md` | how the sealed validation set is built and scored, once |
