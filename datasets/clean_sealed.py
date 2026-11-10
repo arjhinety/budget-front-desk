@@ -30,7 +30,7 @@ ARTEFACTS = [
     "Something went wrong loading this page",
     "The answer could not be displayed",
 ]
-MIN_REPLY_CHARS = 200
+MIN_REPLY_CHARS = 200  # sealed only: a three-turn reply may legitimately be one line
 NEAR_DUP_THRESHOLD = 0.95
 CONTAMINATION_CEILING = 0.20
 MODEL = "BAAI/bge-small-en-v1.5"   # cached locally; bge-large works too if it is available

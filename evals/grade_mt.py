@@ -92,6 +92,7 @@ def main() -> int:
 
     if args.json:
         print(json.dumps(rows, indent=1, ensure_ascii=False))
+        return 0
 
     per: dict[str, list[bool]] = defaultdict(list)
     for r in rows:

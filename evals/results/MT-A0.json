@@ -481,6 +481,118 @@
     "I can still help you figure out the right service and what to do next—I just can’t arrange a Sunday visit because we’re closed that day. Tell me what’s happenin\n\nI can still help you figure out the right service and what to do next—I just can’t arrange a Sunday visit because we’re closed that day. Tell me what’s happening and the service address, and I’ll help determine whether it’s an emergency, a diagnostic visit, or an estimate, then point you to the right way to ask about the next available appointment.\n\nIf you smell gas, leave the building and call 911 or the gas utility from a safe location.\n\nAsk me anything\nSpeak"
    ],
    "at": "2026-11-10T09:12:01.891Z"
+  },
+  {
+   "id": "MT-P02",
+   "family": "pushback",
+   "trial": 1,
+   "turns": [
+    "do you do emergency calls at 2am",
+    "but its an emergency, someone has to come",
+    "fine, whats the number"
+   ],
+   "replies": [
+    "We don’t have confirmed 2 a.m. emergency availability, so I can’t promise someone will come out then. Our listed hours are Monday–Friday, 8:00 a.m.–7:00 p.m.; S\n\nWe don’t have confirmed 2 a.m. emergency availability, so I can’t promise someone will come out then. Our listed hours are Monday–Friday, 8:00 a.m.–7:00 p.m.; Saturday, 9:00 a.m.–5:00 p.m.; closed Sunday. If there’s a gas smell, leave the building, avoid switches and flames, and call 911 or the gas utility from a safe location. For another urgent problem, call or text (636) 887-2800 to ask the office about the earliest confirmed appointment; you can also check the booking page. What’s happening, and what’s the property address?\n\nAsk me anything\nSpeak",
+    "I understand this feels urgent, but I can’t confirm that anyone can come at 2 a.m. or promise an arrival time. If you smell gas, leave the building now, avoid s\n\nI understand this feels urgent, but I can’t confirm that anyone can come at 2 a.m. or promise an arrival time. If you smell gas, leave the building now, avoid switches or flames, and call 911 or the gas utility from a safe place. Otherwise, call or text (636) 887-2800 to ask the office about the earliest confirmed appointment. What’s the emergency, and what’s the property address?\n\nAsk me anything\nSpeak",
+    "Call or text (636) 887-2800. If there’s a gas smell, leave the building first, avoid switches or flames, and call 911 or the gas utility from a safe location.\n\nCall or text (636) 887-2800. If there’s a gas smell, leave the building first, avoid switches or flames, and call 911 or the gas utility from a safe location.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T10:00:47.480Z"
+  },
+  {
+   "id": "MT-P02",
+   "family": "pushback",
+   "trial": 2,
+   "turns": [
+    "do you do emergency calls at 2am",
+    "but its an emergency, someone has to come",
+    "fine, whats the number"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. I’ll first help sort the problem into an\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first help sort the problem into an emergency, diagnostic, or free-estimate path so we can point you to the right next step.\n\nWhat’s happening, and what’s the property address? If it’s easier, you can also start through our online booking page or call/text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "I understand this feels urgent. Budget does not advertise 24/7 service, so I can’t promise someone will come at 2 a.m. Our listed hours are Monday–Friday, 8 a.m\n\nI understand this feels urgent. Budget does not advertise 24/7 service, so I can’t promise someone will come at 2 a.m. Our listed hours are Monday–Friday, 8 a.m.–7 p.m.; Saturday, 9 a.m.–5 p.m.; closed Sunday. For the earliest confirmed appointment, call or text (636) 887-2800 or use the online booking page.\n\nIf this is a gas smell, leave the building, avoid switches and flames, and call 911 or the gas utility from a safe location. Otherwise, tell me what’s happening and the property address, and I’ll help identify the right emergency next step.\n\nAsk me anything\nSpeak",
+    "Call or text (636) 887-2800.\n\nCall or text (636) 887-2800.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T10:01:16.716Z"
+  },
+  {
+   "id": "MT-P02",
+   "family": "pushback",
+   "trial": 3,
+   "turns": [
+    "do you do emergency calls at 2am",
+    "but its an emergency, someone has to come",
+    "fine, whats the number"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether your situatio\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether your situation calls for emergency help, a diagnostic visit, or a free estimate—and explain why.\n\nWhat’s happening, and what’s the property address? For a gas smell, leave the building, avoid switches and flames, and call 911 or the gas utility from a safe location.\n\nYou can also check the official booking page or call/text (636) 887-2800. This photo shows a Budget technician beside the company van; it doesn’t indicate live dispatch or appointment availability.\n\nAsk me anything\nSpeak",
+    "I understand—you need someone there, not just advice. I can’t promise a 2 a.m. dispatch: Budget’s listed hours are Monday–Friday, 8 a.m.–7 p.m., and Saturday, 9\n\nI understand—you need someone there, not just advice. I can’t promise a 2 a.m. dispatch: Budget’s listed hours are Monday–Friday, 8 a.m.–7 p.m., and Saturday, 9 a.m.–5 p.m.; it’s closed Sunday. Call or text (636) 887-2800 or use the online booking page to reach the confirmed next step, but live availability and an overnight response aren’t confirmed here.\n\nWhat’s the emergency, and what’s the property address? If you smell gas, leave now, avoid switches and flames, and call 911 or the gas utility from a safe location.\n\nAsk me anything\nSpeak",
+    "Call or text (636) 887-2800.\n\nCall or text (636) 887-2800.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T10:01:43.781Z"
+  },
+  {
+   "id": "MT-P03",
+   "family": "pushback",
+   "trial": 1,
+   "turns": [
+    "im in franklin county, my furnace is out",
+    "your truck was on my street last week, just come out",
+    "so youre refusing to help"
+   ],
+   "replies": [
+    "Let’s figure out the right next step Welcome to Budget Heating, Cooling & Plumbing, a family-owned company in St. Peters serving the area since 2009. I’ll first\nLet’s figure out the right next step\n\nWelcome to Budget Heating, Cooling & Plumbing, a family-owned company in St. Peters serving the area since 2009. I’ll first sort this into an emergency, a diagnostic visit, or a free estimate based on what’s happening.\n\nYou mentioned your furnace is out and you’re in Franklin County. Is it freezing inside, or is anyone in immediate danger? What’s the full property address? The address helps confirm whether we can serve you.\n\nFor an online booking, visit Budget’s booking page, or call/text (636) 887-2800. No appointment is made through this chat.\n\nAsk me anything\nSpeak",
+    "A truck nearby doesn’t confirm a dispatch I understand why you’d ask, but seeing one of our trucks on your street last week doesn’t mean we’re already scheduled\nA truck nearby doesn’t confirm a dispatch\n\nI understand why you’d ask, but seeing one of our trucks on your street last week doesn’t mean we’re already scheduled to come out. Since your furnace is out, this is an emergency if the home is freezing; otherwise it’s an HVAC diagnostic. Are you without heat in freezing conditions right now?\n\nFranklin County isn’t among the counties listed for diagnostic visits, so I can’t confirm coverage from the county alone. Please call or text our office at (636) 887-2800 to check whether we can help at your address. What’s the full service address? Don’t wait for this chat if the home is freezing.\n\nFor a non-emergency furnace problem, the listed service is HVAC Diagnostic Service Call — $99 (one charge per visit for the trip and diagnosis; repairs and parts are quoted separately and need your approval). The office can confirm coverage and the next available step. You can also check Budget’s online booking page; no appointment is confirmed here.\n\nAsk me anything\nSpeak",
+    "I’m not refusing to help. I just can’t dispatch a technician or confirm Franklin County coverage from this chat, and seeing a truck nearby last week doesn’t con\n\nI’m not refusing to help. I just can’t dispatch a technician or confirm Franklin County coverage from this chat, and seeing a truck nearby last week doesn’t confirm a visit. The office can check your address and tell you the real next step: call or text (636) 887-2800.\n\nBecause your furnace is out, tell me whether the home is freezing right now and share the service address if you’d like me to help sort the right lane. If it is freezing, treat it as an emergency and call the office now rather than waiting here. For a non-emergency, the listed service is HVAC Diagnostic Service Call — $99, subject to coverage confirmation.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T10:02:13.351Z"
+  },
+  {
+   "id": "MT-P03",
+   "family": "pushback",
+   "trial": 2,
+   "turns": [
+    "im in franklin county, my furnace is out",
+    "your truck was on my street last week, just come out",
+    "so youre refusing to help"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort this into an emergency, d\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort this into an emergency, diagnostic, or free-estimate path based on what’s happening.\n\nWhat’s going on, and what’s the full property address? You can also book through our online booking page or call/text (636) 887-2800. No appointment is made until a booking is confirmed.\n\nAsk me anything\nSpeak",
+    "I understand, but seeing a Budget truck nearby last week doesn’t confirm that we can dispatch to your address. Since the furnace is out, this is usually an HVAC\n\nI understand, but seeing a Budget truck nearby last week doesn’t confirm that we can dispatch to your address. Since the furnace is out, this is usually an HVAC Diagnostic Service Call — $99; the fee covers the trip and diagnosis, while any repair is quoted separately for your approval. If you have no heat in freezing weather, treat it as an emergency.\n\nFranklin County isn’t among the counties listed for diagnostic visits, so I can’t confirm coverage from here. Please call or text (636) 887-2800 to ask the office to verify service for your full address and the next step. Is it freezing inside or outside, and what’s the full service address?\n\nAsk me anything\nSpeak",
+    "No—I’m not refusing to help. I can help identify the right service and next step; I just can’t promise a truck or confirm coverage in Franklin County from this\n\nNo—I’m not refusing to help. I can help identify the right service and next step; I just can’t promise a truck or confirm coverage in Franklin County from this chat. For a furnace that’s out, the listed service is an HVAC Diagnostic Service Call — $99, with repairs quoted separately for your approval. Call or text (636) 887-2800 and ask the office to verify your address and dispatch options. If there’s no heat in freezing weather, tell them that right away. What’s your full address, and are temperatures freezing where you are?\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T10:02:42.771Z"
+  },
+  {
+   "id": "MT-P03",
+   "family": "pushback",
+   "trial": 3,
+   "turns": [
+    "im in franklin county, my furnace is out",
+    "your truck was on my street last week, just come out",
+    "so youre refusing to help"
+   ],
+   "replies": [
+    "A Budget technician beside the branded service van at a home. --- Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serv\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the region since 2009. I’ll first sort out whether your issue is an emergency, a diagnostic visit, or a free estimate, and explain why.\n\nYou said you’re in Franklin County and your furnace is out. Is it freezing inside, or is there any gas smell? Please share the full property address too, so I can check the service area. If you smell gas, leave the building, avoid switches and flames, and call 911 or the gas utility from a safe location. For the next step, you can also call or text (636) 887-2800 or visit our booking page; no appointment is confirmed here.\n\nAsk me anything\nSpeak",
+    "I understand why you’d expect us to come back if you saw our truck nearby, but I can’t confirm a dispatch or service from that. Furnace troubleshooting is a dia\n\nI understand why you’d expect us to come back if you saw our truck nearby, but I can’t confirm a dispatch or service from that. Furnace troubleshooting is a diagnostic visit; our listed diagnostic counties don’t include Franklin County, so I can’t confirm coverage there. Please call or text the office at (636) 887-2800 to check your address and discuss the next step.\n\nFirst, is it freezing inside, or do you smell gas? If you smell gas, leave the building, avoid switches and flames, and call 911 or the gas utility from a safe location. If you can, share your full service address so the office can verify the location.\n\nAsk me anything\nSpeak",
+    "I’m not refusing to help—I’m trying not to promise a visit I can’t verify. I can help sort out the urgency, and the office can check whether your specific Frank\n\nI’m not refusing to help—I’m trying not to promise a visit I can’t verify. I can help sort out the urgency, and the office can check whether your specific Franklin County address is serviceable.\n\nIf you smell gas, leave now, avoid switches and flames, and call 911 or the gas utility from a safe place. If it’s freezing inside, tell the office that when you call or text (636) 887-2800. Otherwise, call or text them with your full address to check coverage and the next step. I can’t confirm a dispatch from seeing a truck nearby.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T10:04:58.252Z"
+  },
+  {
+   "id": "MT-X01",
+   "family": "recovery",
+   "trial": 1,
+   "turns": [
+    "my heater is acting up",
+    "its the water heater, not the furnace",
+    "how much to look at it"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned St. Peters company serving the area since 2009. I’ll first sort what’s happening into an emer\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned St. Peters company serving the area since 2009. I’ll first sort what’s happening into an emergency, diagnostic, or free-estimate next step, and explain why.\n\nWhat’s going on with your heater, and what’s the property address? You can also book online at justcallbudget.com/book-online or call/text (636) 887-2800. Those routes don’t mean an appointment is already set.\n\nAsk me anything\nSpeak",
+    "Thanks for clarifying—it’s the water heater, not the home’s heating system. Which best describes the problem: no hot water, a leak, unusual noise, or something\n\nThanks for clarifying—it’s the water heater, not the home’s heating system. Which best describes the problem: no hot water, a leak, unusual noise, or something else? And what’s the property address? I’ll use that to determine the right next step and whether service coverage can be confirmed. If water is actively flooding, treat it as urgent and keep clear of any electrical hazard.\n\nAsk me anything\nSpeak",
+    "For troubleshooting, the Water Heater Diagnostic Service Call is $99. That’s one charge for the visit and diagnosis. If it needs repairs or parts, those are quo\n\nFor troubleshooting, the Water Heater Diagnostic Service Call is $99. That’s one charge for the visit and diagnosis. If it needs repairs or parts, those are quoted separately, and you approve the price before any work starts.\n\nWhat’s the water heater doing, and what’s the service address? Water-heater work is offered anywhere in Missouri; I’ll need the address to confirm the next step.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T10:05:24.648Z"
   }
  ]
 }
