@@ -106,11 +106,11 @@ point rather than a formality.
 
 ## Method, in one paragraph
 
-Every fact the agent was built from is in a 24-field ledger, each field carrying
+Every fact the agent was built from is in a 25-field ledger, each field carrying
 the page and line it came from, and the build fails if a price moves or the
 evidence turns out to be template placeholder text. The evaluation is 55
 single-turn scenarios and 18 three-turn scripts, graded by rules that were
-themselves audited — nineteen of them were wrong and were corrected, every one a
+themselves audited — twenty of them were wrong and were corrected, every one a
 case where a rule failed a correct answer. A sealed validation set was authored by
 a different model with graders written from the spec before any reply existed, and
 frozen by hash on a public commit so the order is checkable. Repository:
@@ -121,6 +121,6 @@ frozen by hash on a public commit so the order is checkable. Repository:
 ## What is not in here
 
 The instruction-arm comparison (A0 at 71.1% of trials, A5 at 87.9%, two arms
-reverted), the nineteen grader corrections, and the sealed-set results are in the
+reverted), the twenty grader corrections, and the sealed-set results are in the
 repository and not in this note. They measure my work rather than your platform,
 and this note is about your platform.

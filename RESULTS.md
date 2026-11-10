@@ -1,23 +1,52 @@
 # Results — what the agent does, and what it does not
 
 Preregistration: `evals/METHOD.md`, written before the first scenario was sent.
-Agent: project `jojuduewx7ud` on Agentplace · GPT-6 Luna. The published link is shared
+Agent: project `cgiefgaebmgh` on Agentplace · GPT-6 Luna. The published link is shared
 separately; this repository holds the transcripts and the graders.
-Test set: 33 conversations × 3 trials = 99 per full arm. **261 conversations** across the five instruction arms. The 822 figure quoted elsewhere counts everything recorded, including the two-model comparison and the multi-turn set; the A0-versus-A5 comparison itself rests on **324 conversations** (159 and 165 trials), and the paired test on the 53 scenarios both arms share.
+**How many conversations there are, stated once and consistently.** The five
+instruction arms on the small set total **261** (A0 81, A1 18, A2 99, A3 57, A4 6).
+The larger set adds **318** (A0 and A2, 159 each), and A5's own run adds **165**. The
+multi-turn set is **54** and the two-model comparison **78**, which is the **822**
+quoted in earlier drafts. The A0-versus-A5 comparison itself rests on **324 trials**
+of 53 shared scenarios (159 and 165) — trials, not distinct dialogues, since each
+scenario is run three times and the paired test is per scenario.
 
 ---
 
 ## The verdict
 
-A0 → A2 goes from 21/27 to 29/33 on strict pass³. That difference rests on
-**eight discordant scenarios**: six gained, two lost. An exact McNemar test on
-those pairs gives **p = 0.289**.
+**On the scenarios it was tuned against, A5 is clearly better than the arm it
+replaced. On the one set it could not be tuned against, it is not measurably
+different. Both numbers belong in the same breath, and this document leads with
+both.**
+
+| | A0 | A5 |
+|---|---|---|
+| pass@1, 53 shared scenarios | 113/159 (71.1%) | 145/165 (87.9%) |
+| strict pass³, 53 shared scenarios | 26/53 (49%) | **43/53 (81%)** |
+| exact McNemar, on pass³ | — | **b=18, c=1, p < 0.001** |
+| sealed set, out of sample, 20 scenarios | 17/20 | 17/20 |
+| sealed set, the 13 not marked ambiguous | 12/13 | 11/13 |
+| sealed set, exact McNemar | — | **p = 1.000** |
+
+The first three rows are in-sample: A5 was iterated on those 53 scenarios, so the
+gain is partly fit to them. The last three rows are the check designed to remove
+that, and they do not confirm it. **The improvement is real on the tuning set and
+unconfirmed out of sample** — not "proven", and not "failed to transfer" either,
+because 13 scored scenarios cannot distinguish those.
+
+### How the arms were chosen: A0 → A2, and why that was not the end
+
+This document used to lead with the next paragraph. It is kept as the record of the
+first step, not as the result.
+
+A0 → A2 goes from 21/27 to 29/33 on strict pass³. That difference rests on **eight
+discordant scenarios**: six gained, two lost. An exact McNemar test on those pairs
+gives **p = 0.289**.
 
 > At n = 27 the improvement is **consistent with a real gain and not
 > distinguishable from noise**. It is reported as the former, not the latter
 > presented as a result.
-
-`evals/stats.py` prints this. It is the first number below.
 
 ```
                            A2 pass     A2 fail
@@ -28,6 +57,9 @@ gained (6): H02, H04, H06, M03, M05, T02
 lost   (2): P04, T04
 exact McNemar two-sided p = 0.289
 ```
+
+A2 was then superseded by A5 on the larger set, where the comparison is significant
+and the sealed check above applies.
 
 ---
 
@@ -196,7 +228,7 @@ found after the missing-phone case in T02. Neither was found by me.
 That is the argument for the study existing, and also the argument against
 trusting a rubric I wrote alone.
 
-## Nineteen grader corrections, all found by reading transcripts
+## Twenty grader corrections, all found by reading transcripts
 
 Fourteen in `evals/graders.json` and five in `evals/graders-big.json`, each with
 what it got wrong. The pattern is the same in every one: a pattern that failed a
@@ -402,6 +434,15 @@ Four explanations fit, and none of them was tested:
 4. The sealed author is a different model, so its scenarios probe behaviours
    neither arm was tuned against.
 
+**The graders were tuned on the same scenarios the arms were tuned on, and that
+cuts both ways.** Twenty corrections were made, every one because a rule failed a
+correct answer. That is the right reason to change a rule, but it also means the
+grader and the agent were improved against the same 55 scenarios. A rule that was
+wrong in the agent's favour would not have been noticed, because nothing in this
+process looks for that direction. The sealed set was written to be immune to the
+agent side of this; it is not immune to the grader side, and the sealed graders were
+written by a different model for that reason.
+
 **One correction was applied after the replies existed, and it is disclosed here
 rather than buried.** The integrity check passed a stated amount only if it was a
 ledger price or the sum of two, and it failed A5's correct `$299` for a Saturday
@@ -482,6 +523,14 @@ each:**
 Eight of the nine flipped. The disagreement was **rubric under-specification, not
 grader error and not agent quality**, and that distinction only became visible
 because the same rows were judged twice.
+
+**The second number is weaker than it looks, and this is the honest reading of it.**
+The rule was written after seeing where the first pass disagreed, and the same 30
+transcripts were then judged again. So κ = 0.911 measures whether a stated rule is
+applied consistently — it does not measure whether a fresh reader would agree with
+me on fresh transcripts, because the rule was fitted to exactly these disagreements.
+A clean test needs a new sample and a rule fixed before any of it is read. That has
+not been done, and it is listed as open work rather than claimed as a result.
 
 Four real grader bugs did fall out of the exercise, all of the same shape as the
 earlier ones, a pattern that failed a correct answer:

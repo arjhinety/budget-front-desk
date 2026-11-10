@@ -6,7 +6,7 @@ not as a diagnosis.
 ## The observation
 
 Two agents were built on Agentplace from **the same brief** — the same 3,107
-characters, generated from the same 24-field ledger. The brief lists the savings
+characters, generated from the same 25-field ledger. The brief lists the savings
 club as a price line and nothing else:
 
 > `Budget Savings Club Membership $250 per year`

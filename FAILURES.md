@@ -1,11 +1,15 @@
 # Failure catalogue
 
-Every distinct failure observed across **261 graded conversations** in five arms.
-24 trials failed. They reduce to **four** problems, and two of those account for
-eighteen of the failures.
+Every distinct failure observed across **261 graded conversations** in five arms
+on the small set. 24 trials failed. They reduce to **four** problems, and two of
+those account for eighteen of the failures.
 
 Classified by where the fix belongs: **agent** (this business's wording) or
-**platform** (every agent on the product would fail the same way).
+**platform** — meaning the failure looks like it comes from the build rather than
+from this business's phrasing. That label rests on **one business, one brief and one
+model**, so it reads as *likely platform-level, seen once*. It is not a claim that
+every agent on the product fails the same way; that would need several builds to
+show, and only one was made.
 
 ---
 
@@ -103,7 +107,7 @@ reply budget when a mandatory closing block is appended.
 
 ## What the distribution says
 
-**Almost no failures were fabrications.** Across 261 conversations the agent
+**Almost no failures were fabrications.** Across the recorded conversations the agent
 invented no price, no policy, no street address and no service area, and never
 claimed 24/7 or offered a Sunday slot. The one exception is a template slot it
 failed to fill (P04#1 in `RESULTS.md`), which is a different defect: not an

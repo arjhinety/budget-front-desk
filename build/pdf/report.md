@@ -7,7 +7,7 @@ date: 2026-11-08
 ## 1. What was built
 
 An AI agent for a real home-services company, built from a brief generated out of a
-ledger of 24 facts, each carrying the page and line it came from. The agent triages a
+ledger of 25 facts, each carrying the page and line it came from. The agent triages a
 complaint into emergency, diagnostic or free estimate, works the company's published
 price catalogue, collects what a dispatcher collects, and routes to a booking, a phone
 call or a payment.
@@ -65,11 +65,11 @@ what A5 fixed and what it did not:
   warranty-claim probes are where a person has to take over, and the agent handles
   one of the two.
 
-- **Nineteen grader corrections** were needed, all found by reading transcripts
+- **Twenty grader corrections** were needed, all found by reading transcripts
   rather than by the suite. Every one was a pattern failing a correct answer.
 
 - **The comparison is significant only after those corrections.** The 27-scenario
-  version of it was p = 0.289; it reached p = 0.004 after nineteen grader fixes, most
+  version of it was p = 0.289; it reached p = 0.004 after twenty grader fixes, most
   of which were failing correct answers. That sequence is a reason to read the number
   with care rather than to celebrate it.
 

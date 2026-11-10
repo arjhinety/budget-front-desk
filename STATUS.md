@@ -4,6 +4,10 @@ Where the work stands, and the exact commands to finish it.
 
 ## State
 
+**Every campaign is complete.** Single-turn (55 scenarios, five arms), multi-turn (18 scripts,
+54 conversations), and the sealed set (20 scenarios, both arms, 40 conversations). Nothing is
+outstanding except the adjudication queue and the two defects named below.
+
 **A5 is complete: 55 of 55 scenarios, 165 conversations.** The quota cut three
 scenarios off mid-run; they were re-run once it cleared and are now scored.
 

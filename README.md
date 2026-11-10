@@ -3,11 +3,12 @@
 An agent built for a real business, and the measurements of where it fails. The
 published link is shared separately; what is here is the method and the evidence.
 
-1. **The agent** — project `jojuduewx7ud` on Agentplace, GPT-6 Luna. The published link is
+1. **The agent** — project `cgiefgaebmgh` on Agentplace, GPT-6 Luna. The published link is
    shared separately, not in this repository.
-2. **The evidence** — 822 recorded conversations, the graders, and the failures they found.
+2. **The evidence** — 324 recorded conversations in the arm comparison, 54 in the multi-turn
+   set, and 40 in the sealed set, with the graders and the failures they found.
 
-The facts it was built from are in a ledger of 24 fields, each carrying the page
+The facts it was built from are in a ledger of 25 fields, each carrying the page
 and line it came from. The agent also read pages beyond that ledger, so the
 ledger is a floor on what it knows, not a complete inventory. Every question the
 site cannot answer is recorded as a gap rather than filled with a guess.

@@ -1,0 +1,214 @@
+{
+ "arm": "MT-A0",
+ "agent": "https://guikfrraxzk5.run.agentplace.io/",
+ "records": [
+  {
+   "id": "MT-C01",
+   "family": "self-correction",
+   "trial": 1,
+   "turns": [
+    "my furnace wont light and im in franklin county, can you send someone",
+    "sorry, typo - im in st charles county, ofallon",
+    "ok so what does that cost"
+   ],
+   "replies": [
+    "A furnace that won’t light is usually a diagnostic visit. If there’s no heat and the weather is freezing, treat it as an emergency; tell me if that’s the situat\n\nA furnace that won’t light is usually a diagnostic visit. If there’s no heat and the weather is freezing, treat it as an emergency; tell me if that’s the situation.\n\nI can’t confirm diagnostic coverage in Franklin County from the service information I have, so I can’t promise we can send someone there. Please share the full property address so the office can check, and call or text (636) 887-2800 for the fastest direct handoff. HVAC Diagnostic Service Call is $99 where offered; repairs and parts are quoted separately and need your approval. Live appointment availability isn’t visible here.\n\nAsk me anything\nSpeak",
+    "Thanks for correcting that. St. Charles County is within Budget’s diagnostic service area, so a furnace that won’t light fits the HVAC Diagnostic Service Call —\n\nThanks for correcting that. St. Charles County is within Budget’s diagnostic service area, so a furnace that won’t light fits the HVAC Diagnostic Service Call — $99. That fee covers the trip and diagnosis; any repair or parts would be quoted separately for your approval.\n\nI can’t dispatch or confirm a time from this chat. To have the office check availability, call or text (636) 887-2800, or use the online booking page. Please provide the full street address and your name and mobile number when you contact them. If you have no heat in freezing weather, let the office know it’s urgent.\n\nAsk me anything\nSpeak",
+    "The HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis. If a repair or parts are needed, they’re quoted separately, and work won’\n\nThe HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis. If a repair or parts are needed, they’re quoted separately, and work won’t begin until you approve the quote.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:28:48.514Z"
+  },
+  {
+   "id": "MT-C01",
+   "family": "self-correction",
+   "trial": 2,
+   "turns": [
+    "my furnace wont light and im in franklin county, can you send someone",
+    "sorry, typo - im in st charles county, ofallon",
+    "ok so what does that cost"
+   ],
+   "replies": [
+    "I can help you find the right next step, but I can’t dispatch someone or confirm service at a Franklin County address from here. Franklin County isn’t among the\n\nI can help you find the right next step, but I can’t dispatch someone or confirm service at a Franklin County address from here. Franklin County isn’t among the counties listed for diagnostic visits, so the office needs to verify coverage.\n\nFirst: is it freezing where you are, or is the home getting dangerously cold without heat? No heat in freezing weather is an emergency. If not, a furnace that won’t light would generally need an HVAC Diagnostic Service Call — $99; repairs or parts would be quoted separately for your approval.\n\nPlease send the full property address and let me know whether it’s freezing inside. To check coverage or reach the office now, call or text (636) 887-2800. You can also use the online booking page, but it may not confirm coverage or availability.\n\nAsk me anything\nSpeak",
+    "Thanks for correcting that. St. Charles County is within Budget’s diagnostic-service area, though I still need the full address to confirm the service location.\n\nThanks for correcting that. St. Charles County is within Budget’s diagnostic-service area, though I still need the full address to confirm the service location.\n\nA furnace that won’t light is generally an HVAC Diagnostic Service Call — $99. If there’s no heat in freezing weather, treat it as an emergency instead. I can’t dispatch or confirm a time from chat; call or text (636) 887-2800 for the office to check next steps, or use the online booking page.\n\nWhat’s the full property address, and is it freezing inside? Repairs and parts, if needed, are quoted separately and require your approval.\n\nAsk me anything\nSpeak",
+    "The HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis. If it needs repair or parts, those are quoted separately, and you approve\n\nThe HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis. If it needs repair or parts, those are quoted separately, and you approve the quote before any work begins.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:29:16.192Z"
+  },
+  {
+   "id": "MT-C01",
+   "family": "self-correction",
+   "trial": 3,
+   "turns": [
+    "my furnace wont light and im in franklin county, can you send someone",
+    "sorry, typo - im in st charles county, ofallon",
+    "ok so what does that cost"
+   ],
+   "replies": [
+    "A furnace that won’t light usually needs an HVAC Diagnostic Service Call — $99. That covers the trip and diagnosis; any repair, parts, or refrigerant would be q\n\nA furnace that won’t light usually needs an HVAC Diagnostic Service Call — $99. That covers the trip and diagnosis; any repair, parts, or refrigerant would be quoted separately for your approval before work begins.\n\nI can’t confirm service coverage or send a technician from this chat. Diagnostic visits are listed for St. Charles, St. Louis, Lincoln, Warren, and Jefferson Counties—not Franklin County. Call or text (636) 887-2800 to ask the office about your location and dispatch options. Online booking is also available at Budget’s booking page, but live availability isn’t shown here.\n\nIf you have no heat in freezing weather, treat it as an emergency and call the office now. What’s the full property address, and is it freezing inside or outside?\n\nAsk me anything\nSpeak",
+    "Thanks for correcting that. St. Charles County is within the listed diagnostic service area, but I still need the full property address to confirm coverage. A f\n\nThanks for correcting that. St. Charles County is within the listed diagnostic service area, but I still need the full property address to confirm coverage. A furnace that won’t light fits an HVAC Diagnostic Service Call — $99; repairs and parts would be quoted separately for your approval.\n\nI can’t send or schedule a technician from this chat. To check live availability, call or text (636) 887-2800, or use Budget’s online booking page. If you have no heat in freezing weather, call the office now and tell them it’s an emergency. What’s the full address, and are you without heat in freezing weather?\n\nAsk me anything\nSpeak",
+    "The HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis. If the technician finds a repair is needed, they’ll quote the repair and\n\nThe HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis. If the technician finds a repair is needed, they’ll quote the repair and any parts separately for your approval before starting work.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:29:45.453Z"
+  },
+  {
+   "id": "MT-C02",
+   "family": "self-correction",
+   "trial": 1,
+   "turns": [
+    "my ac is dead, im in jefferson county",
+    "actually it's the furnace, not the ac",
+    "and how much for someone to look at it"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether your issue ne\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether your issue needs emergency service, a diagnostic visit, or a free estimate, based on what’s happening.\n\nWhat’s going on with your AC, and what’s the full property address? You mentioned Jefferson County; the address helps confirm service coverage.\n\nYou can also use our online booking page or call/text (636) 887-2800. This chat can’t confirm appointment availability.\n\nAsk me anything\nSpeak",
+    "Furnace not working Thanks for correcting that. A furnace that’s stopped working is usually a diagnostic issue; if there’s a gas smell or you have no heat in fr\nFurnace not working\n\nThanks for correcting that. A furnace that’s stopped working is usually a diagnostic issue; if there’s a gas smell or you have no heat in freezing weather, treat it as an emergency instead. For a non-emergency furnace fault, the listed service is an HVAC Diagnostic Service Call — $99. That covers the trip and diagnosis; repairs, parts and refrigerant are quoted separately, and you approve any work before it begins.\n\nYou mentioned Jefferson County, which is within the listed diagnostic service counties, but I still need the full property address to confirm coverage. Is there a gas smell, and is it freezing where you are? Please also share your name and mobile number for the service details.\n\nOnce we have the address and confirm it’s not an emergency, I can recap the details for you. To check real appointment availability, use online booking or call/text (636) 887-2800; this chat can’t see open times.\n\nAsk me anything\nSpeak",
+    "For a non-emergency furnace problem, the HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis. Any repair, parts, or refrigerant wo\n\nFor a non-emergency furnace problem, the HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis. Any repair, parts, or refrigerant would be quoted separately, and you’d approve the work before it starts. If you smell gas or have no heat in freezing weather, leave the building if there’s a gas smell and call 911 or the gas utility from a safe location; otherwise, tell me the full service address and whether either emergency condition applies so I can recap the right next step.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:30:12.823Z"
+  },
+  {
+   "id": "MT-C02",
+   "family": "self-correction",
+   "trial": 2,
+   "turns": [
+    "my ac is dead, im in jefferson county",
+    "actually it's the furnace, not the ac",
+    "and how much for someone to look at it"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether the problem c\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether the problem calls for emergency service, a diagnostic visit, or a free estimate, based on what’s happening.\n\nWhat’s going on with your heating, cooling, or plumbing, and what’s the full property address? I can help with the next step here, or you can use our online booking page or call/text (636) 887-2800. Sharing those details doesn’t book an appointment.\n\nAsk me anything\nSpeak",
+    "Thanks for correcting me. For a furnace that won’t run, the right lane is usually an HVAC Diagnostic Service Call — $99. If you have no heat in freezing weather\n\nThanks for correcting me. For a furnace that won’t run, the right lane is usually an HVAC Diagnostic Service Call — $99. If you have no heat in freezing weather, treat it as an emergency and tell me that first. Repairs and parts, if needed, are quoted separately for your approval before work begins.\n\nJefferson County is within the listed diagnostic service counties, but I need the full property address before confirming coverage. Is there no heat in freezing weather, and what’s the address? You can also call or text (636) 887-2800 or use the online booking page; neither route’s availability is visible to me here.\n\nAsk me anything\nSpeak",
+    "The HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis; any repair, parts, or refrigerant would be quoted separately, and you app\n\nThe HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis; any repair, parts, or refrigerant would be quoted separately, and you approve the work before it begins.\n\nIf the furnace is out and you have no heat in freezing weather, treat it as an emergency. Otherwise, to check service coverage I still need the full property address. You can book at justcallbudget.com/book-online or call/text (636) 887-2800.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:30:41.607Z"
+  },
+  {
+   "id": "MT-C02",
+   "family": "self-correction",
+   "trial": 3,
+   "turns": [
+    "my ac is dead, im in jefferson county",
+    "actually it's the furnace, not the ac",
+    "and how much for someone to look at it"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether your issue ne\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether your issue needs emergency help, a diagnostic visit, or a free estimate, based on what’s happening.\n\nWhat’s happening with your heating, cooling, or plumbing, and what’s the full property address? You can also book through our online booking page or call/text (636) 887-2800. That doesn’t mean an appointment is already confirmed.\n\nAsk me anything\nSpeak",
+    "Thanks for clarifying—it’s the furnace A furnace that’s out is a diagnostic issue unless there’s no heat in freezing weather. If there’s no heat and it’s freezi\nThanks for clarifying—it’s the furnace\n\nA furnace that’s out is a diagnostic issue unless there’s no heat in freezing weather. If there’s no heat and it’s freezing, tell me—that’s an emergency, and I’ll prioritize safety and the next step.\n\nYou said you’re in Jefferson County. What’s the full service address, and is the furnace producing any heat? For a non-emergency furnace fault, the service is HVAC Diagnostic Service Call — $99 (one charge per visit for the trip and diagnosis; repairs and parts are quoted separately and need your approval before work begins).\n\nYou can also call or text (636) 887-2800. I can’t confirm service coverage or an appointment without the full address and live availability.\n\nAsk me anything\nSpeak",
+    "For a non-emergency furnace problem, the HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis; any repairs or parts are quoted sepa\n\nFor a non-emergency furnace problem, the HVAC Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis; any repairs or parts are quoted separately, and you approve the quote before work begins.\n\nIf there’s no heat in freezing weather, treat it as an emergency. To confirm service for your address and check availability, call or text (636) 887-2800 or use the online booking page.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:31:06.918Z"
+  },
+  {
+   "id": "MT-C03",
+   "family": "self-correction",
+   "trial": 1,
+   "turns": [
+    "i want a quote to replace my water heater in franklin county",
+    "wait, it's a plumbing fixture replacement not a water heater",
+    "so what do i do next"
+   ],
+   "replies": [
+    "Free water-heater replacement estimate A replacement request goes in the free-estimate lane: Water Heater & Plumbing Equipment Estimate is a free written estima\nFree water-heater replacement estimate\n\nA replacement request goes in the free-estimate lane: Water Heater & Plumbing Equipment Estimate is a free written estimate with no obligation. Budget offers water-heater work anywhere in Missouri, so Franklin County is within the stated coverage.\n\nTo help with the next step, what’s the full property address, your name, and mobile number? If you know the water heater’s type (tank or tankless) and age, include those too. A photo of its label can help the team identify the equipment, but it isn’t a diagnosis.\n\nOnce you share those details, I’ll recap them. Then you can request the estimate through Budget’s booking page or call/text (636) 887-2800. I can’t confirm an appointment or callback time from this chat.\n\nAsk me anything\nSpeak",
+    "Thanks for clarifying. A plumbing fixture replacement isn’t the same as a water-heater replacement, and I don’t have a listed estimate service or confirmed cove\n\nThanks for clarifying. A plumbing fixture replacement isn’t the same as a water-heater replacement, and I don’t have a listed estimate service or confirmed coverage details for that specific job. Please call or text the office at (636) 887-2800 so they can confirm whether they handle the fixture and what information they need. I can’t confirm pricing or an appointment from chat.\n\nAsk me anything\nSpeak",
+    "Next, call or text Budget’s office at (636) 887-2800 and say you’re looking for a quote to replace a plumbing fixture in Franklin County. The office can confirm\n\nNext, call or text Budget’s office at (636) 887-2800 and say you’re looking for a quote to replace a plumbing fixture in Franklin County. The office can confirm whether they handle that fixture and explain the next step; I can’t verify pricing or arrange it through this chat.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:31:34.981Z"
+  },
+  {
+   "id": "MT-C03",
+   "family": "self-correction",
+   "trial": 2,
+   "turns": [
+    "i want a quote to replace my water heater in franklin county",
+    "wait, it's a plumbing fixture replacement not a water heater",
+    "so what do i do next"
+   ],
+   "replies": [
+    "A replacement request goes through a free estimate: Water Heater & Plumbing Equipment Estimate (free written estimate, no obligation). That estimate service is\n\nA replacement request goes through a free estimate: Water Heater & Plumbing Equipment Estimate (free written estimate, no obligation). That estimate service is listed only up to the St. Charles County line, so I can’t confirm it covers Franklin County. Please call or text our office at (636) 887-2800 to ask about options for your address. If you share the full property address, I can note it for the coverage question; this chat can’t confirm a booking.\n\nAsk me anything\nSpeak",
+    "Thanks for clarifying—and sorry for the mix-up. Since it’s a plumbing fixture, not a water heater, I can’t confirm the right estimate service or Franklin County\n\nThanks for clarifying—and sorry for the mix-up. Since it’s a plumbing fixture, not a water heater, I can’t confirm the right estimate service or Franklin County coverage from the information I have. Please call or text (636) 887-2800 and tell the office which fixture you’re replacing and the full property address; they can confirm the appropriate next step.\n\nAsk me anything\nSpeak",
+    "Call or text (636) 887-2800 and say: “I’m in Franklin County and need a quote to replace a plumbing fixture.” Give them the full property address and name the f\n\nCall or text (636) 887-2800 and say: “I’m in Franklin County and need a quote to replace a plumbing fixture.” Give them the full property address and name the fixture. The office can confirm whether they handle that job at your address and what to do next. I can’t confirm coverage or an appointment from this chat.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:32:03.281Z"
+  },
+  {
+   "id": "MT-C03",
+   "family": "self-correction",
+   "trial": 3,
+   "turns": [
+    "i want a quote to replace my water heater in franklin county",
+    "wait, it's a plumbing fixture replacement not a water heater",
+    "so what do i do next"
+   ],
+   "replies": [
+    "Free water heater replacement estimate A replacement request fits the Water Heater & Plumbing Equipment Estimate lane: it’s a free written estimate with no obli\nFree water heater replacement estimate\n\nA replacement request fits the Water Heater & Plumbing Equipment Estimate lane: it’s a free written estimate with no obligation, and water heater estimates are available anywhere in Missouri. Franklin County is within that stated water-heater estimate coverage.\n\nTo check the service details and arrange the estimate, use the online booking page or call/text (636) 887-2800. We don’t have your full property address yet, so I can’t verify the location details. If you’d like help narrowing down what to ask for, send the address and whether the existing heater is tank or tankless, gas or electric, if known.\n\nAsk me anything\nSpeak",
+    "Thanks for clarifying—and sorry for the mix-up. A plumbing fixture replacement is different from a water-heater replacement. I can’t confirm service or an estim\n\nThanks for clarifying—and sorry for the mix-up. A plumbing fixture replacement is different from a water-heater replacement. I can’t confirm service or an estimate for Franklin County from the information I have; the listed Water Heater & Plumbing Equipment Estimate is limited to the St. Charles County line, and there isn’t a separate plumbing diagnostic service listed here.\n\nPlease call or text our office at (636) 887-2800 with the fixture and your full address so the team can confirm the right next step. I can’t confirm availability or an appointment through this chat.\n\nAsk me anything\nSpeak",
+    "Call or text (636) 887-2800 and say: “I need a quote to replace a plumbing fixture at [your full address] in Franklin County. Can you confirm whether you serve\n\nCall or text (636) 887-2800 and say: “I need a quote to replace a plumbing fixture at [your full address] in Franklin County. Can you confirm whether you serve this address and what the next step is?”\n\nThe office needs to confirm coverage and the right estimate or service option; I can’t verify that or book it from this chat.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:32:33.632Z"
+  },
+  {
+   "id": "MT-M01",
+   "family": "memory",
+   "trial": 1,
+   "turns": [
+    "my water heater is leaking, im at 412 s main st in st charles",
+    "how much is the visit",
+    "and can you get someone out this week"
+   ],
+   "replies": [
+    "A leaking water heater needs prompt attention, but first: if water is near electrical equipment, don’t touch it—keep clear and shut off power only if you can do\n\nA leaking water heater needs prompt attention, but first: if water is near electrical equipment, don’t touch it—keep clear and shut off power only if you can do so safely. If it’s a major, uncontrolled leak, treat it as urgent and call/text our office at (636) 887-2800 for the next confirmed step.\n\nFor a water-heater leak that isn’t an immediate safety emergency, the right lane is a Water Heater Diagnostic Service Call — $99. That covers one visit’s trip and diagnosis; any repair, parts, or refrigerant would be quoted separately and require your approval before work begins.\n\nI have the address as 412 S Main St, St. Charles. I don’t have your name, mobile number, or water-heater type yet. Please share those if you’d like help preparing the handoff. You can also call/text (636) 887-2800 or use our online booking page; this chat can’t confirm availability or make an appointment.\n\nAsk me anything\nSpeak",
+    "The Water Heater Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis; any repair or parts are quoted separately, and work starts only a\n\nThe Water Heater Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis; any repair or parts are quoted separately, and work starts only after you approve the quote.\n\nAsk me anything\nSpeak",
+    "I can’t see live appointment availability, so I can’t confirm whether someone can come this week. Please call or text (636) 887-2800 to check the schedule, or u\n\nI can’t see live appointment availability, so I can’t confirm whether someone can come this week. Please call or text (636) 887-2800 to check the schedule, or use our online booking page. Your address, 412 S Main St, St. Charles, is in St. Charles County, within our listed diagnostic service area.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:33:00.338Z"
+  },
+  {
+   "id": "MT-M01",
+   "family": "memory",
+   "trial": 2,
+   "turns": [
+    "my water heater is leaking, im at 412 s main st in st charles",
+    "how much is the visit",
+    "and can you get someone out this week"
+   ],
+   "replies": [
+    "Water heater leak: diagnostic service call Based on what you’ve shared, this fits the Water Heater Diagnostic Service Call — $99 to identify the cause. That’s o\nWater heater leak: diagnostic service call\n\nBased on what you’ve shared, this fits the Water Heater Diagnostic Service Call — $99 to identify the cause. That’s one charge per visit for the trip and diagnosis; any repair, parts, or refrigerant would be quoted separately and require your approval before work begins.\n\nI have your address as 412 S Main St, St. Charles, MO. Please share your name and mobile number, and whether the heater is tank or tankless (age, if known). If water is rapidly flooding or there’s an electrical hazard, keep clear and call/text (636) 887-2800 for guidance. You can also book online; this chat hasn’t scheduled an appointment.\n\nAsk me anything\nSpeak",
+    "The Water Heater Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis; any repair or parts are quoted separately and need your approval\n\nThe Water Heater Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis; any repair or parts are quoted separately and need your approval before work begins.\n\nAsk me anything\nSpeak",
+    "I can’t confirm a visit this week from chat because I can’t verify a current open time. Please check the booking page or call/text (636) 887-2800 and ask about\n\nI can’t confirm a visit this week from chat because I can’t verify a current open time. Please check the booking page or call/text (636) 887-2800 and ask about the Water Heater Diagnostic Service Call for your address. The booking page says requests are subject to availability and service-area confirmation. If you choose Saturday, there’s an additional $50 fee.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:33:33.171Z"
+  },
+  {
+   "id": "MT-M01",
+   "family": "memory",
+   "trial": 3,
+   "turns": [
+    "my water heater is leaking, im at 412 s main st in st charles",
+    "how much is the visit",
+    "and can you get someone out this week"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether this is an em\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether this is an emergency, a diagnostic visit, or a free estimate, then point you to the right next step.\n\nYou said your water heater is leaking at 412 S Main St, St. Charles. Is water actively gushing or flooding, or is it a small/slow leak? If there’s an electrical hazard, stay clear of it. If water is flooding and the shutoff is safely accessible, turn off the water supply; don’t approach any hazard.\n\nIf it’s a contained leak, the likely next step is a Water Heater Diagnostic Service Call — $99. That covers the trip and diagnosis; any repair or parts would be quoted separately for your approval. You can call or text (636) 887-2800, or use the official booking page. I can’t see live appointment availability here.\n\nAsk me anything\nSpeak",
+    "The Water Heater Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis; repairs and parts, if needed, are quoted separately for your appr\n\nThe Water Heater Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis; repairs and parts, if needed, are quoted separately for your approval before work begins. I can’t see appointment availability from here.\n\nAsk me anything\nSpeak",
+    "I can’t see live appointment availability, so I can’t confirm whether anyone can come out this week. To check the earliest opening, use the official booking pag\n\nI can’t see live appointment availability, so I can’t confirm whether anyone can come out this week. To check the earliest opening, use the official booking page or call/text (636) 887-2800. The visit is $99 for the trip and diagnosis; repairs and parts are quoted separately.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:34:01.665Z"
+  },
+  {
+   "id": "MT-M02",
+   "family": "memory",
+   "trial": 2,
+   "turns": [
+    "its a 2016 tankless water heater in warren county, no hot water",
+    "what are my options",
+    "and what would the flush cost"
+   ],
+   "replies": [
+    "Water-heater diagnostic Since this is a no-hot-water problem with a 2016 tankless water heater, this fits the diagnostic lane, not an emergency based on what yo\nWater-heater diagnostic\n\nSince this is a no-hot-water problem with a 2016 tankless water heater, this fits the diagnostic lane, not an emergency based on what you’ve described. The listed service is Water Heater Diagnostic Service Call — $99; that covers the trip and diagnosis. Any repair, parts, or refrigerant would be quoted separately and need your approval before work begins.\n\nSo far I have: Warren County; tankless water heater; 2016; no hot water. Please send the full service address, your name, and a mobile number. I need the address to verify coverage. Then I can repeat the details back and point you to the online booking page or the office at (636) 887-2800. I can’t see live appointment availability here.\n\nAsk me anything\nSpeak",
+    "For the no-hot-water issue, the service option is a Water Heater Diagnostic Service Call — $99. It covers the trip and diagnosis; any repair or parts would be q\n\nFor the no-hot-water issue, the service option is a Water Heater Diagnostic Service Call — $99. It covers the trip and diagnosis; any repair or parts would be quoted separately for your approval before work begins.\n\nTo move forward, you can use the online booking page or call/text (636) 887-2800. I can’t see appointment availability here. Before I can verify service coverage or repeat the details for you, I still need the full service address, plus your name and mobile number.\n\nAsk me anything\nSpeak",
+    "A Tankless Water Heater Maintenance and Flush is $475 per flush. That’s a maintenance service, not a diagnosis or repair for the no-hot-water problem, so the $9\n\nA Tankless Water Heater Maintenance and Flush is $475 per flush. That’s a maintenance service, not a diagnosis or repair for the no-hot-water problem, so the $99 Water Heater Diagnostic Service Call would be the relevant starting point for troubleshooting. Any repair is quoted separately and requires your approval before work begins.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:34:59.667Z"
+  }
+ ]
+}

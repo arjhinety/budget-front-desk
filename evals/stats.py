@@ -90,6 +90,12 @@ def main() -> int:
 
     a, b = per_scenario(args.a, setname=args.set), per_scenario(args.b, setname=args.set)
     shared = sorted(set(a) & set(b))
+    if not shared:
+        raise SystemExit(
+            f"no shared scenarios between {args.a} and {args.b} on set '{args.set}'.\n"
+            f"  {args.a}: {len(a)} scenarios, {args.b}: {len(b)}.\n"
+            "A wrong --set name looks exactly like a null result, so this stops instead.\n"
+            "Set names are file stems: scenarios, scenarios-big.")
     both_pass = [s for s in shared if a[s] and b[s]]
     both_fail = [s for s in shared if not a[s] and not b[s]]
     gained = [s for s in shared if not a[s] and b[s]]
