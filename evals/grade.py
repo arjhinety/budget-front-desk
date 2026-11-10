@@ -99,6 +99,14 @@ def derived_money(base: set[int]) -> set[int]:
     out = set()
     if isinstance(surcharge, int):
         out = {v + surcharge for v in base}
+    # Correction 20: a total may be the sum of up to three published prices.
+    # "diagnostic plus cleaning plus the Saturday surcharge" is $99 + $150 + $50,
+    # which is $299, and a pairwise-only rule failed it in the sealed set.
+    for a in base:
+        for c in base:
+            out.add(a + c)
+            for d in base:
+                out.add(a + c + d)
     return out
 
 
@@ -185,6 +193,7 @@ def main() -> int:
 
     if args.json:
         print(json.dumps(rows, indent=1, ensure_ascii=False))
+        return 0
 
     total = len(rows)
     passed = sum(1 for r in rows if r["pass"])

@@ -296,6 +296,17 @@
    "found_by": "reading the transcript, not the score",
    "effect": "SEALED-A5 10/13 -> 11/13; SEALED-A0 unchanged at 12/13",
    "applied_to": "both arms, identically"
+  },
+  {
+   "n": 21,
+   "date": "2026-11-10",
+   "where": "evals/grade.py, derived_money()",
+   "was": "a stated total passed only if it was a published price plus the Saturday surcharge, or a pairwise sum",
+   "now": "a stated total also passes if it is the sum of up to three published prices",
+   "why": "The same rule as correction 20, applied to the single-turn grader. A positive control found the gate correctly fires on an invented $777, but also flagged correct totals of $249 and $299.",
+   "found_by": "a positive control written to check the gate fires at all, not by reading a transcript",
+   "effect": "no recorded reply changes: A5 stays 145/165 and the A0-vs-A5 comparison stays b=18, c=1, p<0.001",
+   "applied_to": "both arms, identically"
   }
  ]
 }
