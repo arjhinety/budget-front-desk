@@ -5,13 +5,15 @@ published link is shared separately; what is here is the method and the evidence
 
 1. **The agent** — project `cgiefgaebmgh` on Agentplace, GPT-6 Luna. The published link is
    shared separately, not in this repository.
-2. **The evidence** — 324 trials in the arm comparison, 54 multi-turn conversations,
-   and 40 sealed-set conversations, with the graders and the failures they found.
+2. **The evidence** — all 33 hand-written and 55 generated single-turn scenarios,
+   their instruction-arm runs, 108 multi-turn conversations across both arms,
+   and 40 sealed-set conversations. The 20-scenario sealed set supplements,
+   rather than replaces, the larger development sets.
 
-The facts it was built from are in a ledger of 25 fields, each carrying the page
-and line it came from. The agent also read pages beyond that ledger, so the
-ledger is a floor on what it knows, not a complete inventory. Every question the
-site cannot answer is recorded as a gap rather than filled with a guess.
+The published v1 brief used 24 sourced fields; the current ledger has 25 after
+adding omitted membership benefits. Single-turn A5 metadata names the original
+project; the linked A5 rebuild has its own multi-turn and sealed measurements.
+This provenance difference is disclosed in `RESULTS.md`.
 
 Business: **Budget Heating, Cooling & Plumbing** — justcallbudget.com, St. Peters,
 Missouri. Heating, cooling and plumbing; family-owned since 2009; five named
@@ -41,10 +43,10 @@ status file because a reader should see them before deciding what the numbers me
 | `RIGOR.md` | how the agent was built and what it does **not** claim |
 | `qa/test-plan.md` | scope, evidence standard, hypotheses, exit criteria |
 | `build/brief.txt` | the brief that produced the agent, rendered from the ledger |
-| `facts/sources.csv` | 24 facts, each with its source page and line number |
+| `facts/sources.csv` | 25 current ledger fields, each with its source page and line number; the published v1 brief used 24 |
 | `facts/parameters.csv` | every judgement call, with a written reason |
-| `RESULTS.md` | the five arms, the McNemar test, the grader bugs, the platform findings |
-| `FAILURES.md` | every failure observed, with the reply that caused it |
+| `RESULTS.md` | the six arms, the McNemar test, the grader bugs, the platform findings |
+| `FAILURES.md` | small-set failure patterns; later runs remain in `evals/results/` |
 | `docs/MODEL-COMPARISON.md` | Luna vs Terra on the same 39 conversations, and the decision |
 | `platform/` | the three platform defaults, implemented and tested |
 | `evals/blind/sheet.csv` | 30 transcripts to grade blind — fill one column, then score it |
@@ -57,20 +59,23 @@ status file because a reader should see them before deciding what the numbers me
 | `datasets/RULES.md` | the business rules in plain English, for a labeller |
 | `build/pdf/report.pdf` | two-page summary, regenerated from the results by `build/make_report.py` |
 | `platform/README.md` | the three failures that should be fixed once, not per agent |
-| `evals/METHOD.md` | the preregistration and the eight amendments made after the first run |
+| `evals/METHOD.md` | the original preregistration and forward-recorded amendments |
 
 ## The pipeline
 
 ```
 scrape.py          11 pages -> raw/*.html + raw/*.txt + facts/provenance.json
 build_facts.py     the text -> facts/business.json + sources.csv + parameters.csv
-generate_brief.py  the ledger -> build/brief.txt -> build/builder_url.txt
+generate_brief.py  current ledger -> build/brief-v2.txt -> build/builder_url.txt
 drive.mjs          the brief -> the Agentplace Builder (persistent signed-in profile)
 evals/             scenarios.json (33 hand-written), scenarios-big.json (55 generated),
                    graders.json, gen_scenarios.py, run.mjs, grade.py,
                    stats.py (McNemar + paired bootstrap), kappa.py, health.mjs
 platform/          nextstep.py, clock.py, precedence.py, replay.py, tests
 ```
+
+`build/brief.txt` and `build/builder_url-v1.txt` preserve the evaluated v1 input.
+The v2 brief includes the omitted benefits and is not the published/evaluated arm.
 
 Rebuild from the source pages:
 

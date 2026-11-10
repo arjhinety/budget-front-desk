@@ -3,8 +3,11 @@
 from __future__ import annotations
 
 import json
+import shutil
 import subprocess
 import sys
+import tempfile
+import time
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
@@ -89,24 +92,26 @@ date: {date.today().isoformat()}
 
 # The deliverable
 
-A live AI front desk for Budget Heating, Cooling & Plumbing, built from a **25-field
-ledger** with page-and-line provenance. It triages emergency, diagnostic and estimate
-requests, uses the published catalogue, collects dispatcher intake, and routes to the
-booking page or phone. The repository contains the ledger, transcripts, graders,
-failures and reproducible scripts.
+A live Luna front desk for Budget Heating, Cooling & Plumbing, built from a
+**24-field v1 brief** with page-and-line provenance. The current ledger has 25
+fields after adding the omitted membership benefits; v2 has not been evaluated.
+The agent triages requests, uses the catalogue, collects intake and routes to a
+booking page or phone. All large test sets and recorded runs are retained.
 
 # Before and after
 
-| | A0 baseline | A5 shipped |
+| | A0 baseline | A5 instructions |
 |---|---:|---:|
-| single-turn pass@1 | {a0['passed']}/{a0['trials']} ({a0['passed']/a0['trials']:.1%}) | {a5['passed']}/{a5['trials']} ({a5['passed']/a5['trials']:.1%}) |
+| single-turn pass@1, respective 53/55 scenarios | {a0['passed']}/{a0['trials']} ({a0['passed']/a0['trials']:.1%}) | {a5['passed']}/{a5['trials']} ({a5['passed']/a5['trials']:.1%}) |
 | strict pass³, shared 53 scenarios | {a0['strict']}/53 | **43/53** |
-| integrity-gate scenarios | {a0['gate']}/53 | {a5['gate']}/55 |
+| single-turn integrity-gate failures | {a0['gate']}/53 | {a5['gate']}/55 |
 | multi-turn, 54 conversations | {mt0['passed']}/54 ({mt0['passed']/54:.0%}) | **{mt5['passed']}/54 ({mt5['passed']/54:.0%})** |
 | multi-turn scripts passing all trials | {mt0['strict']}/18 | **{mt5['strict']}/18** |
 
-The tuned arm is better on the scenarios it was iterated against: 71.1% to 87.9%,
-with the paired strict-pass comparison b=18, c=1, p<0.001. The multi-turn baseline
+The paired strict-pass result favours A5 on the development set (b=18, c=1,
+p<0.001). Pass@1 uses different denominators and is descriptive. The original
+single-turn metadata names project `jojuduewx7ud`; the linked A5 rebuild,
+`cgiefgaebmgh`, has its own multi-turn and sealed measurements. The multi-turn baseline
 now exists: A0 is 36/54 and A5 is 41/54. A5 gains 7 conversations and loses 2;
 McNemar p=0.180. The measured direction is positive, but the multi-turn delta is not
 statistically settled. These are three trials of 18 scripts, not 54 independent
@@ -114,6 +119,11 @@ customers; one gain is A0's unfilled-placeholder integrity failure, so the clean
 behavioural signal is narrower than 7 versus 2.
 
 # What changed
+
+A1's generic route instruction permitted \"reply in chat\". A2 required an external
+destination. A3's hours instruction prompted a clock-based contradiction; A5
+kept the customer's stated time and forbade clock checks. The arm history retains
+the regressions as well as the selected changes.
 
 The largest multi-turn gains are **arithmetic (2/9 to 5/9)** and **pushback (5/9 to
 7/9)**. Memory stays 9/9 in both arms; recovery stays 9/9; change-of-mind stays 3/9.
@@ -131,13 +141,13 @@ set is too small to call it a regression.
 
 # Limits and failures
 
-- The single-turn comparison is in-sample: A5 and its graders were iterated against
-  the same scenarios. Twenty grader corrections were made, all after transcript
-  inspection; correction 21 fixed a positive-control bug allowing correct three-term
-  totals such as $99 + $150 + $50 = $299.
-- Six multi-turn failures were authoring gaps: the brief omitted savings-club
-  benefits. The remaining failures are agent misses on hours, overnight constraints,
-  and some arithmetic/change-of-mind turns.
+- The single-turn comparison is in-sample. There are **21 logged corrections**:
+  20 from transcript inspection and one from a positive control. Corrections 20
+  and 21 repaired amount checks that rejected valid arithmetic, including
+  $99 + $150 + $50 = $299. No frozen scenario rubric was changed.
+- Six failing A5 conversations include savings-club expectations absent from the
+  brief; some also miss a required diagnostic price. The overnight example in
+  MT-P02 declines service but fails a wording-sensitive regex. Scores are unchanged.
 - One build showed website-accurate savings-club benefits that were absent from the
   brief while another build declined. The cause is unknown; the repository reports it
   as an open platform question, not as a proven defect.
@@ -153,9 +163,54 @@ The complete evidence is in `RESULTS.md`, `RIGOR.md`, `FAILURES.md` and
                           capture_output=True, text=True)
     if html.returncode:
         raise SystemExit(html.stderr[:1000])
-    print(f"report.md and report.html written; MT A0 {mt0['passed']}/54, A5 {mt5['passed']}/54")
-    print(f"sealed original A0 {sd0['all'][0]}/{sd0['all'][1]}, A5 {sd5['all'][0]}/{sd5['all'][1]}; excluded {sd5['excluded']}")
-    print("print report.html to report.pdf with Chromium")
+    html_path = OUT / "report.html"
+    document = html_path.read_text(encoding="utf-8")
+    print_style = """<style>
+@page { size: A4; margin: 14mm; }
+@media print {
+  body { max-width: none; margin: 0; padding: 0; font-size: 11pt; line-height: 1.4; }
+  h1 { font-size: 14pt; margin-top: 14pt; margin-bottom: 6pt; }
+  header h1 { font-size: 21pt; }
+  table { font-size: 9pt; width: 100%; }
+  tr, h1, h2 { break-inside: avoid; }
+  h1, h2 { break-after: avoid; }
+  #the-check-i-could-not-tune-against { break-before: page; }
+}
+</style>"""
+    html_path.write_text(document.replace("</head>", print_style + "</head>"),
+                         encoding="utf-8")
+    chrome = shutil.which("google-chrome") or shutil.which("chromium")
+    windows_chrome = Path("C:/Program Files/Google/Chrome/Application/chrome.exe")
+    if not chrome and windows_chrome.exists():
+        chrome = str(windows_chrome)
+    if not chrome:
+        raise SystemExit("HTML generated; install Chrome/Chromium to produce the PDF.")
+    with tempfile.TemporaryDirectory(prefix="agentplace-report-", ignore_cleanup_errors=True) as profile:
+        candidate = Path(profile) / "report.pdf"
+        subprocess.run([chrome, "--headless", "--disable-gpu",
+                        f"--user-data-dir={profile}", "--no-pdf-header-footer",
+                        f"--print-to-pdf={candidate}",
+                        html_path.resolve().as_uri()],
+                       capture_output=True, text=True, check=True, timeout=120)
+        # Windows launchers may return before the renderer finishes writing.
+        # Publish only a fresh, complete PDF, never the previous report.
+        deadline = time.monotonic() + 60
+        previous_size = -1
+        stable = 0
+        while time.monotonic() < deadline:
+            if candidate.exists():
+                data = candidate.read_bytes()
+                stable = stable + 1 if len(data) == previous_size else 0
+                previous_size = len(data)
+                if data.startswith(b"%PDF") and b"%%EOF" in data[-1024:] and stable >= 2:
+                    shutil.copyfile(candidate, OUT / "report.pdf")
+                    break
+            time.sleep(0.5)
+        else:
+            raise SystemExit("Chromium did not finish a fresh PDF; old report was not replaced.")
+    print("report.md, report.html and report.pdf generated from recorded results")
+    print(f"multi-turn: A0 {mt0['passed']}/{mt0['n']}; A5 {mt5['passed']}/{mt5['n']}")
+    print(f"sealed exclusions: A0 {sd0['excluded']}; A5 {sd5['excluded']}")
     return 0
 
 

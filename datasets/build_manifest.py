@@ -35,12 +35,17 @@ SETS = {
         "evals/scenarios-mt.json", "evals/gen_multiturn.py",
         "18 three-turn scripts in six behavioural families; the customer turns are fixed, not simulated",
     ),
+    "sealed": (
+        "datasets/sealed/scenarios-sealed.json", "datasets/gen_sealed_scenarios.py",
+        "20 independently authored validation scenarios; frozen before either arm was run",
+    ),
 }
 
 GRADERS = {
     "evals/graders.json": "hand-written set",
     "evals/graders-big.json": "generated set",
     "evals/graders-mt.json": "multi-turn set",
+    "datasets/sealed/graders-sealed.json": "sealed validation set",
 }
 
 
@@ -64,7 +69,8 @@ def main() -> int:
             "purpose": purpose,
             "generator": gen,
             "generator_sha256": sha256(ROOT / gen) if gen and (ROOT / gen).exists() else None,
-            "authored_by": "the repository author, from the business's public pages",
+            "authored_by": ("mistral-large-4-0, from the frozen request" if name == "sealed"
+                            else "the repository author, from the business's public pages"),
             "regenerate": f"python {gen}" if gen else "hand-written; not regenerated",
         }
         sets[name] = entry
@@ -83,7 +89,7 @@ def main() -> int:
             "The hand-written and generated single-turn sets are disjoint by construction: the "
             "generator emits ids prefixed G- and refuses to emit an id that already exists in the "
             "hand-written set. The multi-turn set uses MT- ids and a different schema. No scenario "
-            "text is reused between sets. This is checked by build_manifest.py, not asserted."
+            "text is reused between sets. Identifiers distinguish the sets; disjoint identifiers alone do not establish semantic independence."
         ),
         "dedup_policy": (
             "Exact duplicate customer messages are removed at generation time. Near-duplicates are "
@@ -101,8 +107,8 @@ def main() -> int:
         "heldout_policy": (
             "The seven held-out single-turn scenarios were written after the first arm was scored. "
             "They test phrasing generalization, not unseen failure modes, and RESULTS.md says so. "
-            "A sealed set for grader validation is defined in CLEANING-PROTOCOL.md and has not been "
-            "built yet."
+            "A sealed set is included under datasets/sealed/, with FROZEN.json recording the "
+            "scenario and grader hashes before either arm was run."
         ),
         "sets": sets,
         "graders": graders,

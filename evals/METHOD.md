@@ -6,9 +6,8 @@ bar that existed before the numbers did. If a threshold here turns out to be
 convenient, record the change and the reason; do not edit
 this file.
 
-Initial preregistration build: project `jojuduewx7ud`, linked separately rather than in this repository.
-The final published arm after instruction iteration is project `cgiefgaebmgh`; both use GPT-6 Luna. Public,
-no sign-in required, duplication allowed.
+Published agent: project `jojuduewx7ud`, linked separately rather than in this repository
+Model: GPT-6 Luna. Public, no sign-in required, duplication allowed.
 
 ---
 
@@ -200,3 +199,11 @@ the two probes. The published agent is A2.
 reading transcripts and are logged in `evals/graders.json` under `_corrections`. None
 were found by the suite itself, which is the argument against trusting regex
 graders without a human read.
+
+**A9. Publication/provenance clarification (2026-11-10).** The header above
+describes the initial build, not the final application link. The public link
+now points to `cgiefgaebmgh`, a rebuild with the A5 instructions. Single-turn
+A5 metadata still names `jojuduewx7ud`; it has not been relabelled without a
+capture-time record proving the target. Multi-turn and sealed files identify
+the rebuilt projects explicitly. This note supersedes the publication status
+in A7 without rewriting the preregistered header.

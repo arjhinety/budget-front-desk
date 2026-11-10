@@ -1,6 +1,6 @@
 {
  "arm": "SEALED-A5",
- "agent": "https://cgiefgaebmgh.run.agentplace.io/",
+ "agent": "project:cgiefgaebmgh",
  "records": [
   {
    "id": "SD-01",

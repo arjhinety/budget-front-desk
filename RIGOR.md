@@ -1,7 +1,8 @@
 # How this was built, and what it does not claim
 
-One business, one agent, built from that business's own public pages. The 24
-fields the brief was rendered from each carry a page and a line, and every gap
+One business, one agent, built from that business's own public pages. The published
+v1 brief was rendered from 24 fields, each carrying a page and a line. The current
+ledger has 25 fields after a later correction, and every gap
 the site leaves is written down instead of filled by a confident sentence. The
 agent itself read more pages than the ledger covers, so the ledger bounds what
 was checked, not what the agent knows.
@@ -17,13 +18,17 @@ menu, and enough inconsistency between its own pages to be worth checking.
 ```
 scrape.py          fetch 11 pages  ->  raw/*.html + raw/*.txt + facts/provenance.json
 build_facts.py     parse the text  ->  facts/business.json + facts/sources.csv + facts/parameters.csv
-generate_brief.py  render the ledger -> build/brief.txt + build/builder_url.txt
+generate_brief.py  render current ledger -> build/brief-v2.txt + build/builder_url.txt
 evals/*            test the agent   ->  evals/scenarios.json + evals/check_numbers.py
 ```
 
 Each step reads only what the step before it wrote. Nothing is typed into the
 brief that is not first in the ledger, and the ledger cannot hold a field that
 the build script did not find a literal string for.
+
+`build/brief.txt` and `build/builder_url-v1.txt` preserve the published v1 input.
+The v2 brief adds the missing club benefits; it has not been published or evaluated
+as a replacement arm, so existing results remain attached to v1.
 
 Rebuild from nothing:
 
@@ -89,14 +94,16 @@ like a tuning/pilot/main-sample split rather than one list:
 |---|---|---|
 | tuning (8) | written from the same reading of the site that produced the brief | the brief is wrong — fix the agent |
 | pilot (6) | same business, different wording | the agent memorised the brief's phrasing |
-| main (7) | requests a St. Charles dispatcher actually takes | this is the verdict |
+| main (6) | requests a St. Charles dispatcher actually takes | application behaviour |
+| held-out (7) | authored after observing A0 | phrasing generalization, not blind validation |
+| adversarial (6) | pushback and unsupported-claim probes | boundary behaviour |
 
 Every scenario carries two lists: `must`, all of which have to appear, and
 `must_not`, any one of which fails the scenario even when the `must` items are
 all present. "Correctly quoted the $99 and then invented a furnace price" is a
 failure, not a partial pass.
 
-The scenarios are not random. Six of the twenty-one target the places where this
+The original 21-scenario subset targeted places where this
 specific site is thin: uniform coverage, walk-in address, 24/7, warranty scope,
 licence number, and warranty-company dispatch. Those are the questions the site
 cannot answer, so they are the questions an agent will be tempted to answer
@@ -105,6 +112,13 @@ anyway.
 `evals/check_numbers.py` is the mechanical half of the scoring: it reads a
 transcript and fails any `$N` that is not one of the seven published figures
 ($99, $50, $150, $250, $375, $475, $489).
+
+The complete corpus also retains 55 generated single-turn scenarios,
+18 three-turn scripts and 20 independently authored sealed scenarios.
+All sets and runs remain in the repository. `datasets/manifest.json` records
+their hashes; `RESULTS.md` distinguishes development results from validation.
+The amount check also permits documented arithmetic and customer-supplied
+figures; it does not treat every non-catalogue number as a new business price.
 
 ---
 
@@ -118,11 +132,10 @@ transcript and fails any `$N` that is not one of the seven published figures
   customer to the published booking page, the phone, or the diagnostic fee. No
   calendar, no payments, no CRM. Wiring those up is the next step, not a claim
   made here.
-- **Twenty-one scenarios are not a benchmark.** They are the questions this
-  reviewer thought of after reading eleven pages. They will overstate accuracy
-  on wording that resembles the brief, which is why the phrasing of
-  the pilot and main splits was written *after* the brief, and why the
-  `must_not` lists carry more weight than the `must` lists.
+- **A scripted corpus is not a deployment benchmark.** These sets sample the
+  failure modes identified from one business. Repeated trials measure stability,
+  not additional independent customers; instruction and grader iteration make
+  the development scores optimistic. The sealed set is a separate, small check.
 - **Nothing here is a statement about the business.** Every number belongs to
   Budget Heating, Cooling & Plumbing as published on its own pages on the
   capture date. The customer examples are invented.

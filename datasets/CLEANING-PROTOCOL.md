@@ -1,9 +1,14 @@
 # Cleaning protocol for the sealed validation set
 
-This is written to be executed by someone who has not read the graders and should
-not. It exists because the graders in this repository were written by the same
-person who wrote the scenarios and were patched nineteen times against failures
-that person had already read. Nobody can currently say whether they generalize.
+This protocol separates scenario authorship, deterministic cleaning and human
+labelling. At collection time there were 19 logged corrections; the current
+history has 21 (20 from transcripts and one positive control).
+
+**Current state:** both arms have run, the deterministic exclusion pass has run,
+and automated scores are reported. Human sealed-set labels and grader-agreement
+statistics have not been collected. `labels.csv` below is a planned output,
+not an existing result. The embedding contamination pass also remains separate
+from the completed exclusion-only pass.
 
 **Do not read `evals/graders*.json`, `evals/grade.py` or `evals/grade_mt.py`
 before finishing step 4.** If you do, the set is no longer sealed and the result
@@ -87,7 +92,7 @@ revision**, which is the property the freeze is protecting.
 
 What this tests: whether a rule written from a specification, without sight of the
 replies, agrees with a human reader on what those replies actually say. That is the
-question the nineteen patches left open.
+question the transcript-driven corrections left open.
 
 What it does not test: whether the *existing* 55 scenarios' graders generalize.
 They cannot be tested this way, because a per-scenario regex has nothing to attach
@@ -109,11 +114,14 @@ arms that exist:
 That is **40 conversations**. One trial each: the point is whether a rule written
 from a spec agrees with a reader, not run-to-run stability.
 
-Write to `evals/results/SEALED.json` using the existing runner:
+Write each arm to its own result file using the multi-turn runner:
 
 ```
-bun evals/run_sealed.mjs --arm SEALED-A5 --url <arm url>
+bun evals/run_mt.mjs --arm SEALED-A5 --set datasets/sealed/scenarios-sealed.json --trials 1 --url <arm url>
 ```
+
+The runner requires the injected `browser` session used for the recorded runs;
+the command shows its arguments, not a standalone browser installation.
 
 Run A0 and A5 into **separate files** (`SEALED-A0.json`, `SEALED-A5.json`) so the
 arm is not visible in the record a labeller sees.
@@ -125,8 +133,8 @@ Exclude any record where:
 - the transcript contains `cannot continue right now` (quota),
 - the transcript contains `Something went wrong loading this page` or
   `The answer could not be displayed` (render failure),
-- the reply is under 200 characters and identical to another record's reply
-  (the fixed-reply artefact),
+- all captured replies are under 200 characters (the current script's short-reply
+  rule; it does not discard a conversation solely because one valid reply is terse),
 - `records` has an `error` key.
 
 Record every exclusion with its reason in `datasets/sealed/exclusions.json`.
@@ -137,9 +145,9 @@ Excluded records are **not** agent failures and must not be scored as such.
 The question: is any sealed reply close enough to a reply the graders were tuned
 on that it is effectively the same text?
 
-1. Take the 165 A5 transcripts already in `evals/results/A5.json` and the 159 in
-   `BIG-A2.json` as the **tuned-on** corpus. These are the replies the nineteen
-   grader patches were written against.
+1. Take the 165 A5 transcripts in `evals/results/A5.json` and the 159 in
+   `evals/results/BIG-A2.json` as the **tuned-on** corpus. These are development
+   replies used during instruction and grader iteration.
 2. Embed every reply in both corpora with a sentence-embedding model. `BAAI/bge-m3`
    or `BAAI/bge-large-en-v1.5` are fine; use one model for both sides and record
    which.
@@ -187,13 +195,13 @@ Report, and report all of them:
 |---|---|---|
 | raw agreement | how often grader and labeller agree | below 0.80 |
 | Cohen's κ | agreement corrected for chance | below 0.60 |
-| **false-fail rate** | share of human-PASS replies the grader failed | above 10% — this is the bug that produced all nineteen corrections |
+| **false-fail rate** | share of human-PASS replies the grader failed | above 10% — a recurring grader bug class |
 | **failure recall** | share of human-FAIL replies the grader caught | below 0.90 — this is a grader letting a bad reply through |
 | Gwet's AC1 | agreement that survives a skewed pass rate | report next to κ, never instead of it |
 
-The false-fail rate is the number to lead with. Every one of the nineteen
-corrections in `evals/graders.json` was a false fail, and that is the failure mode
-this set exists to measure.
+Report false-fail rate alongside failure recall so the audit covers both
+over-strict grading and missed agent errors. The correction log alone does not
+establish how often either occurs.
 
 ## Step 5b — the independent evaluator
 

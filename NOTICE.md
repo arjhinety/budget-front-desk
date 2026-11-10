@@ -16,10 +16,10 @@ each came from are included.
 taken down, that request will be honoured immediately.** Open an issue on this
 repository or contact the author through their GitHub profile.
 
-The published agent is not linked from this repository. It is a demonstration
-built for an evaluation exercise, not a service offered to customers, and it is
-shared privately rather than published here. It is taken offline once the
-evaluation it was built for is over.
+The published agent is not linked from this repository's documentation. It is a
+public demonstration built for an evaluation exercise, not a service offered to
+customers; its URL is shared privately with the application. It remains live for
+the application period and can be taken down on request.
 
 It was built from pages the company publishes, and it can be wrong about their
 business. Nothing it says should be relied on as a quote, a booking, or advice.

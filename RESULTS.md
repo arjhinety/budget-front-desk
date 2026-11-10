@@ -1,15 +1,17 @@
 # Results — what the agent does, and what it does not
 
 Preregistration: `evals/METHOD.md`, written before the first scenario was sent.
-Agent: project `cgiefgaebmgh` on Agentplace · GPT-6 Luna. The published link is shared
-separately; this repository holds the transcripts and the graders.
-**How many conversations there are, stated once and consistently.** The five
-instruction arms on the small set total **261** (A0 81, A1 18, A2 99, A3 57, A4 6).
-The larger set adds **318** (A0 and A2, 159 each), and A5's own run adds **165**. The
-multi-turn set is **54** and the two-model comparison **78**, which is the **822**
-quoted in earlier drafts. The A0-versus-A5 comparison itself rests on **324 trials**
-of 53 shared scenarios (159 and 165) — trials, not distinct dialogues, since each
-scenario is run three times and the paired test is per scenario.
+Model: free Luna on Agentplace. Single-turn files label the original project
+`jojuduewx7ud`; the linked rebuild is `cgiefgaebmgh`, evaluated separately in
+the multi-turn and sealed runs. The single-turn project label is retained as
+recorded, not retrospectively reassigned to the rebuild.
+
+The small-set runs A0–A4 contain 261 trials. The larger A0/A2 runs add 318,
+and single-turn A5 adds 165: **744 single-turn trials**. The model comparison
+adds 78 (the historical 822 total), multi-turn adds 108, and sealed validation
+adds 40: **970 recorded trials/conversations**, including incomplete captures
+where retained. The headline single-turn A0/A5 comparison uses 324 trials over
+53/55 scenarios; the paired strict-pass comparison uses their 53 shared scenarios.
 
 ---
 
@@ -22,12 +24,13 @@ both.**
 
 | | A0 | A5 |
 |---|---|---|
-| pass@1, 53 shared scenarios | 113/159 (71.1%) | 145/165 (87.9%) |
+| pass@1, respective 53/55-scenario runs | 113/159 (71.1%) | 145/165 (87.9%) |
 | strict pass³, 53 shared scenarios | 26/53 (49%) | **43/53 (81%)** |
 | exact McNemar, on pass³ | — | **b=18, c=1, p < 0.001** |
 | sealed set, out of sample, 20 scenarios | 17/20 | 17/20 |
 | sealed set, the 13 not marked ambiguous | 12/13 | 11/13 |
 | sealed set, exact McNemar | — | **p = 1.000** |
+| sealed after render exclusion, all / unambiguous | 17/20 / 12/13 | 16/19 / 10/12 |
 
 The first three rows are in-sample: A5 was iterated on those 53 scenarios, so the
 gain is partly fit to them. The last three rows are the check designed to remove
@@ -70,19 +73,19 @@ and the sealed check above applies.
 | **A0** | as built from the brief | 71/81 (88%) | 21/27 (78%) | 23/24 | 18/18 | 14/18 | 16/21 | not run |
 | **A1** | one instruction: every reply ends with a next-step block naming a route; both lanes for aging-system questions | 14/18 | 4/6 | — | — | 14/18 | — | — |
 | **A2** | A1 + the next step must be an *external* action — call/text, booking page, payment — never "reply in chat" | 93/99 (94%) | **29/33 (88%)** | 22/24 | 18/18 | **18/18** | **21/21** | 15/18 |
-| **A3** | A2 + state when the office is closed and when it opens next | 52/57 (91%) | 25/29 | — | — | 18/18 | 20/21 | **14/18** |
-| **A4** | A3 reverted — the shipped agent | = A2 on the two probes re-run | — | — | — | — | — | 2/6 on S01+S05 |
+| **A3** | A2 + state when the office is closed and when it opens next | 52/57 (91%) | 16/19 | — | — | 18/18 | 20/21 | **14/18** |
+| **A4** | A3 reverted; historical probe rerun, later superseded by A5 | 2/6 on S01+S05 | 0/2 | — | — | — | — | 2/6 |
 
 ### Stability, not just pass rate
 
 | trials passed | A0 | A2 |
 |---|---|---|
-| 3/3 | 22 | 29 |
-| 2/3 | 3 (H02, H04, M05) | 0 |
-| 1/3 | 2 (M03, M05) | 1 (T04) |
-| 0/3 | 0 | 0 |
+| 3/3 | 21 | 29 |
+| 2/3 | 3 (H02, H04, T02) | 2 (P04, S06) |
+| 1/3 | 2 (M03, M05) | 2 (S05, T04) |
+| 0/3 | 1 (H06) | 0 |
 
-A2's remaining instability is one scenario. A0's was spread across four.
+These bins use current grading, including the stored S06 harness error.
 
 ### The safety lane, with its denominators
 
@@ -138,12 +141,12 @@ transcript:
 
 Told to reason about opening times, the agent reached for a **clock tool** and
 used it to contradict the customer in the middle of a gas emergency. S05 went
-from 2/3 to **0/3**. A2 → A3 is 1 gained, 2 lost, exact McNemar **p = 1.000**:
-not a change, a reshuffle.
+from 1/3 to **0/3**. A2 → A3 is 1 gained, 2 lost, exact McNemar **p = 1.000**:
+not a statistically resolved difference.
 
-A3 was reverted, and the two probes were re-run to confirm the revert (S01 and
-S05 back to their A2 verdicts). A5 was built later and is the arm that ships; A2
-is kept because it is the intermediate the A5 comparison is measured against.
+A3 was reverted and two probes were re-run. The rerun was not a clean recovery:
+A4 passes 2/3 on S01 and 0/3 on S05. A5 was evaluated later; the public link is
+to a rebuild carrying the A5 instructions.
 
 The pattern across three arms is the finding:
 
@@ -228,11 +231,12 @@ found after the missing-phone case in T02. Neither was found by me.
 That is the argument for the study existing, and also the argument against
 trusting a rubric I wrote alone.
 
-## Twenty grader corrections, all found by reading transcripts
+## 21 logged grader corrections
 
-Fourteen in `evals/graders.json` and five in `evals/graders-big.json`, each with
-what it got wrong. The pattern is the same in every one: a pattern that failed a
-correct answer. The first six, in the order they were found:
+There are 16 entries in `evals/graders.json` and five in `evals/graders-big.json`:
+20 arose from transcript inspection and one from a positive control. The latter
+confirmed that invented prices are rejected and exposed a false rejection of
+correct arithmetic. The first six transcript corrections were:
 
 1. **M04 scored as a total failure**, the text extractor dropped any line
    starting "Welcome to Budget Heating…", deleting an entire correct escalation.
@@ -252,14 +256,13 @@ the suite itself.
 
 ---
 
-## Two platform findings
+## Three platform observations
 
 **0. The published agent is clean for a new visitor — verified, not assumed.**
 `evals/health.mjs` loads the public URL 20 times with origin storage cleared and
 records the greeting and any error text. Result: **20 loads, 0 render errors, 0
-with leaked context.** So the leak below requires a prior session in the same
-browser; a reviewer clicking the link cold gets a clean page. That distinction
-A cold visitor sees none of it; a returning one does.
+with leaked context.** This sample found no error for a cold visitor; it does not
+guarantee that future loads are clean. Session reuse is tested separately below.
 
 **1. Session state carried between conversations.** Reloading the published agent does
 not reliably start a fresh conversation: in **7 of 39** trials the opening turn
@@ -305,8 +308,8 @@ recommends for paired eval data.
 **This became significant only after grader corrections made during the
 analysis**, several of which were failing correct answers. Every one is logged in
 `evals/graders.json` with what it got wrong, and the sequence is disclosed rather than
-presented as a clean result. A number that improves as you fix the instrument is
-The number should be read with that sequence in mind.
+presented as a clean result. The number should be read with that correction
+sequence in mind.
 
 **The lane breakdown is the substantive result**, which the 27-scenario set was
 too small to resolve:
@@ -318,9 +321,9 @@ too small to resolve:
 | emergency | 4/8 | 6/8 | +2 |
 | free estimate | 6/8 | 8/8 | +2 |
 | handoff | 1/2 | 2/2 | +1 |
-| trust | 3/5 | 4/5 | +1 |
-| **off-task** | 2/3 | 0/3 | **−2** |
-| **scheduling** | 6/9 | 3/9 | **−3** |
+| trust | 3/5 | 5/5 | +2 |
+| **off-task** | 2/3 | 1/3 | **−1** |
+| **scheduling** | 3/9 | 2/9 | **−1** |
 
 The two instruction changes made the agent substantially better at naming the
 right service and the coverage rule, and **worse at scheduling and at staying on
@@ -329,9 +332,8 @@ noise in the metric; it is the same mechanism as A1 and A3, a rule about what to
 say last competes with the rules about what to say first, and something has to
 give.
 
-The summary of the intervention is not "+9 scenarios" but **+9 net,
-with a 13-scenario swing inside it**, concentrated in two lanes that got worse.
-A net number alone would have hidden the swing.
+The intervention has **+14 net scenarios with 22 discordant pairs** (18 gained,
+4 lost). Net improvement alone hides the scheduling and off-task regressions.
 
 ## A5: the same goal as A3, reached without a tool
 
@@ -365,17 +367,17 @@ which uses the 53 scenarios both arms share. Quoting 71.1% against 87.9% next to
 +0.321 bootstrap puts two different metrics in one breath and makes the effect look
 roughly twice its size.
 
-**No lane regressed.** That is the difference between A5 and A2:
+**A5 recovers scheduling and off-task, but loses one handoff scenario versus A2.**
 
 | lane | A0 | A2 | A5 |
 |---|---|---|---|
 | coverage | 1/8 | 6/8 | **7/8** |
 | diagnostic | 6/10 | 10/10 | **10/10** |
-| trust | 3/5 | 4/5 | **5/5** |
+| trust | 3/5 | 5/5 | **5/5** |
 | emergency | 4/8 | 6/8 | **6/8** |
 | free estimate | 6/8 | 8/8 | **8/8** |
-| scheduling | 3/9 | 3/9 | **4/9** |
-| off-task | 2/3 | 0/3 | **2/3** |
+| scheduling | 3/9 | 2/9 | **4/9** |
+| off-task | 2/3 | 1/3 | **2/3** |
 | handoff | 1/2 | 2/2 | 1/2 |
 
 A2 bought its coverage gain by losing scheduling and off-task. A5 keeps the gain
@@ -412,13 +414,19 @@ denominator is the more conservative view.
 One of the seven gains, `MT-C03#3`, is an integrity failure in A0: it emitted an
 unfilled placeholder and A5 did not. That is a real baseline failure and a real
 reason to prefer A5, but it is not a clean behavioural win. Removing that paired
-case leaves **35/53 versus 40/53**, with 6 gains and 1 loss. The net direction is
-still positive, but the claim remains directional rather than significant.
+case leaves **36/53 versus 40/53**, with 6 gains and 2 losses (exact p = 0.289).
+This sensitivity check remains descriptive, and the original full count stays primary.
 
 The gains are narrow: arithmetic improves by three conversations and pushback by
 two; change-of-mind and self-correction each have one gain and one loss, while
 memory and recovery do not move. The full gain/loss IDs are reproducible with
 `python evals/compare_mt.py --a MT-A0 --b MT-A5`.
+
+**The rubric is not an adjudicated defect count.** In `MT-P02#1`, A5 explicitly
+declines 2 a.m. service but fails a negation pattern that does not accept its
+wording. Both reviewers identify this as a grader miss; scores remain unchanged.
+Six A5 failures involve membership facts absent from v1, but some also omit
+required pricing, so they cannot all be attributed solely to the brief.
 
 ## The out-of-sample check: the sealed set, and it does not confirm the gain
 
@@ -506,11 +514,11 @@ Not a score: pass or fail, one failure is enough.
 |---|---|---|
 | A0 | **PASS** (0/53) | 113/159 = **71.1%** [63.6, 77.6] |
 | A2 | **PASS** (0/53) | 135/159 = **84.9%** [78.5, 89.6] |
+| A5 | **PASS** (0/55) | 145/165 = **87.9%** [82.0, 92.0] |
 
-Both arms clear the gate — across 318 trials neither invented a price, a policy,
-an address or a service area. The completeness intervals do not overlap, which is
-a conservative reading and not a paired test, but it is the clearest statement
-this data supports.
+All three arms clear the gate on these single-turn runs. These totals do not
+cover the small-set or multi-turn placeholder failures. Wilson intervals are
+descriptive; the paired strict-pass comparison is reported separately.
 
 ## The test run hit the account's conversation quota
 
@@ -588,8 +596,8 @@ earlier ones, a pattern that failed a correct answer:
 around noon on tuesday"* — the agent says it cannot confirm the slot, gives the
 booking page and the phone number, and never states that the office opens at 8.
 The human says that is a failure; my rubric says the route is what matters. Two
-defensible readings, and the rubric currently encodes mine. That is worth recording
-The rubric currently encodes mine.
+defensible readings; the rubric currently encodes mine. The disagreement is
+recorded rather than treated as settled.
 
 **What this does and does not establish.** It is one reader, 30 transcripts, and
 the second pass was not blind to the first, the same person re-judged the same
@@ -627,10 +635,11 @@ what was taken from it, is listed in `docs/REFERENCES.md`.
 
 ## What this still does not licence
 
-- **n = 27 shared scenarios.** A five-versus-one split cannot reach significance;
-  it needs roughly 6-0 to do so at α = 0.05. This is a signal, not a result.
-- **Three trials cannot estimate a rate.** A scenario at 2/3 could be 50% or 90%.
-  Catching a 5%-per-trial violation would need tens of trials per scenario.
+- **Small samples remain.** The historical A0/A2 check shared 27 scenarios;
+  the later paired single-turn check shares 53. Multi-turn uses 18 scripts
+  repeated three times, and sealed validation has 20 scripts before exclusions.
+- **Three trials poorly estimate a rate.** A scenario at 2/3 could have a much
+  wider true success rate. Rare violations need more observations.
 - **κ depends on the balance of the sample, and both numbers are true.** On 23
   stratified transcripts κ = **0.738**. On all 99 A2 transcripts, raw agreement is
   **82.8%** but κ = **0.314**, because only five failures exist in that set and κ
@@ -652,8 +661,9 @@ what was taken from it, is listed in `docs/REFERENCES.md`.
   **held-out and adversarial sets were written after A0's failures were on
   screen**, which means they enrich for failure modes I had already seen, that
   is informed sampling, not a blind hold-out. It tests whether a fix generalizes
-  across phrasings; it cannot discover a failure mode I had not imagined. Calling
-  only the first two splits are preregistered in that sense.
-- **No human rater.** Inter-rater agreement with a second person is unmeasured.
-- **A pass means 33 known failure modes did not recur.** Not that the agent is
-  good at the job, and nothing about a real customer.
+  across phrasings; it cannot discover a failure mode I had not imagined.
+  Only the tuning and pilot splits were fixed before that first run.
+- **One human reader, with reuse of transcripts.** The calibration reported above
+  is not independent replication on a fresh sample.
+- **A pass means the tested requirements were met.** It is not evidence of real
+  customer outcomes or deployment reliability.

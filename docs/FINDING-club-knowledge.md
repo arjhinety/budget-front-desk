@@ -5,15 +5,17 @@ not as a diagnosis.
 
 ## The observation
 
-Two agents were built on Agentplace from **the same brief** — the same 3,107
-characters, generated from the same 25-field ledger. The brief lists the savings
+Two agents were built on Agentplace from **the same v1 brief** — the same 3,107
+characters, generated from the 24-field ledger snapshot used for that build. The
+current ledger has since gained a benefits field; it was absent from the published
+v1 brief. The brief lists the savings
 club as a price line and nothing else:
 
 > `Budget Savings Club Membership $250 per year`
 
-It contains no description of what the membership includes. Neither does the
-ledger: `facts/business.json` has a `savings_club` service with a price and no
-benefits field.
+It contains no description of what the membership includes. The v1 ledger used for
+these builds likewise had no benefits field. The current `facts/business.json` now
+contains that field as a documented post-run correction.
 
 The business's website does publish the benefits:
 
@@ -77,9 +79,9 @@ before it was caught by reading the reply.
 
 ## The fix, in order
 
-1. Add a `benefits` field to the savings club in the ledger, sourced from
+1. **Done:** add `savings_club_benefits` to the current ledger with source
    `raw/book-online.txt:212`.
-2. Regenerate the brief and re-run the scripts that ask about membership.
-3. Add a check to `build_facts.py`: every fact an evaluation expects must exist in
-   the ledger, or the build fails. A scenario that asserts a fact the brief does
-   not contain is a broken test, not a hard one.
+2. **Generated, not evaluated:** `build/brief-v2.txt` contains the benefits.
+   No v2 outcome is substituted for the retained v1 runs.
+3. **Still proposed:** check that every expected evaluation fact is present in
+   the effective build input before attributing its absence to the agent.

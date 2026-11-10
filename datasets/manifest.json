@@ -1,12 +1,12 @@
 {
   "canonical_schema_version": "agentplace-eval-set-v1",
-  "generation_timestamp": "2026-11-08T16:24:22+00:00",
-  "repository_commit": "HEAD",
-  "record_count": 106,
-  "contamination_policy": "The hand-written and generated single-turn sets are disjoint by construction: the generator emits ids prefixed G- and refuses to emit an id that already exists in the hand-written set. The multi-turn set uses MT- ids and a different schema. No scenario text is reused between sets. This is checked by build_manifest.py, not asserted.",
+  "generation_timestamp": "2026-11-10T15:14:40+00:00",
+  "repository_commit": "09717c660e0efc1bb971ed33aa6173e615aa55d3",
+  "record_count": 126,
+  "contamination_policy": "The hand-written and generated single-turn sets are disjoint by construction: the generator emits ids prefixed G- and refuses to emit an id that already exists in the hand-written set. The multi-turn set uses MT- ids and a different schema. No scenario text is reused between sets. Identifiers distinguish the sets; disjoint identifiers alone do not establish semantic independence.",
   "dedup_policy": "Exact duplicate customer messages are removed at generation time. Near-duplicates are NOT removed, and that is deliberate: a near-duplicate with a different county or a different day is a different test, and collapsing them would delete exactly the perturbations the set exists to measure. The cleaning pass measures near-duplicate rate and reports it rather than deleting.",
   "evaluation_exclusion_policy": "Any record whose transcript contains the platform quota message, a render error, or a harness failure is excluded from scoring and recorded as excluded, never counted as an agent failure. The exclusion list is in evals/results/*.json under records with an 'error' key.",
-  "heldout_policy": "The seven held-out single-turn scenarios were written after the first arm was scored. They test phrasing generalization, not unseen failure modes, and RESULTS.md says so. A sealed set for grader validation is defined in CLEANING-PROTOCOL.md and has not been built yet.",
+  "heldout_policy": "The seven held-out single-turn scenarios were written after the first arm was scored. They test phrasing generalization, not unseen failure modes, and RESULTS.md says so. A sealed set is included under datasets/sealed/, with FROZEN.json recording the scenario and grader hashes before either arm was run.",
   "sets": {
     "handwritten-single-turn": {
       "file": "evals/scenarios.json",
@@ -34,14 +34,24 @@
       "items": 18,
       "purpose": "18 three-turn scripts in six behavioural families; the customer turns are fixed, not simulated",
       "generator": "evals/gen_multiturn.py",
-      "generator_sha256": "edc0c74c152ceda1d94217a02eeeef07346458b7b13b1224166c3e3cccb3a6cb",
+      "generator_sha256": "1f382e0b1c46021b371969887f97a025027805b9470a5b7cd7534980dc31a075",
       "authored_by": "the repository author, from the business's public pages",
       "regenerate": "python evals/gen_multiturn.py"
+    },
+    "sealed": {
+      "file": "datasets/sealed/scenarios-sealed.json",
+      "sha256": "45ecf6aa9c14d3c376cae6aa46fc2314fd8ef1efde79d215c235cbf371453d92",
+      "items": 20,
+      "purpose": "20 independently authored validation scenarios; frozen before either arm was run",
+      "generator": "datasets/gen_sealed_scenarios.py",
+      "generator_sha256": "7d47e5cc1956afbaa16badf58711d1c958cb7b3835d64c8e28a71978e9f16b2a",
+      "authored_by": "mistral-large-4-0, from the frozen request",
+      "regenerate": "python datasets/gen_sealed_scenarios.py"
     }
   },
   "graders": {
     "evals/graders.json": {
-      "sha256": "a2d6ba38d5305ce39aa8dff9d8153466fe4c6d50ccc52cd2778ee2de6c4e580d",
+      "sha256": "5b7dbf5eaa9e0c5b81eae0940815f76f5c25f3130269f62fedd0166fee2a5e29",
       "grades": "hand-written set"
     },
     "evals/graders-big.json": {
@@ -49,8 +59,12 @@
       "grades": "generated set"
     },
     "evals/graders-mt.json": {
-      "sha256": "2744aaa73a51f8763c2f0e90aef99795c76f68d9b66dc8624d8150da2dfca32e",
+      "sha256": "46e7e33f378ce73c2f2bb81af7326d7b94b8b5a8428e9e9c3e8872fc2282dcfb",
       "grades": "multi-turn set"
+    },
+    "datasets/sealed/graders-sealed.json": {
+      "sha256": "4b82bd26c91303d7bdac38fd7b5d7234f11b6c304ef963b7be4368272c7a5a96",
+      "grades": "sealed validation set"
     }
   }
 }

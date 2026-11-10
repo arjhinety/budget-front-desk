@@ -44,7 +44,7 @@ customer mid-gas-leak:
 > Central Time, with the office open; that conflicts with your saying it's Sunday
 > at 11 p.m."
 
-S05 went 2/3 → 0/3. A2 → A3 was 1 gained, 2 lost.
+S05 went 1/3 → 0/3. A2 → A3 was 1 gained, 2 lost.
 
 **Why the patch failed.** The instruction named a concept — "outside business
 hours" — that the agent could resolve two ways: from what the customer said, or
@@ -94,9 +94,9 @@ structural too:
   message, not on the word "closed"
 - precedence → assert on the resolved fact set, not on which sentence came first
 
-Six of my graders were wrong at least once, and every one was caught by reading a
-transcript rather than by the suite. That is the argument for moving the check
-from the text to the state.
+There are 21 logged grader corrections: 20 from transcript inspection and one
+from a positive control. They motivate checking structured state as well as
+text; they do not prove a proposed platform fix eliminates the failure class.
 
 ---
 

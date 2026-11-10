@@ -287,7 +287,7 @@
   "Price check allows a published price plus the published Saturday surcharge. A2 wrote 'a Saturday appointment adds $50, so that's $200 for one system' - $150 + $50, correct arithmetic, scored as an invented figure. Derived totals are allowed when they decompose into published components.",
   "The negation guard now applies to every global rule, not only CLAIMS_24_7. OFFERS_SUNDAY was still failing 'I can't verify whether Budget has an appointment available for Sunday', which is the correct answer, and it was failing the integrity gate for the whole arm on that one sentence.",
   {
-   "n": 29,
+   "n": 20,
    "date": "2026-11-10",
    "where": "datasets/grade_sealed.py, integrity check UNSOURCED_PRICE",
    "was": "a stated amount passed only if it was a ledger price or the sum of two",
@@ -295,7 +295,8 @@
    "why": "A5 answered SD-17 turn 3 with $249 for diagnostic plus cleaning and $299 for the same on a Saturday. $299 = $99 + $150 + $50, all three in the ledger. The check failed a correct total — same class as the $200 and $250 false positives.",
    "found_by": "reading the transcript, not the score",
    "effect": "SEALED-A5 10/13 -> 11/13; SEALED-A0 unchanged at 12/13",
-   "applied_to": "both arms, identically"
+   "applied_to": "both arms, identically",
+   "metadata_note": "Correction ID was mistakenly written as 29; corrected to 20 during pre-send audit. Grading behaviour unchanged."
   },
   {
    "n": 21,

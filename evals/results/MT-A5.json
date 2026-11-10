@@ -1,6 +1,6 @@
 {
  "arm": "MT-A5",
- "agent": "https://cgiefgaebmgh.run.agentplace.io/",
+ "agent": "project:cgiefgaebmgh",
  "records": [
   {
    "id": "MT-C01",
@@ -867,5 +867,5 @@
    "at": "2026-11-09T14:28:59.454Z"
   }
  ],
- "note": "Cleared 2026-11-09. The first multi-turn run was invalid twice over: the reply extraction used a character offset that returned empty when the page re-rendered, and the account quota was hit partway through, so most replies are the quota message. Both are fixed; the run is to be redone."
+ "note": "Completed: 54 conversations, 18 scripts, three trials each. Earlier invalid captures were replaced after extraction and quota handling were repaired; no rerun remains pending."
 }

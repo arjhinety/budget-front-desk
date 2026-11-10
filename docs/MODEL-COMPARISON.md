@@ -29,9 +29,9 @@ model produces**, not on the count.
   **neither** the free estimate nor the $99 diagnostic. The customer gets no path
   at all.
 
-Both are one failure in thirty-nine. One costs a customer some information; the
-other costs them the next step. **Terra is roughly 8% faster and 10% terser. Whether the terseness causes the speed
-or the dropped content is a hypothesis from one observation, not a finding.**
+The aggregate is 37/39 for each model, so each has two failing trials.
+**Terra's displayed median is roughly 6.5% faster (8.7 s versus 9.3 s) and its
+mean reply is about 10% shorter. A causal connection is untested.**
 Paying more for a model that is quicker at omitting the answer is a bad trade for
 a front desk whose whole job is routing.
 

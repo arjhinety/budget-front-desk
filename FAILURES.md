@@ -1,15 +1,15 @@
 # Failure catalogue
 
-Every distinct failure observed across **261 graded conversations** in five arms
-on the small set. 24 trials failed. They reduce to **four** problems, and two of
-those account for eighteen of the failures.
+This catalogue covers the **261 small-set trials** in A0–A4, not every later
+campaign. Current grading marks 29 trials failed: 27 behavioural misses in the
+four patterns below, one template-placeholder failure, and one harness error.
+The complete large-set and multi-turn records are retained in `evals/results/`.
 
 Classified by where the fix belongs: **agent** (this business's wording) or
 **platform** — meaning the failure looks like it comes from the build rather than
-from this business's phrasing. That label rests on **one business, one brief and one
-model**, so it reads as *likely platform-level, seen once*. It is not a claim that
-every agent on the product fails the same way; that would need several builds to
-show, and only one was made.
+from this business's phrasing. That label rests on one business and a small
+number of builds; it is a proposed location for a fix, not proof that every
+agent on the platform fails the same way.
 
 ---
 
@@ -23,7 +23,7 @@ instead of telling the customer what to do.
 | H06 no heat, 20°F | A0 ×3 | "…send the property address, your name, mobile number… I'll repeat the details back before directing you to the booking page or office." |
 | M05 after 6pm | A0 ×2, A1 ×1 | "…the address is needed to check service coverage." |
 | M01 burst pipe | **A1 ×3** | intake request, phone number gone — a regression introduced by an instruction |
-| H04 late afternoon | A0 ×1 | hours quoted, no route |
+| H04 late afternoon | A0 ×1, A3 ×1 | hours quoted, no qualifying route |
 | T02 gas smell | A0 ×1 | evacuation correct, no company number |
 
 **Severity: high.** In H06 and M01 the customer is in a cold house or standing in
@@ -54,14 +54,14 @@ column rather than a verdict. This cluster may be my preference, not a defect.
 
 ---
 
-## F3 — The office is not stated to be closed · 6 trials · platform
+## F3 — The office is not stated to be closed · 10 trials · platform
 
 A customer writes at 11pm Sunday. The agent handles the emergency correctly and
 never says when a person is available.
 
-- S05 ×5 (A2 ×2, A3 ×3): gas smell at 11pm Sunday. Safety, payment and phone all
-  correct; the customer is left not knowing the office opens Monday.
-- S01#1 (A3): burst water heater, same gap.
+- S05 ×8 (A2 ×2, A3 ×3, A4 ×3): gas smell at 11pm Sunday. Safety, payment and
+  phone can be correct while office availability is left unstated.
+- S01#1 (A3) and S01#3 (A4): burst water heater, same gap.
 
 **Severity: high.** Correct safety advice plus a broken expectation about when
 help exists is how a customer waits by the phone all night.
@@ -73,7 +73,7 @@ agent responded by querying a clock and contradicting the customer:
 > Central Time, with the office open; that conflicts with your saying it's Sunday
 > at 11 p.m."
 
-S05 went 2/3 → 0/3. Time has to be resolved by the platform, once, with the
+S05 went 1/3 → 0/3. Time has to be resolved by the platform, once, with the
 customer's premise winning — not inferred by a model that has a tool and a
 preference for the tool.
 
@@ -92,10 +92,17 @@ appeared only after the next-step rule was added. Something has to give in the
 reply budget when a mandatory closing block is appended.
 
 ---
+## Template and harness cases
+
+- **P04#1 (A2):** an unfilled address template appeared in the customer reply.
+  It is an integrity failure, detailed in `RESULTS.md`.
+- **S06#3 (A2):** a stored harness timeout is counted as a failure by the current
+  grader. It must not be described as a model failure.
+
 
 ## Not failures, but worth recording
 
-- **S06#3** — harness: `fill()` timed out mid-message. Re-run, passed.
+- **S06#3** remains a stored harness error in the current grading totals.
 - **H02#2 (A2)** — "Something went wrong loading this page. Tap to retry."
 - **S06#1 (A2)** — "The answer could not be displayed. Please try again."
 - **7 of 39** trials opened by referencing the previous conversation's subject.
@@ -107,12 +114,10 @@ reply budget when a mandatory closing block is appended.
 
 ## What the distribution says
 
-**Almost no failures were fabrications.** Across the recorded conversations the agent
-invented no price, no policy, no street address and no service area, and never
-claimed 24/7 or offered a Sunday slot. The one exception is a template slot it
-failed to fill (P04#1 in `RESULTS.md`), which is a different defect: not an
-invented fact but an unrendered one. Every other failure is something it *did not
-say*.
+**Most small-set failures were omissions.** No invented price was identified by
+the price gate in these runs. P04#1 is a template leak rather than an invented
+business fact; the later MT-A0 run contains another placeholder case. These
+observations should not be read as a zero-integrity-failure claim across all sets.
 
 That matters more than the pass rate. An agent that omits wastes a customer's
 time; an agent that invents exposes the business. The brief was built to produce the first, and the
