@@ -1,7 +1,7 @@
 ---
 title: "Budget Front Desk"
 subtitle: "An Agentplace Luna agent: failures, changes, and the rerun"
-author: "Arjhine A. Ty · Prepared for Agentplace · 2026-11-10"
+author: "Arjhine A. Ty · Prepared for Agentplace · 2026-11-11"
 ---
 
 # What I built and tested
@@ -44,9 +44,9 @@ external action and forbade clock-based contradictions of the customer's stated 
 | Handoff | 1/2 | 1/2 |
 
 There are 18 gains and 1 loss (paired McNemar p<0.001).
-Most gains now state the $99 diagnostic or coverage rule. One sewage reply loses
-avoid-contact advice. The external-next-step version had reached
-40/53; A5 recovered scheduling and off-task losses.
+Most gains now state the $99 diagnostic or coverage rule. The lost sewage score
+reflects a pattern that misses keep-away wording, not established loss of safety
+advice. The external-next-step version reached 40/53.
 This sequential comparison is not a controlled ablation.
 
 # Validation and remaining work
