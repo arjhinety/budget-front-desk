@@ -45,7 +45,7 @@ def verify_frozen() -> None:
             raise SystemExit(f"{name} does not match FROZEN.json — the sealed set is burned")
 
 
-def grade_record(rec: dict, checks: dict, globals_: list[dict], money: set[int]) -> dict:
+def grade_record(rec: dict, checks: dict, globals_: list[dict], money: set[int], derived: set[int]) -> dict:
     replies = rec.get("replies", [])
     fails: list[tuple[int, str]] = []
     for i, txt in enumerate(replies, 1):
@@ -75,7 +75,7 @@ def grade_record(rec: dict, checks: dict, globals_: list[dict], money: set[int])
             if tail in ("\n", "") and any(str(a).startswith(raw) and str(a) != raw for a in money):
                 continue
             v = int(float(raw))
-            if v not in money and not any(v == a + b for a in money for b in money):
+            if v not in derived:
                 fails.append((i, f"INTEGRITY UNSOURCED_PRICE ${raw}"))
     return {"id": rec["id"], "pass": not fails, "fails": fails,
             "first_fail_turn": fails[0][0] if fails else None}
@@ -93,6 +93,16 @@ def main() -> int:
 
     g = json.loads((SEALED / "graders-sealed.json").read_text(encoding="utf-8"))
     money = allowed_money()
+    # correction 20: a stated total may be the sum of up to three ledger prices.
+    # $99 + $150 + $50 = $299 is a correct Saturday total and was being failed.
+    derived = set(money)
+    ms = sorted(money)
+    for a in ms:
+        derived.add(a)
+        for b in ms:
+            derived.add(a + b)
+            for c in ms:
+                derived.add(a + b + c)
     recs = json.loads((ROOT / "evals" / "results" / f"{args.arm}.json").read_text(encoding="utf-8"))["records"]
 
     rows = []
@@ -100,10 +110,11 @@ def main() -> int:
         if "error" in r:
             rows.append({"id": r["id"], "pass": False, "fails": [(0, "HARNESS")], "first_fail_turn": None})
             continue
-        rows.append(grade_record(r, g["scripts"].get(r["id"], {}), g["global_must_not"], money))
+        rows.append(grade_record(r, g["scripts"].get(r["id"], {}), g["global_must_not"], money, derived))
 
     if args.json:
         print(json.dumps(rows, indent=1, ensure_ascii=False))
+        return 0
 
     ambiguous = set(g["ambiguous"])
     scored = [r for r in rows if r["id"] not in ambiguous]

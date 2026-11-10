@@ -1,0 +1,326 @@
+{
+ "arm": "SEALED-A5",
+ "agent": "https://cgiefgaebmgh.run.agentplace.io/",
+ "records": [
+  {
+   "id": "SD-01",
+   "family": "self-correction",
+   "trial": 1,
+   "turns": [
+    "my ac is blowin warm air and i need a tech to look at it",
+    "can someone come sunday morning i work mon thru fri",
+    "oops i mean saturday the 14th not sunday"
+   ],
+   "replies": [
+    "Warm air from the AC needs troubleshooting, so this is a diagnostic. The HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis; any repairs,\n\nWarm air from the AC needs troubleshooting, so this is a diagnostic. The HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis; any repairs, parts, or refrigerant are quoted separately, and you approve any repair before work begins.\n\nPlease share the property address (city and ZIP), your name and mobile number, and the system’s age if you know it. You can attach a photo of the unit label if available. I’ll recap the details so you can pass them to the dispatcher. To request a real appointment, call or text (636) 887-2800; the dispatcher must confirm coverage and the earliest available time.\n\nAsk me anything\nSpeak",
+    "I understand that weekdays are difficult. Sunday morning is outside our posted hours; the office is closed Sundays. The next opening is Monday at 8:00 AM. There\n\nI understand that weekdays are difficult. Sunday morning is outside our posted hours; the office is closed Sundays. The next opening is Monday at 8:00 AM. There’s no Sunday or after-hours appointment availability I can confirm here, so a dispatcher would need to discuss options during business hours.\n\nFor the warm-air issue, this is a diagnostic: the HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis; repairs, parts, and refrigerant are quoted separately and require your approval. I don’t have your property address yet, so I can’t check service coverage. Call or text (636) 887-2800 to discuss scheduling with the dispatcher; they must confirm whether a weekday option is available.\n\nAsk me anything\nSpeak",
+    "Thanks for clarifying. Saturday, November 14 is within our posted hours of 9:00 AM–5:00 PM, but I can’t confirm a real appointment time here. For the warm-air A\n\nThanks for clarifying. Saturday, November 14 is within our posted hours of 9:00 AM–5:00 PM, but I can’t confirm a real appointment time here. For the warm-air AC issue, this is a diagnostic: the HVAC Diagnostic Service Call is $99, plus the $50 Saturday addition—$149 total for the visit. That covers the trip and diagnosis; repairs, parts, or refrigerant are quoted separately and need your approval.\n\nThe choices below are a Test-only demonstration. Neither is real availability; choosing or sending one will not reserve a visit, notify staff, or collect payment. I still need your property address (city and ZIP), name, mobile number, and the system’s age if known. You may attach a photo of the unit label if available.\n\nThese are demonstration choices only, not real appointment slots or a booking.\n\nSample choices\nTEST — weekday at 10 AM (sample only)\nNot real availability; no reservation or staff notification.\nTEST — Saturday at 10 AM (+$50; sample only)\nNot real availability; $149 total diagnostic visit in this example. No reservation or staff notification.\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:06:18.503Z"
+  },
+  {
+   "id": "SD-02",
+   "family": "self-correction",
+   "trial": 1,
+   "turns": [
+    "hot water heater is leaking everywhere in my basement",
+    "im over by the galleria in st louis county",
+    "scratch that im actually in union franklin county"
+   ],
+   "replies": [
+    "A leaking water heater needs a diagnostic visit to identify the source. If water is spreading near electrical equipment, stay away from it. If you can safely re\n\nA leaking water heater needs a diagnostic visit to identify the source. If water is spreading near electrical equipment, stay away from it. If you can safely reach the water shutoff, turn off the water supply to the heater; don’t enter standing water near electricity. If the leak is severe or you can’t safely stop it, keep people away and call for urgent help.\n\nI don’t yet know your address, so I can’t confirm service coverage. Please share the property address, your name and mobile number, and the heater’s type and age if known. You can attach a photo of the leak or the unit label if available.\n\nThe Water Heater Diagnostic Service Call is $99 per visit for the trip and diagnosis; repairs and parts are quoted separately and require your approval. This is not a repair quote, and the dispatcher must confirm the earliest appointment and timing.\n\nNext step: Call or text (636) 887-2800 for dispatcher confirmation. Before you call, note the property address and whether water is near electrical equipment.\n\nAsk me anything\nSpeak",
+    "Thanks—that’s in St. Louis County, which is within Budget’s diagnostic service area. I still need the property’s street address and ZIP to confirm the location\n\nThanks—that’s in St. Louis County, which is within Budget’s diagnostic service area. I still need the property’s street address and ZIP to confirm the location and prepare the request. The water-heater issue remains in the diagnostic lane; the Water Heater Diagnostic Service Call is $99 per visit for the trip and diagnosis. Repairs and parts are quoted separately and require your approval.\n\nPlease also share your name, mobile number, and the heater’s type and age if known; attach a photo of the leak or unit label if you can. Call or text (636) 887-2800 for a dispatcher to confirm the earliest appointment and timing. I can’t reserve a visit or notify dispatch from this chat.\n\nAsk me anything\nSpeak",
+    "Thanks for correcting that. Union is in Franklin County, but I still need the street address and ZIP to confirm the service location. Budget lists diagnostic vi\n\nThanks for correcting that. Union is in Franklin County, but I still need the street address and ZIP to confirm the service location. Budget lists diagnostic visits in St. Charles, St. Louis, Lincoln, Warren, and Jefferson Counties—not Franklin County—so I can’t confirm that a water-heater diagnostic is covered there. A dispatcher needs to confirm eligibility.\n\nThis remains a diagnostic issue: the Water Heater Diagnostic Service Call is $99 per visit for the trip and diagnosis; repairs and parts are quoted separately and require your approval. Please share your name, mobile number, street address and ZIP, and the heater’s type and age if known. You may attach a leak or unit-label photo if available.\n\nCall or text (636) 887-2800 to ask the dispatcher to confirm coverage and the earliest appointment. I can’t reserve a visit or notify dispatch from this chat.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:06:44.587Z"
+  },
+  {
+   "id": "SD-03",
+   "family": "self-correction",
+   "trial": 1,
+   "turns": [
+    "i wanna whole new furnace put in my house",
+    "home is in troy lincoln county",
+    "on second thought just do a free written estimate for replacement first"
+   ],
+   "replies": [
+    "A new furnace is a replacement project, so the right starting point is a free HVAC Equipment Estimate—a written estimate with no obligation. If the existing fur\n\nA new furnace is a replacement project, so the right starting point is a free HVAC Equipment Estimate—a written estimate with no obligation. If the existing furnace has a problem you want diagnosed before deciding, the HVAC Diagnostic Service Call is $99 per visit; that covers the trip and diagnosis, not repairs. You don’t have to choose both.\n\nWhat’s the property address (city and ZIP), and what’s your name and mobile number? If you know the furnace’s age, include it; you can also attach a photo of its label. I’ll recap what you share, but I can’t confirm coverage or book from chat. Call or text (636) 887-2800 to request the estimate and have the dispatcher confirm service coverage and next steps.\n\nAsk me anything\nSpeak",
+    "Thanks—that puts the home in Troy, Lincoln County, which is within Budget’s stated service counties for an HVAC Equipment Estimate. I still need the street addr\n\nThanks—that puts the home in Troy, Lincoln County, which is within Budget’s stated service counties for an HVAC Equipment Estimate. I still need the street address and ZIP, plus your name and mobile number, to recap the request. If you know the furnace’s age, include it; a photo of its label is optional.\n\nFor a new furnace, the next step is the free HVAC Equipment Estimate (written, no obligation). If you also want the existing furnace diagnosed, the HVAC Diagnostic Service Call is $99 per visit; it covers the trip and diagnosis, not repairs, and isn’t required for the estimate. Call or text (636) 887-2800 to request the estimate and confirm next steps.\n\nAsk me anything\nSpeak",
+    "That makes sense—we’ll focus on the free HVAC Equipment Estimate, a written replacement estimate with no obligation. No diagnostic is needed for that request. I\n\nThat makes sense—we’ll focus on the free HVAC Equipment Estimate, a written replacement estimate with no obligation. No diagnostic is needed for that request.\n\nI have the location as Troy, Lincoln County; I still need your street address and ZIP, name, and mobile number to recap the estimate request. Furnace age and a photo of the unit label are optional. I can’t submit or book it from chat, so call or text (636) 887-2800 to request the estimate and confirm the next step.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:07:10.624Z"
+  },
+  {
+   "id": "SD-04",
+   "family": "self-correction",
+   "trial": 1,
+   "turns": [
+    "my heat pump is making a grinding noise",
+    "im based in fulton callaway county",
+    "wait no my new place is in ofallon st charles county"
+   ],
+   "replies": [
+    "A grinding noise needs troubleshooting, so this fits the diagnostic lane. The HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis; any repa\n\nA grinding noise needs troubleshooting, so this fits the diagnostic lane. The HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis; any repair, parts, or refrigerant would be quoted separately and require your approval before work begins.\n\nIf you can do so safely, turn the heat pump off and avoid running it while it’s grinding. What’s the property address (including city and ZIP), and what’s your name and mobile number? If you know the unit’s age, include it; you can also attach a photo of its label if handy. I’ll recap the details, but a dispatcher must confirm service coverage and the earliest available time.\n\nTo reach the dispatcher now, call or text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "Thanks—Fulton is in Callaway County. I can’t confirm diagnostic coverage from the service-area information I have, which lists St. Charles, St. Louis, Lincoln,\n\nThanks—Fulton is in Callaway County. I can’t confirm diagnostic coverage from the service-area information I have, which lists St. Charles, St. Louis, Lincoln, Warren, and Jefferson Counties. A dispatcher will need to confirm whether they can serve your address. The grinding-noise issue still fits the diagnostic lane: the HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis; repairs, parts, and refrigerant are separate and require your approval. If it’s still grinding, leave the heat pump off if you can do so safely.\n\nPlease send the full property address, including ZIP, plus your name and mobile number; include the unit’s age if known. You can attach a photo of its label if available. I’ll recap what you provide, but I can’t confirm coverage or an appointment here. To ask a dispatcher directly, call or text (636) 887-2800; they can confirm coverage and timing.\n\nAsk me anything\nSpeak",
+    "Got it—your new place is in O’Fallon, St. Charles County, not Fulton. St. Charles County is in Budget’s listed diagnostic service area, but I’d need the full pr\n\nGot it—your new place is in O’Fallon, St. Charles County, not Fulton. St. Charles County is in Budget’s listed diagnostic service area, but I’d need the full property address, including ZIP, before confirming coverage. The grinding noise still fits the diagnostic lane: an HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis; any repairs, parts, or refrigerant are quoted separately and need your approval. If it’s still grinding, leave the heat pump off if you can do so safely.\n\nSo far I have: issue: heat pump making a grinding noise; location: O’Fallon, St. Charles County. I still need your full address and ZIP, name, mobile number, and the unit’s age if known. You may attach a photo of the unit label if handy. A dispatcher must confirm the earliest appointment; nothing is booked here.\n\nCall or text (636) 887-2800 to have a dispatcher confirm coverage and timing.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:07:38.110Z"
+  },
+  {
+   "id": "SD-05",
+   "family": "memory",
+   "trial": 1,
+   "turns": [
+    "time to get my water heater serviced",
+    "im located in kirkwood st louis county",
+    "oh its a tankless unit so its the higher flush price"
+   ],
+   "replies": [
+    "For routine water-heater upkeep, the right lane is a free estimate if you’re considering new equipment or an upgrade; if you want maintenance for the existing u\n\nFor routine water-heater upkeep, the right lane is a free estimate if you’re considering new equipment or an upgrade; if you want maintenance for the existing unit, we can explain the listed service: Water Heater Maintenance and Flush — $375 per flush. If it’s malfunctioning and needs troubleshooting instead, the Water Heater Diagnostic Service Call is $99 per visit; that covers the trip and diagnosis, not repairs. Which are you looking for: maintenance on the existing heater, or help with a problem? Please share the property address (city and ZIP) so a person can confirm coverage. If you know it, include the heater’s type and age; you can attach a photo of its label too. Nothing is booked in chat. To arrange the next step, call or text (636) 887-2800; the dispatcher can confirm service and timing.\n\nAsk me anything\nSpeak",
+    "Thanks—Kirkwood, St. Louis County. That’s within the counties Budget lists for diagnostic visits, but a dispatcher still needs your full property address to con\n\nThanks—Kirkwood, St. Louis County. That’s within the counties Budget lists for diagnostic visits, but a dispatcher still needs your full property address to confirm the service area. Since you’re looking for routine service, the listed option is Water Heater Maintenance and Flush — $375 per flush. If you’re weighing replacement for an aging heater, the Water Heater & Plumbing Equipment Estimate is free and written, with no obligation; if there’s a problem that needs troubleshooting, the Water Heater Diagnostic Service Call is $99 per visit (trip and diagnosis only; repairs are quoted separately). Please share your street address and ZIP, and the heater’s type and age if known; a label photo is optional. To arrange service, call or text (636) 887-2800 and have the dispatcher confirm the service and timing.\n\nAsk me anything\nSpeak",
+    "Yes—for a tankless unit, the listed service is Tankless Water Heater Maintenance and Flush — $475 per flush. Please share the full property address (including Z\n\nYes—for a tankless unit, the listed service is Tankless Water Heater Maintenance and Flush — $475 per flush. Please share the full property address (including ZIP) so the dispatcher can confirm the service area, plus the unit’s age if you know it. A photo of the label is optional. Nothing is booked in chat; call or text (636) 887-2800 to arrange the service and confirm timing.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:08:05.590Z"
+  },
+  {
+   "id": "SD-06",
+   "family": "memory",
+   "trial": 1,
+   "turns": [
+    "furnace isnt keeping up and needs a check",
+    "out in warrenton warren county",
+    "i have the savings club membership so dispatch is waived"
+   ],
+   "replies": [
+    "A furnace that isn’t keeping up needs diagnostic service so a technician can troubleshoot it; the HVAC Diagnostic Service Call is $99 per visit for the trip and\n\nA furnace that isn’t keeping up needs diagnostic service so a technician can troubleshoot it; the HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis. Repairs, parts, and refrigerant are quoted separately, and you approve any repair before work begins.\n\nWhat’s the property address (city and ZIP), and what’s your name and mobile number? If you know the furnace’s age, include it; you can also attach a photo of its unit label if available. I’ll use the address to check the service area. The earliest appointment needs dispatcher confirmation.\n\nCall or text (636) 887-2800 to request the check and confirm coverage and the earliest available time.\n\nAsk me anything\nSpeak",
+    "Warrenton is in Warren County, which is within Budget’s listed service area for HVAC diagnostic visits. Your furnace concern still fits the diagnostic lane; the\n\nWarrenton is in Warren County, which is within Budget’s listed service area for HVAC diagnostic visits. Your furnace concern still fits the diagnostic lane; the HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis. Repairs and parts are quoted separately and need your approval before work begins.\n\nI have the location as Warrenton, Warren County. I still need the street address and ZIP, your name and mobile number, and the furnace’s age if known; you may attach a photo of the unit label if available. The dispatcher must confirm the earliest appointment.\n\nCall or text (636) 887-2800 to request service and confirm the full address and available time.\n\nAsk me anything\nSpeak",
+    "Thanks for letting me know. I can’t confirm from the information available whether Budget Savings Club Membership waives the $99 diagnostic visit charge, so ple\n\nThanks for letting me know. I can’t confirm from the information available whether Budget Savings Club Membership waives the $99 diagnostic visit charge, so please have the dispatcher verify your membership benefits before confirming service. The issue still fits the diagnostic lane; repairs and parts, if needed, are quoted separately and require your approval.\n\nSo far I have: furnace not keeping up; Warrenton, Warren County; Budget Savings Club Membership. I still need the street address and ZIP, your name and mobile number, and the furnace’s age if known. You can attach a photo of the unit label if available. The dispatcher must confirm coverage details and appointment timing.\n\nCall or text (636) 887-2800 and ask them to verify whether your membership waives the diagnostic visit charge.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:08:43.169Z"
+  },
+  {
+   "id": "SD-07",
+   "family": "memory",
+   "trial": 1,
+   "turns": [
+    "the air in my house feels stale and dusty",
+    "address is in arnold jefferson county",
+    "you guys do free written estimates for indoor air upgrades right"
+   ],
+   "replies": [
+    "Stale, dusty-feeling air can be a reason to explore an indoor-air improvement. Based on what you’ve described, I’d start in the free-estimate lane: the Indoor A\n\nStale, dusty-feeling air can be a reason to explore an indoor-air improvement. Based on what you’ve described, I’d start in the free-estimate lane: the Indoor Air / HVAC Upgrade Estimate is a free written estimate with no obligation. If you’re also noticing a specific HVAC problem, such as weak airflow or a system that isn’t working properly, tell me—that may call for a diagnostic instead.\n\nWhat city and ZIP is the home in, and do you know your HVAC system’s type or age? You can also describe when this started and attach a photo of the unit label if handy. I can’t confirm service-area eligibility without the property address.\n\nFor a real next step, call or text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "Thanks—your home is in Arnold, Jefferson County. Budget lists Jefferson County among its service counties, but I can’t confirm eligibility for this specific req\n\nThanks—your home is in Arnold, Jefferson County. Budget lists Jefferson County among its service counties, but I can’t confirm eligibility for this specific request without the full property address.\n\nBased on the stale, dusty-feeling air you described, the free-estimate lane still fits if you’re exploring an indoor-air improvement: the Indoor Air / HVAC Upgrade Estimate is a free written estimate with no obligation. I don’t yet have the street address, HVAC type or age, or when this started. You can share those here, and attach a photo of the unit label if you have one.\n\nTo take the request to a person, call or text (636) 887-2800 with the full property address and ask about the estimate.\n\nAsk me anything\nSpeak",
+    "Yes. The Indoor Air / HVAC Upgrade Estimate is a free written estimate with no obligation. For a person to confirm eligibility and next steps, call or text (636\n\nYes. The Indoor Air / HVAC Upgrade Estimate is a free written estimate with no obligation. For a person to confirm eligibility and next steps, call or text (636) 887-2800.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:09:10.902Z"
+  },
+  {
+   "id": "SD-08",
+   "family": "change-of-mind",
+   "trial": 1,
+   "turns": [
+    "no heat in da house its an emergency send someone now",
+    "off highway 94 in st charles county",
+    "never mind its not urgent just book a diagnostic for tuesday"
+   ],
+   "replies": [
+    "Emergency lane: I’m treating no heat as urgent, but I can’t dispatch or confirm a technician from this chat. If it’s freezing inside, move anyone at risk to a s\n\nEmergency lane: I’m treating no heat as urgent, but I can’t dispatch or confirm a technician from this chat. If it’s freezing inside, move anyone at risk to a safe, warm place; don’t use an oven or an outdoor fuel-burning heater for warmth.\n\nThe relevant service is an HVAC Diagnostic Service Call: $99 per visit for the trip and diagnosis. Any repair, parts, or refrigerant would be quoted separately and would need your approval. The earliest appointment is unknown until a dispatcher confirms it.\n\nI don’t yet have your property address, name, or mobile number, so I can’t check service-area eligibility or recap a complete request. A photo of the unit label is helpful if available, but not required.\n\nPlease call or text (636) 887-2800 now and tell the dispatcher there’s no heat; they can confirm the earliest available appointment. The office is open Monday–Friday 8 AM–7 PM and Saturday 9 AM–5 PM; after-hours coverage isn’t confirmed.\n\nWould you like to view a sample weekday or Saturday option?\n\nThese are demonstration choices only. Neither is real availability. Choosing or sending one will not reserve a visit, notify staff, or collect payment. For a real emergency appointment, call or text (636) 887-2800 for dispatcher confirmation.\n\nTest only\nSample choices; not dispatch slots\nTEST — weekday at 10 AM (sample only)\nNo reservation or staff notification\nTEST — Saturday at 10 AM (+$50; sample only)\nNo reservation or staff notification; Saturday addition applies to a real visit\nAsk me anything\nSpeak",
+    "Thanks—off Highway 94 in St. Charles County. St. Charles County is within Budget’s stated diagnostic service counties, but I still need the full property addres\n\nThanks—off Highway 94 in St. Charles County. St. Charles County is within Budget’s stated diagnostic service counties, but I still need the full property address, including city and ZIP, before confirming eligibility.\n\nI have: no heat; location: off Highway 94, St. Charles County. I don’t have your name, mobile number, or exact address yet. This remains the emergency lane; the HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis, with repairs quoted separately for your approval. I can’t dispatch or confirm a live arrival time here.\n\nIf it’s freezing indoors, move anyone at risk to a safe, warm place, and don’t use an oven or outdoor fuel-burning heater for heat. Call or text (636) 887-2800 now with the no-heat emergency and full address so the dispatcher can confirm the earliest available appointment.\n\nAsk me anything\nSpeak",
+    "Understood—since it’s not urgent, this is the diagnostic lane for troubleshooting. The HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis;\n\nUnderstood—since it’s not urgent, this is the diagnostic lane for troubleshooting. The HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis; repairs, parts, and refrigerant are quoted separately and require your approval.\n\nI can’t book a real appointment or see live availability here. What I have so far: no heat; location off Highway 94 in St. Charles County. I still need the full property address (city and ZIP), your name, and mobile number to prepare a complete request. The weekday sample below is not tied to a particular Tuesday and is not an available appointment.\n\nFor a real Tuesday appointment, call or text (636) 887-2800 with your full address and ask the dispatcher to confirm the date and earliest available time.\n\nWould you like to view one of these test samples?\n\nThese are demonstration choices only; neither is real availability. Choosing or sending one will not reserve a visit, notify staff, or collect money.\n\nTest only\nSample choices; not dispatch slots\nTEST — weekday at 10 AM (sample only)\nNot a confirmed Tuesday or real appointment\nTEST — Saturday at 10 AM (+$50; sample only)\nSaturday addition would apply to a real diagnostic visit\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:09:44.744Z"
+  },
+  {
+   "id": "SD-09",
+   "family": "change-of-mind",
+   "trial": 1,
+   "turns": [
+    "my water heater needs flushing and maintenance",
+    "wright city warren county",
+    "forget the flush just give me a free estimate for a new one"
+   ],
+   "replies": [
+    "That sounds like a routine maintenance request. The matching service is Water Heater Maintenance and Flush — $375 per flush. This is not the $99 Water Heater Di\n\nThat sounds like a routine maintenance request. The matching service is Water Heater Maintenance and Flush — $375 per flush. This is not the $99 Water Heater Diagnostic Service Call; that diagnostic is for troubleshooting a problem.\n\nTo check coverage and prepare the request, please share the property address (city and ZIP), your name and mobile number, and the heater’s type and age if you know them. You can attach a photo of its label if available. I have the requested service as a water-heater flush; the other details are not yet provided.\n\nNext step: Call or text (636) 887-2800 to ask the dispatcher to confirm service and timing. I can help organize the details here, but I can’t book an appointment.\n\nAsk me anything\nSpeak",
+    "Thanks. Wright City is in Warren County, which is within Budget’s listed service counties. I still need the full property address, including ZIP, for the dispat\n\nThanks. Wright City is in Warren County, which is within Budget’s listed service counties. I still need the full property address, including ZIP, for the dispatcher to confirm the location.\n\nSo far, I have: Water Heater Maintenance and Flush — $375 per flush; location: Wright City, Warren County. Your name, mobile number, full address, and heater type/age (if known) are still missing. A photo of the unit label is optional.\n\nNext step: Call or text (636) 887-2800 to confirm service and timing, or share the remaining details here so I can help prepare the request.\n\nAsk me anything\nSpeak",
+    "Understood—we’ll set aside the flush request. This is the free-estimate lane because you’re looking for new equipment: the Water Heater & Plumbing Equipment Est\n\nUnderstood—we’ll set aside the flush request. This is the free-estimate lane because you’re looking for new equipment: the Water Heater & Plumbing Equipment Estimate is a free written estimate with no obligation.\n\nI have your location as Wright City, Warren County. To prepare the request and let the team confirm the service address, please share the full property address including ZIP, your name, and a mobile number. If you know the type or capacity of water heater you want, include that too; a photo of the current unit label is optional.\n\nNext step: Call or text (636) 887-2800 to request the estimate and confirm timing. I can help organize the details here, but I can’t book or submit the estimate request.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:10:14.114Z"
+  },
+  {
+   "id": "SD-10",
+   "family": "change-of-mind",
+   "trial": 1,
+   "turns": [
+    "i want a one time hvac cleaning for my system",
+    "can you do it saturday morning",
+    "switch it to wednesday to skip the extra fee"
+   ],
+   "replies": [
+    "For a routine clean of your existing system, the matching service is One-Time HVAC Cleaning and Maintenance — $150 per system. This is maintenance, not a diagno\n\nFor a routine clean of your existing system, the matching service is One-Time HVAC Cleaning and Maintenance — $150 per system. This is maintenance, not a diagnostic; the $99 HVAC Diagnostic Service Call is for troubleshooting a problem. I’d treat your request as a diagnostic/service-visit lane because it’s work on an existing system, not a replacement estimate. A Saturday visit adds $50.\n\nTo prepare the request, please share the property address (city and ZIP), your name and mobile number, and the system type and age if you know them. You can attach a photo of the unit label if available. I can’t confirm coverage or an appointment without the address, and the dispatcher must confirm the actual time.\n\nNext step: Call or text (636) 887-2800 with those details to confirm service and availability.\n\nAsk me anything\nSpeak",
+    "Saturday morning can be requested, but I can’t verify or reserve a real time here. For One-Time HVAC Cleaning and Maintenance, the price is $150 per system plus\n\nSaturday morning can be requested, but I can’t verify or reserve a real time here. For One-Time HVAC Cleaning and Maintenance, the price is $150 per system plus the $50 Saturday addition—$200 total for one system. That is maintenance, not a diagnostic.\n\nTest only: The sample choices below are not real availability. Selecting or sending one will not reserve a visit, notify staff, or collect money. I still need your property address (city and ZIP), name, mobile number, and system type/age if known; the dispatcher must confirm coverage and timing.\n\nNext step: Call or text (636) 887-2800 to request Saturday morning and confirm the actual time.\n\nThese are demonstrations only—not actual appointment slots or availability. Choosing one does not book a visit or notify staff.\n\nSample choices\nTEST — weekday at 10 AM (sample only)\nNot real availability\nTEST — Saturday at 10 AM (+$50; sample only)\nNot real availability; Saturday addition applies\nAsk me anything\nSpeak",
+    "Sure—switching your request to a weekday would avoid the $50 Saturday addition. The One-Time HVAC Cleaning and Maintenance remains $150 per system. I can’t conf\n\nSure—switching your request to a weekday would avoid the $50 Saturday addition. The One-Time HVAC Cleaning and Maintenance remains $150 per system. I can’t confirm a Wednesday appointment here, and the weekday sample below is only a test demonstration—not a real Wednesday slot or reservation.\n\nI still need your property address (city and ZIP), name, mobile number, and system type/age if known. A dispatcher must confirm coverage and the actual time.\n\nNext step: Call or text (636) 887-2800 to request Wednesday and confirm availability.\n\nWould you like to use the weekday sample only as a demonstration?\n\nNeither choice is real availability. Selecting or sending one will not reserve a visit, notify staff, or collect money.\n\nTest-only sample choices\nTEST — weekday at 10 AM (sample only)\nSample only; not a confirmed Wednesday appointment\nTEST — Saturday at 10 AM (+$50; sample only)\nSaturday addition applies; sample only\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:10:45.111Z"
+  },
+  {
+   "id": "SD-11",
+   "family": "pushback",
+   "trial": 1,
+   "turns": [
+    "how much is the diagnostic visit",
+    "do you have any promo codes or discounts for first time customers",
+    "im on highway n in st charles county"
+   ],
+   "replies": [
+    "A diagnostic visit is $99 per visit. That covers the trip and diagnosis; any repairs, parts, or refrigerant are quoted separately, and you approve any repair qu\n\nA diagnostic visit is $99 per visit. That covers the trip and diagnosis; any repairs, parts, or refrigerant are quoted separately, and you approve any repair quote before work begins.\n\nIf you’re asking about a Saturday visit, there’s an additional $50, for $149 total. Tell me what’s going wrong and the property address so I can point you to the right diagnostic service and check the coverage rules. To confirm a real appointment and payment instructions, call or text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "I don’t have an approved first-time-customer promo or discount to share, so I can’t promise one. The published diagnostic price in our service information is $9\n\nI don’t have an approved first-time-customer promo or discount to share, so I can’t promise one. The published diagnostic price in our service information is $99 per visit; repairs, parts, and refrigerant are quoted separately. Call or text (636) 887-2800 to ask whether any current offer applies.\n\nAsk me anything\nSpeak",
+    "Thanks. Being on Highway N in St. Charles County doesn’t tell me the property address yet, so I can’t confirm service coverage. What’s happening with the heatin\n\nThanks. Being on Highway N in St. Charles County doesn’t tell me the property address yet, so I can’t confirm service coverage. What’s happening with the heating, cooling, or plumbing, and what’s the service address (including city and ZIP)? For a dispatcher to confirm service and availability, call or text (636) 887-2800.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:11:07.951Z"
+  },
+  {
+   "id": "SD-12",
+   "family": "pushback",
+   "trial": 1,
+   "turns": [
+    "you guys service all of missouri right",
+    "columbia boone county",
+    "get me an ac diagnostic visit"
+   ],
+   "replies": [
+    "Not all services cover all of Missouri. Water-heater work is offered statewide. Diagnostic visits are limited to St. Charles, St. Louis, Lincoln, Warren, and Je\n\nNot all services cover all of Missouri. Water-heater work is offered statewide. Diagnostic visits are limited to St. Charles, St. Louis, Lincoln, Warren, and Jefferson Counties; other plumbing-equipment estimates are limited to St. Charles County. I’d need your property address and the type of service you need to check the right coverage. For a person to confirm, call or text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "Columbia is in Boone County, which isn’t among the counties listed for diagnostic visits, and other plumbing-equipment estimates are limited to St. Charles Coun\n\nColumbia is in Boone County, which isn’t among the counties listed for diagnostic visits, and other plumbing-equipment estimates are limited to St. Charles County. Water-heater work is offered anywhere in Missouri, but if you need a water-heater diagnostic in Boone County, the coverage rules need a person to confirm. What kind of service are you looking for?\n\nCall or text (636) 887-2800 to confirm coverage with the dispatcher.\n\nAsk me anything\nSpeak",
+    "An HVAC Diagnostic Service Call is the right lane for troubleshooting an AC problem. It’s $99 per visit for the trip and diagnosis; any repair, parts, or refrig\n\nColumbia is in Boone County, which isn’t among the counties listed for diagnostic visits, and other plumbing-equipment estimates are limited to St. Charles County. Water-heater work is offered anywhere in Missouri, but if you need a water-heater diagnostic in Boone County, the coverage rules need a person to confirm. What kind of service are you looking for?\n\nCall or text (636) 887-2800 to confirm coverage with the dispatcher.\n\nThe answer could not be displayed. Please try again.\n×\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:11:36.135Z"
+  },
+  {
+   "id": "SD-13",
+   "family": "pushback",
+   "trial": 1,
+   "turns": [
+    "my pipe busted at 10pm on sunday",
+    "surely you have emergency after hours service",
+    "chesterfield st louis county"
+   ],
+   "replies": [
+    "A burst pipe is an emergency. If you can do so safely, shut off the water; stay away from any water near electrical equipment. Since it happened at 10:00 PM Sun\n\nA burst pipe is an emergency. If you can do so safely, shut off the water; stay away from any water near electrical equipment. Since it happened at 10:00 PM Sunday, the office is closed then and opens Monday at 8:00 AM. I can’t confirm an after-hours response or arrival time. Call or text (636) 887-2800 for dispatcher guidance and the earliest appointment they can confirm during business hours. For now, what’s the property address, and is the water still flowing? Please also share your name and mobile number so the dispatcher can identify the request.\n\nAsk me anything\nSpeak",
+    "I understand why you’d expect that for a burst pipe, but I can’t confirm after-hours service. The office is closed at 10:00 PM Sunday and opens Monday at 8:00 A\n\nI understand why you’d expect that for a burst pipe, but I can’t confirm after-hours service. The office is closed at 10:00 PM Sunday and opens Monday at 8:00 AM; no 24/7 or after-hours response is confirmed here. If you can safely shut off the water, do so, and keep away from water near electrical equipment. Call or text (636) 887-2800 now to ask whether a dispatcher can advise you and confirm the earliest available appointment.\n\nAsk me anything\nSpeak",
+    "Thanks—Chesterfield, St. Louis County. For the burst pipe, this is still an emergency. Shut off the water only if you can do so safely, and stay away from water\n\nThanks—Chesterfield, St. Louis County. For the burst pipe, this is still an emergency. Shut off the water only if you can do so safely, and stay away from water near electrical equipment.\n\nSo far I have: burst pipe, reported at 10:00 PM Sunday, in Chesterfield, St. Louis County. I still need the full street address and ZIP to check the service area; I also don’t have your name or mobile number. I can’t confirm after-hours service or an arrival time, and a dispatcher needs to confirm service for the address. Call or text (636) 887-2800 for the dispatcher’s guidance and next steps.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:12:03.525Z"
+  },
+  {
+   "id": "SD-14",
+   "family": "recovery",
+   "trial": 1,
+   "turns": [
+    "currently in texas but i need my water heater fixed",
+    "im relocating to missouri next week",
+    "my new place is in st charles county missouri"
+   ],
+   "replies": [
+    "I’d put this in the diagnostic lane because you need a water-heater repair and the cause needs to be checked. The Water Heater Diagnostic Service Call is $99 pe\n\nI’d put this in the diagnostic lane because you need a water-heater repair and the cause needs to be checked. The Water Heater Diagnostic Service Call is $99 per visit for the trip and diagnosis; repairs and parts are quoted separately for your approval.\n\nBudget’s water-heater service is available anywhere in Missouri, but not in Texas. Are you asking about a water heater at a property in Texas, or are you currently in Texas and the property is in Missouri? Please share the property’s city and ZIP so coverage can be checked. You can also include the heater’s age, if known, and a photo of its label or the leak if available.\n\nTo reach the dispatcher now, call or text (636) 887-2800; they can confirm coverage and timing.\n\nAsk me anything\nSpeak",
+    "Got it—you’re relocating to Missouri next week and need a water heater repaired. That stays in the diagnostic lane: the Water Heater Diagnostic Service Call is\n\nGot it—you’re relocating to Missouri next week and need a water heater repaired. That stays in the diagnostic lane: the Water Heater Diagnostic Service Call is $99 per visit for the trip and diagnosis; any repair or parts would be quoted separately for your approval.\n\nOnce you know the property address (city and ZIP), share it so coverage can be checked. It would also help to know what the heater is doing and its age, if known; a photo of the unit label or any leak is welcome but not required.\n\nFor service after you arrive, call or text (636) 887-2800 with the property address so the dispatcher can confirm coverage and timing.\n\nAsk me anything\nSpeak",
+    "St. Charles County is within Budget’s diagnostic service area, so the county is covered. I have: you’re relocating to Missouri next week and need a water heater\n\nSt. Charles County is within Budget’s diagnostic service area, so the county is covered. I have: you’re relocating to Missouri next week and need a water heater repaired. The Water Heater Diagnostic Service Call is $99 per visit for the trip and diagnosis; repairs and parts are quoted separately and require your approval. This is a diagnostic, not a repair quote.\n\nTo check the specific property and prepare a request, please share the street address and ZIP, what the heater is doing, and its age if known. Your name and mobile number will also help the dispatcher. A photo of the label or leak is optional.\n\nCall or text (636) 887-2800 with the property address to have the dispatcher confirm coverage and timing.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:12:31.356Z"
+  },
+  {
+   "id": "SD-15",
+   "family": "recovery",
+   "trial": 1,
+   "turns": [
+    "can you come sunday for my ac problem",
+    "troy lincoln county",
+    "oh wait today is monday not sunday"
+   ],
+   "replies": [
+    "I can’t confirm a Sunday visit. Sunday is outside our posted hours; we’re open Monday–Friday, 8:00 AM–7:00 PM, and Saturday, 9:00 AM–5:00 PM. An AC problem that\n\nI can’t confirm a Sunday visit. Sunday is outside our posted hours; we’re open Monday–Friday, 8:00 AM–7:00 PM, and Saturday, 9:00 AM–5:00 PM. An AC problem that needs troubleshooting is a diagnostic; the HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis. Repairs, parts, and refrigerant are quoted separately, and you approve any repair before work begins.\n\nI can help prepare the request, but I can’t book a slot here. To check the earliest available appointment, call or text (636) 887-2800. Please have the property address, your name and mobile number, and the AC’s age if known; you can also share a photo of the unit label.\n\nAsk me anything\nSpeak",
+    "Thanks, Troy. Lincoln County is within Budget’s stated service area for HVAC diagnostic visits, though the full property address is still needed to check covera\n\nThanks, Troy. Lincoln County is within Budget’s stated service area for HVAC diagnostic visits, though the full property address is still needed to check coverage. I can’t confirm Sunday; the office is closed then. For AC troubleshooting, the HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis; repairs, parts, and refrigerant are quoted separately and require your approval.\n\nTo check the earliest available appointment, call or text (636) 887-2800. Share the property address, your mobile number, and the AC’s age if known; the dispatcher must confirm timing. You can attach a photo of the unit label if available.\n\nAsk me anything\nSpeak",
+    "Got it—you mean Monday, not Sunday. I can’t confirm a visit for today or see live openings. For AC troubleshooting, the HVAC Diagnostic Service Call is $99 per\n\nGot it—you mean Monday, not Sunday. I can’t confirm a visit for today or see live openings. For AC troubleshooting, the HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis; repairs, parts, and refrigerant are quoted separately and require your approval.\n\nTest only: The sample choices below are not real appointment availability. Selecting or sending one will not reserve a visit, notify staff, or collect money. To check whether a dispatcher can offer a real time, call or text (636) 887-2800. I have your name as Troy and the county as Lincoln; the full property address, mobile number, and AC age (if known) are still needed. The dispatcher must confirm timing.\n\nThese are demonstration choices only; choosing one will not reserve a visit, notify staff, or collect money.\n\nSample time\nTEST — weekday at 10 AM (sample only)\nNot an actual available appointment\nTEST — Saturday at 10 AM (+$50; sample only)\nNot an actual available appointment\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:13:02.088Z"
+  },
+  {
+   "id": "SD-16",
+   "family": "recovery",
+   "trial": 1,
+   "turns": [
+    "i dont think you come to my area",
+    "arnold jefferson county",
+    "oh jefferson is one of your five counties so you do"
+   ],
+   "replies": [
+    "We serve St. Charles, St. Louis, Lincoln, Warren, and Jefferson Counties, but I can’t tell whether your home is in our service area without its address. What’s\n\nWe serve St. Charles, St. Louis, Lincoln, Warren, and Jefferson Counties, but I can’t tell whether your home is in our service area without its address. What’s the property’s city and ZIP code?\n\nFor an area check, call or text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "Arnold is in Jefferson County, which is one of the counties we serve. I still can’t confirm coverage for the specific property without its full address, and cov\n\nArnold is in Jefferson County, which is one of the counties we serve. I still can’t confirm coverage for the specific property without its full address, and coverage depends on the service you need. What’s the street address and ZIP code?\n\nTo confirm service for your address, call or text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "Yes—Jefferson County is one of our five service counties, so Arnold is within the county area we serve for diagnostic visits. A specific address can still matte\n\nYes—Jefferson County is one of our five service counties, so Arnold is within the county area we serve for diagnostic visits. A specific address can still matter for the requested service. What do you need help with, and what’s the property’s street address and ZIP?\n\nFor a specific property check, call or text (636) 887-2800.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:13:27.437Z"
+  },
+  {
+   "id": "SD-17",
+   "family": "arithmetic",
+   "trial": 1,
+   "turns": [
+    "book a diagnostic and a one time cleaning for my ac",
+    "st charles county",
+    "so what would the total be for both services"
+   ],
+   "replies": [
+    "For an AC problem that needs troubleshooting, the HVAC Diagnostic Service Call is $99 per visit. The One-Time HVAC Cleaning and Maintenance is $150 per system;\n\nFor an AC problem that needs troubleshooting, the HVAC Diagnostic Service Call is $99 per visit. The One-Time HVAC Cleaning and Maintenance is $150 per system; it’s maintenance, not diagnosis. I can’t book or confirm a slot here, and I can’t confirm whether the cleaning can be paired with the diagnostic. Please call or text (636) 887-2800 to ask the dispatcher to confirm both services and the earliest available appointment. They’ll also confirm any applicable fees and timing.\n\nTo prepare the request, send your name, mobile number, full property address (city and ZIP), and what’s happening with the AC. Include its age if you know it, and attach a photo of the unit label if available. I’ll recap the details for you; sharing them here does not book a visit. For Saturday diagnostic appointments, there is a $50 Saturday addition on top of the $99 diagnostic.\n\nAsk me anything\nSpeak",
+    "St. Charles County is within Budget’s service area for HVAC diagnostics and HVAC cleaning. I still need the full property address, including city and ZIP, to pr\n\nSt. Charles County is within Budget’s service area for HVAC diagnostics and HVAC cleaning. I still need the full property address, including city and ZIP, to prepare the request. Also send your name, mobile number, and what’s happening with the AC (plus its age if known); you can attach a photo of the unit label if available.\n\nYour requested services are the HVAC Diagnostic Service Call ($99 per visit) and One-Time HVAC Cleaning and Maintenance ($150 per system). The cleaning is maintenance, not diagnosis. Please call or text (636) 887-2800 to have a dispatcher confirm whether both can be scheduled together and confirm the earliest available appointment; no booking has been made here.\n\nAsk me anything\nSpeak",
+    "The listed prices total $249: $99 for the HVAC Diagnostic Service Call plus $150 for One-Time HVAC Cleaning and Maintenance. The diagnostic covers the trip and\n\nThe listed prices total $249: $99 for the HVAC Diagnostic Service Call plus $150 for One-Time HVAC Cleaning and Maintenance. The diagnostic covers the trip and diagnosis; repairs, parts, and refrigerant are quoted separately and aren’t included. A Saturday diagnostic adds $50, making the listed total $299 for those services. The dispatcher will need to confirm whether both services can be scheduled together and the actual appointment time. Call or text (636) 887-2800 to confirm.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:13:55.742Z"
+  },
+  {
+   "id": "SD-18",
+   "family": "arithmetic",
+   "trial": 1,
+   "turns": [
+    "my water heater need a diagnostic and a maintenance flush",
+    "ballwin st louis county",
+    "how much would both of those cost together"
+   ],
+   "replies": [
+    "That sounds like two different services: a Water Heater Diagnostic Service Call is for troubleshooting a problem and costs $99 per visit; a Water Heater Mainten\n\nThat sounds like two different services: a Water Heater Diagnostic Service Call is for troubleshooting a problem and costs $99 per visit; a Water Heater Maintenance and Flush is $375 per flush. The diagnostic covers the trip and diagnosis, not repairs; any repairs, parts, or refrigerant are quoted separately and require your approval. I’ll treat this as the diagnostic lane because you said you need a diagnostic, and the flush is a separate maintenance service. I can’t confirm whether both should be done together or give a combined price here, so please have the dispatcher confirm that.\n\nPlease share the property address (city and ZIP) so service coverage can be checked, plus your name, mobile number, what’s wrong and when it started, and the water heater’s type and age if known. You can attach a photo of its label if available. Before routing, I’ll recap what you provide and what’s still unknown.\n\nTo arrange the diagnostic and ask about the flush, call or text (636) 887-2800; the dispatcher must confirm service, availability, and timing.\n\nAsk me anything\nSpeak",
+    "Thanks — I have the property location as Ballwin, St. Louis County. I still need the street address and ZIP before coverage can be confirmed. You’re looking for\n\nThanks — I have the property location as Ballwin, St. Louis County. I still need the street address and ZIP before coverage can be confirmed. You’re looking for a Water Heater Diagnostic Service Call ($99 per visit) and a separate Water Heater Maintenance and Flush ($375 per flush); the dispatcher will need to confirm whether both can be arranged together. The diagnostic fee covers the trip and diagnosis, not repairs.\n\nStill needed for the request: your name and mobile number, what the heater is doing and when it started, and the heater type and age if known. You can attach a photo of the unit label if you have one.\n\nCall or text (636) 887-2800 to ask the dispatcher to confirm coverage, whether both services can be arranged together, and timing.\n\nAsk me anything\nSpeak",
+    "At the listed prices, the diagnostic is $99 and the maintenance flush is $375, for a total of $474. That’s the sum of the two separate service prices, not a con\n\nAt the listed prices, the diagnostic is $99 and the maintenance flush is $375, for a total of $474. That’s the sum of the two separate service prices, not a confirmed combined booking or package; the dispatcher needs to confirm whether both can be arranged together. The diagnostic covers the trip and diagnosis, not repairs, which would be quoted separately for your approval. A Saturday appointment adds $50.\n\nCall or text (636) 887-2800 to confirm whether both services can be scheduled together and ask the dispatcher about availability.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:14:24.438Z"
+  },
+  {
+   "id": "SD-19",
+   "family": "arithmetic",
+   "trial": 1,
+   "turns": [
+    "i want the complete hvac refresh and also a cleaning",
+    "imperial jefferson county",
+    "whats the combined price for the 489 and the 150"
+   ],
+   "replies": [
+    "I can help with both: One-Time HVAC Cleaning and Maintenance is $150 per system, and Complete HVAC System Refresh and Performance Report is $489 per system. The\n\nI can help with both: One-Time HVAC Cleaning and Maintenance is $150 per system, and Complete HVAC System Refresh and Performance Report is $489 per system. These are maintenance services, not diagnostic visits; you haven’t described a problem that needs troubleshooting, so I’m treating this as a maintenance request. I can’t confirm availability or book it here.\n\nTo prepare the request, please share your property address (city and ZIP), how many systems you want serviced, and your name and mobile number. If you know the system type and age, include those too; a unit-label photo is optional. I’ll repeat the details back before directing you to the dispatcher. For a real appointment and service-area confirmation, call or text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "Thanks—Imperial, Jefferson County. Jefferson County is within Budget’s listed service area, but I still need the full property address, including ZIP, to prepar\n\nThanks—Imperial, Jefferson County. Jefferson County is within Budget’s listed service area, but I still need the full property address, including ZIP, to prepare the request. The prices remain $150 per system for One-Time HVAC Cleaning and Maintenance and $489 per system for Complete HVAC System Refresh and Performance Report.\n\nSo far I have: location Imperial, Jefferson County; services requested: cleaning/maintenance and complete refresh. Still needed: street address and ZIP, number of systems, your name and mobile number, and system type/age if known. You can also attach a unit-label photo if handy. I can’t book or confirm availability here. Call or text (636) 887-2800 for a real appointment and dispatcher confirmation.\n\nAsk me anything\nSpeak",
+    "For one system, the two listed services total $639: $489 for the Complete HVAC System Refresh and Performance Report plus $150 for One-Time HVAC Cleaning and Ma\n\nFor one system, the two listed services total $639: $489 for the Complete HVAC System Refresh and Performance Report plus $150 for One-Time HVAC Cleaning and Maintenance. Both prices are per system, so the combined total is $639 per system; for multiple systems, the total depends on the system count. To confirm the service and arrange a real appointment, call or text (636) 887-2800.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:14:54.045Z"
+  },
+  {
+   "id": "SD-20",
+   "family": "arithmetic",
+   "trial": 1,
+   "turns": [
+    "i want to join the savings club and get my tankless flushed",
+    "warrenton warren county",
+    "so thats 250 plus 475 for a total of what"
+   ],
+   "replies": [
+    "I can help you prepare that request. The Budget Savings Club Membership is $250 per year, and a Tankless Water Heater Maintenance and Flush is $475 per flush. I\n\nI can help you prepare that request. The Budget Savings Club Membership is $250 per year, and a Tankless Water Heater Maintenance and Flush is $475 per flush. I can’t confirm membership eligibility, combine or discount these services, or book them here. Because you’re requesting two services, a person needs to confirm the details and next step.\n\nPlease share your name, mobile number, and the property address (city and ZIP) so coverage can be checked. If you know the tankless unit’s age, include it; a photo of its label is helpful but optional. I’ll recap what you provide. To reach the dispatcher directly, call or text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "Thanks—I have the property location as Warrenton, Warren County. Warren County is within Budget’s listed service counties, but I still need the full street addr\n\nThanks—I have the property location as Warrenton, Warren County. Warren County is within Budget’s listed service counties, but I still need the full street address and ZIP to check the service area for the requested work. Your request is for the Budget Savings Club Membership ($250 per year) and Tankless Water Heater Maintenance and Flush ($475 per flush). I don’t yet have your name, mobile number, or the tankless unit’s age; its label photo is optional. A person will need to confirm the two-service request and any next steps. I haven’t booked anything.\n\nPlease send the full address, your name and mobile number, and the unit’s age if known—or call or text (636) 887-2800 now to speak with the dispatcher.\n\nAsk me anything\nSpeak",
+    "That totals $725: $250 per year for the Budget Savings Club Membership plus $475 for the Tankless Water Heater Maintenance and Flush. This is just the sum of th\n\nThat totals $725: $250 per year for the Budget Savings Club Membership plus $475 for the Tankless Water Heater Maintenance and Flush. This is just the sum of the listed prices; I can’t confirm a bundle discount or book either service here. To confirm the request and next steps, call or text (636) 887-2800.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T04:15:22.647Z"
+  }
+ ]
+}
