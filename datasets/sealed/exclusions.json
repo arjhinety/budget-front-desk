@@ -1,0 +1,18 @@
+{
+ "policy": {
+  "artefacts": [
+   "cannot continue right now",
+   "Something went wrong loading this page",
+   "The answer could not be displayed"
+  ],
+  "min_reply_chars": 200
+ },
+ "excluded": [
+  {
+   "record": "A5/SD-12#1",
+   "reason": "ARTEFACT: quota or render message in the transcript"
+  }
+ ],
+ "kept": 39,
+ "total": 40
+}

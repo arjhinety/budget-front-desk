@@ -63,9 +63,9 @@ So the sealed set must use **new customer messages**, not new replies to old one
 
 1. **Someone other than the grader author writes 20 new scenarios.** Done:
    `mistral-large-4-0` via the Mistral API, 20 scenarios across the six families,
-   request and response hashed in `scenarios-sealed.json`.
+   request and response hashed in `datasets/sealed/scenarios-sealed.json`.
 2. **The grader author writes graders for them from the spec alone**, before any
-   reply exists. Done: `graders-sealed.json`, written from each scenario's stated
+   reply exists. Done: `datasets/sealed/graders-sealed.json`, written from each scenario's stated
    `tests` line and the business rules, with no reply in existence yet.
 3. **The artefacts are frozen.** `FROZEN.json` records the sha256 of the scenarios,
    the graders, the request and the raw response. If a grader changes after the

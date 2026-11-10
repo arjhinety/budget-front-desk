@@ -403,6 +403,14 @@ arms were then run on it once each, 40 conversations, 120 replies.
 | the 7 marked ambiguous | 5/7 | 6/7 |
 | mean reply length | 741 chars | 856 chars |
 
+**One A5 record is excluded, and it changes the denominators.** `A5/SD-12#1`
+carries a render failure in its third reply — *"The answer could not be displayed.
+Please try again."* — appended after a complete answer. `datasets/clean_sealed.py`
+catches it deterministically. It scored as a pass, so excluding it makes A5 look
+*worse*, not better: **16/19 overall and 10/12 on the scored scenarios.** A0 has no
+excluded record. The headline is stated on all 20 for both arms because that is what
+was run; the exclusion is reported here rather than folded in silently.
+
 The two arms agree on 18 of 20 scenarios. Exactly one scored scenario is discordant
 — `SD-15`, which A0 passes and A5 fails — giving an exact McNemar **p = 1.000**.
 

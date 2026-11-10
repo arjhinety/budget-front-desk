@@ -60,14 +60,19 @@ def main() -> int:
 
     sealed, tuned = [], []
     for f in args.sealed:
-        sealed += load(ROOT / f)
+        # tag each record with the arm it came from: SD-12#1 exists in both files,
+        # so an untagged key cannot say which one was excluded
+        arm = Path(f).stem.replace("SEALED-", "")
+        for rec in load(ROOT / f):
+            rec["_arm"] = arm
+            sealed.append(rec)
     for f in args.tuned:
         tuned += load(ROOT / f)
 
     # ---- deterministic exclusions
     exclusions, kept = [], []
     for rec in sealed:
-        key = f"{rec.get('id')}#{rec.get('trial')}"
+        key = f"{rec.get('_arm','?')}/{rec.get('id')}#{rec.get('trial')}"
         rs = replies_of(rec)
         reason = None
         if "error" in rec:
