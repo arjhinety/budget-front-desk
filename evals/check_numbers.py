@@ -48,7 +48,11 @@ def derived_for(text: str, base: set[int]) -> set[int]:
     """
     present = {int(m.group(1).replace(",", "")) for m in AMOUNT.finditer(text)
                if int(m.group(1).replace(",", "")) in base}
-    return {a + c for a in present for c in present}
+    # three-term sums as well as pairs: a Saturday total is diagnostic + cleaning +
+    # surcharge, and correction 20 found that a pairwise-only rule fails it.
+    out = {a + c for a in present for c in present}
+    out |= {a + c + d for a in present for c in present for d in present}
+    return out
 
 
 AMOUNT = re.compile(r"\$\s?([0-9][0-9,]*(?:\.[0-9]{2})?)")

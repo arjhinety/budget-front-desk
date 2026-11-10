@@ -3,7 +3,7 @@
 Preregistration: `evals/METHOD.md`, written before the first scenario was sent.
 Agent: project `jojuduewx7ud` on Agentplace · GPT-6 Luna. The published link is shared
 separately; this repository holds the transcripts and the graders.
-Test set: 33 conversations × 3 trials = 99 per full arm. **261 conversations** across the five instruction arms, **822** in total including the larger set, the two-model comparison and A5.
+Test set: 33 conversations × 3 trials = 99 per full arm. **261 conversations** across the five instruction arms. The 822 figure quoted elsewhere counts everything recorded, including the two-model comparison and the multi-turn set; the A0-versus-A5 comparison itself rests on **324 conversations** (159 and 165 trials), and the paired test on the 53 scenarios both arms share.
 
 ---
 
@@ -316,8 +316,22 @@ All 55 scenarios are complete, 165 conversations.
 | strict pass³ | 26/53 (49%) | **43/53 (81%)** |
 | pass@1 | 113/159 (71.1%) | **145/165 (87.9%)** |
 | integrity gate | PASS (0/53) | PASS (0/55) |
-| exact McNemar | — | **b=18, c=1, p < 0.001** |
-| paired bootstrap | — | **+0.321 [+0.189, +0.453]** |
+
+The two significance tests below are on **strict pass³**, not on pass@1. They are
+separated out because the two metrics have different denominators and the tests
+belong to only one of them:
+
+| test, on strict pass³ | result |
+|---|---|
+| exact McNemar | b=18, c=1, p < 0.001 |
+| paired bootstrap, 10k resamples | **+0.321 [+0.189, +0.453]** |
+
+**The pass@1 denominators differ, and that matters.** A0 was run on 53 scenarios
+(159 trials) and A5 on all 55 (165 trials), so the pass@1 rates are not paired and
+their gap is not a paired estimate. The paired comparison is the pass³ one above,
+which uses the 53 scenarios both arms share. Quoting 71.1% against 87.9% next to a
++0.321 bootstrap puts two different metrics in one breath and makes the effect look
+roughly twice its size.
 
 **No lane regressed.** That is the difference between A5 and A2:
 
@@ -340,6 +354,61 @@ One lane did not recover: **handoff stayed at 1/2**, having been 2/2 under A2.
 The multi-system and warranty-claim probes are the two scenarios where a person
 must take over, and A5 handles one of them. That is the remaining defect, and it
 is the one to fix next rather than declare finished.
+
+## The out-of-sample check: the sealed set, and it does not confirm the gain
+
+Everything above was measured on scenarios I wrote and then tuned against. That is
+the weakness of the whole result, so the last test was built to remove it: 20
+three-turn scenarios authored by a different model against the same 3,107-character
+brief, with graders written from the spec **before any reply existed**, frozen by
+SHA-256 in `datasets/sealed/FROZEN.json` and timestamped at commit `d7c9ad3`. Both
+arms were then run on it once each, 40 conversations, 120 replies.
+
+| | A0 | A5 |
+|---|---|---|
+| all 20 scenarios | 17/20 | 17/20 |
+| the 13 not marked ambiguous | **12/13** | **11/13** |
+| the 7 marked ambiguous | 5/7 | 6/7 |
+| mean reply length | 741 chars | 856 chars |
+
+The two arms agree on 18 of 20 scenarios. Exactly one scored scenario is discordant
+— `SD-15`, which A0 passes and A5 fails — giving an exact McNemar **p = 1.000**.
+
+**The tie depends on the ambiguous scenarios, and that has to be said plainly.** On
+the 13 scenarios the adjudicator did not flag, A5 scores *lower* than the baseline.
+The 17/20-each headline only appears when the seven ambiguous ones are folded in,
+and A5 gains a point there. Neither number is the honest one on its own; both are
+above.
+
+**Why this does not mean the tuning failed.** One discordant scenario out of 13
+moves the rate 7.7 points, and the confidence interval on 12/13 spans roughly 66–99%.
+A set this size could not have detected even the single-turn effect, so it cannot
+distinguish "no gain" from "gain too small to see here". The correct statement is
+that the improvement **has not been confirmed out of sample**, not that it failed to
+transfer.
+
+Four explanations fit, and none of them was tested:
+
+1. **Overfitting to the tuning scenarios.** A5 was iterated on the same 55 scenarios
+   it was measured against, and A2 and A3 were tried and reverted on them. Part of
+   the in-sample gain may be fit to those scenarios and their graders. This is the
+   explanation I would weigh most heavily, and it is the one that makes the sealed
+   set worth having run.
+2. The instructions address single-turn failures — quoting the right price,
+   refusing to invent, stating a constraint — and say nothing about memory,
+   correction or pushback, which is most of what a three-turn conversation tests.
+3. A5 writes 856 characters against A0's 741. Every extra sentence is another
+   chance to state an unsourced number or miss a required one.
+4. The sealed author is a different model, so its scenarios probe behaviours
+   neither arm was tuned against.
+
+**One correction was applied after the replies existed, and it is disclosed here
+rather than buried.** The integrity check passed a stated amount only if it was a
+ledger price or the sum of two, and it failed A5's correct `$299` for a Saturday
+diagnostic plus cleaning (`$99 + $150 + $50`, all three in the ledger). This is a
+mechanical rule failing a correct answer, not a rubric changed after seeing output.
+It was applied to both arms identically, logged as correction 20, and moved A5 from
+10/13 to 11/13. A0 was unchanged. **No scenario rubric was touched.**
 
 ## Two tiers instead of one number
 

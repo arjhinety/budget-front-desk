@@ -83,6 +83,27 @@ broken test, not a hard one.
 
 ---
 
+## 4. The check that did not confirm my own work
+
+Everything above was measured on scenarios I wrote and then tuned against, which is
+the weakness of the whole exercise. So the last test was built to remove it: 20
+three-turn scenarios written by a different model against the same brief, with
+graders written from the spec before any reply existed, frozen by hash on a public
+commit, then run once on each arm.
+
+**The two arms came out the same.** 17/20 each. On the 13 scenarios I had not
+flagged as ambiguous, the baseline scored 12/13 and the tuned arm 11/13 — the tie
+only appears when the seven ambiguous ones are folded in, and the tuned arm gains a
+point there. One scored scenario is discordant, exact McNemar p = 1.000.
+
+That does not mean the tuning failed. One conversation out of 13 moves the rate 7.7
+points, and a set that size could not have detected even the single-turn effect. It
+means the improvement **has not been confirmed out of sample**, and the explanation
+I weigh most heavily is the least flattering one: the tuned arm was iterated on the
+same scenarios it was measured against, so part of that gain may be fit to my own
+test set. That is why the sealed set was worth running, and why running it was the
+point rather than a formality.
+
 ## Method, in one paragraph
 
 Every fact the agent was built from is in a 24-field ledger, each field carrying
