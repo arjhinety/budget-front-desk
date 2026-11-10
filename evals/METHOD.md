@@ -6,8 +6,9 @@ bar that existed before the numbers did. If a threshold here turns out to be
 convenient, record the change and the reason; do not edit
 this file.
 
-Published agent: project `jojuduewx7ud`, linked separately rather than in this repository
-Model: GPT-6 Luna. Public, no sign-in required, duplication allowed.
+Initial preregistration build: project `jojuduewx7ud`, linked separately rather than in this repository.
+The final published arm after instruction iteration is project `cgiefgaebmgh`; both use GPT-6 Luna. Public,
+no sign-in required, duplication allowed.
 
 ---
 

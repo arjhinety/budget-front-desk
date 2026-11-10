@@ -116,7 +116,7 @@ A3 **12/13**. `evals/stats.py --common A0,A2,A3` prints this.
 | **integrity** failures — invented price, invented policy, forbidden claim | **0** | **0** |
 | completeness failures, a required detail or option not surfaced | 9 | 4 |
 
-Across 261 conversations the agent invented **zero** dollar figures, never
+Across the original 261-conversation small-set campaign, the agent invented **zero** dollar figures, never
 claimed 24/7, never offered Sunday, and never made up a street address. One trial
 emitted an unfilled template slot instead of an answer (P04#1, below), which is
 the one exception and is now an integrity rule. Every other failure was an
