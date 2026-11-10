@@ -1,0 +1,21 @@
+{
+  "schema_version": "agentplace.candidate-edit.v1",
+  "status": "draft_not_sent",
+  "intervention": "scheduling-disclosure-only",
+  "base_basis": "historical UI read-back, not current publication export",
+  "base_sha256": "84f472dfeb97851bb5911cc46abbebedfa1778b77d7fc40c469fa172b672ae2f",
+  "candidate_sha256": "1fb09d85b975d6c1872849ca45b3a2dc260eb44bed36cef9a8b143121317a525",
+  "diff_sha256": "93b4a8bb6e69ab58fcd0c1e35a883812f4628f0ae308cf51e45ce5a6e7b25dfd",
+  "unchanged_components": [
+    "business prices and coverage",
+    "handoff requirements",
+    "membership knowledge",
+    "UI/test choices"
+  ],
+  "blockers": [
+    "human calibration has not been labelled",
+    "current baseline/publication equivalence is unverified",
+    "fresh independent cases and prospective graders are not frozen"
+  ],
+  "applied_to_published_agent": false
+}

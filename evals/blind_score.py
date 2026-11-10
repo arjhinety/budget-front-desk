@@ -1,81 +1,91 @@
 #!/usr/bin/env python3
-"""
-Score a returned blind sheet against my graders.
+"""Score a returned blind sheet against the graders, joined through the private key.
 
-Refuses rather than guesses: an unfilled row, a blank verdict, a value that is
-not PASS or FAIL, a reordered sheet, or a sheet whose rows do not match the key
-all stop the run. A blank answer is not a no, and a silently reordered sheet
-would pair verdicts with the wrong transcripts.
+The sheet is validated before anything is scored. A blank verdict, an unknown or
+duplicated row id, a missing row, an altered conversation cell, a renamed column
+or an edited guide is a refusal, not a default. Rows may be returned in any
+order: the join is by ``row_id``, so a shuffled sheet cannot mispair a verdict,
+and a sheet that has lost its ids is rejected rather than aligned by position.
 
-  python evals/blind_score.py
+  python evals/blind_score.py --sheet <out>/sheet.csv --key <out>/private/key.json \
+                             --guide <out>/GUIDE.md
+
+The historical ``evals/blind`` sheet can still be scored, but only explicitly and
+only as a NON-arm-blind reproduction:
+
+  python evals/blind_score.py --legacy-dir evals/blind
 """
 
 from __future__ import annotations
 
-import csv
+import argparse
 import json
 import sys
 from pathlib import Path
 
-EVALS = Path(__file__).resolve().parent.parent / "evals"
-OUT = EVALS / "blind"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import review_common as rc  # noqa: E402
 
 
-def kappa(a: list[str], b: list[str]) -> tuple[float, float]:
-    n = len(a)
-    po = sum(1 for x, y in zip(a, b) if x == y) / n
-    pa = sum(1 for x in a if x == "PASS") / n
-    pb = sum(1 for x in b if x == "PASS") / n
-    pe = pa * pb + (1 - pa) * (1 - pb)
-    return po, (1.0 if pe == 1 else (po - pe) / (1 - pe))
+def build_parser() -> argparse.ArgumentParser:
+    ap = argparse.ArgumentParser(
+        description="Score human PASS/FAIL/UNSURE labels against the grader verdicts "
+                    "held in the private key.")
+    ap.add_argument("--sheet", metavar="CSV", help="returned sheet")
+    ap.add_argument("--key", metavar="JSON", help="private key written at export")
+    ap.add_argument("--guide", metavar="PATH",
+                    help="guide the labeller used; its hash must match the key")
+    ap.add_argument("--out", metavar="PATH", help="score JSON destination")
+    ap.add_argument("--force", action="store_true", help="overwrite an existing --out")
+    ap.add_argument("--json", action="store_true", help="print the score object")
+    ap.add_argument("--legacy-dir", metavar="DIR",
+                    help="score the historical evals/blind sheet (NOT arm-blind; "
+                         "that sheet exposes scenario and arm)")
+    return ap
 
 
-def main() -> int:
-    sheet, keyfile = OUT / "sheet.csv", OUT / "key.json"
-    if not sheet.exists() or not keyfile.exists():
-        print("no sheet: run evals/blind_export.py first")
+def _write(path: Path, obj: dict, force: bool) -> None:
+    if path.exists() and not force:
+        raise rc.ReviewError(f"{path} exists; pass --force to replace it")
+    rc.write_json_atomic(path, obj)
+
+
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+    try:
+        if args.legacy_dir:
+            if args.sheet or args.key:
+                raise rc.ReviewError("--legacy-dir cannot be combined with --sheet/--key")
+            result = rc.score_legacy_blind(Path(args.legacy_dir))
+            default_out = None
+        else:
+            if not args.sheet or not args.key:
+                raise rc.ReviewError("--sheet and --key are both required "
+                                     "(or use --legacy-dir)")
+            result = rc.score_sheet(Path(args.sheet), Path(args.key),
+                                    guide=Path(args.guide) if args.guide else None)
+            default_out = Path(args.key).parent / "score.json"
+    except rc.ReviewError as exc:
+        print(f"refused: {exc}", file=sys.stderr)
         return 2
 
-    key = json.loads(keyfile.read_text(encoding="utf-8"))
-    rows = list(csv.DictReader(sheet.open(encoding="utf-8")))
+    if args.json:
+        print(json.dumps(result, indent=1, ensure_ascii=False))
+    else:
+        print(rc.format_report(result))
+        if result.get("returned_out_of_order"):
+            print("  note: rows came back out of export order; joined by row_id")
 
-    if len(rows) != len(key):
-        print(f"sheet has {len(rows)} rows, key has {len(key)} — refusing")
-        return 2
-
-    mine, theirs, detail = [], [], []
-    for r in rows:
-        i = r["row"].strip()
-        if i not in key:
-            print(f"row {i} is not in the key — the sheet was reordered or edited; refusing")
+    dest = Path(args.out) if args.out else default_out
+    if dest is not None:
+        try:
+            _write(dest, result, args.force)
+        except rc.ReviewError as exc:
+            print(f"not written: {exc}", file=sys.stderr)
             return 2
-        v = (r["your_verdict_PASS_or_FAIL"] or "").strip().upper()
-        if v not in ("PASS", "FAIL"):
-            print(f"row {i} has verdict {v!r}. A blank is not a no. Fill every row, then re-run.")
-            return 2
-        mine.append(key[i]["my_verdict"])
-        theirs.append(v)
-        detail.append({"row": i, "arm": key[i]["arm"], "id": key[i]["id"],
-                       "mine": key[i]["my_verdict"], "yours": v,
-                       "notes": r.get("notes", "")})
-
-    po, k = kappa(mine, theirs)
-    agree = sum(1 for x, y in zip(mine, theirs) if x == y)
-    print(f"n = {len(mine)}   agreement {agree}/{len(mine)} ({agree/len(mine):.0%})")
-    print(f"Cohen's kappa = {k:.3f}")
-
-    dis = [d for d in detail if d["mine"] != d["yours"]]
-    print(f"\ndisagreements ({len(dis)}):")
-    for d in dis:
-        print(f"  row {d['row']:>2}  {d['arm']} {d['id']}  mine={d['mine']} yours={d['yours']}"
-              + (f"  — {d['notes']}" if d["notes"] else ""))
-    if not dis:
-        print("  none")
-
-    (OUT / "result.json").write_text(
-        json.dumps({"n": len(mine), "agreement": agree / len(mine), "kappa": k, "detail": detail},
-                   indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"\n-> {OUT / 'result.json'}")
+        if not args.json:
+            print(f"\n-> {dest}")
     return 0
 
 

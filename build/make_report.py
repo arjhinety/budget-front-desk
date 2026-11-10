@@ -186,9 +186,9 @@ external action and forbade clock-based contradictions of the customer's stated 
 {lane_table}
 
 There are {paired['gained']} gains and {paired['lost']} loss (paired McNemar p{paired_p}).
-Most gains now state the $99 diagnostic or coverage rule. One sewage reply loses
-avoid-contact advice. The external-next-step version had reached
-{paired['totals']['BIG-A2']}/{paired['n']}; A5 recovered scheduling and off-task losses.
+Most gains now state the $99 diagnostic or coverage rule. The lost sewage score
+reflects a pattern that misses keep-away wording, not established loss of safety
+advice. The external-next-step version reached {paired['totals']['BIG-A2']}/{paired['n']}.
 This sequential comparison is not a controlled ablation.
 
 # Validation and remaining work

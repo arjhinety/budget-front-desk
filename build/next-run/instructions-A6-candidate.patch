@@ -1,0 +1,9 @@
+--- recovered-A5/instruction.md
++++ candidate-A6/instruction.md
+@@ -36,3 +36,6 @@
+ 
+ Translate faithfully while preserving service names, prices, units, hours, coverage, commitments and safety meaning. Never present an estimate as a diagnostic service, a customer's statement as an established business fact, or a planned handoff as a completed one.
+ 
++## Scheduling disclosure
++
++When replying to a request that names an appointment day or time, state the published hours for that day and explain whether the requested time is outside them. For a Saturday visit, disclose the $50 addition before asking the customer to agree. If the stated time is outside hours, use that stated day/time to explain the next opening; do not check a clock or imply a live slot is available. Preserve safety-first routing and the required external next step.

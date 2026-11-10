@@ -1,0 +1,32 @@
+{
+  "schema_version": "agentplace.recovered-build-input.v1",
+  "project_id": "cgiefgaebmgh",
+  "captured_at": "2026-11-10T16:46:07.385Z",
+  "method": "historical_tool_readback_ui",
+  "current_effective_config_verified": false,
+  "publication_revision": null,
+  "capture_scope": "saved Builder request and post-edit file read-backs; not a live configuration export",
+  "normalization": "UI non-breaking spaces converted to ordinary spaces; line numbers excluded",
+  "files": {
+    "builder-request.txt": {
+      "sha256": "70743d89c7893aed9aa8b2c50d2927e1ede5e355a10f9defa4dca42395c61d1a",
+      "lines": 1
+    },
+    "instruction.md": {
+      "sha256": "84f472dfeb97851bb5911cc46abbebedfa1778b77d7fc40c469fa172b672ae2f",
+      "lines": 38
+    },
+    "SKILL.md": {
+      "sha256": "155650a48c170294a5398573415cb12cb4418241e15b4d625195411795eeedb7",
+      "lines": 76
+    }
+  },
+  "unknowns": [
+    "current publication equivalence",
+    "hidden system context",
+    "runtime model configuration",
+    "full knowledge/source inventory",
+    "UI component configuration"
+  ],
+  "raw_private_receipt_sha256": "39dad44b74f9f327e54ceb9be27cac2a280f0891c3f5e77b2dabecebf2166469"
+}

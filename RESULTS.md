@@ -13,14 +13,19 @@ adds 40: **970 recorded trials/conversations**, including incomplete captures
 where retained. The headline single-turn A0/A5 comparison uses 324 trials over
 53/55 scenarios; the paired strict-pass comparison uses their 53 shared scenarios.
 
+**Pre-run audit:** `docs/PRE-RUN-AUDIT.md` documents two distinct A5 capture
+blocks with missing per-record provenance and grader errors in both directions.
+The numbers below remain the recorded machine scores, not a newly validated
+causal estimate. New human review and configuration verification are pending.
+
 ---
 
 ## The verdict
 
-**On the scenarios it was tuned against, A5 is clearly better than the arm it
-replaced. On the one set it could not be tuned against, it is not measurably
-different. Both numbers belong in the same breath, and this document leads with
-both.**
+**The development rubric scores A5 higher than its baseline. Separate validation
+does not establish a general advantage. Provenance and semantic-grading issues
+now require the additional audit described above; neither a causal gain nor
+equivalence follows from these scores.**
 
 | | A0 | A5 |
 |---|---|---|

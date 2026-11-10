@@ -10,6 +10,12 @@ statistics have not been collected. `labels.csv` below is a planned output,
 not an existing result. The embedding contamination pass also remains separate
 from the completed exclusion-only pass.
 
+**Preparation update:** use `evals/human/GUIDE.md` and the repaired
+`blind_export.py` / `blind_score.py` path for the pending retrospective audit.
+The modern sheet uses opaque row IDs and PASS/FAIL/UNSURE; source identities
+and machine verdicts remain in a separate private key. The old `evals/blind/`
+sheet remains historical and is not arm-blind. No new collection is authorised.
+
 **Do not read `evals/graders*.json`, `evals/grade.py` or `evals/grade_mt.py`
 before finishing step 4.** If you do, the set is no longer sealed and the result
 should be reported as unsealed.
@@ -166,9 +172,9 @@ fitted to, and they should be reported by count.
 
 ## Step 4 — label
 
-Label each conversation PASS or FAIL against the business rules, not against the
-scenario's regexes. The rules are in `facts/business.json` and in plain English in
-`NOTICE.md` and `datasets/RULES.md`.
+Label each conversation PASS, FAIL or UNSURE against the frozen
+`evals/human/GUIDE.md`. It distinguishes missing knowledge and policy ambiguity
+from an agent error. Do not silently substitute the older RULES.md.
 
 - Shuffle the records. Do not show arm, trial, scenario id, or the grader's
   verdict.
@@ -177,16 +183,18 @@ scenario's regexes. The rules are in `facts/business.json` and in plain English 
 - Where the two disagree, record the disagreement and do not resolve it by
   majority. A disagreement is a finding about the rubric.
 
-Deliver `datasets/sealed/labels.csv` with `row, verdict, notes`.
+Return the opaque `sheet.csv` generated in a fresh private batch. Its columns are
+`row_id,conversation,your_verdict,recognized,notes`. Edit only the verdict,
+recognition and notes; the private key/manifest must not be consulted during labelling.
 
 ## Step 5 — score, once
 
 Only now read the graders.
 
-Run the existing graders over the sealed transcripts and compare to the labels:
+Score the returned sheet against its verified private key and manifest:
 
-```
-python evals/sealed_score.py
+```sh
+python evals/blind_score.py --sheet <batch>/sheet.csv --key <batch>/private/key.json
 ```
 
 Report, and report all of them:

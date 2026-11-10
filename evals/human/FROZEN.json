@@ -1,0 +1,59 @@
+{
+  "schema_version": "agentplace.human-guide-freeze.v1",
+  "frozen_at": "2026-11-10T17:09:23.927032+00:00",
+  "guide": {
+    "path": "evals/human/GUIDE.md",
+    "sha256": "23fbadb524a023b53c25e34f42d66f1f3af86aff04eb69741e89daea303d446b"
+  },
+  "controls": {
+    "path": "evals/human/controls.json",
+    "sha256": "b8f780fc3e416c61f11d26fb00fdcb31037084257ec6e7a376900148203d7c7a"
+  },
+  "scope": "Frozen before collecting human labels, after historical outputs had been inspected. This is retrospective calibration, not a claim of pre-output preregistration.",
+  "batches": [
+    {
+      "batch": "pre-run-sealed-v2",
+      "rows": 39,
+      "sheet_sha256": "a306b73ab7ba89d2d1b3ee58dfe59eea2a4ddcd196d90a7d6ee464615fb1e280",
+      "private_manifest_sha256": "5853a65e91dae0a04778ce9ffd5db6ecc44c81dc6de04da510453c4e3a1ab777",
+      "private_manifest_content_sha256": "5853a65e91dae0a04778ce9ffd5db6ecc44c81dc6de04da510453c4e3a1ab777",
+      "private_key_sha256": "957e39e694c7ae3d6b7b653074aa2dcb1faab55c56cd27c1dabdc2e9bbc9bb4d",
+      "private_key_content_sha256": "957e39e694c7ae3d6b7b653074aa2dcb1faab55c56cd27c1dabdc2e9bbc9bb4d",
+      "human_labels_present": false
+    },
+    {
+      "batch": "pre-run-development-v2",
+      "rows": 60,
+      "sheet_sha256": "c98ee9d90d31e3c56586605cdb2beae0c10277726ad5779c42b3dc85b1828a89",
+      "private_manifest_sha256": "2c523aabd0eb6e4d19291847fb010b93ac5196795b558c569940426ee5285583",
+      "private_manifest_content_sha256": "2c523aabd0eb6e4d19291847fb010b93ac5196795b558c569940426ee5285583",
+      "private_key_sha256": "39ee7abfd720ab3255fcf399ce8637586b2b0439547d216dacfd9b8873bd2f11",
+      "private_key_content_sha256": "39ee7abfd720ab3255fcf399ce8637586b2b0439547d216dacfd9b8873bd2f11",
+      "human_labels_present": false
+    }
+  ],
+  "labels_fabricated": false,
+  "superseded_batches": [
+    {
+      "batch": "pre-run-sealed-v1",
+      "rows": 39,
+      "sheet_sha256": "a306b73ab7ba89d2d1b3ee58dfe59eea2a4ddcd196d90a7d6ee464615fb1e280",
+      "private_manifest_sha256": "e99d3d2a4855963333856401042f2409255909705f06c14a8e8e77fabf686ec8",
+      "private_key_sha256": "3b83cf0974d79558d3daec923eb425679e09f215de128ff3ab6b0cffe476b20b",
+      "human_labels_present": false,
+      "status": "superseded_before_labelling",
+      "reason": "Preview/customer stripping repaired; no human verdicts had been entered."
+    },
+    {
+      "batch": "pre-run-development-v1",
+      "rows": 60,
+      "sheet_sha256": "0f9e61e4e775f25cc73b1ebc1892c39f973fbcc3d261c52fe2d2e44ceb531399",
+      "private_manifest_sha256": "45f12de0ce7f595993f14ba434dcc513f6d5726e6a260a2e90e0db919932d55d",
+      "private_key_sha256": "66cef7c9c2a536f773287cf0d1a5e1de5b146d7df178763edad4150fd8ae5b40",
+      "human_labels_present": false,
+      "status": "superseded_before_labelling",
+      "reason": "Preview/customer stripping repaired; no human verdicts had been entered."
+    }
+  ],
+  "export_correction": "Only export cleaning changed; the guide and source captures stayed unchanged."
+}

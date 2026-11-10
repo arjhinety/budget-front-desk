@@ -1,136 +1,104 @@
 #!/usr/bin/env python3
-"""
-Export a blind grading sheet, and score it when it comes back.
+"""Export a blind human-labelling batch.
 
-The problem this solves: every verdict in this repository was produced by graders
-I wrote. A reviewer cannot separate "the agent is good" from "the rubric grew to
-match the agent". The only measurement that breaks that loop is a person grading
-transcripts without seeing my verdicts.
+Every verdict in this repository was produced by graders the author wrote, so a
+reviewer needs a sheet that carries the conversation and nothing else: no arm,
+no scenario id, no trial, no source file, no grader verdict. Those live in
+``private/key.json`` beside the sheet and are joined back only at scoring time.
 
-  python evals/blind_export.py --n 30        # writes evals/blind/sheet.csv
-  python evals/blind_score.py                # after the verdict column is filled
+  python evals/blind_export.py \
+      --input sealed@evals/results/SEALED-A0.json \
+      --input sealed@evals/results/SEALED-A5.json --all \
+      --out ../agentplace-private/labelling/2026-11-11-sealed \
+      --guide evals/human/GUIDE.md
 
-The sheet is a CSV on purpose. A grader should not be editing JSON, and a
-corrupted return costs the whole exercise. The importer is written before the
-export and refuses a sheet that has been reordered or edited.
+  python evals/blind_export.py --input evals/results/BIG-A0.json \
+      --input evals/results/BIG-A2.json --n 30
+
+A guide is required: it is copied into the batch and its hash frozen in the
+private key, so labels cannot be collected without the rules they were given.
+Output defaults to ``../agentplace-private/labelling/<date>-<arms>`` outside the
+repository. An existing non-empty ``--out`` is refused; the historical
+``evals/blind`` directory is refused always. Run with ``--help`` writes nothing.
 """
 
 from __future__ import annotations
 
 import argparse
-import csv
 import json
-import random
-import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-EVALS = ROOT / "evals"
-OUT = EVALS / "blind"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-COLUMNS = ["row", "scenario", "arm", "customer_says", "business_rules",
-           "agent_reply", "your_verdict_PASS_or_FAIL", "notes"]
-
-RULES = (
-    "Published rules for this business. Hours: Mon-Fri 8am-7pm, Sat 9am-5pm, closed Sunday; "
-    "Saturday appointments add $50. Prices: HVAC diagnostic $99 and water-heater diagnostic $99, "
-    "each covering the trip and diagnosis, with repairs quoted separately and approved first; "
-    "one-time HVAC cleaning $150/system; deep HVAC refresh $489/system; water-heater flush $375; "
-    "tankless flush $475; savings club $250/yr; free written replacement estimates for HVAC, "
-    "water heaters and indoor-air upgrades. Coverage: water-heater work anywhere in Missouri; "
-    "diagnostics only in St. Charles, St. Louis, Lincoln, Warren and Jefferson counties; other "
-    "plumbing-equipment estimates only in St. Charles County. No 24/7 or after-hours service is "
-    "published. No discounts exist. One-year labour warranty; licensed, bonded, insured. No street "
-    "address is published. "
-)
+import review_common as rc  # noqa: E402
 
 
-def graded(arm: str, setname: str) -> list[dict]:
-    out = subprocess.run(["python", str(EVALS / "grade.py"), "--arm", arm, "--json", "--set", setname],
-                         capture_output=True, text=True, cwd=str(ROOT)).stdout
-    start = out.find("[")
-    return json.JSONDecoder().raw_decode(out[start:])[0] if start >= 0 else []
+def build_parser() -> argparse.ArgumentParser:
+    ap = argparse.ArgumentParser(
+        description="Export neutral, shuffled, opaque rows for human labelling.",
+        epilog="Identity, arm, scenario, trial and the grader verdict are written "
+               "only to <out>/private/key.json.")
+    ap.add_argument("--input", action="append", required=True, metavar="[KIND@]RESULTS.json",
+                    help="results file; KIND is single, mt or sealed and may be omitted "
+                         "when it can be inferred. Repeat for multiple files/arms.")
+    ap.add_argument("--out", metavar="DIR",
+                    help="output directory (default: private directory outside the repo)")
+    ap.add_argument("--all", action="store_true", help="export every eligible row")
+    ap.add_argument("--n", type=int, default=30, help="rows to sample when --all is absent")
+    ap.add_argument("--seed", type=int, default=20261111, help="shuffle/sampling seed")
+    ap.add_argument("--strata", default="pass,fail,edge",
+                    help="strata for a development sample, in allocation order")
+    ap.add_argument("--guide", metavar="PATH", required=True,
+                    help="labelling guide; copied into the batch and its hash frozen in the key")
+    ap.add_argument("--set", default=None,
+                    help="scenario set for single-turn grading (default: inferred from the "
+                         "records' split and id prefix; an override must cover every record)")
+    ap.add_argument("--fresh", action="store_true",
+                    help="acknowledge that --out must be a fresh path; a non-empty "
+                         "directory is still refused")
+    ap.add_argument("--json", action="store_true", help="print the run summary as JSON")
+    return ap
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--n", type=int, default=30)
-    ap.add_argument("--seed", type=int, default=20261108)
-    ap.add_argument("--arms", default="BIG-A0,BIG-A2")
-    ap.add_argument("--set", default="scenarios-big")
-    args = ap.parse_args()
+def main(argv: list[str] | None = None) -> int:
+    args = build_parser().parse_args(argv)
+    specs = [rc.InputSpec.parse(v) for v in args.input]
+    out = Path(args.out) if args.out else rc.private_default_out(
+        [rc.arm_from_path(s.path) for s in specs], [])
+    try:
+        result = rc.export_batch(
+            specs, out,
+            n=args.n, take_all=args.all, seed=args.seed,
+            guide=Path(args.guide),
+            set_name=args.set,
+            strata=[s.strip() for s in args.strata.split(",") if s.strip()],
+        )
+    except rc.ReviewError as exc:
+        print(f"refused: {exc}", file=sys.stderr)
+        return 2
 
-    scen = {s["id"]: s for s in json.loads((EVALS / f"{args.set}.json").read_text(encoding="utf-8"))["scenarios"]}
-
-    pool = []
-    for arm in args.arms.split(","):
-        for r in graded(arm, args.set):
-            if "text" in r:
-                r["arm"] = arm
-                pool.append(r)
-
-    # stratified: a third passing, a third failing, a third unstable or soft
-    by: dict[str, list[dict]] = {"pass": [], "fail": [], "edge": []}
-    for r in pool:
-        if r.get("soft_missed"):
-            by["edge"].append(r)
-        elif r["pass"]:
-            by["pass"].append(r)
-        else:
-            by["fail"].append(r)
-
-    rng = random.Random(args.seed)
-    for k in by:
-        rng.shuffle(by[k])
-    per = max(1, args.n // 3)
-    picked = []
-    for k in ("pass", "fail", "edge"):
-        picked += by[k][:per]
-    # top up from whichever stratum still has rows, so a thin one does not shrink the sheet
-    if len(picked) < args.n:
-        taken = {(r["arm"], r["id"], r["trial"]) for r in picked}
-        for k in ("pass", "fail", "edge"):
-            for r in by[k]:
-                if len(picked) >= args.n:
-                    break
-                if (r["arm"], r["id"], r["trial"]) not in taken:
-                    picked.append(r)
-                    taken.add((r["arm"], r["id"], r["trial"]))
-    rng.shuffle(picked)
-
-    OUT.mkdir(parents=True, exist_ok=True)
-    sheet = OUT / "sheet.csv"
-    with sheet.open("w", newline="", encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=COLUMNS)
-        w.writeheader()
-        for i, r in enumerate(picked, 1):
-            s = scen.get(r["id"], {})
-            w.writerow({
-                "row": i,
-                "scenario": r["id"],
-                "arm": r["arm"],
-                "customer_says": s.get("customer", ""),
-                "business_rules": RULES,
-                "agent_reply": (r.get("text", "") or "")[:1800],
-                "your_verdict_PASS_or_FAIL": "",
-                "notes": "",
-            })
-
-    # the key stays out of the sheet
-    key = {str(i): {"arm": r["arm"], "id": r["id"], "trial": r["trial"],
-                    "my_verdict": "PASS" if r["pass"] else "FAIL"}
-           for i, r in enumerate(picked, 1)}
-    (OUT / "key.json").write_text(json.dumps(key, indent=1) + "\n", encoding="utf-8")
-
-    print(f"{len(picked)} transcripts -> {sheet}")
-    print(f"  strata: {sum(1 for r in picked if r['pass'])} pass, "
-          f"{sum(1 for r in picked if not r['pass'])} fail, "
-          f"{sum(1 for r in picked if r.get('soft_missed'))} edge")
-    print("  my verdicts are in blind/key.json and are not in the sheet")
-    print("  the sheet carries the business rules, not my regexes: judge the answer, not the rubric")
-    print("\nfill the column your_verdict_PASS_or_FAIL with PASS or FAIL, then run:")
-    print("  python evals/blind_score.py")
+    if args.json:
+        print(json.dumps(result, indent=1, ensure_ascii=False))
+        return 0
+    sel = result["selection"]
+    print(f"{result['selected']} conversations -> {result['sheet']}")
+    if sel.get("selection_bias"):
+        print("  sample: stratified, not a population sample (details in the private manifest)")
+    reasons: dict[str, int] = {}
+    for item in result["exclusions"]:
+        reasons[item["reason"]] = reasons.get(item["reason"], 0) + 1
+    if reasons:
+        print("  excluded: " + ", ".join(f"{k} {v}" for k, v in sorted(reasons.items())))
+    if result["unresolved"]:
+        print(f"  unresolved: {len(result['unresolved'])} (listed privately, not exported)")
+    print(f"  guide: {result['guide']['sha256'][:12]}… {result['out']}/GUIDE.md")
+    print(f"  private identity: {result['key']}")
+    print(f"  manifest: {result['manifest']}")
+    print("\nFill your_verdict with PASS, FAIL or UNSURE for every row; the optional")
+    print("recognized column takes yes/no. Add reasons in notes; leave conversation and row_id unchanged.")
+    print("\nThen score the returned sheet with:")
+    print(f"  python evals/blind_score.py --sheet {result['sheet']} --key {result['key']}")
     return 0
 
 

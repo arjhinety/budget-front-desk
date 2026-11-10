@@ -1,0 +1,8 @@
+{
+  "visibility": "public",
+  "require_login": false,
+  "allow_remix": false,
+  "has_enabled_schedules": false,
+  "component_definitions_exposed": false,
+  "test_choice_settings": null
+}

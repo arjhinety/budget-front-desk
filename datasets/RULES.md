@@ -1,5 +1,10 @@
 # The business rules, in plain English
 
+**Historical reference.** This was the rule prose used for the original audits.
+It contains the v1 water-heater/diagnostic coverage ambiguity and later membership
+facts. New human-review batches use `evals/human/GUIDE.md`, whose version/hash is
+frozen with each batch. Do not silently apply this older file instead.
+
 A labeller should not have to read a regex to know what a correct answer looks
 like. This is the same rule set the graders encode, written for a person.
 

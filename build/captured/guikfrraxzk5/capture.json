@@ -1,0 +1,26 @@
+{
+  "schema_version": "agentplace.published-config-capture.v1",
+  "project_id": "guikfrraxzk5",
+  "captured_at": "2026-11-10T17:26:00.350237+00:00",
+  "method": "authenticated_readonly_configuration_get",
+  "response_type": "published",
+  "publication_revision": "1794070812010-29ccd856-363a-4806-b13c-60a6cd753b13",
+  "published_at_epoch_ms": 1794071165577,
+  "app_version": "13.0.7",
+  "instruction_sha256": "70e623f09c26ba5d86b6e4207f85f741b79ae9874a09faa21c93d6fdf0b39dc1",
+  "ui_exposed_settings_sha256": "24a28fdbc5b9165566e2f1da7d15acdf1211144ed249594d611a9c1f46ae1f71",
+  "raw_private_response_sha256": "9252c409bf15db27dfcc990ee07ae5b816275acc025a40166fd54eff98e43f04",
+  "current_published_prompt_verified": true,
+  "current_effective_config_verified": false,
+  "unknowns": [
+    "current skill-file contents/full knowledge inventory",
+    "runtime model parameters and routing",
+    "complete UI component configuration",
+    "hidden platform system context"
+  ],
+  "limitations": [
+    "Published prompt and selected settings are captured, not the complete effective agent configuration.",
+    "roles=[] and state.mounts=[] do not establish that no skills or other context exist.",
+    "No generation, customer message, builder instruction or publish action was sent."
+  ]
+}

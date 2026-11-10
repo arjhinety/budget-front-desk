@@ -1,0 +1,62 @@
+{
+  "schema": "agentplace-run-manifest-v1",
+  "run_id": "scheduling-diagnostic-v1",
+  "phase": "before",
+  "status": "preparation_only",
+  "collection_authorized": false,
+  "stages": {
+    "guide": {
+      "status": "complete",
+      "path": "evals/human/GUIDE.md",
+      "sha256": "23fbadb524a023b53c25e34f42d66f1f3af86aff04eb69741e89daea303d446b"
+    },
+    "scenarios": {
+      "status": "blocked",
+      "path": "datasets/next-run/scenarios.json",
+      "reason": "Independent authoring follows calibration and effective-input review; no replies or fresh case set exist."
+    },
+    "graders": {
+      "status": "blocked",
+      "path": "datasets/next-run/graders.json",
+      "reason": "Prospective semantic requirements and balanced controls must be validated before freezing."
+    },
+    "controls": {
+      "status": "pending",
+      "path": "evals/human/controls.json",
+      "sha256": "b8f780fc3e416c61f11d26fb00fdcb31037084257ec6e7a376900148203d7c7a",
+      "reason": "Fixtures prepared; no prospective grader control-results receipt exists."
+    },
+    "snapshot": {
+      "status": "blocked",
+      "reason": "Published prompts and exposed settings were captured for both arms without messaging the agent, but skill/knowledge artifact contents are not exposed, so verified-effective configuration remains unavailable.",
+      "known_revision": "1794124548292-0123885d-0f4a-4f85-8572-98b86f5036f7",
+      "private_receipt": "agentplace-private/capture/current-a5/snapshot.json"
+    },
+    "human_labels": {
+      "status": "pending",
+      "owner": "user",
+      "reviewed": false,
+      "reason": "39 sealed and 60 development rows are prepared but unlabelled."
+    }
+  },
+  "pair_execution": {
+    "planned": true,
+    "implemented": true,
+    "completed_pairs": 0
+  },
+  "intervention": {
+    "status": "candidate_not_applied",
+    "metadata": "build/next-run/candidate.json"
+  },
+  "budget": {
+    "targeted_scenarios": 24,
+    "targeted_trials": 3,
+    "tripwire_scenarios": 24,
+    "tripwire_trials": 1,
+    "arm_phase_cells": 4,
+    "planned_conversations": 384,
+    "claim": "diagnostic pilot; no power or quota-window guarantee"
+  },
+  "protocol": "evals/next_run/PROTOCOL.md",
+  "historical_evidence_preserved": true
+}

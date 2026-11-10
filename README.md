@@ -27,14 +27,18 @@ honoured immediately. See `NOTICE.md`.
 
 ## Open work
 
-Two limitations remain, and they are listed here rather than hidden in a separate
-status file because a reader should see them before deciding what the numbers mean.
+Preparation is offline; no new collection is authorised. See
+`docs/PRE-RUN-AUDIT.md` and `evals/next_run/PROTOCOL.md`.
 
-1. **The handoff lane is 1/2.** The multi-system and warranty-claim probes are where
-   a person has to take over, and the agent handles one of the two.
-2. **The human calibration needs a fresh sample.** The second pass reached
-   kappa 0.911 on the same 30 transcripts after the rule was written, so it measures
-   consistency with a fitted rule. A clean test needs new transcripts.
+1. **Measurement:** historical scores remain unchanged. Arm-blind human review
+   must check false passes as well as false failures.
+2. **Provenance:** recovered A5 input files are historical read-backs, not proof
+   of the current effective publication. New captures need bound configurations.
+3. **Agent behaviour:** scheduling and handoff still need review; their machine
+   scores are 4/9 and 1/2 all-three passes, not a complete adjudicated defect count.
+4. **Fresh evaluation:** case authoring, prospective graders/control receipts and
+   explicit collection approval follow calibration. The used sealed set is not
+   reused for tuning.
 
 ## Read these first
 
@@ -49,17 +53,20 @@ status file because a reader should see them before deciding what the numbers me
 | `FAILURES.md` | small-set failure patterns; later runs remain in `evals/results/` |
 | `docs/MODEL-COMPARISON.md` | Luna vs Terra on the same 39 conversations, and the decision |
 | `platform/` | the three platform defaults, implemented and tested |
-| `evals/blind/sheet.csv` | 30 transcripts to grade blind — fill one column, then score it |
+| `evals/blind/sheet.csv` | historical 30-row calibration; arm identity was visible |
 | `NOTICE.md` | the business relationship, the scripted conversations, and takedown |
 | `docs/REFERENCES.md` | every paper cited, with what was taken from it |
 | `FINDINGS-FOR-AGENTPLACE.md` | the findings worth sending, and the one thing I got wrong |
 | `docs/FINDING-club-knowledge.md` | two builds from one brief know different amounts, with the evidence |
 | `datasets/manifest.json` | every set, its hash, its generator, and the contamination policy |
 | `datasets/CLEANING-PROTOCOL.md` | how the sealed validation set is built and scored, once |
-| `datasets/RULES.md` | the business rules in plain English, for a labeller |
+| `evals/human/GUIDE.md` | frozen meaning-based guide for the new retrospective human audit |
 | `build/pdf/report.pdf` | two-page summary, regenerated from the results by `build/make_report.py` |
 | `platform/README.md` | the three failures that should be fixed once, not per agent |
 | `evals/METHOD.md` | the original preregistration and forward-recorded amendments |
+| `docs/PRE-RUN-AUDIT.md` | provenance discontinuity and grader flags, without replacing old scores |
+| `evals/next_run/PROTOCOL.md` | offline preparation, release blockers and prospective analysis |
+| `build/recovered/cgiefgaebmgh/` | historical A5 request and file read-backs, with limitations |
 
 ## The pipeline
 
@@ -83,14 +90,21 @@ Rebuild from the source pages:
 python scrape.py --root https://justcallbudget.com
 python build_facts.py
 python generate_brief.py
-python evals/check_numbers.py build/brief.txt
+python evals/check_numbers.py build/brief-v2.txt
 python evals/stats.py --a A0 --b A2      # 2x2 discordance + exact McNemar
 python evals/kappa.py --all --arm A2     # grader vs an independent judge
 python evals/gen_scenarios.py            # regenerate the 55-scenario branch set
 python evals/stats.py --a BIG-A0 --b BIG-A2 --set scenarios-big --bootstrap 10000
 python evals/twotier.py --a BIG-A0 --b BIG-A2 --set scenarios-big
-python evals/blind_export.py --n 30   # then fill the sheet and run blind_score.py
+python evals/blind_export.py --input evals/results/BIG-A0.json \
+  --input evals/results/A5.json --n 60 --guide evals/human/GUIDE.md \
+  --out ../agentplace-private/labelling/new-batch
 ```
+
+Human exports are local processing of existing captures, not new agent runs.
+Do not regenerate historical scenarios or start capture during this preparation.
+Future capture uses a separate manifest and fails closed when required evidence
+or explicit collection approval is missing.
 
 `build_facts.py` fails rather than warns. If a price changes on the site, or a
 catalogue row is renamed, or the evidence turns out to be template placeholder
