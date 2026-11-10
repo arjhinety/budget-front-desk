@@ -5,8 +5,8 @@ published link is shared separately; what is here is the method and the evidence
 
 1. **The agent** — project `cgiefgaebmgh` on Agentplace, GPT-6 Luna. The published link is
    shared separately, not in this repository.
-2. **The evidence** — 324 recorded conversations in the arm comparison, 54 in the multi-turn
-   set, and 40 in the sealed set, with the graders and the failures they found.
+2. **The evidence** — 324 trials in the arm comparison, 54 multi-turn conversations,
+   and 40 sealed-set conversations, with the graders and the failures they found.
 
 The facts it was built from are in a ledger of 25 fields, each carrying the page
 and line it came from. The agent also read pages beyond that ledger, so the
@@ -23,6 +23,21 @@ honoured immediately. See `NOTICE.md`.
 
 ---
 
+## Open work
+
+Three things are unfinished, and they are listed here rather than in a separate
+status file because a reader should see them before deciding what the numbers mean.
+
+1. **The multi-turn baseline is incomplete.** A5 has 54 conversations across 18
+   three-turn scripts; A0 has 30 of the same 54. The platform throttles the account
+   after a handful of conversations, so this is being filled in a few at a time.
+   Until it is done there is no multi-turn before/after delta, only an A5 figure.
+2. **The handoff lane is 1/2.** The multi-system and warranty-claim probes are where
+   a person has to take over, and the agent handles one of the two.
+3. **The human calibration needs a fresh sample.** The second pass reached
+   kappa 0.911 on the same 30 transcripts after the rule was written, so it measures
+   consistency with a fitted rule. A clean test needs new transcripts.
+
 ## Read these first
 
 | file | what it is |
@@ -34,19 +49,18 @@ honoured immediately. See `NOTICE.md`.
 | `facts/parameters.csv` | every judgement call, with a written reason |
 | `RESULTS.md` | the five arms, the McNemar test, the grader bugs, the platform findings |
 | `FAILURES.md` | every failure observed, with the reply that caused it |
-| `MODEL-COMPARISON.md` | Luna vs Terra on the same 39 conversations, and the decision |
+| `docs/MODEL-COMPARISON.md` | Luna vs Terra on the same 39 conversations, and the decision |
 | `platform/` | the three platform defaults, implemented and tested |
 | `evals/blind/sheet.csv` | 30 transcripts to grade blind — fill one column, then score it |
-| `STATUS.md` | open work and the commands to finish it |
 | `NOTICE.md` | the business relationship, the scripted conversations, and takedown |
-| `REFERENCES.md` | every paper cited, with what was taken from it |
-| `FINDINGS-FOR-AGENTPLACE.md` | the two findings worth sending, and the one thing I got wrong |
-| `FINDING-club-knowledge.md` | two builds from one brief know different amounts, with the evidence |
+| `docs/REFERENCES.md` | every paper cited, with what was taken from it |
+| `FINDINGS-FOR-AGENTPLACE.md` | the findings worth sending, and the one thing I got wrong |
+| `docs/FINDING-club-knowledge.md` | two builds from one brief know different amounts, with the evidence |
 | `datasets/manifest.json` | every set, its hash, its generator, and the contamination policy |
 | `datasets/CLEANING-PROTOCOL.md` | how the sealed validation set is built and scored, once |
 | `datasets/RULES.md` | the business rules in plain English, for a labeller |
 | `build/pdf/report.pdf` | two-page summary, regenerated from the results by `build/make_report.py` |
-| `PLATFORM-NOTE.md` | the three failures that should be fixed once, not per agent |
+| `platform/README.md` | the three failures that should be fixed once, not per agent |
 | `evals/METHOD.md` | the preregistration and the eight amendments made after the first run |
 
 ## The pipeline

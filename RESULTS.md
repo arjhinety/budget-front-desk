@@ -588,7 +588,7 @@ introduces pass^k for exactly this reliability question, and the dual-control
 conversational setting of *τ²-Bench* (arXiv:2506.07982, ICML 2026). The
 capability/regression split and the "read the transcripts" discipline follow
 Anthropic's *Demystifying evals for AI agents* (Jan 2026). Every source, with
-what was taken from it, is listed in `REFERENCES.md`.
+what was taken from it, is listed in `docs/REFERENCES.md`.
 
 ---
 

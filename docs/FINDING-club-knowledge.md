@@ -62,7 +62,7 @@ That is the website's wording, close to verbatim. It is **not in the brief**.
   verdict on either answer.
 - **Not an under-claiming problem.** An earlier draft of this note called the
   refusal a model failure. That was wrong: the brief never contained the benefits,
-  so declining was correct. The correction is recorded in `STATUS.md`.
+  so declining was correct. The correction is recorded in `RESULTS.md`.
 
 ## Why it matters for evaluation
 

@@ -64,7 +64,7 @@ somewhere the owner never supplied. **Either way it's a question worth an answer
 from inside, and I'd rather ask it than assert it.**
 
 The full write-up, with the evidence and the four explanations, is
-`FINDING-club-knowledge.md`.
+`docs/FINDING-club-knowledge.md`.
 
 ---
 
