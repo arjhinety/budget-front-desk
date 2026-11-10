@@ -1,19 +1,12 @@
 #!/usr/bin/env python3
-"""
-Build the one-document summary from the recorded results.
-
-Every number in the output is computed here from the graded transcripts, so the
-report cannot drift from the data the way a hand-written summary does.
-
-  python build/make_report.py            # writes build/pdf/report.md and .pdf
-"""
-
+"""Build the two-page application summary from the recorded results."""
 from __future__ import annotations
 
 import json
 import subprocess
 import sys
 from collections import defaultdict
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -22,11 +15,17 @@ OUT = ROOT / "build" / "pdf"
 SET = "scenarios-big"
 
 
+def json_output(cmd: list[str]) -> object:
+    p = subprocess.run(cmd, capture_output=True, text=True, cwd=ROOT)
+    if p.returncode:
+        raise SystemExit(f"command failed: {' '.join(cmd)}\n{p.stderr[-800:]}")
+    text = p.stdout.strip()
+    return json.loads(text)
+
+
 def graded(arm: str) -> list[dict]:
-    out = subprocess.run(["python", str(EVALS / "grade.py"), "--arm", arm, "--json", "--set", SET],
-                         capture_output=True, text=True, cwd=str(ROOT)).stdout
-    start = out.find("[")
-    return json.JSONDecoder().raw_decode(out[start:])[0] if start >= 0 else []
+    return json_output([sys.executable, str(EVALS / "grade.py"), "--arm", arm,
+                        "--json", "--set", SET])
 
 
 def summarise(arm: str) -> dict:
@@ -34,150 +33,129 @@ def summarise(arm: str) -> dict:
     per: dict[str, list[dict]] = defaultdict(list)
     for r in rows:
         per[r["id"]].append(r)
-    trials = sum(len(v) for v in per.values())
-    passed = sum(1 for r in rows if r["pass"])
-    strict = sum(1 for v in per.values() if all(t["pass"] for t in v) and len(v) == 3)
-    gate = sum(1 for v in per.values() if any(any(w.startswith("INTEGRITY") for w in t["why"]) for t in v))
-    return {"arm": arm, "scenarios": len(per), "trials": trials, "passed": passed,
-            "strict": strict, "gate": gate}
+    return {
+        "scenarios": len(per),
+        "trials": len(rows),
+        "passed": sum(r["pass"] for r in rows),
+        "strict": sum(1 for v in per.values() if len(v) == 3 and all(x["pass"] for x in v)),
+        "gate": sum(1 for v in per.values() if any(
+            any(w.startswith("INTEGRITY") for w in x["why"]) for x in v)),
+    }
 
 
-def lane_table(arms: list[str]) -> tuple[list[str], dict[str, dict[str, tuple[int, int]]]]:
-    scen = {s["id"]: s for s in json.loads((EVALS / f"{SET}.json").read_text(encoding="utf-8"))["scenarios"]}
-    per_arm = {}
-    for a in arms:
-        agg: dict[str, list[bool]] = defaultdict(list)
-        for r in graded(a):
-            agg[r["id"]].append(r["pass"])
-        per_arm[a] = {k: (sum(v), len(v)) for k, v in agg.items()}
+def mt_rows(arm: str) -> list[dict]:
+    return json_output([sys.executable, str(EVALS / "grade_mt.py"), "--arm", arm, "--json"])
 
-    lanes: dict[str, dict[str, tuple[int, int]]] = defaultdict(dict)
-    for sid, lane in ((s, scen[s]["lane"]) for s in per_arm[arms[0]]):
-        for a in arms:
-            if sid in per_arm[a]:
-                ok, n = per_arm[a][sid]
-                prev = lanes[lane].get(a, (0, 0))
-                lanes[lane][a] = (prev[0] + (1 if ok == n else 0), prev[1] + 1)
-    return arms, lanes
+
+def mt_summary(arm: str) -> dict:
+    rows = mt_rows(arm)
+    by_script: dict[str, list[bool]] = defaultdict(list)
+    for r in rows:
+        by_script[r["id"]].append(r["pass"])
+    return {"n": len(rows), "passed": sum(r["pass"] for r in rows),
+            "scripts": len(by_script),
+            "strict": sum(1 for x in by_script.values() if len(x) == 3 and all(x))}
+
+
+def sealed_summary(arm: str) -> dict:
+    rows = json_output([sys.executable, str(ROOT / "datasets" / "grade_sealed.py"),
+                        "--arm", arm, "--json"])
+    amb = set(json.loads((ROOT / "datasets/sealed/graders-sealed.json").read_text())["ambiguous"])
+    excluded = set()
+    exclusions = ROOT / "datasets/sealed/exclusions.json"
+    if exclusions.exists():
+        for x in json.loads(exclusions.read_text())["excluded"]:
+            if x["record"].startswith(arm.replace("SEALED-", "") + "/"):
+                excluded.add(x["record"].split("/", 1)[1].split("#", 1)[0])
+    kept = [r for r in rows if r["id"] not in excluded]
+    clean = [r for r in kept if r["id"] not in amb]
+    return {"all": (sum(r["pass"] for r in rows), len(rows)),
+            "kept": (sum(r["pass"] for r in kept), len(kept)),
+            "clean": (sum(r["pass"] for r in clean), len(clean)),
+            "excluded": sorted(excluded)}
 
 
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
-    arms = ["BIG-A0", "BIG-A2", "A5"]
-    s = {a: summarise(a) for a in arms}
-    order, lanes = lane_table(["BIG-A0", "BIG-A2", "A5"])
-
-    a0, a2, a5 = s["BIG-A0"], s["BIG-A2"], s["A5"]
-
-    def row(label, key):
-        return (f"| {label} | {a0[key]} | {a2[key]} | {a5[key]} |")
-
-    lane_rows = []
-    for lane in sorted(lanes, key=lambda k: lanes[k]["A5"][0] - lanes[k]["BIG-A0"][0], reverse=True):
-        l = lanes[lane]
-        a2v = l.get("BIG-A2")
-        a2c = f"{a2v[0]}/{a2v[1]}" if a2v else "—"
-        lane_rows.append(f"| {lane} | {l['BIG-A0'][0]}/{l['BIG-A0'][1]} | {a2c} | {l['A5'][0]}/{l['A5'][1]} |")
+    a0, a2, a5 = (summarise(x) for x in ("BIG-A0", "BIG-A2", "A5"))
+    mt0, mt5 = mt_summary("MT-A0"), mt_summary("MT-A5")
+    sd0, sd5 = sealed_summary("SEALED-A0"), sealed_summary("SEALED-A5")
 
     md = f"""---
 title: "Budget Front Desk"
-subtitle: "An agent built from a business's public pages, and the measurements of where it fails"
-date: 2026-11-08
+subtitle: "An agent built from public business pages, measured before and after"
+date: {date.today().isoformat()}
 ---
 
-## 1. What was built
+# The deliverable
 
-An AI agent for a real home-services company, built from a brief generated out of a
-ledger of 24 facts, each carrying the page and line it came from. The agent triages a
-complaint into emergency, diagnostic or free estimate, works the company's published
-price catalogue, collects what a dispatcher collects, and routes to a booking, a phone
-call or a payment.
+A live AI front desk for Budget Heating, Cooling & Plumbing, built from a **25-field
+ledger** with page-and-line provenance. It triages emergency, diagnostic and estimate
+requests, uses the published catalogue, collects dispatcher intake, and routes to the
+booking page or phone. The repository contains the ledger, transcripts, graders,
+failures and reproducible scripts.
 
-The ledger bounds what goes into the brief: it fails the build if a price moves or if
-the evidence turns out to be template placeholder text. It does not bound what the
-model then says, which is why the output is checked separately against the same seven
-prices.
+# Before and after
 
-## 2. How it was measured
+| | A0 baseline | A5 shipped |
+|---|---:|---:|
+| single-turn pass@1 | {a0['passed']}/{a0['trials']} ({a0['passed']/a0['trials']:.1%}) | {a5['passed']}/{a5['trials']} ({a5['passed']/a5['trials']:.1%}) |
+| strict pass³, shared 53 scenarios | {a0['strict']}/53 | **43/53** |
+| integrity-gate scenarios | {a0['gate']}/53 | {a5['gate']}/55 |
+| multi-turn, 54 conversations | {mt0['passed']}/54 ({mt0['passed']/54:.0%}) | **{mt5['passed']}/54 ({mt5['passed']/54:.0%})** |
+| multi-turn scripts passing all trials | {mt0['strict']}/18 | **{mt5['strict']}/18** |
 
-33 hand-written scenarios and 55 generated from the business's decision branches
-(service × county × timing × complication), three trials each. Every scenario carries
-required behaviours and forbidden ones; a forbidden behaviour fails it even when every
-required one is present. A deterministic grader checks the transcript, and a separate
-check fails any dollar figure that is not one of the seven published prices.
+The tuned arm is better on the scenarios it was iterated against: 71.1% to 87.9%,
+with the paired strict-pass comparison b=18, c=1, p<0.001. The multi-turn baseline
+now exists: A0 is 36/54 and A5 is 41/54. A5 gains 7 conversations and loses 2;
+McNemar p=0.180. The measured direction is positive, but the multi-turn delta is not
+statistically settled. These are three trials of 18 scripts, not 54 independent
+customers; one gain is A0's unfilled-placeholder integrity failure, so the clean
+behavioural signal is narrower than 7 versus 2.
 
-Two tiers are reported rather than one score: an **integrity gate** (any invented price,
-policy or placeholder fails the scenario outright) and **completeness** (how often the
-required behaviour appears), with a Wilson interval because the counts are small.
+# What changed
 
-## 3. What the measurements found
+The largest multi-turn gains are **arithmetic (2/9 to 5/9)** and **pushback (5/9 to
+7/9)**. Memory stays 9/9 in both arms; recovery stays 9/9; change-of-mind stays 3/9.
+One A0 failure emitted an unfilled template placeholder; A5 passed that conversation.
 
-| | A0 as built | A2 two rules | A5 three rules |
-|---|---|---|---|
-{row("scenarios", "scenarios")}
-{row("trials", "trials")}
-{row("passed", "passed")}
-{row("strict pass³", "strict")}
-{row("integrity gate failures", "gate")}
+# The check I could not tune against
 
-Four instruction changes were tried. A1 regressed the emergency lane: told every reply
-must name a route, the agent chose "reply in chat" and dropped the phone number. A2
-fixed that. A3 tried to make the agent state when the office reopens and it started
-querying a clock and contradicting a customer mid-gas-leak, so it was reverted. A5
-reaches the same goal as A3 without a tool, and is the arm that ships.
+Twenty three-turn scenarios were authored by a different model, with graders frozen
+before replies existed. On the original run A0 and A5 both scored **17/20**, agreeing
+on 18/20; on the 13 unambiguous scenarios A0 scored 12/13 and A5 11/13. One A5 reply
+was then excluded by deterministic cleaning because a render failure was appended to
+a complete answer; excluding it leaves A5 at 16/19 overall and 10/12 on the scored
+scenarios. The result does not confirm the single-turn gain out of sample, and the
+set is too small to call it a regression.
 
-By lane, on the scenarios both arms ran. The A2 column is included because it shows
-what A5 fixed and what it did not:
+# Limits and failures
 
-| lane | A0 | A2 | A5 |
-|---|---|---|---|
-{chr(10).join(lane_rows)}
+- The single-turn comparison is in-sample: A5 and its graders were iterated against
+  the same scenarios. Twenty grader corrections were made, all after transcript
+  inspection; correction 21 fixed a positive-control bug allowing correct three-term
+  totals such as $99 + $150 + $50 = $299.
+- Six multi-turn failures were authoring gaps: the brief omitted savings-club
+  benefits. The remaining failures are agent misses on hours, overnight constraints,
+  and some arithmetic/change-of-mind turns.
+- One build showed website-accurate savings-club benefits that were absent from the
+  brief while another build declined. The cause is unknown; the repository reports it
+  as an open platform question, not as a proven defect.
+- A human calibration reached κ=0.911 only after the rule was fitted to the same
+  30 transcripts; it is not fresh-sample agreement.
 
-## 4. What is wrong with it
-
-- **One lane did not recover.** Handoff sits at 1/2: the multi-system and
-  warranty-claim probes are where a person has to take over, and the agent handles
-  one of the two.
-
-- **Nineteen grader corrections** were needed, all found by reading transcripts
-  rather than by the suite. Every one was a pattern failing a correct answer.
-
-- **The comparison is significant only after those corrections.** The 27-scenario
-  version of it was p = 0.289; it reached p = 0.004 after nineteen grader fixes, most
-  of which were failing correct answers. That sequence is a reason to read the number
-  with care rather than to celebrate it.
-
-- **The held-out set was written after the first arm's failures were on screen.** It
-  tests phrasing generalization, not failure modes nobody imagined.
-
-- **One human calibration, 30 transcripts, and not double-blind.** Agreement was 70%
-  with the requirement unstated and 97% with it stated; on the full 99-transcript set
-  kappa fell to 0.314 because the sample is almost all passes. All three numbers say
-  more about the rubric than about the agent.
-
-## 5. What I would do next
-
-1. Fix the handoff lane, then re-run the same set.
-2. Move the three failure classes into the platform rather than the prompt: a typed
-   next-step field, one clock resolved per turn with the customer's premise winning, and
-   rule precedence as data. All three are implemented in `platform/` and replayed
-   against the recorded conversations.
-3. Get a second reader who never sees the first pass, on rows whose requirement is
-   stated from the start.
+The complete evidence is in `RESULTS.md`, `RIGOR.md`, `FAILURES.md` and
+`FINDINGS-FOR-AGENTPLACE.md`. The live agent link is supplied separately.
 """
     (OUT / "report.md").write_text(md, encoding="utf-8")
-
     html = subprocess.run(["pandoc", str(OUT / "report.md"), "-o", str(OUT / "report.html"),
                            "--standalone", "--metadata", "pagetitle=Budget Front Desk"],
                           capture_output=True, text=True)
-    if html.returncode != 0:
-        print("pandoc:", html.stderr[:300]); return 1
-    # weasyprint needs GTK on Windows; Chromium prints the same HTML instead
-    print("html ready -> build/pdf/report.html (print with Chromium via the browser tool)")
-
-    print(f"report.md -> {OUT/'report.md'}")
-    print(f"report.pdf -> {OUT/'report.pdf'}")
-    print(f"  A0 {a0['passed']}/{a0['trials']}  A2 {a2['passed']}/{a2['trials']}  A5 {a5['passed']}/{a5['trials']}")
+    if html.returncode:
+        raise SystemExit(html.stderr[:1000])
+    print(f"report.md and report.html written; MT A0 {mt0['passed']}/54, A5 {mt5['passed']}/54")
+    print(f"sealed original A0 {sd0['all'][0]}/{sd0['all'][1]}, A5 {sd5['all'][0]}/{sd5['all'][1]}; excluded {sd5['excluded']}")
+    print("print report.html to report.pdf with Chromium")
     return 0
 
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2026-11-08" />
+  <meta name="dcterms.date" content="2026-11-10" />
   <title>Budget Front Desk</title>
   <style>
     /* Default styles provided by pandoc.
@@ -185,177 +185,100 @@
 <body>
 <header id="title-block-header">
 <h1 class="title">Budget Front Desk</h1>
-<p class="subtitle">An agent built from a business’s public pages, and
-the measurements of where it fails</p>
-<p class="date">2026-11-08</p>
+<p class="subtitle">An agent built from public business pages, measured
+before and after</p>
+<p class="date">2026-11-10</p>
 </header>
-<h2 id="what-was-built">1. What was built</h2>
-<p>An AI agent for a real home-services company, built from a brief
-generated out of a ledger of 24 facts, each carrying the page and line
-it came from. The agent triages a complaint into emergency, diagnostic
-or free estimate, works the company’s published price catalogue,
-collects what a dispatcher collects, and routes to a booking, a phone
-call or a payment.</p>
-<p>The ledger bounds what goes into the brief: it fails the build if a
-price moves or if the evidence turns out to be template placeholder
-text. It does not bound what the model then says, which is why the
-output is checked separately against the same seven prices.</p>
-<h2 id="how-it-was-measured">2. How it was measured</h2>
-<p>33 hand-written scenarios and 55 generated from the business’s
-decision branches (service × county × timing × complication), three
-trials each. Every scenario carries required behaviours and forbidden
-ones; a forbidden behaviour fails it even when every required one is
-present. A deterministic grader checks the transcript, and a separate
-check fails any dollar figure that is not one of the seven published
-prices.</p>
-<p>Two tiers are reported rather than one score: an <strong>integrity
-gate</strong> (any invented price, policy or placeholder fails the
-scenario outright) and <strong>completeness</strong> (how often the
-required behaviour appears), with a Wilson interval because the counts
-are small.</p>
-<h2 id="what-the-measurements-found">3. What the measurements found</h2>
+<h1 id="the-deliverable">The deliverable</h1>
+<p>A live AI front desk for Budget Heating, Cooling &amp; Plumbing,
+built from a <strong>25-field ledger</strong> with page-and-line
+provenance. It triages emergency, diagnostic and estimate requests, uses
+the published catalogue, collects dispatcher intake, and routes to the
+booking page or phone. The repository contains the ledger, transcripts,
+graders, failures and reproducible scripts.</p>
+<h1 id="before-and-after">Before and after</h1>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>A0 as built</th>
-<th>A2 two rules</th>
-<th>A5 three rules</th>
+<th style="text-align: right;">A0 baseline</th>
+<th style="text-align: right;">A5 shipped</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>scenarios</td>
-<td>53</td>
-<td>53</td>
-<td>55</td>
+<td>single-turn pass@1</td>
+<td style="text-align: right;">113/159 (71.1%)</td>
+<td style="text-align: right;">145/165 (87.9%)</td>
 </tr>
 <tr>
-<td>trials</td>
-<td>159</td>
-<td>159</td>
-<td>165</td>
+<td>strict pass³, shared 53 scenarios</td>
+<td style="text-align: right;">26/53</td>
+<td style="text-align: right;"><strong>43/53</strong></td>
 </tr>
 <tr>
-<td>passed</td>
-<td>113</td>
-<td>135</td>
-<td>145</td>
+<td>integrity-gate scenarios</td>
+<td style="text-align: right;">0/53</td>
+<td style="text-align: right;">0/55</td>
 </tr>
 <tr>
-<td>strict pass³</td>
-<td>26</td>
-<td>40</td>
-<td>45</td>
+<td>multi-turn, 54 conversations</td>
+<td style="text-align: right;">36/54 (67%)</td>
+<td style="text-align: right;"><strong>41/54 (76%)</strong></td>
 </tr>
 <tr>
-<td>integrity gate failures</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
+<td>multi-turn scripts passing all trials</td>
+<td style="text-align: right;">9/18</td>
+<td style="text-align: right;"><strong>12/18</strong></td>
 </tr>
 </tbody>
 </table>
-<p>Four instruction changes were tried. A1 regressed the emergency lane:
-told every reply must name a route, the agent chose “reply in chat” and
-dropped the phone number. A2 fixed that. A3 tried to make the agent
-state when the office reopens and it started querying a clock and
-contradicting a customer mid-gas-leak, so it was reverted. A5 reaches
-the same goal as A3 without a tool, and is the arm that ships.</p>
-<p>By lane, on the scenarios both arms ran. The A2 column is included
-because it shows what A5 fixed and what it did not:</p>
-<table>
-<thead>
-<tr>
-<th>lane</th>
-<th>A0</th>
-<th>A2</th>
-<th>A5</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>coverage</td>
-<td>1/8</td>
-<td>6/8</td>
-<td>7/8</td>
-</tr>
-<tr>
-<td>diagnostic</td>
-<td>6/10</td>
-<td>10/10</td>
-<td>10/10</td>
-</tr>
-<tr>
-<td>free estimate</td>
-<td>6/8</td>
-<td>8/8</td>
-<td>8/8</td>
-</tr>
-<tr>
-<td>emergency</td>
-<td>4/8</td>
-<td>6/8</td>
-<td>6/8</td>
-</tr>
-<tr>
-<td>trust</td>
-<td>3/5</td>
-<td>5/5</td>
-<td>5/5</td>
-</tr>
-<tr>
-<td>scheduling</td>
-<td>3/9</td>
-<td>2/9</td>
-<td>4/9</td>
-</tr>
-<tr>
-<td>off-task</td>
-<td>2/3</td>
-<td>1/3</td>
-<td>2/3</td>
-</tr>
-<tr>
-<td>handoff</td>
-<td>1/2</td>
-<td>2/2</td>
-<td>1/2</td>
-</tr>
-</tbody>
-</table>
-<h2 id="what-is-wrong-with-it">4. What is wrong with it</h2>
+<p>The tuned arm is better on the scenarios it was iterated against:
+71.1% to 87.9%, with the paired strict-pass comparison b=18, c=1,
+p&lt;0.001. The multi-turn baseline now exists: A0 is 36/54 and A5 is
+41/54. A5 gains 7 conversations and loses 2; McNemar p=0.180. The
+measured direction is positive, but the multi-turn delta is not
+statistically settled. These are three trials of 18 scripts, not 54
+independent customers; one gain is A0’s unfilled-placeholder integrity
+failure, so the clean behavioural signal is narrower than 7 versus
+2.</p>
+<h1 id="what-changed">What changed</h1>
+<p>The largest multi-turn gains are <strong>arithmetic (2/9 to
+5/9)</strong> and <strong>pushback (5/9 to 7/9)</strong>. Memory stays
+9/9 in both arms; recovery stays 9/9; change-of-mind stays 3/9. One A0
+failure emitted an unfilled template placeholder; A5 passed that
+conversation.</p>
+<h1 id="the-check-i-could-not-tune-against">The check I could not tune
+against</h1>
+<p>Twenty three-turn scenarios were authored by a different model, with
+graders frozen before replies existed. On the original run A0 and A5
+both scored <strong>17/20</strong>, agreeing on 18/20; on the 13
+unambiguous scenarios A0 scored 12/13 and A5 11/13. One A5 reply was
+then excluded by deterministic cleaning because a render failure was
+appended to a complete answer; excluding it leaves A5 at 16/19 overall
+and 10/12 on the scored scenarios. The result does not confirm the
+single-turn gain out of sample, and the set is too small to call it a
+regression.</p>
+<h1 id="limits-and-failures">Limits and failures</h1>
 <ul>
-<li><p><strong>One lane did not recover.</strong> Handoff sits at 1/2:
-the multi-system and warranty-claim probes are where a person has to
-take over, and the agent handles one of the two.</p></li>
-<li><p><strong>Nineteen grader corrections</strong> were needed, all
-found by reading transcripts rather than by the suite. Every one was a
-pattern failing a correct answer.</p></li>
-<li><p><strong>The comparison is significant only after those
-corrections.</strong> The 27-scenario version of it was p = 0.289; it
-reached p = 0.004 after nineteen grader fixes, most of which were
-failing correct answers. That sequence is a reason to read the number
-with care rather than to celebrate it.</p></li>
-<li><p><strong>The held-out set was written after the first arm’s
-failures were on screen.</strong> It tests phrasing generalization, not
-failure modes nobody imagined.</p></li>
-<li><p><strong>One human calibration, 30 transcripts, and not
-double-blind.</strong> Agreement was 70% with the requirement unstated
-and 97% with it stated; on the full 99-transcript set kappa fell to
-0.314 because the sample is almost all passes. All three numbers say
-more about the rubric than about the agent.</p></li>
+<li>The single-turn comparison is in-sample: A5 and its graders were
+iterated against the same scenarios. Twenty grader corrections were
+made, all after transcript inspection; correction 21 fixed a
+positive-control bug allowing correct three-term totals such as $99 +
+$150 + $50 = $299.</li>
+<li>Six multi-turn failures were authoring gaps: the brief omitted
+savings-club benefits. The remaining failures are agent misses on hours,
+overnight constraints, and some arithmetic/change-of-mind turns.</li>
+<li>One build showed website-accurate savings-club benefits that were
+absent from the brief while another build declined. The cause is
+unknown; the repository reports it as an open platform question, not as
+a proven defect.</li>
+<li>A human calibration reached κ=0.911 only after the rule was fitted
+to the same 30 transcripts; it is not fresh-sample agreement.</li>
 </ul>
-<h2 id="what-i-would-do-next">5. What I would do next</h2>
-<ol type="1">
-<li>Fix the handoff lane, then re-run the same set.</li>
-<li>Move the three failure classes into the platform rather than the
-prompt: a typed next-step field, one clock resolved per turn with the
-customer’s premise winning, and rule precedence as data. All three are
-implemented in <code>platform/</code> and replayed against the recorded
-conversations.</li>
-<li>Get a second reader who never sees the first pass, on rows whose
-requirement is stated from the start.</li>
-</ol>
+<p>The complete evidence is in <code>RESULTS.md</code>,
+<code>RIGOR.md</code>, <code>FAILURES.md</code> and
+<code>FINDINGS-FOR-AGENTPLACE.md</code>. The live agent link is supplied
+separately.</p>
 </body>
 </html>

@@ -10,9 +10,20 @@ got wrong.
 
 ## 1. Two multi-turn failures that are the agent's, not mine
 
-18 three-turn scripts, 54 conversations, 41 pass. The failures split cleanly:
-**6 come from my brief** (below), and **7 are the agent's**. Two of those seven are
-worth your attention because they're the same shape.
+18 three-turn scripts, 54 conversations per arm. The tuned arm is **41/54 (76%)**
+and the baseline is **36/54 (67%)**: a directional difference, not a significant
+one (exact paired McNemar p = 0.180). A5 gains 7 conversations and loses 2, with
+45/54 paired outcomes agreeing. The gains are concentrated in arithmetic (2/9 to
+5/9) and pushback (5/9 to 7/9); memory, recovery, change-of-mind and
+self-correction do not show a clean broad shift.
+
+One apparent gain, `MT-C03#3`, is A0 emitting an unfilled placeholder while A5 does
+not. That is a genuine baseline integrity failure, but not a clean behavioural win.
+The full paired result is in `RESULTS.md`; this note does not call it validated
+multi-turn transfer.
+
+The failures split cleanly: **6 come from my brief** (below), and **7 are the tuned
+agent's**. Two of those seven are worth your attention because they're the same shape.
 
 **It does not state opening hours when asked about a specific slot.**
 
@@ -91,10 +102,13 @@ three-turn scenarios written by a different model against the same brief, with
 graders written from the spec before any reply existed, frozen by hash on a public
 commit, then run once on each arm.
 
-**The two arms came out the same.** 17/20 each. On the 13 scenarios I had not
-flagged as ambiguous, the baseline scored 12/13 and the tuned arm 11/13 — the tie
-only appears when the seven ambiguous ones are folded in, and the tuned arm gains a
-point there. One scored scenario is discordant, exact McNemar p = 1.000.
+**The two arms came out the same on the original 20-run total.** 17/20 each. On
+the 13 scenarios I had not flagged as ambiguous, the baseline scored 12/13 and the
+tuned arm 11/13 — the tie only appears when the seven ambiguous ones are folded in,
+and the tuned arm gains a point there. One scored scenario is discordant, exact
+McNemar p = 1.000. Deterministic cleaning then excluded one A5 record with a render
+failure appended after a complete answer; the cleaned A5 count is 16/19 overall and
+10/12 on the scored scenarios.
 
 That does not mean the tuning failed. One conversation out of 13 moves the rate 7.7
 points, and a set that size could not have detected even the single-turn effect. It

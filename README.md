@@ -28,10 +28,10 @@ honoured immediately. See `NOTICE.md`.
 Three things are unfinished, and they are listed here rather than in a separate
 status file because a reader should see them before deciding what the numbers mean.
 
-1. **The multi-turn baseline is incomplete.** A5 has 54 conversations across 18
-   three-turn scripts; A0 has 30 of the same 54. The platform throttles the account
-   after a handful of conversations, so this is being filled in a few at a time.
-   Until it is done there is no multi-turn before/after delta, only an A5 figure.
+1. **The multi-turn comparison is complete.** A0 is 36/54 and A5 is 41/54 across
+   18 three-turn scripts; A5 gains 7 and loses 2, p = 0.180. The direction is
+   positive but not statistically settled, and one gain is an A0 placeholder
+   integrity failure rather than a clean behavioural win.
 2. **The handoff lane is 1/2.** The multi-system and warranty-claim probes are where
    a person has to take over, and the agent handles one of the two.
 3. **The human calibration needs a fresh sample.** The second pass reached

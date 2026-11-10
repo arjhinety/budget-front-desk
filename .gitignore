@@ -19,3 +19,6 @@ Thumbs.db
 notes/
 *.err
 *_tmp.json
+
+.report-profile/
+.report-profile-final/

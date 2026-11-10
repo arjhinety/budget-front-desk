@@ -387,6 +387,39 @@ The multi-system and warranty-claim probes are the two scenarios where a person
 must take over, and A5 handles one of them. That is the remaining defect, and it
 is the one to fix next rather than declare finished.
 
+## The multi-turn before/after check
+
+The single-turn comparison had no multi-turn baseline, so both arms were run on the
+same 18 three-turn scripts, three trials each: **54 conversations per arm**. This
+is a robustness check, not a sealed set; the sealed check follows it.
+
+| family | A0 | A5 |
+|---|---:|---:|
+| arithmetic | 2/9 | **5/9** |
+| change-of-mind | 3/9 | 3/9 |
+| memory | 9/9 | 9/9 |
+| pushback | 5/9 | **7/9** |
+| recovery | 9/9 | 9/9 |
+| self-correction | 8/9 | 8/9 |
+| all conversations | 36/54 (67%) | **41/54 (76%)** |
+| scripts passing all three trials | 9/18 | **12/18** |
+
+A5 gains 7 conversations and loses 2; exact paired McNemar **p = 0.180**. The
+direction is positive, but it is not statistically settled. The 54 conversations
+are three trials of 18 scripts, not 54 independent customers, so the script-level
+denominator is the more conservative view.
+
+One of the seven gains, `MT-C03#3`, is an integrity failure in A0: it emitted an
+unfilled placeholder and A5 did not. That is a real baseline failure and a real
+reason to prefer A5, but it is not a clean behavioural win. Removing that paired
+case leaves **35/53 versus 40/53**, with 6 gains and 1 loss. The net direction is
+still positive, but the claim remains directional rather than significant.
+
+The gains are narrow: arithmetic improves by three conversations and pushback by
+two; change-of-mind and self-correction each have one gain and one loss, while
+memory and recovery do not move. The full gain/loss IDs are reproducible with
+`python evals/compare_mt.py --a MT-A0 --b MT-A5`.
+
 ## The out-of-sample check: the sealed set, and it does not confirm the gain
 
 Everything above was measured on scenarios I wrote and then tuned against. That is

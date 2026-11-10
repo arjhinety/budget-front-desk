@@ -593,6 +593,278 @@
     "For troubleshooting, the Water Heater Diagnostic Service Call is $99. That’s one charge for the visit and diagnosis. If it needs repairs or parts, those are quo\n\nFor troubleshooting, the Water Heater Diagnostic Service Call is $99. That’s one charge for the visit and diagnosis. If it needs repairs or parts, those are quoted separately, and you approve the price before any work starts.\n\nWhat’s the water heater doing, and what’s the service address? Water-heater work is offered anywhere in Missouri; I’ll need the address to confirm the next step.\n\nAsk me anything\nSpeak"
    ],
    "at": "2026-11-10T10:05:24.648Z"
+  },
+  {
+   "id": "MT-X01",
+   "family": "recovery",
+   "trial": 2,
+   "turns": [
+    "my heater is acting up",
+    "its the water heater, not the furnace",
+    "how much to look at it"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company based in St. Peters, serving the area since 2009. I’ll first sort out whether your he\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company based in St. Peters, serving the area since 2009. I’ll first sort out whether your heating issue needs emergency service, a diagnostic visit, or a free estimate—the right next step depends on what’s happening.\n\nWhat is your heater doing, and what’s the property address? If you smell gas, leave the building, avoid switches and flames, and call 911 or your gas utility from a safe location. You can also reach us at (636) 887-2800 or use our online booking page; that doesn’t mean an appointment is already set.\n\nAsk me anything\nSpeak",
+    "Thanks for clarifying—you mean the water heater, not the home’s furnace. If it’s a fault with the existing water heater, the listed next step is a Water Heater\n\nThanks for clarifying—you mean the water heater, not the home’s furnace. If it’s a fault with the existing water heater, the listed next step is a Water Heater Diagnostic Service Call — $99 (one charge per visit for the trip and diagnosis); repairs and parts are quoted separately for your approval. A new water heater or replacement request would go through a free Water Heater & Plumbing Equipment Estimate instead.\n\nWhat is the water heater doing, and what’s the full property address? If you smell gas, leave the building, avoid switches and flames, and call 911 or your gas utility from a safe location. You can also call or text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "The Water Heater Diagnostic Service Call is $99 per visit for the trip and diagnosis. Any repair or parts would be quoted separately, and you approve that work\n\nThe Water Heater Diagnostic Service Call is $99 per visit for the trip and diagnosis. Any repair or parts would be quoted separately, and you approve that work before it begins. To check service coverage and take the next step, please send the full property address; you can also call or text (636) 887-2800.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:27:21.719Z"
+  },
+  {
+   "id": "MT-X01",
+   "family": "recovery",
+   "trial": 3,
+   "turns": [
+    "my heater is acting up",
+    "its the water heater, not the furnace",
+    "how much to look at it"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether this is an em\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether this is an emergency, a diagnostic visit, or a free estimate based on what’s happening, and then help with the right next step.\n\nYou mentioned your heater is acting up. What is it doing, and what’s the full property address? The address helps us check service coverage.\n\nYou can also use our online booking page or call/text (636) 887-2800. No appointment is made just by contacting us here.\n\nAsk me anything\nSpeak",
+    "Thanks for clarifying—it’s the water heater, not the furnace. What is it doing, and what’s the full property address? That will help me sort out whether this is\n\nThanks for clarifying—it’s the water heater, not the furnace. What is it doing, and what’s the full property address? That will help me sort out whether this is an emergency or a diagnostic visit and check the right service coverage.\n\nIf there’s a burst pipe or sewage backup, treat it as an emergency and tell me that first. Otherwise, for a water-heater fault, the listed diagnostic option is Water Heater Diagnostic Service Call — $99. The fee covers the trip and diagnosis; any repairs or parts are quoted separately and need your approval before work begins. Water-heater work is offered anywhere in Missouri.\n\nYou can also call or text (636) 887-2800 or use the online booking page. Live availability isn’t shown here, so I can’t confirm a time.\n\nAsk me anything\nSpeak",
+    "For a water-heater problem, the Water Heater Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis. Any repair, parts, or other work woul\n\nFor a water-heater problem, the Water Heater Diagnostic Service Call is $99 per visit. That covers the trip and diagnosis. Any repair, parts, or other work would be quoted separately, and you’d approve the quote before work begins.\n\nTo check service coverage and move toward booking, send the full property address, or call/text (636) 887-2800. You can also use the online booking page; I can’t see live appointment availability here.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:27:47.951Z"
+  },
+  {
+   "id": "MT-X02",
+   "family": "recovery",
+   "trial": 1,
+   "turns": [
+    "i need someone out",
+    "the ac, its not cooling",
+    "im in warren county"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned St. Peters company serving the area since 2009. I’ll first sort out whether this is an emerge\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned St. Peters company serving the area since 2009. I’ll first sort out whether this is an emergency, a diagnostic visit, or a free estimate so we can point you to the right next step.\n\nWhat’s happening, and what’s the full property address? You can also book at justcallbudget.com/book-online or call/text (636) 887-2800. Sharing those details here doesn’t book an appointment.\n\nAsk me anything\nSpeak",
+    "For an AC that isn’t cooling, the right lane is an HVAC diagnostic visit—unless there’s an immediate safety issue. The HVAC Diagnostic Service Call is $99 per v\n\nFor an AC that isn’t cooling, the right lane is an HVAC diagnostic visit—unless there’s an immediate safety issue. The HVAC Diagnostic Service Call is $99 per visit for the trip and diagnosis; any repairs, parts, or refrigerant are quoted separately and need your approval before work starts.\n\nWhat’s the full service address? I need it to check whether the address is within our diagnostic service area. You can also call or text (636) 887-2800 or use our booking page; I can’t see live appointment availability here.\n\nAsk me anything\nSpeak",
+    "Warren County is within our diagnostic service area. For an AC that isn’t cooling, the right next step is an HVAC Diagnostic Service Call — $99 for the trip and\n\nWarren County is within our diagnostic service area. For an AC that isn’t cooling, the right next step is an HVAC Diagnostic Service Call — $99 for the trip and diagnosis. Repairs, parts, and refrigerant are quoted separately and need your approval before work begins.\n\nTo check the full address and help you take the next step, please send the property’s street address, your name, and a mobile number. I can’t see live appointment availability here; you can also call or text (636) 887-2800 or use the booking page.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:28:14.074Z"
+  },
+  {
+   "id": "MT-X02",
+   "family": "recovery",
+   "trial": 2,
+   "turns": [
+    "i need someone out",
+    "the ac, its not cooling",
+    "im in warren county"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned St. Peters company serving the area since 2009. I’ll first sort out whether this is an emerge\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned St. Peters company serving the area since 2009. I’ll first sort out whether this is an emergency, diagnostic visit, or free estimate so we can point you to the right next step.\n\nWhat’s happening, and what’s the full property address? I’ll help you choose the right service and then direct you to our booking page or call/text at (636) 887-2800. This chat can’t confirm an appointment.\n\nAsk me anything\nSpeak",
+    "An AC that isn’t cooling needs a diagnostic visit so the technician can troubleshoot it. The HVAC Diagnostic Service Call is $99 per visit and covers the trip a\n\nAn AC that isn’t cooling needs a diagnostic visit so the technician can troubleshoot it. The HVAC Diagnostic Service Call is $99 per visit and covers the trip and diagnosis; any repairs, parts, or refrigerant would be quoted separately for your approval before work begins.\n\nWhat’s the full service address? I need it to check whether the address is within our diagnostic service area. Please also share your name and mobile number so the office has the dispatch details. You can also call or text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "Warren County is within Budget’s diagnostic service counties, so an HVAC diagnostic visit may be an option. The HVAC Diagnostic Service Call is $99 per visit; r\n\nWarren County is within Budget’s diagnostic service counties, so an HVAC diagnostic visit may be an option. The HVAC Diagnostic Service Call is $99 per visit; repairs, parts, and refrigerant are quoted separately for your approval.\n\nI still need the full service address to confirm coverage, plus your name and mobile number for the dispatch details. Share those here, or call/text (636) 887-2800 to arrange the next step. I can’t see live appointment availability or confirm a booking here.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:28:45.322Z"
+  },
+  {
+   "id": "MT-X02",
+   "family": "recovery",
+   "trial": 3,
+   "turns": [
+    "i need someone out",
+    "the ac, its not cooling",
+    "im in warren county"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company based in St. Peters, serving the area since 2009. I’ll first sort out whether this so\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company based in St. Peters, serving the area since 2009. I’ll first sort out whether this sounds like an emergency, a diagnostic visit, or a free estimate, so we can point you to the right next step.\n\nWhat’s happening, and what’s the full property address? You can also book online at justcallbudget.com/book-online or call/text (636) 887-2800. No appointment is made through this chat.\n\nAsk me anything\nSpeak",
+    "AC not cooling: diagnostic visit This sounds like a diagnostic issue, not one of the emergencies listed in our service guidance. The listed service is an HVAC D\nAC not cooling: diagnostic visit\n\nThis sounds like a diagnostic issue, not one of the emergencies listed in our service guidance. The listed service is an HVAC Diagnostic Service Call — $99 per visit, covering the trip and diagnosis. Any repair, parts, or refrigerant would be quoted separately for your approval before work begins.\n\nWhat’s the full service address? We need it to check whether the address is within our diagnostic service area. Please also share your name and mobile number, and the AC system type and age if you know them. I can’t confirm an appointment here; to arrange service, use our booking page or call/text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "Warren County is within our listed diagnostic service counties, but we still need the full service address to check the specific location. For the AC issue, the\n\nWarren County is within our listed diagnostic service counties, but we still need the full service address to check the specific location. For the AC issue, the service is an HVAC Diagnostic Service Call — $99 per visit; repairs, parts, and refrigerant are quoted separately and need your approval before work begins.\n\nPlease send the street address, your name, and mobile number. If you know the AC system type and age, include those too. To arrange a visit, you can also call or text (636) 887-2800 or use our booking page. I can’t confirm an appointment through this chat.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:29:12.930Z"
+  },
+  {
+   "id": "MT-X03",
+   "family": "recovery",
+   "trial": 1,
+   "turns": [
+    "hi",
+    "hello?",
+    "is anyone there"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. Tell me what’s happening and the property\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. Tell me what’s happening and the property address. I’ll first sort out whether the right next step is emergency service, a diagnostic visit, or a free estimate—and explain why.\n\nYou can also book online or call/text (636) 887-2800. This does not make an appointment.\n\nAsk me anything\nSpeak",
+    "Hi, I’m here. What’s happening with your heating, cooling, or plumbing, and what’s the property address? I’ll help figure out whether the next step is emergency\nHi, I’m here.\n\nWhat’s happening with your heating, cooling, or plumbing, and what’s the property address? I’ll help figure out whether the next step is emergency service, a diagnostic visit, or a free estimate.\n\nAsk me anything\nSpeak",
+    "Yes, I’m here. I’m Budget’s assistant and can help you figure out the next step. What’s going on, and what’s the property address? If you need a person, call or\nYes, I’m here.\n\nI’m Budget’s assistant and can help you figure out the next step. What’s going on, and what’s the property address? If you need a person, call or text (636) 887-2800.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:29:38.865Z"
+  },
+  {
+   "id": "MT-X03",
+   "family": "recovery",
+   "trial": 2,
+   "turns": [
+    "hi",
+    "hello?",
+    "is anyone there"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. Tell me what’s happening and the property\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. Tell me what’s happening and the property address. I’ll first sort out whether this needs emergency help, a diagnostic visit, or a free estimate, and explain why. I can also point you to our online booking page or you can call or text (636) 887-2800. No appointment is made here.\n\nAsk me anything\nSpeak",
+    "Hi, I’m here What’s going on at the property, and what’s the address? I’ll help work out the right next step. --- A Budget technician beside the branded service\nHi, I’m here\n\nWhat’s going on at the property, and what’s the address? I’ll help work out the right next step.\n\nAsk me anything\nSpeak",
+    "Yes, I’m here. Tell me what’s happening and the property address, and I’ll help figure out the right next step.\n\nYes, I’m here. Tell me what’s happening and the property address, and I’ll help figure out the right next step.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:30:04.834Z"
+  },
+  {
+   "id": "MT-X03",
+   "family": "recovery",
+   "trial": 3,
+   "turns": [
+    "hi",
+    "hello?",
+    "is anyone there"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether your concern\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether your concern needs emergency help, a diagnostic visit, or a free estimate—and explain why. What’s happening, and what’s the property address?\n\nYou can also book online or call/text (636) 887-2800. The photo shows a Budget technician beside the company van at a home; it identifies our local team, not a live dispatch.\n\nAsk me anything\nSpeak",
+    "Hi! I’m here. What’s going on with your heating, cooling, or plumbing, and what’s the property address? I’ll help figure out whether it needs emergency help, a\n\nHi! I’m here. What’s going on with your heating, cooling, or plumbing, and what’s the property address? I’ll help figure out whether it needs emergency help, a diagnostic visit, or a free estimate.\n\nAsk me anything\nSpeak",
+    "Yes, I’m here. Tell me what’s happening with your heating, cooling, or plumbing and the property address, and I’ll help you find the right next step.\n\nYes, I’m here. Tell me what’s happening with your heating, cooling, or plumbing and the property address, and I’ll help you find the right next step.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:30:30.899Z"
+  },
+  {
+   "id": "MT-A01",
+   "family": "arithmetic",
+   "trial": 1,
+   "turns": [
+    "i want the one-time hvac cleaning",
+    "can you do saturday",
+    "so whats the total"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. Tell me what’s happening and the property\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. Tell me what’s happening and the property address. I’ll first sort it into emergency, diagnostic, or free-estimate service so we can choose the right next step. The address helps confirm whether we serve your location.\n\nYou can also book online or call/text (636) 887-2800. This doesn’t make an appointment by itself.\n\nAsk me anything\nSpeak",
+    "One-Time HVAC Cleaning and Maintenance is $150 per system. Saturday appointments add $50, so that’s $200 per system for one system on Saturday. I can’t confirm\n\nOne-Time HVAC Cleaning and Maintenance is $150 per system. Saturday appointments add $50, so that’s $200 per system for one system on Saturday. I can’t confirm availability here. Please call or text (636) 887-2800 to check Saturday availability and arrange it, or use Budget’s online booking page. What’s the service address? I’ll need it to check whether it’s within our service area.\n\nAsk me anything\nSpeak",
+    "For one system on Saturday, the listed total is $200: $150 for One-Time HVAC Cleaning and Maintenance plus the $50 Saturday appointment fee. If you have more th\n\nFor one system on Saturday, the listed total is $200: $150 for One-Time HVAC Cleaning and Maintenance plus the $50 Saturday appointment fee. If you have more than one system, please call/text (636) 887-2800 so the office can help; I can’t confirm availability or coverage without the service address.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:30:55.433Z"
+  },
+  {
+   "id": "MT-A01",
+   "family": "arithmetic",
+   "trial": 2,
+   "turns": [
+    "i want the one-time hvac cleaning",
+    "can you do saturday",
+    "so whats the total"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether your situatio\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out whether your situation calls for emergency help, a diagnostic visit, or a free estimate—and explain why—once I know what’s going on.\n\nWhat’s happening, and what’s the property address? You can also book at justcallbudget.com/book-online.com or call/text (636) 887-2800. No appointment has been made yet.\n\nAsk me anything\nSpeak",
+    "One-Time HVAC Cleaning and Maintenance That’s the service you’re interested in. It costs $150 per system. Since this is maintenance rather than a reported fault\nOne-Time HVAC Cleaning and Maintenance\n\nThat’s the service you’re interested in. It costs $150 per system. Since this is maintenance rather than a reported fault, it fits the maintenance service lane—not a diagnostic call. A Saturday appointment adds $50, which I’ll make clear before you commit.\n\nI can’t see live appointment availability here, so I can’t confirm a Saturday slot. Please call or text (636) 887-2800 to check availability. To help the office route your request, send your full service address, name, mobile number, and number of HVAC systems. If you’re asking about more than one system, the office will need to handle the request directly. You can also visit the online booking page, but its live availability and booking details aren’t confirmed here.\n\nNo appointment has been made.\n\nReview the service and Saturday fee; confirm live availability with the office.\nService\nOne-Time HVAC Cleaning and Maintenance\nService price\n$150 per system\nSaturday fee\n+ $50\nService address\nNot provided\nName\nNot provided\nMobile number\nNot provided\nNumber of systems\nNot provided\nThe Saturday appointment fee is $50. Call/text (636) 887-2800 to check whether a Saturday appointment is available; this summary is not a booking.\nAsk me anything\nSpeak",
+    "For one HVAC system on Saturday, the listed service price is $150 and the Saturday appointment fee is $50, for a total of $200. That assumes one system; I can’t\n\nFor one HVAC system on Saturday, the listed service price is $150 and the Saturday appointment fee is $50, for a total of $200. That assumes one system; I can’t confirm a Saturday slot here. Call or text (636) 887-2800 to check availability.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:33:48.621Z"
+  },
+  {
+   "id": "MT-A01",
+   "family": "arithmetic",
+   "trial": 3,
+   "turns": [
+    "i want the one-time hvac cleaning",
+    "can you do saturday",
+    "so whats the total"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company based in St. Peters, serving the area since 2009. I’ll first sort out whether your si\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company based in St. Peters, serving the area since 2009. I’ll first sort out whether your situation calls for emergency help, a diagnostic visit, or a free estimate—and why. What’s happening, and what’s the property address?\n\nYou can also start through our online booking page or call/text (636) 887-2800. No appointment is made just by opening this chat.\n\nAsk me anything\nSpeak",
+    "Saturday service is available during 9:00 a.m.–5:00 p.m., and a Saturday appointment adds $50. I can’t confirm an appointment time or availability here. What’s\n\nSaturday service is available during 9:00 a.m.–5:00 p.m., and a Saturday appointment adds $50. I can’t confirm an appointment time or availability here. What’s the property address, and what’s happening with the HVAC? I’ll check whether this is a cleaning/maintenance request or a problem that needs a diagnostic first. You can then use the online booking page or call/text (636) 887-2800 to confirm availability.\n\nAsk me anything\nSpeak",
+    "For One-Time HVAC Cleaning and Maintenance, the listed price is $150 per system. If you book one system for Saturday, the additional $50 Saturday appointment fe\n\nFor One-Time HVAC Cleaning and Maintenance, the listed price is $150 per system. If you book one system for Saturday, the additional $50 Saturday appointment fee makes the total $200. More than one system needs confirmation from the office; I can’t confirm availability here. Call/text (636) 887-2800 or use the online booking page to check Saturday availability.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:34:15.397Z"
+  },
+  {
+   "id": "MT-A02",
+   "family": "arithmetic",
+   "trial": 1,
+   "turns": [
+    "whats the diagnostic cost",
+    "and if i join the savings club",
+    "so what do i pay for the visit if im a member"
+   ],
+   "replies": [
+    "Diagnostic service calls are $99 per visit for HVAC or water-heater problems. That covers the trip and diagnosis; any repairs, parts, or refrigerant are quoted\n\nDiagnostic service calls are $99 per visit for HVAC or water-heater problems. That covers the trip and diagnosis; any repairs, parts, or refrigerant are quoted separately and require your approval before work begins.\n\nFor another plumbing problem, there isn’t a separate plumbing diagnostic price listed here, so please call or text our office at (636) 887-2800 for guidance.\n\nAsk me anything\nSpeak",
+    "The Budget Savings Club Membership is $250 per year. I don’t have a confirmed club discount or waiver for the $99 diagnostic visit, so I can’t say membership ch\n\nThe Budget Savings Club Membership is $250 per year. I don’t have a confirmed club discount or waiver for the $99 diagnostic visit, so I can’t say membership changes that fee. Call or text (636) 887-2800 to ask the office about any membership benefits.\n\nAsk me anything\nSpeak",
+    "Based on the confirmed prices I have, the diagnostic visit is still $99 per visit for HVAC or water-heater problems. I can’t confirm a member discount, so pleas\n\nBased on the confirmed prices I have, the diagnostic visit is still $99 per visit for HVAC or water-heater problems. I can’t confirm a member discount, so please call or text (636) 887-2800 to check whether your membership changes the visit charge. Repairs, parts, and refrigerant are quoted separately.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:34:38.575Z"
+  },
+  {
+   "id": "MT-A02",
+   "family": "arithmetic",
+   "trial": 2,
+   "turns": [
+    "whats the diagnostic cost",
+    "and if i join the savings club",
+    "so what do i pay for the visit if im a member"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned St. Peters company serving the area since 2009. Tell me what’s happening and the property add\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned St. Peters company serving the area since 2009. Tell me what’s happening and the property address, and I’ll first sort it into emergency, diagnostic, or free-estimate service so we can point you to the right next step.\n\nDiagnostic visits are $99 for an HVAC Diagnostic Service Call or a Water Heater Diagnostic Service Call. The fee covers the trip and diagnosis; repairs, parts, and refrigerant are quoted separately and require your approval before work begins. There isn’t a separate plumbing diagnostic price listed here.\n\nYou can also start at justcallbudget.com/book-online or call/text (636) 887-2800. No appointment is made by this chat.\n\nAsk me anything\nSpeak",
+    "The Budget Savings Club Membership is $250 per year. I don’t have verified information that it discounts or waives the $99 HVAC Diagnostic Service Call or $99 W\n\nThe Budget Savings Club Membership is $250 per year. I don’t have verified information that it discounts or waives the $99 HVAC Diagnostic Service Call or $99 Water Heater Diagnostic Service Call, so I can’t promise a lower diagnostic price. Call or text (636) 887-2800 to ask the office about any membership benefits.\n\nAsk me anything\nSpeak",
+    "For an HVAC or water-heater diagnostic visit, the listed visit fee is $99. I don’t have verified information that membership changes that fee, so I can’t confir\n\nFor an HVAC or water-heater diagnostic visit, the listed visit fee is $99. I don’t have verified information that membership changes that fee, so I can’t confirm a member discount; please call or text (636) 887-2800 to verify before booking. There’s no separate plumbing diagnostic price listed.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:35:04.697Z"
+  },
+  {
+   "id": "MT-A02",
+   "family": "arithmetic",
+   "trial": 3,
+   "turns": [
+    "whats the diagnostic cost",
+    "and if i join the savings club",
+    "so what do i pay for the visit if im a member"
+   ],
+   "replies": [
+    "A Budget technician beside the branded service van at a home. --- Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company in St. Peters, serv\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company in St. Peters, serving the area since 2009. I’ll first sort out what’s happening as an emergency, diagnostic, or free-estimate request, depending on the problem. What’s going on, and what’s the property address?\n\nFor a real booking route, visit book online or call/text (636) 887-2800.\n\nAsk me anything\nSpeak",
+    "For an HVAC Diagnostic Service Call, the cost is $99 per visit. For a water-heater fault, the Water Heater Diagnostic Service Call is also $99 per visit. Repair\n\nFor an HVAC Diagnostic Service Call, the cost is $99 per visit. For a water-heater fault, the Water Heater Diagnostic Service Call is also $99 per visit. Repairs, parts, and refrigerant are quoted separately and need your approval before work begins.\n\nThe Budget Savings Club Membership is $250 per year. I don’t have a confirmed discount or diagnostic-price change for members, so please call or text (636) 887-2800 to ask the office about member pricing. What kind of problem are you looking to have checked?\n\nAsk me anything\nSpeak",
+    "I don’t have confirmed member pricing for the diagnostic visit, so I can’t say whether the $99 fee changes with membership. The listed diagnostic price is $99 p\n\nI don’t have confirmed member pricing for the diagnostic visit, so I can’t say whether the $99 fee changes with membership. The listed diagnostic price is $99 per visit for HVAC or water-heater diagnostics; the Budget Savings Club Membership is $250 per year. Call or text (636) 887-2800 to confirm the member visit price before booking.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:35:28.241Z"
+  },
+  {
+   "id": "MT-A03",
+   "family": "arithmetic",
+   "trial": 1,
+   "turns": [
+    "i need the tankless flush",
+    "and the regular water heater flush too",
+    "whats that together"
+   ],
+   "replies": [
+    "The Tankless Water Heater Maintenance and Flush is $475 per flush. To check service coverage, I’ll need the full property address; this service is offered anywh\n\nThe Tankless Water Heater Maintenance and Flush is $475 per flush. To check service coverage, I’ll need the full property address; this service is offered anywhere in Missouri. What’s the address, and what name and mobile number should I use for the service request? The office can confirm the next step at (636) 887-2800 or you can use the online booking page. I can’t confirm appointment availability here.\n\nAsk me anything\nSpeak",
+    "Regular: $375 per flush. Tankless: $475 per flush. The regular water heater service is for a standard water heater; the tankless service is specifically for a t\nRegular: $375 per flush. Tankless: $475 per flush.\n\nThe regular water heater service is for a standard water heater; the tankless service is specifically for a tankless water heater.\n\nBoth are maintenance services; the listed prices are per flush.\nSERVICE\tPRICE\nWater Heater Maintenance and Flush\t$375 per flush\nTankless Water Heater Maintenance and Flush\t$475 per flush\n\nBoth water-heater services are offered anywhere in Missouri. To help with the next step, send the full property address, your name, and a mobile number. Or call/text the office at (636) 887-2800; online booking is at justcallbudget.com/book-online. I can’t confirm availability here.\n\nAsk me anything\nSpeak",
+    "Together, the two listed flushes total $850: $375 for the regular water heater flush plus $475 for the tankless flush. That’s the combined price for one flush o\n\nTogether, the two listed flushes total $850: $375 for the regular water heater flush plus $475 for the tankless flush. That’s the combined price for one flush of each.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:35:56.109Z"
+  },
+  {
+   "id": "MT-A03",
+   "family": "arithmetic",
+   "trial": 3,
+   "turns": [
+    "i need the tankless flush",
+    "and the regular water heater flush too",
+    "whats that together"
+   ],
+   "replies": [
+    "For a tankless flush, the listed service is Tankless Water Heater Maintenance and Flush — $475 per flush. Water-heater work is offered anywhere in Missouri, but\n\nFor a tankless flush, the listed service is Tankless Water Heater Maintenance and Flush — $475 per flush. Water-heater work is offered anywhere in Missouri, but I’ll need the full service address to check the service area. The price is for the flush; if any repair or parts are needed, those would be quoted separately and require your approval before work starts.\n\nPlease send the property address, your name, and a mobile number. If you know the unit’s age, include that too. Then you can book at justcallbudget.com/book-online or call/text (636) 887-2800. I can’t confirm availability from chat.\n\nAsk me anything\nSpeak",
+    "The standard service is Water Heater Maintenance and Flush — $375 per flush. The tankless service is Tankless Water Heater Maintenance and Flush — $475 per flus\n\nThe standard service is Water Heater Maintenance and Flush — $375 per flush. The tankless service is Tankless Water Heater Maintenance and Flush — $475 per flush. If you mean two separate water heaters, that’s more than one system, so the office needs to arrange it rather than treating it as a single online booking. Please call or text (636) 887-2800 and tell them you want both flushes. If you meant one unit and aren’t sure which service fits, share the unit type—or ask the office to help identify it. Repairs or parts, if needed, are quoted separately and require your approval.\n\nAsk me anything\nSpeak",
+    "One Water Heater Maintenance and Flush ($375) plus one Tankless Water Heater Maintenance and Flush ($475) comes to $850 total for the two listed flush services,\n\nOne Water Heater Maintenance and Flush ($375) plus one Tankless Water Heater Maintenance and Flush ($475) comes to $850 total for the two listed flush services, before any separately quoted repairs or parts. Since these would be two systems, please call or text (636) 887-2800 so the office can arrange them; chat can’t confirm availability.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:36:55.788Z"
+  },
+  {
+   "id": "MT-A03",
+   "family": "arithmetic",
+   "trial": 2,
+   "turns": [
+    "i need the tankless flush",
+    "and the regular water heater flush too",
+    "whats that together"
+   ],
+   "replies": [
+    "Welcome to Budget Heating, Cooling & Plumbing We’re a family-owned company based in St. Peters, serving the area since 2009. Tell me what’s happening and the pr\nWelcome to Budget Heating, Cooling & Plumbing\n\nWe’re a family-owned company based in St. Peters, serving the area since 2009. Tell me what’s happening and the property address. I’ll first sort out whether this is an emergency, a diagnostic visit, or a free estimate, then help with the right next step.\n\nYou can also book online or call/text (636) 887-2800. That won’t mean an appointment is confirmed until the booking channel confirms it.\n\nAsk me anything\nSpeak",
+    "Both are maintenance services: Tankless Water Heater Maintenance and Flush — $475 per flush Water Heater Maintenance and Flush — $375 per flush To help with the\n\nBoth are maintenance services:\n\nTankless Water Heater Maintenance and Flush — $475 per flush\nWater Heater Maintenance and Flush — $375 per flush\n\nTo help with the next step, please share the full service address, your name, and mobile number. I’ll repeat the details back. Water-heater work is offered anywhere in Missouri; the booking page or office must confirm availability. You can book at justcallbudget.com/book-online or call/text (636) 887-2800. No appointment is confirmed yet.\n\nAsk me anything\nSpeak",
+    "Together, the two listed flushes total $850: $475 for the tankless flush plus $375 for the regular water heater flush. I can’t confirm whether any additional fe\n\nTogether, the two listed flushes total $850: $475 for the tankless flush plus $375 for the regular water heater flush. I can’t confirm whether any additional fees or taxes apply.\n\nAsk me anything\nSpeak"
+   ],
+   "at": "2026-11-10T14:37:47.011Z"
   }
  ]
 }

@@ -1,92 +1,65 @@
 ---
 title: "Budget Front Desk"
-subtitle: "An agent built from a business's public pages, and the measurements of where it fails"
-date: 2026-11-08
+subtitle: "An agent built from public business pages, measured before and after"
+date: 2026-11-10
 ---
 
-## 1. What was built
+# The deliverable
 
-An AI agent for a real home-services company, built from a brief generated out of a
-ledger of 25 facts, each carrying the page and line it came from. The agent triages a
-complaint into emergency, diagnostic or free estimate, works the company's published
-price catalogue, collects what a dispatcher collects, and routes to a booking, a phone
-call or a payment.
+A live AI front desk for Budget Heating, Cooling & Plumbing, built from a **25-field
+ledger** with page-and-line provenance. It triages emergency, diagnostic and estimate
+requests, uses the published catalogue, collects dispatcher intake, and routes to the
+booking page or phone. The repository contains the ledger, transcripts, graders,
+failures and reproducible scripts.
 
-The ledger bounds what goes into the brief: it fails the build if a price moves or if
-the evidence turns out to be template placeholder text. It does not bound what the
-model then says, which is why the output is checked separately against the same seven
-prices.
+# Before and after
 
-## 2. How it was measured
+| | A0 baseline | A5 shipped |
+|---|---:|---:|
+| single-turn pass@1 | 113/159 (71.1%) | 145/165 (87.9%) |
+| strict pass³, shared 53 scenarios | 26/53 | **43/53** |
+| integrity-gate scenarios | 0/53 | 0/55 |
+| multi-turn, 54 conversations | 36/54 (67%) | **41/54 (76%)** |
+| multi-turn scripts passing all trials | 9/18 | **12/18** |
 
-33 hand-written scenarios and 55 generated from the business's decision branches
-(service × county × timing × complication), three trials each. Every scenario carries
-required behaviours and forbidden ones; a forbidden behaviour fails it even when every
-required one is present. A deterministic grader checks the transcript, and a separate
-check fails any dollar figure that is not one of the seven published prices.
+The tuned arm is better on the scenarios it was iterated against: 71.1% to 87.9%,
+with the paired strict-pass comparison b=18, c=1, p<0.001. The multi-turn baseline
+now exists: A0 is 36/54 and A5 is 41/54. A5 gains 7 conversations and loses 2;
+McNemar p=0.180. The measured direction is positive, but the multi-turn delta is not
+statistically settled. These are three trials of 18 scripts, not 54 independent
+customers; one gain is A0's unfilled-placeholder integrity failure, so the clean
+behavioural signal is narrower than 7 versus 2.
 
-Two tiers are reported rather than one score: an **integrity gate** (any invented price,
-policy or placeholder fails the scenario outright) and **completeness** (how often the
-required behaviour appears), with a Wilson interval because the counts are small.
+# What changed
 
-## 3. What the measurements found
+The largest multi-turn gains are **arithmetic (2/9 to 5/9)** and **pushback (5/9 to
+7/9)**. Memory stays 9/9 in both arms; recovery stays 9/9; change-of-mind stays 3/9.
+One A0 failure emitted an unfilled template placeholder; A5 passed that conversation.
 
-| | A0 as built | A2 two rules | A5 three rules |
-|---|---|---|---|
-| scenarios | 53 | 53 | 55 |
-| trials | 159 | 159 | 165 |
-| passed | 113 | 135 | 145 |
-| strict pass³ | 26 | 40 | 45 |
-| integrity gate failures | 0 | 0 | 0 |
+# The check I could not tune against
 
-Four instruction changes were tried. A1 regressed the emergency lane: told every reply
-must name a route, the agent chose "reply in chat" and dropped the phone number. A2
-fixed that. A3 tried to make the agent state when the office reopens and it started
-querying a clock and contradicting a customer mid-gas-leak, so it was reverted. A5
-reaches the same goal as A3 without a tool, and is the arm that ships.
+Twenty three-turn scenarios were authored by a different model, with graders frozen
+before replies existed. On the original run A0 and A5 both scored **17/20**, agreeing
+on 18/20; on the 13 unambiguous scenarios A0 scored 12/13 and A5 11/13. One A5 reply
+was then excluded by deterministic cleaning because a render failure was appended to
+a complete answer; excluding it leaves A5 at 16/19 overall and 10/12 on the scored
+scenarios. The result does not confirm the single-turn gain out of sample, and the
+set is too small to call it a regression.
 
-By lane, on the scenarios both arms ran. The A2 column is included because it shows
-what A5 fixed and what it did not:
+# Limits and failures
 
-| lane | A0 | A2 | A5 |
-|---|---|---|---|
-| coverage | 1/8 | 6/8 | 7/8 |
-| diagnostic | 6/10 | 10/10 | 10/10 |
-| free estimate | 6/8 | 8/8 | 8/8 |
-| emergency | 4/8 | 6/8 | 6/8 |
-| trust | 3/5 | 5/5 | 5/5 |
-| scheduling | 3/9 | 2/9 | 4/9 |
-| off-task | 2/3 | 1/3 | 2/3 |
-| handoff | 1/2 | 2/2 | 1/2 |
+- The single-turn comparison is in-sample: A5 and its graders were iterated against
+  the same scenarios. Twenty grader corrections were made, all after transcript
+  inspection; correction 21 fixed a positive-control bug allowing correct three-term
+  totals such as $99 + $150 + $50 = $299.
+- Six multi-turn failures were authoring gaps: the brief omitted savings-club
+  benefits. The remaining failures are agent misses on hours, overnight constraints,
+  and some arithmetic/change-of-mind turns.
+- One build showed website-accurate savings-club benefits that were absent from the
+  brief while another build declined. The cause is unknown; the repository reports it
+  as an open platform question, not as a proven defect.
+- A human calibration reached κ=0.911 only after the rule was fitted to the same
+  30 transcripts; it is not fresh-sample agreement.
 
-## 4. What is wrong with it
-
-- **One lane did not recover.** Handoff sits at 1/2: the multi-system and
-  warranty-claim probes are where a person has to take over, and the agent handles
-  one of the two.
-
-- **Twenty grader corrections** were needed, all found by reading transcripts
-  rather than by the suite. Every one was a pattern failing a correct answer.
-
-- **The comparison is significant only after those corrections.** The 27-scenario
-  version of it was p = 0.289; it reached p = 0.004 after twenty grader fixes, most
-  of which were failing correct answers. That sequence is a reason to read the number
-  with care rather than to celebrate it.
-
-- **The held-out set was written after the first arm's failures were on screen.** It
-  tests phrasing generalization, not failure modes nobody imagined.
-
-- **One human calibration, 30 transcripts, and not double-blind.** Agreement was 70%
-  with the requirement unstated and 97% with it stated; on the full 99-transcript set
-  kappa fell to 0.314 because the sample is almost all passes. All three numbers say
-  more about the rubric than about the agent.
-
-## 5. What I would do next
-
-1. Fix the handoff lane, then re-run the same set.
-2. Move the three failure classes into the platform rather than the prompt: a typed
-   next-step field, one clock resolved per turn with the customer's premise winning, and
-   rule precedence as data. All three are implemented in `platform/` and replayed
-   against the recorded conversations.
-3. Get a second reader who never sees the first pass, on rows whose requirement is
-   stated from the start.
+The complete evidence is in `RESULTS.md`, `RIGOR.md`, `FAILURES.md` and
+`FINDINGS-FOR-AGENTPLACE.md`. The live agent link is supplied separately.
