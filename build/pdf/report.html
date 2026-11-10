@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc 3.12.1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2026-11-10" />
+  <meta name="author" content="Arjhine A. Ty · Prepared for Agentplace · 2026-11-10" />
   <title>Budget Front Desk</title>
   <style>
     /* Default styles provided by pandoc.
@@ -182,128 +182,287 @@
     }
   </style>
 <style>
-@page { size: A4; margin: 14mm; }
-@media print {
-  body { max-width: none; margin: 0; padding: 0; font-size: 11pt; line-height: 1.4; }
-  h1 { font-size: 14pt; margin-top: 14pt; margin-bottom: 6pt; }
-  header h1 { font-size: 21pt; }
-  table { font-size: 9pt; width: 100%; }
-  tr, h1, h2 { break-inside: avoid; }
-  h1, h2 { break-after: avoid; }
-  #the-check-i-could-not-tune-against { break-before: page; }
+/* Print design adapted from the user's Momo-V4/output reports.
+   Only the visual system is reused; no project content is imported. */
+@page {
+  size: Letter;
+  margin: 0.75in 0.75in 0.85in;
+  @bottom-center {
+    content: "Page " counter(page) " of " counter(pages);
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 8pt;
+    color: #5a6470;
+  }
 }
+:root {
+  --navy: #14305c;
+  --blue: #1f5c9e;
+  --rule: #a9c2dd;
+  --ink: #262b31;
+  --muted: #5a6470;
+  --thead: #eaf1f8;
+  --border: #b9c8d8;
+}
+* { box-sizing: border-box; }
+html { background: #fff; }
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.45;
+  color: var(--ink);
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  background: #fff;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+header { margin: 0 0 18px; text-align: left; }
+header .title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25pt;
+  line-height: 1.16;
+  color: var(--navy);
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  margin: 0 0 9px;
+  text-align: left;
+}
+header .subtitle {
+  font-size: 11pt;
+  font-weight: 600;
+  color: var(--blue);
+  margin: 0 0 8px;
+}
+header .author, header .date {
+  font-size: 9pt;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+header::after {
+  content: "";
+  display: block;
+  width: 120px;
+  border-top: 3px solid var(--navy);
+  margin: 13px 0 0;
+}
+h1:not(.title), h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14.5pt;
+  line-height: 1.2;
+  color: var(--blue);
+  font-weight: 700;
+  margin: 17px 0 8px;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+h3 {
+  font-size: 11pt;
+  color: var(--navy);
+  font-weight: 700;
+  margin: 13px 0 5px;
+  break-after: avoid;
+}
+p { margin: 0 0 8px; orphans: 3; widows: 3; }
+ul, ol { margin: 0 0 9px; padding-left: 20px; }
+li { margin: 0 0 5px; orphans: 3; widows: 3; }
+strong { font-weight: 700; color: #1a1f25; }
+table {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 9px 0 12px;
+  font-size: 9pt;
+  font-variant-numeric: tabular-nums;
+}
+thead { display: table-header-group; }
+tr { break-inside: avoid; page-break-inside: avoid; }
+th, td {
+  border: 1px solid var(--border);
+  padding: 5px 7px;
+  vertical-align: top;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+th { background: var(--thead); color: var(--navy); font-weight: 700; }
+th:first-child { width: 52%; }
+td:first-child { font-weight: 600; }
+blockquote {
+  margin: 10px 0 12px;
+  padding: 8px 12px;
+  border-left: 3px solid var(--blue);
+  background: #f5f8fc;
+  color: var(--navy);
+  break-inside: avoid;
+}
+blockquote p:last-child { margin-bottom: 0; }
+code {
+  font-family: Consolas, "SFMono-Regular", "Courier New", monospace;
+  font-size: 8.5pt;
+  color: var(--navy);
+  background: #f2f5f9;
+  padding: 0 2px;
+  overflow-wrap: anywhere;
+}
+a { color: var(--blue); text-decoration: none; }
+#validation-and-remaining-work { break-before: page; page-break-before: always; }
+@media screen {
+  body { width: 6.75in; margin: 0.75in auto; }
+}
+
 </style></head>
 <body>
 <header id="title-block-header">
 <h1 class="title">Budget Front Desk</h1>
-<p class="subtitle">An agent built from public business pages, measured
-before and after</p>
-<p class="date">2026-11-10</p>
+<p class="subtitle">An Agentplace Luna agent: failures, changes, and the
+rerun</p>
+<p class="author">Arjhine A. Ty · Prepared for Agentplace ·
+2026-11-10</p>
 </header>
-<h1 id="the-deliverable">The deliverable</h1>
-<p>A live Luna front desk for Budget Heating, Cooling &amp; Plumbing,
-built from a <strong>24-field v1 brief</strong> with page-and-line
-provenance. The current ledger has 25 fields after adding the omitted
-membership benefits; v2 has not been evaluated. The agent triages
-requests, uses the catalogue, collects intake and routes to a booking
-page or phone. All large test sets and recorded runs are retained.</p>
-<h1 id="before-and-after">Before and after</h1>
+<h1 id="what-i-built-and-tested">What I built and tested</h1>
+<p>A public Luna front desk for <strong>Budget Heating, Cooling &amp;
+Plumbing</strong>, built from its public website. It answers price and
+service-area questions, triages emergencies, and routes to a booking
+page or phone. The company is not involved; the agent has no connection
+to its calendar or CRM.</p>
+<p>The corpus retains <strong>33 hand-written and 55 generated
+single-turn scenarios</strong>, <strong>18 scripts of three turns
+each</strong>, and <strong>20 sealed validation scenarios</strong>.
+Tests include missing details, unknown prices, off-topic requests and
+pushback. The main single-turn comparison and multi-turn scripts run
+three trials each. A pass requires the specified facts and next step,
+with no forbidden claim. “All-three pass” means the scenario passed
+every trial.</p>
+<h1 id="changes-made-including-the-regressions">Changes made, including
+the regressions</h1>
+<p><strong>A0 is the baseline; A5 is the selected instruction
+set.</strong> A generic next-step instruction first produced “reply in
+chat” instead of the phone number. Requiring an <strong>external
+action</strong> repaired that, but introduced scheduling and off-task
+regressions. Asking when the office reopens then triggered a clock check
+that contradicted a Sunday-night emergency. That edit was reverted. A5
+retained the external action and forbade clock-based contradictions of
+the customer’s stated time.</p>
+<h1 id="before-and-after-on-the-shared-development-set">Before and after
+on the shared development set</h1>
+<blockquote>
+<p><strong>All-three passes: 26/53 → 43/53.</strong> This is
+<strong>in-sample</strong>: the scenarios guided instruction and grader
+iteration.</p>
+</blockquote>
 <table>
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 36%" />
-<col style="width: 36%" />
-</colgroup>
 <thead>
 <tr>
-<th></th>
-<th style="text-align: right;">A0 baseline</th>
+<th>Requirement group</th>
+<th style="text-align: right;">Baseline</th>
 <th style="text-align: right;">A5 instructions</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>single-turn pass@1, respective 53/55 scenarios</td>
-<td style="text-align: right;">113/159 (71.1%)</td>
-<td style="text-align: right;">145/165 (87.9%)</td>
+<td>Coverage</td>
+<td style="text-align: right;">1/8</td>
+<td style="text-align: right;">7/8</td>
 </tr>
 <tr>
-<td>strict pass³, shared 53 scenarios</td>
-<td style="text-align: right;">26/53</td>
-<td style="text-align: right;"><strong>43/53</strong></td>
+<td>Diagnostic</td>
+<td style="text-align: right;">6/10</td>
+<td style="text-align: right;">10/10</td>
 </tr>
 <tr>
-<td>single-turn integrity-gate failures</td>
-<td style="text-align: right;">0/53</td>
-<td style="text-align: right;">0/55</td>
+<td>Free Estimate</td>
+<td style="text-align: right;">6/8</td>
+<td style="text-align: right;">8/8</td>
 </tr>
 <tr>
-<td>multi-turn, 54 conversations</td>
-<td style="text-align: right;">36/54 (67%)</td>
-<td style="text-align: right;"><strong>41/54 (76%)</strong></td>
+<td>Trust</td>
+<td style="text-align: right;">3/5</td>
+<td style="text-align: right;">5/5</td>
 </tr>
 <tr>
-<td>multi-turn scripts passing all trials</td>
-<td style="text-align: right;">9/18</td>
-<td style="text-align: right;"><strong>12/18</strong></td>
+<td>Emergency</td>
+<td style="text-align: right;">4/8</td>
+<td style="text-align: right;">6/8</td>
+</tr>
+<tr>
+<td>Scheduling</td>
+<td style="text-align: right;">3/9</td>
+<td style="text-align: right;">4/9</td>
+</tr>
+<tr>
+<td>Off-Task</td>
+<td style="text-align: right;">2/3</td>
+<td style="text-align: right;">2/3</td>
+</tr>
+<tr>
+<td>Handoff</td>
+<td style="text-align: right;">1/2</td>
+<td style="text-align: right;">1/2</td>
 </tr>
 </tbody>
 </table>
-<p>The paired strict-pass result favours A5 on the development set
-(b=18, c=1, p&lt;0.001). Pass@1 uses different denominators and is
-descriptive. The original single-turn metadata names project
-<code>jojuduewx7ud</code>; the linked A5 rebuild,
-<code>cgiefgaebmgh</code>, has its own multi-turn and sealed
-measurements. The multi-turn baseline now exists: A0 is 36/54 and A5 is
-41/54. A5 gains 7 conversations and loses 2; McNemar p=0.180. The
-measured direction is positive, but the multi-turn delta is not
-statistically settled. These are three trials of 18 scripts, not 54
-independent customers; one gain is A0’s unfilled-placeholder integrity
-failure, so the clean behavioural signal is narrower than 7 versus
-2.</p>
-<h1 id="what-changed">What changed</h1>
-<p>A1’s generic route instruction permitted “reply in chat”. A2 required
-an external destination. A3’s hours instruction prompted a clock-based
-contradiction; A5 kept the customer’s stated time and forbade clock
-checks. The arm history retains the regressions as well as the selected
-changes.</p>
-<p>The largest multi-turn gains are <strong>arithmetic (2/9 to
-5/9)</strong> and <strong>pushback (5/9 to 7/9)</strong>. Memory stays
-9/9 in both arms; recovery stays 9/9; change-of-mind stays 3/9. One A0
-failure emitted an unfilled template placeholder; A5 passed that
-conversation.</p>
-<h1 id="the-check-i-could-not-tune-against">The check I could not tune
-against</h1>
-<p>Twenty three-turn scenarios were authored by a different model, with
-graders frozen before replies existed. On the original run A0 and A5
-both scored <strong>17/20</strong>, agreeing on 18/20; on the 13
-unambiguous scenarios A0 scored 12/13 and A5 11/13. One A5 reply was
-then excluded by deterministic cleaning because a render failure was
-appended to a complete answer; excluding it leaves A5 at 16/19 overall
-and 10/12 on the scored scenarios. The result does not confirm the
-single-turn gain out of sample, and the set is too small to call it a
-regression.</p>
-<h1 id="limits-and-failures">Limits and failures</h1>
+<p>There are 18 gains and 1 loss (paired McNemar p&lt;0.001). Most gains
+now state the $99 diagnostic or coverage rule. One sewage reply loses
+avoid-contact advice. The external-next-step version had reached 40/53;
+A5 recovered scheduling and off-task losses. This sequential comparison
+is not a controlled ablation.</p>
+<h1 id="validation-and-remaining-work">Validation and remaining
+work</h1>
+<p>The positive development result is not confirmed on the separate
+validation checks. These scores are automated rubric outcomes, not
+independently established customer success rates.</p>
+<h2 id="multi-turn-a-positive-but-uncertain-difference">Multi-turn: a
+positive but uncertain difference</h2>
+<p>Across 18 scripts with three trials each, baseline passes
+<strong>36/54</strong> and A5 <strong>41/54</strong>; scripts passing
+all trials move from 9/18 to 12/18. There are 7 gains and 2 losses
+(nominal paired p=0.180, not statistically significant). Trials repeat
+scripts, so they are not 54 independent customers. Observed gains are
+concentrated in arithmetic and pushback, not a demonstrated effect of
+the instructions. One gain is the baseline’s template-placeholder
+failure.</p>
+<h2 id="sealed-no-demonstrated-advantage">Sealed: no demonstrated
+advantage</h2>
+<p>The 20 scenarios, each three turns long, were authored by a different
+model. Scenario rubrics were frozen before replies. Before the render
+exclusion, totals are <strong>17/20 baseline and 17/20 A5</strong>; the
+subset not flagged as ambiguous is 12/13 versus 11/13.</p>
+<p>A post-run mechanical amount-check fix, applied to both arms, moved
+A5 from 10/13 to 11/13; baseline was unchanged. Separately, cleaning
+excluded one A5 pass containing an appended render error, leaving
+<strong>16/19 overall and 10/12 on the unambiguous subset</strong>.
+Baseline had no exclusion. The small set does not establish equivalence
+or regression.</p>
+<h2 id="remaining-failures-and-grading-limits">Remaining failures and
+grading limits</h2>
 <ul>
-<li>The single-turn comparison is in-sample. There are <strong>21 logged
-corrections</strong>: 20 from transcript inspection and one from a
-positive control. Corrections 20 and 21 repaired amount checks that
-rejected valid arithmetic, including $99 + $150 + $50 = $299. No frozen
-scenario rubric was changed.</li>
-<li>Six failing A5 conversations include savings-club expectations
-absent from the brief; some also miss a required diagnostic price. The
-overnight example in MT-P02 declines service but fails a
-wording-sensitive regex. Scores are unchanged.</li>
-<li>One build showed website-accurate savings-club benefits that were
-absent from the brief while another build declined. The cause is
-unknown; the repository reports it as an open platform question, not as
-a proven defect.</li>
-<li>A human calibration reached κ=0.911 only after the rule was fitted
-to the same 30 transcripts; it is not fresh-sample agreement.</li>
+<li><strong>Scheduling: 4/9 all-three passes.</strong> Some replies omit
+the required hours or Saturday surcharge. <strong>Handoff: 1/2.</strong>
+A multi-unit outage misses escalation.</li>
+<li>Six membership-script conversations fail in <strong>both
+arms</strong> on benefits omitted from v1; some also omit required
+pricing. These are mixed authoring and agent gaps.</li>
+<li>There are <strong>21 logged grader corrections</strong>: 20 from
+transcripts, one from a positive control. A correct overnight refusal
+still fails a wording-sensitive check; its recorded score is retained.
+Human calibration reused the same transcripts after a rule
+clarification, so it is not fresh-sample validation.</li>
 </ul>
-<p>The complete evidence is in <code>RESULTS.md</code>,
-<code>RIGOR.md</code>, <code>FAILURES.md</code> and
-<code>FINDINGS-FOR-AGENTPLACE.md</code>. The live agent link is supplied
-separately.</p>
+<h2 id="build-provenance-and-evidence">Build provenance and
+evidence</h2>
+<p>Single-turn files label the original project
+<code>jojuduewx7ud</code>. Validation compares the A5 rebuild
+<code>cgiefgaebmgh</code> with a <strong>separate baseline
+rebuild</strong>, <code>guikfrraxzk5</code>; build differences are an
+additional confound. The evaluated brief used 24 sourced fields. The
+current ledger has 25; its corrected v2 is not evaluated. Two builds
+also answered membership questions differently; the cause remains
+unknown.</p>
+<p>All recorded runs are retained. The 20 sealed scenarios supplement,
+rather than replace, the larger development sets.</p>
+<p>All test sets, runs, instruction history and findings: <a
+href="https://github.com/arjhinety/budget-front-desk">github.com/arjhinety/budget-front-desk</a>.
+The published agent link is supplied separately.</p>
 </body>
 </html>

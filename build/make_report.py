@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -10,6 +11,7 @@ import tempfile
 import time
 from collections import defaultdict
 from datetime import date
+from math import comb
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -63,11 +65,11 @@ def mt_summary(arm: str) -> dict:
 def sealed_summary(arm: str) -> dict:
     rows = json_output([sys.executable, str(ROOT / "datasets" / "grade_sealed.py"),
                         "--arm", arm, "--json"])
-    amb = set(json.loads((ROOT / "datasets/sealed/graders-sealed.json").read_text())["ambiguous"])
+    amb = set(json.loads((ROOT / "datasets/sealed/graders-sealed.json").read_text(encoding="utf-8"))["ambiguous"])
     excluded = set()
     exclusions = ROOT / "datasets/sealed/exclusions.json"
     if exclusions.exists():
-        for x in json.loads(exclusions.read_text())["excluded"]:
+        for x in json.loads(exclusions.read_text(encoding="utf-8"))["excluded"]:
             if x["record"].startswith(arm.replace("SEALED-", "") + "/"):
                 excluded.add(x["record"].split("/", 1)[1].split("#", 1)[0])
     kept = [r for r in rows if r["id"] not in excluded]
@@ -75,87 +77,177 @@ def sealed_summary(arm: str) -> dict:
     return {"all": (sum(r["pass"] for r in rows), len(rows)),
             "kept": (sum(r["pass"] for r in kept), len(kept)),
             "clean": (sum(r["pass"] for r in clean), len(clean)),
+            "unambiguous_all": (sum(r["pass"] for r in rows if r["id"] not in amb),
+                                sum(r["id"] not in amb for r in rows)),
             "excluded": sorted(excluded)}
+
+
+def paired_strict(arms: list[str]) -> dict:
+    """Use exactly the same scenarios for strict comparisons and lane tables."""
+    per_arm = {}
+    for arm in arms:
+        grouped = defaultdict(list)
+        for row in graded(arm):
+            grouped[row["id"]].append(row["pass"])
+        per_arm[arm] = {sid: len(v) == 3 and all(v) for sid, v in grouped.items()}
+    shared = sorted(set.intersection(*(set(v) for v in per_arm.values())))
+    if not shared:
+        raise SystemExit("No shared single-turn scenarios")
+    scenarios = json.loads((EVALS / f"{SET}.json").read_text(encoding="utf-8"))["scenarios"]
+    lane_for = {s["id"]: s["lane"] for s in scenarios}
+    lanes = defaultdict(lambda: {arm: 0 for arm in arms} | {"n": 0})
+    for sid in shared:
+        lane = lanes[lane_for[sid]]
+        lane["n"] += 1
+        for arm in arms:
+            lane[arm] += per_arm[arm][sid]
+    before, after = per_arm[arms[0]], per_arm[arms[-1]]
+    gained = sum(not before[sid] and after[sid] for sid in shared)
+    lost = sum(before[sid] and not after[sid] for sid in shared)
+    return {"n": len(shared), "lanes": lanes, "gained": gained, "lost": lost,
+            "totals": {arm: sum(per_arm[arm][sid] for sid in shared) for arm in arms},
+            "p": exact_p(gained, lost)}
+
+
+def exact_p(gained: int, lost: int) -> float:
+    n = gained + lost
+    return min(1.0, 2 * sum(comb(n, i) for i in range(min(gained, lost) + 1)) / 2 ** n) if n else 1.0
+
+
+def fraction(pair: tuple[int, int]) -> str:
+    return f"{pair[0]}/{pair[1]}"
 
 
 def main() -> int:
     OUT.mkdir(parents=True, exist_ok=True)
-    a0, a2, a5 = (summarise(x) for x in ("BIG-A0", "BIG-A2", "A5"))
     mt0, mt5 = mt_summary("MT-A0"), mt_summary("MT-A5")
     sd0, sd5 = sealed_summary("SEALED-A0"), sealed_summary("SEALED-A5")
+    paired = paired_strict(["BIG-A0", "BIG-A2", "A5"])
+    lanes = paired["lanes"]
+    lane_order = ["coverage", "diagnostic", "free estimate", "trust",
+                  "emergency", "scheduling", "off-task", "handoff"]
+    lane_table = "\n".join(
+        f"| {lane.title()} | {lanes[lane]['BIG-A0']}/{lanes[lane]['n']} "
+        f"| {lanes[lane]['A5']}/{lanes[lane]['n']} |" for lane in lane_order)
+    mt_before = {(r["id"], r["trial"]): r["pass"] for r in mt_rows("MT-A0")}
+    mt_after = {(r["id"], r["trial"]): r["pass"] for r in mt_rows("MT-A5")}
+    if set(mt_before) != set(mt_after):
+        raise SystemExit("Multi-turn arms are incomplete or do not match")
+    mt_gained = sum(mt_after[k] and not mt_before[k] for k in mt_before)
+    mt_lost = sum(mt_before[k] and not mt_after[k] for k in mt_before)
+    corrections = json.loads((EVALS / "graders.json").read_text(encoding="utf-8"))["_corrections"]
+    correction_count = len(corrections) + len(
+        json.loads((EVALS / "graders-big.json").read_text(encoding="utf-8"))["_corrections"])
+    sealed_fix = next(c for c in corrections if isinstance(c, dict) and c.get("n") == 20)
+    effect = re.search(r"SEALED-A5 (\d+)/(\d+) -> (\d+)/(\d+)", sealed_fix["effect"])
+    if not effect or tuple(map(int, effect.groups()[2:])) != sd5["unambiguous_all"]:
+        raise SystemExit("Sealed correction history no longer matches the report")
+    sealed_pre_fix = f"{effect[1]}/{effect[2]}"
+    handwritten_n = len(json.loads((EVALS / "scenarios.json").read_text(encoding="utf-8"))["scenarios"])
+    generated_n = len(json.loads((EVALS / f"{SET}.json").read_text(encoding="utf-8"))["scenarios"])
+    paired_p = "<0.001" if paired["p"] < 0.001 else f"={paired['p']:.3f}"
 
     md = f"""---
 title: "Budget Front Desk"
-subtitle: "An agent built from public business pages, measured before and after"
-date: {date.today().isoformat()}
+subtitle: "An Agentplace Luna agent: failures, changes, and the rerun"
+author: "Arjhine A. Ty · Prepared for Agentplace · {date.today().isoformat()}"
 ---
 
-# The deliverable
+# What I built and tested
 
-A live Luna front desk for Budget Heating, Cooling & Plumbing, built from a
-**24-field v1 brief** with page-and-line provenance. The current ledger has 25
-fields after adding the omitted membership benefits; v2 has not been evaluated.
-The agent triages requests, uses the catalogue, collects intake and routes to a
-booking page or phone. All large test sets and recorded runs are retained.
+A public Luna front desk for **Budget Heating, Cooling & Plumbing**, built from
+its public website. It answers price and service-area questions, triages
+emergencies, and routes to a booking page or phone. The company is not involved;
+the agent has no connection to its calendar or CRM.
 
-# Before and after
+The corpus retains **{handwritten_n} hand-written and {generated_n} generated single-turn scenarios**,
+**{mt0['scripts']} scripts of three turns each**, and **{sd0['all'][1]} sealed validation scenarios**.
+Tests include missing details, unknown prices, off-topic requests and pushback.
+The main single-turn comparison and multi-turn scripts run three trials each.
+A pass requires the specified facts and next step, with no forbidden claim.
+“All-three pass” means the scenario passed every trial.
 
-| | A0 baseline | A5 instructions |
+# Changes made, including the regressions
+
+**A0 is the baseline; A5 is the selected instruction set.** A generic next-step
+instruction first produced “reply in chat” instead of the phone number. Requiring
+an **external action** repaired that, but introduced scheduling and off-task
+regressions. Asking when the office reopens then triggered a clock check that
+contradicted a Sunday-night emergency. That edit was reverted. A5 retained the
+external action and forbade clock-based contradictions of the customer's stated time.
+
+# Before and after on the shared development set
+
+> **All-three passes: {paired['totals']['BIG-A0']}/{paired['n']} → {paired['totals']['A5']}/{paired['n']}.**
+> This is **in-sample**: the scenarios guided instruction and grader iteration.
+
+| Requirement group | Baseline | A5 instructions |
 |---|---:|---:|
-| single-turn pass@1, respective 53/55 scenarios | {a0['passed']}/{a0['trials']} ({a0['passed']/a0['trials']:.1%}) | {a5['passed']}/{a5['trials']} ({a5['passed']/a5['trials']:.1%}) |
-| strict pass³, shared 53 scenarios | {a0['strict']}/53 | **43/53** |
-| single-turn integrity-gate failures | {a0['gate']}/53 | {a5['gate']}/55 |
-| multi-turn, 54 conversations | {mt0['passed']}/54 ({mt0['passed']/54:.0%}) | **{mt5['passed']}/54 ({mt5['passed']/54:.0%})** |
-| multi-turn scripts passing all trials | {mt0['strict']}/18 | **{mt5['strict']}/18** |
+{lane_table}
 
-The paired strict-pass result favours A5 on the development set (b=18, c=1,
-p<0.001). Pass@1 uses different denominators and is descriptive. The original
-single-turn metadata names project `jojuduewx7ud`; the linked A5 rebuild,
-`cgiefgaebmgh`, has its own multi-turn and sealed measurements. The multi-turn baseline
-now exists: A0 is 36/54 and A5 is 41/54. A5 gains 7 conversations and loses 2;
-McNemar p=0.180. The measured direction is positive, but the multi-turn delta is not
-statistically settled. These are three trials of 18 scripts, not 54 independent
-customers; one gain is A0's unfilled-placeholder integrity failure, so the clean
-behavioural signal is narrower than 7 versus 2.
+There are {paired['gained']} gains and {paired['lost']} loss (paired McNemar p{paired_p}).
+Most gains now state the $99 diagnostic or coverage rule. One sewage reply loses
+avoid-contact advice. The external-next-step version had reached
+{paired['totals']['BIG-A2']}/{paired['n']}; A5 recovered scheduling and off-task losses.
+This sequential comparison is not a controlled ablation.
 
-# What changed
+# Validation and remaining work
 
-A1's generic route instruction permitted \"reply in chat\". A2 required an external
-destination. A3's hours instruction prompted a clock-based contradiction; A5
-kept the customer's stated time and forbade clock checks. The arm history retains
-the regressions as well as the selected changes.
+The positive development result is not confirmed on the separate validation
+checks. These scores are automated rubric outcomes, not independently established
+customer success rates.
 
-The largest multi-turn gains are **arithmetic (2/9 to 5/9)** and **pushback (5/9 to
-7/9)**. Memory stays 9/9 in both arms; recovery stays 9/9; change-of-mind stays 3/9.
-One A0 failure emitted an unfilled template placeholder; A5 passed that conversation.
+## Multi-turn: a positive but uncertain difference
 
-# The check I could not tune against
+Across {mt0['scripts']} scripts with three trials each, baseline passes
+**{mt0['passed']}/{mt0['n']}** and A5 **{mt5['passed']}/{mt5['n']}**; scripts passing all trials move
+from {mt0['strict']}/{mt0['scripts']} to {mt5['strict']}/{mt5['scripts']}.
+There are {mt_gained} gains and {mt_lost} losses (nominal paired p={exact_p(mt_gained, mt_lost):.3f},
+not statistically significant).
+Trials repeat scripts, so they are not {mt0['n']} independent customers.
+Observed gains are concentrated in arithmetic and pushback, not a demonstrated
+effect of the instructions. One gain is the baseline's template-placeholder failure.
 
-Twenty three-turn scenarios were authored by a different model, with graders frozen
-before replies existed. On the original run A0 and A5 both scored **17/20**, agreeing
-on 18/20; on the 13 unambiguous scenarios A0 scored 12/13 and A5 11/13. One A5 reply
-was then excluded by deterministic cleaning because a render failure was appended to
-a complete answer; excluding it leaves A5 at 16/19 overall and 10/12 on the scored
-scenarios. The result does not confirm the single-turn gain out of sample, and the
-set is too small to call it a regression.
+## Sealed: no demonstrated advantage
 
-# Limits and failures
+The {sd0['all'][1]} scenarios, each three turns long, were authored by a different model.
+Scenario rubrics were frozen before replies. Before the render exclusion, totals are
+**{fraction(sd0['all'])} baseline and {fraction(sd5['all'])} A5**;
+the subset not flagged as ambiguous is {fraction(sd0['unambiguous_all'])} versus
+{fraction(sd5['unambiguous_all'])}.
 
-- The single-turn comparison is in-sample. There are **21 logged corrections**:
-  20 from transcript inspection and one from a positive control. Corrections 20
-  and 21 repaired amount checks that rejected valid arithmetic, including
-  $99 + $150 + $50 = $299. No frozen scenario rubric was changed.
-- Six failing A5 conversations include savings-club expectations absent from the
-  brief; some also miss a required diagnostic price. The overnight example in
-  MT-P02 declines service but fails a wording-sensitive regex. Scores are unchanged.
-- One build showed website-accurate savings-club benefits that were absent from the
-  brief while another build declined. The cause is unknown; the repository reports it
-  as an open platform question, not as a proven defect.
-- A human calibration reached κ=0.911 only after the rule was fitted to the same
-  30 transcripts; it is not fresh-sample agreement.
+A post-run mechanical amount-check fix, applied to both arms, moved A5 from
+{sealed_pre_fix} to {fraction(sd5['unambiguous_all'])}; baseline was unchanged.
+Separately, cleaning excluded one A5 pass containing an appended render error,
+leaving **{fraction(sd5['kept'])} overall and {fraction(sd5['clean'])} on the unambiguous subset**.
+Baseline had no exclusion. The small set does not establish equivalence or regression.
 
-The complete evidence is in `RESULTS.md`, `RIGOR.md`, `FAILURES.md` and
-`FINDINGS-FOR-AGENTPLACE.md`. The live agent link is supplied separately.
+## Remaining failures and grading limits
+
+- **Scheduling: {lanes['scheduling']['A5']}/{lanes['scheduling']['n']} all-three passes.**
+  Some replies omit the required hours or Saturday surcharge.
+  **Handoff: {lanes['handoff']['A5']}/{lanes['handoff']['n']}.** A multi-unit outage misses escalation.
+- Six membership-script conversations fail in **both arms** on benefits omitted
+  from v1; some also omit required pricing. These are mixed authoring and agent gaps.
+- There are **{correction_count} logged grader corrections**: 20 from transcripts, one from
+  a positive control. A correct overnight refusal still fails a wording-sensitive
+  check; its recorded score is retained. Human calibration reused the same
+  transcripts after a rule clarification, so it is not fresh-sample validation.
+
+## Build provenance and evidence
+
+Single-turn files label the original project `jojuduewx7ud`. Validation compares
+the A5 rebuild `cgiefgaebmgh` with a **separate baseline rebuild**,
+`guikfrraxzk5`; build differences are an additional confound. The evaluated brief
+used 24 sourced fields. The current ledger has 25; its corrected v2 is not evaluated.
+Two builds also answered membership questions differently; the cause remains unknown.
+
+All recorded runs are retained. The 20 sealed scenarios supplement, rather than
+replace, the larger development sets.
+
+All test sets, runs, instruction history and findings:
+[github.com/arjhinety/budget-front-desk](https://github.com/arjhinety/budget-front-desk).
+The published agent link is supplied separately.
 """
     (OUT / "report.md").write_text(md, encoding="utf-8")
     html = subprocess.run(["pandoc", str(OUT / "report.md"), "-o", str(OUT / "report.html"),
@@ -165,18 +257,7 @@ The complete evidence is in `RESULTS.md`, `RIGOR.md`, `FAILURES.md` and
         raise SystemExit(html.stderr[:1000])
     html_path = OUT / "report.html"
     document = html_path.read_text(encoding="utf-8")
-    print_style = """<style>
-@page { size: A4; margin: 14mm; }
-@media print {
-  body { max-width: none; margin: 0; padding: 0; font-size: 11pt; line-height: 1.4; }
-  h1 { font-size: 14pt; margin-top: 14pt; margin-bottom: 6pt; }
-  header h1 { font-size: 21pt; }
-  table { font-size: 9pt; width: 100%; }
-  tr, h1, h2 { break-inside: avoid; }
-  h1, h2 { break-after: avoid; }
-  #the-check-i-could-not-tune-against { break-before: page; }
-}
-</style>"""
+    print_style = "<style>\n" + (ROOT / "build/report.css").read_text(encoding="utf-8") + "\n</style>"
     html_path.write_text(document.replace("</head>", print_style + "</head>"),
                          encoding="utf-8")
     chrome = shutil.which("google-chrome") or shutil.which("chromium")

@@ -1,0 +1,128 @@
+/* Print design adapted from the user's Momo-V4/output reports.
+   Only the visual system is reused; no project content is imported. */
+@page {
+  size: Letter;
+  margin: 0.75in 0.75in 0.85in;
+  @bottom-center {
+    content: "Page " counter(page) " of " counter(pages);
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 8pt;
+    color: #5a6470;
+  }
+}
+:root {
+  --navy: #14305c;
+  --blue: #1f5c9e;
+  --rule: #a9c2dd;
+  --ink: #262b31;
+  --muted: #5a6470;
+  --thead: #eaf1f8;
+  --border: #b9c8d8;
+}
+* { box-sizing: border-box; }
+html { background: #fff; }
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 10pt;
+  line-height: 1.45;
+  color: var(--ink);
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  background: #fff;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+header { margin: 0 0 18px; text-align: left; }
+header .title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25pt;
+  line-height: 1.16;
+  color: var(--navy);
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  margin: 0 0 9px;
+  text-align: left;
+}
+header .subtitle {
+  font-size: 11pt;
+  font-weight: 600;
+  color: var(--blue);
+  margin: 0 0 8px;
+}
+header .author, header .date {
+  font-size: 9pt;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+header::after {
+  content: "";
+  display: block;
+  width: 120px;
+  border-top: 3px solid var(--navy);
+  margin: 13px 0 0;
+}
+h1:not(.title), h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14.5pt;
+  line-height: 1.2;
+  color: var(--blue);
+  font-weight: 700;
+  margin: 17px 0 8px;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+h3 {
+  font-size: 11pt;
+  color: var(--navy);
+  font-weight: 700;
+  margin: 13px 0 5px;
+  break-after: avoid;
+}
+p { margin: 0 0 8px; orphans: 3; widows: 3; }
+ul, ol { margin: 0 0 9px; padding-left: 20px; }
+li { margin: 0 0 5px; orphans: 3; widows: 3; }
+strong { font-weight: 700; color: #1a1f25; }
+table {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  margin: 9px 0 12px;
+  font-size: 9pt;
+  font-variant-numeric: tabular-nums;
+}
+thead { display: table-header-group; }
+tr { break-inside: avoid; page-break-inside: avoid; }
+th, td {
+  border: 1px solid var(--border);
+  padding: 5px 7px;
+  vertical-align: top;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+th { background: var(--thead); color: var(--navy); font-weight: 700; }
+th:first-child { width: 52%; }
+td:first-child { font-weight: 600; }
+blockquote {
+  margin: 10px 0 12px;
+  padding: 8px 12px;
+  border-left: 3px solid var(--blue);
+  background: #f5f8fc;
+  color: var(--navy);
+  break-inside: avoid;
+}
+blockquote p:last-child { margin-bottom: 0; }
+code {
+  font-family: Consolas, "SFMono-Regular", "Courier New", monospace;
+  font-size: 8.5pt;
+  color: var(--navy);
+  background: #f2f5f9;
+  padding: 0 2px;
+  overflow-wrap: anywhere;
+}
+a { color: var(--blue); text-decoration: none; }
+#validation-and-remaining-work { break-before: page; page-break-before: always; }
+@media screen {
+  body { width: 6.75in; margin: 0.75in auto; }
+}

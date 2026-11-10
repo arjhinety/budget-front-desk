@@ -1,72 +1,108 @@
 ---
 title: "Budget Front Desk"
-subtitle: "An agent built from public business pages, measured before and after"
-date: 2026-11-10
+subtitle: "An Agentplace Luna agent: failures, changes, and the rerun"
+author: "Arjhine A. Ty · Prepared for Agentplace · 2026-11-10"
 ---
 
-# The deliverable
+# What I built and tested
 
-A live Luna front desk for Budget Heating, Cooling & Plumbing, built from a
-**24-field v1 brief** with page-and-line provenance. The current ledger has 25
-fields after adding the omitted membership benefits; v2 has not been evaluated.
-The agent triages requests, uses the catalogue, collects intake and routes to a
-booking page or phone. All large test sets and recorded runs are retained.
+A public Luna front desk for **Budget Heating, Cooling & Plumbing**, built from
+its public website. It answers price and service-area questions, triages
+emergencies, and routes to a booking page or phone. The company is not involved;
+the agent has no connection to its calendar or CRM.
 
-# Before and after
+The corpus retains **33 hand-written and 55 generated single-turn scenarios**,
+**18 scripts of three turns each**, and **20 sealed validation scenarios**.
+Tests include missing details, unknown prices, off-topic requests and pushback.
+The main single-turn comparison and multi-turn scripts run three trials each.
+A pass requires the specified facts and next step, with no forbidden claim.
+“All-three pass” means the scenario passed every trial.
 
-| | A0 baseline | A5 instructions |
+# Changes made, including the regressions
+
+**A0 is the baseline; A5 is the selected instruction set.** A generic next-step
+instruction first produced “reply in chat” instead of the phone number. Requiring
+an **external action** repaired that, but introduced scheduling and off-task
+regressions. Asking when the office reopens then triggered a clock check that
+contradicted a Sunday-night emergency. That edit was reverted. A5 retained the
+external action and forbade clock-based contradictions of the customer's stated time.
+
+# Before and after on the shared development set
+
+> **All-three passes: 26/53 → 43/53.**
+> This is **in-sample**: the scenarios guided instruction and grader iteration.
+
+| Requirement group | Baseline | A5 instructions |
 |---|---:|---:|
-| single-turn pass@1, respective 53/55 scenarios | 113/159 (71.1%) | 145/165 (87.9%) |
-| strict pass³, shared 53 scenarios | 26/53 | **43/53** |
-| single-turn integrity-gate failures | 0/53 | 0/55 |
-| multi-turn, 54 conversations | 36/54 (67%) | **41/54 (76%)** |
-| multi-turn scripts passing all trials | 9/18 | **12/18** |
+| Coverage | 1/8 | 7/8 |
+| Diagnostic | 6/10 | 10/10 |
+| Free Estimate | 6/8 | 8/8 |
+| Trust | 3/5 | 5/5 |
+| Emergency | 4/8 | 6/8 |
+| Scheduling | 3/9 | 4/9 |
+| Off-Task | 2/3 | 2/3 |
+| Handoff | 1/2 | 1/2 |
 
-The paired strict-pass result favours A5 on the development set (b=18, c=1,
-p<0.001). Pass@1 uses different denominators and is descriptive. The original
-single-turn metadata names project `jojuduewx7ud`; the linked A5 rebuild,
-`cgiefgaebmgh`, has its own multi-turn and sealed measurements. The multi-turn baseline
-now exists: A0 is 36/54 and A5 is 41/54. A5 gains 7 conversations and loses 2;
-McNemar p=0.180. The measured direction is positive, but the multi-turn delta is not
-statistically settled. These are three trials of 18 scripts, not 54 independent
-customers; one gain is A0's unfilled-placeholder integrity failure, so the clean
-behavioural signal is narrower than 7 versus 2.
+There are 18 gains and 1 loss (paired McNemar p<0.001).
+Most gains now state the $99 diagnostic or coverage rule. One sewage reply loses
+avoid-contact advice. The external-next-step version had reached
+40/53; A5 recovered scheduling and off-task losses.
+This sequential comparison is not a controlled ablation.
 
-# What changed
+# Validation and remaining work
 
-A1's generic route instruction permitted "reply in chat". A2 required an external
-destination. A3's hours instruction prompted a clock-based contradiction; A5
-kept the customer's stated time and forbade clock checks. The arm history retains
-the regressions as well as the selected changes.
+The positive development result is not confirmed on the separate validation
+checks. These scores are automated rubric outcomes, not independently established
+customer success rates.
 
-The largest multi-turn gains are **arithmetic (2/9 to 5/9)** and **pushback (5/9 to
-7/9)**. Memory stays 9/9 in both arms; recovery stays 9/9; change-of-mind stays 3/9.
-One A0 failure emitted an unfilled template placeholder; A5 passed that conversation.
+## Multi-turn: a positive but uncertain difference
 
-# The check I could not tune against
+Across 18 scripts with three trials each, baseline passes
+**36/54** and A5 **41/54**; scripts passing all trials move
+from 9/18 to 12/18.
+There are 7 gains and 2 losses (nominal paired p=0.180,
+not statistically significant).
+Trials repeat scripts, so they are not 54 independent customers.
+Observed gains are concentrated in arithmetic and pushback, not a demonstrated
+effect of the instructions. One gain is the baseline's template-placeholder failure.
 
-Twenty three-turn scenarios were authored by a different model, with graders frozen
-before replies existed. On the original run A0 and A5 both scored **17/20**, agreeing
-on 18/20; on the 13 unambiguous scenarios A0 scored 12/13 and A5 11/13. One A5 reply
-was then excluded by deterministic cleaning because a render failure was appended to
-a complete answer; excluding it leaves A5 at 16/19 overall and 10/12 on the scored
-scenarios. The result does not confirm the single-turn gain out of sample, and the
-set is too small to call it a regression.
+## Sealed: no demonstrated advantage
 
-# Limits and failures
+The 20 scenarios, each three turns long, were authored by a different model.
+Scenario rubrics were frozen before replies. Before the render exclusion, totals are
+**17/20 baseline and 17/20 A5**;
+the subset not flagged as ambiguous is 12/13 versus
+11/13.
 
-- The single-turn comparison is in-sample. There are **21 logged corrections**:
-  20 from transcript inspection and one from a positive control. Corrections 20
-  and 21 repaired amount checks that rejected valid arithmetic, including
-  $99 + $150 + $50 = $299. No frozen scenario rubric was changed.
-- Six failing A5 conversations include savings-club expectations absent from the
-  brief; some also miss a required diagnostic price. The overnight example in
-  MT-P02 declines service but fails a wording-sensitive regex. Scores are unchanged.
-- One build showed website-accurate savings-club benefits that were absent from the
-  brief while another build declined. The cause is unknown; the repository reports it
-  as an open platform question, not as a proven defect.
-- A human calibration reached κ=0.911 only after the rule was fitted to the same
-  30 transcripts; it is not fresh-sample agreement.
+A post-run mechanical amount-check fix, applied to both arms, moved A5 from
+10/13 to 11/13; baseline was unchanged.
+Separately, cleaning excluded one A5 pass containing an appended render error,
+leaving **16/19 overall and 10/12 on the unambiguous subset**.
+Baseline had no exclusion. The small set does not establish equivalence or regression.
 
-The complete evidence is in `RESULTS.md`, `RIGOR.md`, `FAILURES.md` and
-`FINDINGS-FOR-AGENTPLACE.md`. The live agent link is supplied separately.
+## Remaining failures and grading limits
+
+- **Scheduling: 4/9 all-three passes.**
+  Some replies omit the required hours or Saturday surcharge.
+  **Handoff: 1/2.** A multi-unit outage misses escalation.
+- Six membership-script conversations fail in **both arms** on benefits omitted
+  from v1; some also omit required pricing. These are mixed authoring and agent gaps.
+- There are **21 logged grader corrections**: 20 from transcripts, one from
+  a positive control. A correct overnight refusal still fails a wording-sensitive
+  check; its recorded score is retained. Human calibration reused the same
+  transcripts after a rule clarification, so it is not fresh-sample validation.
+
+## Build provenance and evidence
+
+Single-turn files label the original project `jojuduewx7ud`. Validation compares
+the A5 rebuild `cgiefgaebmgh` with a **separate baseline rebuild**,
+`guikfrraxzk5`; build differences are an additional confound. The evaluated brief
+used 24 sourced fields. The current ledger has 25; its corrected v2 is not evaluated.
+Two builds also answered membership questions differently; the cause remains unknown.
+
+All recorded runs are retained. The 20 sealed scenarios supplement, rather than
+replace, the larger development sets.
+
+All test sets, runs, instruction history and findings:
+[github.com/arjhinety/budget-front-desk](https://github.com/arjhinety/budget-front-desk).
+The published agent link is supplied separately.
