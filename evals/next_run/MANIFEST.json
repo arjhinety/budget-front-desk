@@ -36,7 +36,17 @@
       "status": "pending",
       "owner": "user",
       "reviewed": false,
-      "reason": "39 sealed and 60 development rows are prepared but unlabelled."
+      "reason": "39 sealed and 60 development rows are prepared but unlabelled.",
+      "review_evidence": {
+        "labeller_type": "model",
+        "model": "gemini-4-argon",
+        "via": "agy",
+        "blinded": true,
+        "sealed_score": "agentplace-private/labelling/pre-run-sealed-v2/private/score-model-gemini.json",
+        "development_score": "agentplace-private/labelling/pre-run-development-v2/private/score-model-gemini.json",
+        "finding": "docs/MODEL-REVIEW.md",
+        "note": "Model review informs but does not satisfy the human-calibration gate. The human stage remains pending."
+      }
     }
   },
   "pair_execution": {
@@ -58,5 +68,9 @@
     "claim": "diagnostic pilot; no power or quota-window guarantee"
   },
   "protocol": "evals/next_run/PROTOCOL.md",
-  "historical_evidence_preserved": true
+  "historical_evidence_preserved": true,
+  "known_issues": {
+    "ledger_street_address": "facts/business.json.not_stated claims no street address is published; the captured site contradicts this",
+    "guide_inherits_ledger_error": "evals/human/GUIDE.md version 1 does not correct the address claim"
+  }
 }

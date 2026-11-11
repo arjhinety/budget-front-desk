@@ -48,3 +48,23 @@ Human review is still pending. Prepared sheets do not constitute labels, and the
 ## Release boundary
 
 The next-run protocol is `evals/next_run/PROTOCOL.md`. Current public configuration equivalence, human calibration, independently authored fresh cases and prospective grader controls are release dependencies. Recovered inputs, a candidate instruction diff and a dry schedule are not evidence that those dependencies are complete. No new conversations or published-agent edits were made for this preparation.
+
+
+## Ledger error: street address is published
+
+The ledger's `not_stated` entry says "no street address for walk-in visits is
+published." The captured site text contains "325 Mid Rivers Mall Drive,
+St. Peters, MO 63376" on both the about-us and areas-we-service pages. The
+evaluated v1 brief omits it, so the agent states a real published fact that the
+brief never contained — the same class as the savings-club benefits. The
+`GUIDE.md` inherits this error. The ledger and guide are not corrected
+mid-application; the discrepancy is recorded here.
+
+## Independent model review
+
+A blinded model from a different family (gemini-4-argon) labelled 99 existing
+conversations. It found grader false passes as well as false failures. Two
+verified grader false passes — a Texas out-of-state reply and a booking-page
+route without the phone — are documented in `docs/MODEL-REVIEW.md`. The model
+labeller is not a substitute for human calibration; the human-review gate remains
+pending. Agreement details are in the private score receipts.
