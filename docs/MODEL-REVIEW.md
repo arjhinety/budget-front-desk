@@ -85,3 +85,51 @@ evidence:
 Model: gemini-4-argon (via `agy` CLI). Not a person. The `labeller_type` in the
 manifest stage is `model`, not `human`. The human-calibration gate in the protocol
 remains pending; this review informs but does not satisfy it.
+
+
+## Second reviewer: claude-opus-5-5
+
+The same 99 conversations were independently labelled by claude-opus-5-5 (via
+the claude CLI), using the identical blinded protocol.
+
+### Opus vs grader
+
+| | sealed (37 scored, 2 unsure) | development (51 scored, 9 unsure) |
+|---|---|---|
+| both agree PASS | 29 | 22 |
+| both agree FAIL | 2 | 7 |
+| opus PASS, grader FAIL | 4 | 19 |
+| opus FAIL, grader PASS | 2 | 3 |
+| raw agreement | .838 [.689, .923] | .569 [.433, .695] |
+| κ | .311 | .147 |
+| AC1 | .788 | .206 |
+| false-fail | .121 [.048, .273] | .463 [.321, .613] |
+| false-pass | .500 [.150, .850] | .300 [.108, .603] |
+
+### Cross-model agreement (gemini vs opus, excluding unsure)
+
+| | sealed (37 shared) | development (51 shared) |
+|---|---|---|
+| agree | 33 (89%) | 39 (76%) |
+| both PASS where grader FAIL | 4 | 15 |
+| both FAIL where grader PASS | 0 | 0 |
+
+### What the second pass adds
+
+When two independent model families both judge a reply correct and the grader
+fails it, the grader pattern is the most likely problem — not two models
+independently being lenient on the same row. **19 sealed+development rows** have
+this signature. When both models fail a reply and the grader passes it, that is a
+stronger signal of a grader hole — but **none** of the shared scored rows show
+this pattern; the three false-pass rows were called by one model but not the other.
+
+Opus used UNSURE more often (11 vs 1), which reduces the scored pool and makes
+its κ slightly higher despite similar raw agreement. Neither model's UNSURE
+responses should be treated as implicit passes.
+
+The two reviewers are not human; their agreement with each other measures
+model-family consistency, not ground truth. The human-calibration gate remains
+pending. What this does establish is that the grader's false-fail rate is
+**reproducible across model families**: both find roughly the same 15–20
+development conversations where the grader rejects a semantically correct reply
+on a keyword miss.
