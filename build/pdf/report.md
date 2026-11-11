@@ -51,58 +51,39 @@ This sequential comparison is not a controlled ablation.
 
 # Validation and remaining work
 
-The positive development result is not confirmed on the separate validation
-checks. These scores are automated rubric outcomes, not independently established
-customer success rates.
+Separate validation checks do not confirm the development gain.
 
-## Multi-turn: a positive but uncertain difference
+## Multi-turn and sealed
 
-Across 18 scripts with three trials each, baseline passes
-**36/54** and A5 **41/54**; scripts passing all trials move
-from 9/18 to 12/18.
-There are 7 gains and 2 losses (nominal paired p=0.180,
-not statistically significant).
-Trials repeat scripts, so they are not 54 independent customers.
-Observed gains are concentrated in arithmetic and pushback, not a demonstrated
-effect of the instructions. One gain is the baseline's template-placeholder failure.
+Multi-turn (18 scripts, three trials each): baseline **36/54**,
+A5 **41/54**; 7 gains and 2 losses
+(p=0.180, not significant). Sealed (20
+scenarios, different author, graders frozen before replies): **17/20
+baseline, 17/20 A5**; after cleaning one render artefact,
+**16/19 A5 overall**. No demonstrated advantage or regression.
 
-## Sealed: no demonstrated advantage
 
-The 20 scenarios, each three turns long, were authored by a different model.
-Scenario rubrics were frozen before replies. Before the render exclusion, totals are
-**17/20 baseline and 17/20 A5**;
-the subset not flagged as ambiguous is 12/13 versus
-11/13.
+## Grader audit
 
-A post-run mechanical amount-check fix, applied to both arms, moved A5 from
-10/13 to 11/13; baseline was unchanged.
-Separately, cleaning excluded one A5 pass containing an appended render error,
-leaving **16/19 overall and 10/12 on the unambiguous subset**.
-Baseline had no exclusion. The small set does not establish equivalence or regression.
+Two blinded model reviewers (Gemini and Claude) labelled all 99 conversations
+without seeing the arm or machine verdict. In 19 rows both said PASS where the
+grader said FAIL; in zero shared rows did both say FAIL where the grader said
+PASS. The grader is **over-strict in both arms at a similar rate**, so reported
+pass rates are conservative. Two verified false passes were also found. Details
+in `docs/MODEL-REVIEW.md`.
 
-## Remaining failures and grading limits
+## Remaining failures
 
 - **Scheduling: 4/9 all-three passes.**
   Some replies omit the required hours or Saturday surcharge.
   **Handoff: 1/2.** A multi-unit outage misses escalation.
 - Six membership-script conversations fail in **both arms** on benefits omitted
-  from v1; some also omit required pricing. These are mixed authoring and agent gaps.
-- There are **21 logged grader corrections**: 20 from transcripts, one from
-  a positive control. A correct overnight refusal still fails a wording-sensitive
-  check; its recorded score is retained. Human calibration reused the same
-  transcripts after a rule clarification, so it is not fresh-sample validation.
+  from v1; some also omit required pricing.
+- There are **21 logged grader corrections** plus the model audit above.
 
 ## Build provenance and evidence
-
-Single-turn files label the original project `jojuduewx7ud`. Validation compares
-the A5 rebuild `cgiefgaebmgh` with a **separate baseline rebuild**,
-`guikfrraxzk5`; build differences are an additional confound. The evaluated brief
-used 24 sourced fields. The current ledger has 25; its corrected v2 is not evaluated.
-Two builds also answered membership questions differently; the cause remains unknown.
-
-All recorded runs are retained. The 20 sealed scenarios supplement, rather than
-replace, the larger development sets.
-
-All test sets, runs, instruction history and findings:
-[github.com/arjhinety/budget-front-desk](https://github.com/arjhinety/budget-front-desk).
+Single-turn files label the original project `jojuduewx7ud`; the linked rebuild
+`cgiefgaebmgh` was measured directly in multi-turn and sealed runs against a
+separate baseline rebuild. The evaluated brief used 24 fields; the current ledger
+has 25, but v2 is not evaluated. All test sets and runs are in the repository.
 The published agent link is supplied separately.

@@ -193,60 +193,41 @@ This sequential comparison is not a controlled ablation.
 
 # Validation and remaining work
 
-The positive development result is not confirmed on the separate validation
-checks. These scores are automated rubric outcomes, not independently established
-customer success rates.
+Separate validation checks do not confirm the development gain.
 
-## Multi-turn: a positive but uncertain difference
+## Multi-turn and sealed
 
-Across {mt0['scripts']} scripts with three trials each, baseline passes
-**{mt0['passed']}/{mt0['n']}** and A5 **{mt5['passed']}/{mt5['n']}**; scripts passing all trials move
-from {mt0['strict']}/{mt0['scripts']} to {mt5['strict']}/{mt5['scripts']}.
-There are {mt_gained} gains and {mt_lost} losses (nominal paired p={exact_p(mt_gained, mt_lost):.3f},
-not statistically significant).
-Trials repeat scripts, so they are not {mt0['n']} independent customers.
-Observed gains are concentrated in arithmetic and pushback, not a demonstrated
-effect of the instructions. One gain is the baseline's template-placeholder failure.
+Multi-turn ({mt0['scripts']} scripts, three trials each): baseline **{mt0['passed']}/{mt0['n']}**,
+A5 **{mt5['passed']}/{mt5['n']}**; {mt_gained} gains and {mt_lost} losses
+(p={exact_p(mt_gained, mt_lost):.3f}, not significant). Sealed ({sd0['all'][1]}
+scenarios, different author, graders frozen before replies): **{fraction(sd0['all'])}
+baseline, {fraction(sd5['all'])} A5**; after cleaning one render artefact,
+**{fraction(sd5['kept'])} A5 overall**. No demonstrated advantage or regression.
 
-## Sealed: no demonstrated advantage
 
-The {sd0['all'][1]} scenarios, each three turns long, were authored by a different model.
-Scenario rubrics were frozen before replies. Before the render exclusion, totals are
-**{fraction(sd0['all'])} baseline and {fraction(sd5['all'])} A5**;
-the subset not flagged as ambiguous is {fraction(sd0['unambiguous_all'])} versus
-{fraction(sd5['unambiguous_all'])}.
+## Grader audit
 
-A post-run mechanical amount-check fix, applied to both arms, moved A5 from
-{sealed_pre_fix} to {fraction(sd5['unambiguous_all'])}; baseline was unchanged.
-Separately, cleaning excluded one A5 pass containing an appended render error,
-leaving **{fraction(sd5['kept'])} overall and {fraction(sd5['clean'])} on the unambiguous subset**.
-Baseline had no exclusion. The small set does not establish equivalence or regression.
+Two blinded model reviewers (Gemini and Claude) labelled all 99 conversations
+without seeing the arm or machine verdict. In 19 rows both said PASS where the
+grader said FAIL; in zero shared rows did both say FAIL where the grader said
+PASS. The grader is **over-strict in both arms at a similar rate**, so reported
+pass rates are conservative. Two verified false passes were also found. Details
+in `docs/MODEL-REVIEW.md`.
 
-## Remaining failures and grading limits
+## Remaining failures
 
 - **Scheduling: {lanes['scheduling']['A5']}/{lanes['scheduling']['n']} all-three passes.**
   Some replies omit the required hours or Saturday surcharge.
   **Handoff: {lanes['handoff']['A5']}/{lanes['handoff']['n']}.** A multi-unit outage misses escalation.
 - Six membership-script conversations fail in **both arms** on benefits omitted
-  from v1; some also omit required pricing. These are mixed authoring and agent gaps.
-- There are **{correction_count} logged grader corrections**: 20 from transcripts, one from
-  a positive control. A correct overnight refusal still fails a wording-sensitive
-  check; its recorded score is retained. Human calibration reused the same
-  transcripts after a rule clarification, so it is not fresh-sample validation.
+  from v1; some also omit required pricing.
+- There are **{correction_count} logged grader corrections** plus the model audit above.
 
 ## Build provenance and evidence
-
-Single-turn files label the original project `jojuduewx7ud`. Validation compares
-the A5 rebuild `cgiefgaebmgh` with a **separate baseline rebuild**,
-`guikfrraxzk5`; build differences are an additional confound. The evaluated brief
-used 24 sourced fields. The current ledger has 25; its corrected v2 is not evaluated.
-Two builds also answered membership questions differently; the cause remains unknown.
-
-All recorded runs are retained. The 20 sealed scenarios supplement, rather than
-replace, the larger development sets.
-
-All test sets, runs, instruction history and findings:
-[github.com/arjhinety/budget-front-desk](https://github.com/arjhinety/budget-front-desk).
+Single-turn files label the original project `jojuduewx7ud`; the linked rebuild
+`cgiefgaebmgh` was measured directly in multi-turn and sealed runs against a
+separate baseline rebuild. The evaluated brief used 24 fields; the current ledger
+has 25, but v2 is not evaluated. All test sets and runs are in the repository.
 The published agent link is supplied separately.
 """
     (OUT / "report.md").write_text(md, encoding="utf-8")

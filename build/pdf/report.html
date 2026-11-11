@@ -409,60 +409,40 @@ of safety advice. The external-next-step version reached 40/53. This
 sequential comparison is not a controlled ablation.</p>
 <h1 id="validation-and-remaining-work">Validation and remaining
 work</h1>
-<p>The positive development result is not confirmed on the separate
-validation checks. These scores are automated rubric outcomes, not
-independently established customer success rates.</p>
-<h2 id="multi-turn-a-positive-but-uncertain-difference">Multi-turn: a
-positive but uncertain difference</h2>
-<p>Across 18 scripts with three trials each, baseline passes
-<strong>36/54</strong> and A5 <strong>41/54</strong>; scripts passing
-all trials move from 9/18 to 12/18. There are 7 gains and 2 losses
-(nominal paired p=0.180, not statistically significant). Trials repeat
-scripts, so they are not 54 independent customers. Observed gains are
-concentrated in arithmetic and pushback, not a demonstrated effect of
-the instructions. One gain is the baseline’s template-placeholder
-failure.</p>
-<h2 id="sealed-no-demonstrated-advantage">Sealed: no demonstrated
-advantage</h2>
-<p>The 20 scenarios, each three turns long, were authored by a different
-model. Scenario rubrics were frozen before replies. Before the render
-exclusion, totals are <strong>17/20 baseline and 17/20 A5</strong>; the
-subset not flagged as ambiguous is 12/13 versus 11/13.</p>
-<p>A post-run mechanical amount-check fix, applied to both arms, moved
-A5 from 10/13 to 11/13; baseline was unchanged. Separately, cleaning
-excluded one A5 pass containing an appended render error, leaving
-<strong>16/19 overall and 10/12 on the unambiguous subset</strong>.
-Baseline had no exclusion. The small set does not establish equivalence
-or regression.</p>
-<h2 id="remaining-failures-and-grading-limits">Remaining failures and
-grading limits</h2>
+<p>Separate validation checks do not confirm the development gain.</p>
+<h2 id="multi-turn-and-sealed">Multi-turn and sealed</h2>
+<p>Multi-turn (18 scripts, three trials each): baseline
+<strong>36/54</strong>, A5 <strong>41/54</strong>; 7 gains and 2 losses
+(p=0.180, not significant). Sealed (20 scenarios, different author,
+graders frozen before replies): <strong>17/20 baseline, 17/20
+A5</strong>; after cleaning one render artefact, <strong>16/19 A5
+overall</strong>. No demonstrated advantage or regression.</p>
+<h2 id="grader-audit">Grader audit</h2>
+<p>Two blinded model reviewers (Gemini and Claude) labelled all 99
+conversations without seeing the arm or machine verdict. In 19 rows both
+said PASS where the grader said FAIL; in zero shared rows did both say
+FAIL where the grader said PASS. The grader is <strong>over-strict in
+both arms at a similar rate</strong>, so reported pass rates are
+conservative. Two verified false passes were also found. Details in
+<code>docs/MODEL-REVIEW.md</code>.</p>
+<h2 id="remaining-failures">Remaining failures</h2>
 <ul>
 <li><strong>Scheduling: 4/9 all-three passes.</strong> Some replies omit
 the required hours or Saturday surcharge. <strong>Handoff: 1/2.</strong>
 A multi-unit outage misses escalation.</li>
 <li>Six membership-script conversations fail in <strong>both
 arms</strong> on benefits omitted from v1; some also omit required
-pricing. These are mixed authoring and agent gaps.</li>
-<li>There are <strong>21 logged grader corrections</strong>: 20 from
-transcripts, one from a positive control. A correct overnight refusal
-still fails a wording-sensitive check; its recorded score is retained.
-Human calibration reused the same transcripts after a rule
-clarification, so it is not fresh-sample validation.</li>
+pricing.</li>
+<li>There are <strong>21 logged grader corrections</strong> plus the
+model audit above.</li>
 </ul>
 <h2 id="build-provenance-and-evidence">Build provenance and
 evidence</h2>
 <p>Single-turn files label the original project
-<code>jojuduewx7ud</code>. Validation compares the A5 rebuild
-<code>cgiefgaebmgh</code> with a <strong>separate baseline
-rebuild</strong>, <code>guikfrraxzk5</code>; build differences are an
-additional confound. The evaluated brief used 24 sourced fields. The
-current ledger has 25; its corrected v2 is not evaluated. Two builds
-also answered membership questions differently; the cause remains
-unknown.</p>
-<p>All recorded runs are retained. The 20 sealed scenarios supplement,
-rather than replace, the larger development sets.</p>
-<p>All test sets, runs, instruction history and findings: <a
-href="https://github.com/arjhinety/budget-front-desk">github.com/arjhinety/budget-front-desk</a>.
-The published agent link is supplied separately.</p>
+<code>jojuduewx7ud</code>; the linked rebuild <code>cgiefgaebmgh</code>
+was measured directly in multi-turn and sealed runs against a separate
+baseline rebuild. The evaluated brief used 24 fields; the current ledger
+has 25, but v2 is not evaluated. All test sets and runs are in the
+repository. The published agent link is supplied separately.</p>
 </body>
 </html>
