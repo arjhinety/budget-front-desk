@@ -1,127 +1,117 @@
-# Budget Front Desk — an agent, its ledger, and what it gets wrong
+# Budget Front Desk
 
-An agent built for a real business, and the measurements of where it fails. The
-published link is shared separately; what is here is the method and the evidence.
+A public Luna agent for **Budget Heating, Cooling & Plumbing** (St. Peters, MO),
+built from their website, tested with realistic and adversarial conversations,
+improved, and retested. The company is not involved; see `NOTICE.md`.
 
-1. **The agent** — project `cgiefgaebmgh` on Agentplace, GPT-6 Luna. The published link is
-   shared separately, not in this repository.
-2. **The evidence** — all 33 hand-written and 55 generated single-turn scenarios,
-   their instruction-arm runs, 108 multi-turn conversations across both arms,
-   and 40 sealed-set conversations. The 20-scenario sealed set supplements,
-   rather than replaces, the larger development sets.
+The published agent link is shared separately. This repository holds the test
+sets, transcripts, instruction changes, graders, failures, and everything needed
+to check the numbers.
 
-The published v1 brief used 24 sourced fields; the current ledger has 25 after
-adding omitted membership benefits. Single-turn A5 metadata names the original
-project; the linked A5 rebuild has its own multi-turn and sealed measurements.
-This provenance difference is disclosed in `RESULTS.md`.
+## Before and after
 
-Business: **Budget Heating, Cooling & Plumbing** — justcallbudget.com, St. Peters,
-Missouri. Heating, cooling and plumbing; family-owned since 2009; five named
-counties; a booking page selling a twelve-row catalogue at published prices.
+| | A0 baseline | A5 tuned |
+|---|---:|---:|
+| single-turn, all three trials pass | 26/53 | **43/53** |
+| multi-turn, 54 conversations | 36/54 (67%) | **41/54 (76%)** |
+| sealed set, 20 independent scenarios | 17/20 | 17/20 |
 
-The company did not commission this and does not endorse it. It is a
-demonstration built from their public pages, and a takedown request would be
-honoured immediately. See `NOTICE.md`.
+The single-turn gain is in-sample (p < 0.001 on the shared 53 scenarios). The
+multi-turn gain is positive but not statistically settled (p = 0.18). The sealed
+set, written by a different model with graders frozen before any reply existed,
+shows no measurable difference. The grader is over-strict in both versions at a
+similar rate, so the reported pass rates are conservative.
 
----
+## What changed and what it fixed
 
-## Open work
+Five instruction arms were tried; two regressed and were reverted.
 
-Preparation is offline; no new collection is authorised. See
-`docs/PRE-RUN-AUDIT.md` and `evals/next_run/PROTOCOL.md`.
+**A1: "End every reply with a next step."** The agent chose "reply in chat" and
+dropped the phone number from a burst-pipe emergency. Worse.
 
-1. **Measurement:** historical scores remain unchanged. Arm-blind human review
-   must check false passes as well as false failures.
-2. **Provenance:** recovered A5 input files are historical read-backs, not proof
-   of the current effective publication. New captures need bound configurations.
-3. **Agent behaviour:** scheduling and handoff still need review; their machine
-   scores are 4/9 and 1/2 all-three passes, not a complete adjudicated defect count.
-4. **Fresh evaluation:** case authoring, prospective graders/control receipts and
-   explicit collection approval follow calibration. The used sealed set is not
-   reused for tuning.
+**A2: "The next step must be an external action."** Fixed A1. Coverage and
+diagnostic scenarios jumped from 1/8 to 6/8 and 6/10 to 10/10. But scheduling
+and off-task replies got worse: the agent stopped stating hours when asked about
+a specific day.
 
-## Read these first
+**A3: "Say when the office is closed."** The agent queried a clock tool and
+contradicted a customer reporting a Sunday-night gas smell. Reverted.
+
+**A5: A2's external-action rule, plus after-hours handling that uses the
+customer's stated time and forbids clock checks.** Recovered the scheduling and
+off-task losses without losing the coverage gain. This is the shipped arm.
+
+| Requirement group | A0 | A5 |
+|---|---:|---:|
+| Coverage | 1/8 | **7/8** |
+| Diagnostic | 6/10 | **10/10** |
+| Free estimate | 6/8 | **8/8** |
+| Trust | 3/5 | **5/5** |
+| Emergency | 4/8 | **6/8** |
+| Scheduling | 3/9 | **4/9** |
+| Off-task | 2/3 | **2/3** |
+| Handoff | 1/2 | 1/2 |
+
+## Limits
+
+- The single-turn comparison is in-sample: A5 and its graders were iterated on
+  the same 53 scenarios. The sealed set exists to check for that, and it found
+  no advantage.
+- The linked agent is a rebuild (`cgiefgaebmgh`); its direct measurements are
+  the multi-turn and sealed runs. Single-turn files label the original project.
+- Two blinded model reviewers (Gemini and Claude, neither the grader author)
+  independently found the grader rejects correct replies at a 12–46% rate, but
+  rarely lets wrong replies through. The bias is similar in both arms, so the
+  before/after direction holds even though the absolute rates are too low.
+- The platform does not expose skill/knowledge file contents, so a fully verified
+  effective-configuration snapshot was not possible.
+- Scheduling (4/9) and handoff (1/2) remain weak.
+
+## What is here
 
 | file | what it is |
 |---|---|
+| `RESULTS.md` | every arm, the paired tests, the grader corrections, the platform findings |
+| `FAILURES.md` | the four failure patterns and which arm they appear in |
 | `RIGOR.md` | how the agent was built and what it does **not** claim |
-| `qa/test-plan.md` | scope, evidence standard, hypotheses, exit criteria |
-| `build/brief.txt` | the brief that produced the agent, rendered from the ledger |
-| `facts/sources.csv` | 25 current ledger fields, each with its source page and line number; the published v1 brief used 24 |
-| `facts/parameters.csv` | every judgement call, with a written reason |
-| `RESULTS.md` | the six arms, the McNemar test, the grader bugs, the platform findings |
-| `FAILURES.md` | small-set failure patterns; later runs remain in `evals/results/` |
-| `docs/MODEL-COMPARISON.md` | Luna vs Terra on the same 39 conversations, and the decision |
-| `platform/` | the three platform defaults, implemented and tested |
-| `evals/blind/sheet.csv` | historical 30-row calibration; arm identity was visible |
-| `NOTICE.md` | the business relationship, the scripted conversations, and takedown |
-| `docs/REFERENCES.md` | every paper cited, with what was taken from it |
-| `FINDINGS-FOR-AGENTPLACE.md` | the findings worth sending, and the one thing I got wrong |
-| `docs/FINDING-club-knowledge.md` | two builds from one brief know different amounts, with the evidence |
-| `datasets/manifest.json` | every set, its hash, its generator, and the contamination policy |
-| `datasets/CLEANING-PROTOCOL.md` | how the sealed validation set is built and scored, once |
-| `evals/human/GUIDE.md` | frozen meaning-based guide for the new retrospective human audit |
-| `build/pdf/report.pdf` | two-page summary, regenerated from the results by `build/make_report.py` |
-| `platform/README.md` | the three failures that should be fixed once, not per agent |
-| `evals/METHOD.md` | the original preregistration and forward-recorded amendments |
-| `docs/PRE-RUN-AUDIT.md` | provenance discontinuity and grader flags, without replacing old scores |
-| `evals/next_run/PROTOCOL.md` | offline preparation, release blockers and prospective analysis |
-| `build/recovered/cgiefgaebmgh/` | historical A5 request and file read-backs, with limitations |
+| `FINDINGS-FOR-AGENTPLACE.md` | findings for the platform team |
+| `build/pdf/report.pdf` | two-page summary |
+| `build/brief.txt` | the brief that produced the agent |
+| `build/captured/` | current published instructions for both arms |
+| `facts/sources.csv` | every ledger field with its source page and line |
+| `evals/results/` | all recorded conversations |
+| `evals/scenarios*.json` | 33 hand-written + 55 generated + 18 multi-turn + 20 sealed scenarios |
+| `evals/human/GUIDE.md` | the frozen review guide |
+| `docs/MODEL-REVIEW.md` | the two-model grader audit |
+| `docs/PRE-RUN-AUDIT.md` | provenance discontinuity and grader flags |
+| `platform/` | three proposed structural fixes, implemented and tested |
+| `NOTICE.md` | the business relationship and takedown |
 
 ## The pipeline
 
 ```
 scrape.py          11 pages -> raw/*.html + raw/*.txt + facts/provenance.json
 build_facts.py     the text -> facts/business.json + sources.csv + parameters.csv
-generate_brief.py  current ledger -> build/brief-v2.txt -> build/builder_url.txt
-drive.mjs          the brief -> the Agentplace Builder (persistent signed-in profile)
-evals/             scenarios.json (33 hand-written), scenarios-big.json (55 generated),
-                   graders.json, gen_scenarios.py, run.mjs, grade.py,
-                   stats.py (McNemar + paired bootstrap), kappa.py, health.mjs
-platform/          nextstep.py, clock.py, precedence.py, replay.py, tests
+generate_brief.py  the ledger -> build/brief.txt -> build/builder_url.txt
+drive.mjs          the brief -> the Agentplace Builder
+evals/run.mjs      scenarios -> the published agent -> evals/results/*.json
+evals/grade.py     results + graders -> pass/fail per trial
+evals/stats.py     paired McNemar + bootstrap
+platform/          nextstep.py, clock.py, precedence.py + 16 tests
 ```
 
-`build/brief.txt` and `build/builder_url-v1.txt` preserve the evaluated v1 input.
-The v2 brief includes the omitted benefits and is not the published/evaluated arm.
+`build_facts.py` fails if a price moves or the evidence is placeholder text.
 
-Rebuild from the source pages:
+## Open questions
 
-```
-python scrape.py --root https://justcallbudget.com
-python build_facts.py
-python generate_brief.py
-python evals/check_numbers.py build/brief-v2.txt
-python evals/stats.py --a A0 --b A2      # 2x2 discordance + exact McNemar
-python evals/kappa.py --all --arm A2     # grader vs an independent judge
-python evals/gen_scenarios.py            # regenerate the 55-scenario branch set
-python evals/stats.py --a BIG-A0 --b BIG-A2 --set scenarios-big --bootstrap 10000
-python evals/twotier.py --a BIG-A0 --b BIG-A2 --set scenarios-big
-python evals/blind_export.py --input evals/results/BIG-A0.json \
-  --input evals/results/A5.json --n 60 --guide evals/human/GUIDE.md \
-  --out ../agentplace-private/labelling/new-batch
-```
+These are documented rather than hidden; they do not block the submission.
 
-Human exports are local processing of existing captures, not new agent runs.
-Do not regenerate historical scenarios or start capture during this preparation.
-Future capture uses a separate manifest and fails closed when required evidence
-or explicit collection approval is missing.
-
-`build_facts.py` fails rather than warns. If a price changes on the site, or a
-catalogue row is renamed, or the evidence turns out to be template placeholder
-text, the build stops and names the field. A stale price on a booking agent is a
-complaint with the customer's name on it.
-
-## What is deliberately not here
-
-`.profile/` and `raw/` are gitignored. The first holds a live signed-in browser
-session and the second holds third-party page copies; neither belongs in a zip
-that leaves this machine.
-
-## Known limits
-
-The agent is not connected to the business's calendar, payments or CRM — it routes
-to their booking page, their phone number, or their $99 diagnostic. The facts are
-a dated snapshot with a 30-day freshness rule, not a sync. The 33 hand-written
-scenarios were written by the person who wrote the brief, which flatters the
-agent; the 55-scenario set was generated from the business's decision branches
-instead. `RIGOR.md` says which part of this is preregistered and which is not.
+1. The grader's false-fail rate is high. Two independent model families confirm
+   it. The recorded scores stay; the model audit is a separate layer.
+2. The ledger says no street address is published; the site publishes one. The
+   agent states the real address. This is a known ledger error, not corrected
+   mid-application because the v1 hash chain must stay intact.
+3. Two builds from the same brief answer membership questions differently. The
+   cause is unknown; `docs/FINDING-club-knowledge.md` has the evidence.
+4. A fully verified rerun would need the platform to expose skill contents. The
+   offline tooling for it is built; the data gate stays blocked.
